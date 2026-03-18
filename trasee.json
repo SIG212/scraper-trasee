@@ -7,10 +7,10 @@
       "nume": "Vf. Grecului: traseu nemarcat Busteni - Azuga",
       "localitate_start": "Busteni",
       "judet": "Prahova",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": "usor",
       "denivelare_m": 650,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": 650,
       "sursa_url": "https://bloguldecalatorii.ro/2022/03/iarna-varful-grecului.html",
       "sursa_blog": "bloguldecalatorii",
@@ -21,11 +21,11 @@
     {
       "nume": "Circuit Vf. Omu dinspre Pestera: Valea Obarsiei si Culmea Doamnele",
       "localitate_start": "Pestera",
-      "judet": "Dambovita",
+      "judet": "Prahova",
       "durata_h": 7.5,
       "dificultate": "mediu",
       "denivelare_m": 1000,
-      "distanta_km": 15.0,
+      "distanta_km": 15,
       "elevatie_pozitiva_m": 1000,
       "sursa_url": "https://bloguldecalatorii.ro/2021/07/circuit-vf-omu-dinspre-pestera.html",
       "sursa_blog": "bloguldecalatorii",
@@ -36,7 +36,7 @@
     {
       "nume": "Vf. Bucsa din Moieciu de Sus",
       "localitate_start": "Moieciu de Sus",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": 6.75,
       "dificultate": null,
       "denivelare_m": null,
@@ -51,11 +51,11 @@
     {
       "nume": "Traseu Cascada Moara Dracului",
       "localitate_start": "Simon",
-      "judet": "Brasov",
-      "durata_h": 5.0,
+      "judet": "Brașov",
+      "durata_h": 5,
       "dificultate": null,
       "denivelare_m": 735,
-      "distanta_km": 15.0,
+      "distanta_km": 15,
       "elevatie_pozitiva_m": 735,
       "sursa_url": "https://bloguldecalatorii.ro/2019/08/bucegi-cascada-moara-dracului-iulie-2019.html",
       "sursa_blog": "bloguldecalatorii",
@@ -66,7 +66,7 @@
     {
       "nume": "Drumetie pe dealurile din Simon",
       "localitate_start": "Simon",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -81,11 +81,11 @@
     {
       "nume": "Poteci si ulite in Fundata",
       "localitate_start": "Fundata",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": 4.5,
       "dificultate": "usor",
       "denivelare_m": 382,
-      "distanta_km": 13.0,
+      "distanta_km": 13,
       "elevatie_pozitiva_m": 382,
       "sursa_url": "https://bloguldecalatorii.ro/2019/04/pe-dealuri-in-fundata-decembrie-2018.html",
       "sursa_blog": "bloguldecalatorii",
@@ -97,10 +97,10 @@
       "nume": "Acele Morarului",
       "localitate_start": "Busteni",
       "judet": "Prahova",
-      "durata_h": 13.0,
+      "durata_h": 13,
       "dificultate": "greu",
       "denivelare_m": 1675,
-      "distanta_km": 16.0,
+      "distanta_km": 16,
       "elevatie_pozitiva_m": 1675,
       "sursa_url": "https://bloguldecalatorii.ro/2019/01/muntii-bucegi-acele-morarului-august-2018.html",
       "sursa_blog": "bloguldecalatorii",
@@ -112,7 +112,7 @@
       "nume": "Circuit nemarcat Bucegi: Valea Galbenele si Valea Priponului",
       "localitate_start": "Busteni",
       "judet": "Prahova",
-      "durata_h": 12.0,
+      "durata_h": 12,
       "dificultate": "greu",
       "denivelare_m": 1600,
       "distanta_km": null,
@@ -126,7 +126,7 @@
     {
       "nume": "Circuit ecoturistic pe dealurile din Moeciu",
       "localitate_start": "Moeciu",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": null,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -141,8 +141,8 @@
     {
       "nume": "Circuit prin Șaua Bătrâna și Șaua Strunga din Moeciu",
       "localitate_start": "Moeciu de Sus",
-      "judet": "Brasov",
-      "durata_h": 10.0,
+      "judet": "Brașov",
+      "durata_h": 10,
       "dificultate": null,
       "denivelare_m": 1000,
       "distanta_km": null,
@@ -187,7 +187,7 @@
       "nume": "Babele - Crucea Caraiman (iarna)",
       "localitate_start": "Busteni",
       "judet": "Prahova",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": "mediu",
       "denivelare_m": null,
       "distanta_km": null,
@@ -217,7 +217,7 @@
       "nume": "Babele - Releul Coștila",
       "localitate_start": "Busteni",
       "judet": "Prahova",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -232,7 +232,7 @@
       "nume": "Babele - Crucea Caraiman si retur (iarna)",
       "localitate_start": "Sinaia",
       "judet": "Prahova",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": "greu",
       "denivelare_m": null,
       "distanta_km": null,
@@ -246,7 +246,7 @@
     {
       "nume": "Predeal - Cabana Diham - Azuga",
       "localitate_start": "Predeal",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": 5.5,
       "dificultate": null,
       "denivelare_m": 463,
@@ -277,7 +277,7 @@
       "nume": "Sinaia - Poiana Stanii",
       "localitate_start": "Sinaia",
       "judet": "Prahova",
-      "durata_h": 1.0,
+      "durata_h": 1,
       "dificultate": "usor",
       "denivelare_m": 350,
       "distanta_km": null,
@@ -292,7 +292,7 @@
       "nume": "Circuit Cabana Diham din Busteni pentru incepatori",
       "localitate_start": "Busteni",
       "judet": "Prahova",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -306,7 +306,7 @@
     {
       "nume": "Drumetii in satul Simon",
       "localitate_start": "Simon",
-      "judet": "Brasov",
+      "judet": "Dâmbovița",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -321,7 +321,7 @@
     {
       "nume": "Circuit Bucegi: Malaiesti - Hornul Mare - Tiganesti - Brana Caprelor",
       "localitate_start": "Rasnov",
-      "judet": "Brasov",
+      "judet": "Prahova",
       "durata_h": 14.5,
       "dificultate": null,
       "denivelare_m": null,
@@ -330,13 +330,13 @@
       "sursa_url": "https://bloguldecalatorii.ro/2018/03/bucegi-malaiesti-hornul-mare-turnurile-tiganesti-refugiul-tiganesti-varful-omu-brana-caprelor.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2018/03/DSC01005.jpg",
-      "lat": 45.5910307,
-      "lng": 25.4656159
+      "lat": 45.42,
+      "lng": 25.45
     },
     {
       "nume": "Circuit prin Saua Batrana si Saua Strunga",
       "localitate_start": "Moeciu",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -360,13 +360,13 @@
       "sursa_url": "https://bloguldecalatorii.ro/2015/09/valea-horoabei-iulie-2015.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/09/DSC02496.jpg",
-      "lat": 45.3455492,
-      "lng": 25.5481496
+      "lat": 45.42,
+      "lng": 25.5
     },
     {
       "nume": "Traseu de iarna la Cabana Malaiesti",
       "localitate_start": "Rasnov",
-      "judet": "Brasov",
+      "judet": "Prahova",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -375,8 +375,8 @@
       "sursa_url": "https://bloguldecalatorii.ro/2015/03/plimbare-de-iarna-la-cabana-malaiesti.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/03/DSC04370.jpg",
-      "lat": 45.5910307,
-      "lng": 25.4656159
+      "lat": 45.42,
+      "lng": 25.45
     },
     {
       "nume": "Varful Omu si Crucea Caraiman dinspre Piatra Arsa",
@@ -390,8 +390,8 @@
       "sursa_url": "https://bloguldecalatorii.ro/2014/12/la-cabana-omu-dupa-40-de-ani.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2014/12/DSC00254.jpg",
-      "lat": 45.3455492,
-      "lng": 25.5481496
+      "lat": 45.42,
+      "lng": 25.5
     },
     {
       "nume": "Circuit nemarcat: Valea Albă - Vf. Omu - Valea Morarului",
@@ -426,8 +426,8 @@
     {
       "nume": "Vârful Omu dinspre Moeciu",
       "localitate_start": "Moeciu de Sus",
-      "judet": "Brasov",
-      "durata_h": 20.0,
+      "judet": "Brașov",
+      "durata_h": 20,
       "dificultate": "greu",
       "denivelare_m": null,
       "distanta_km": null,
@@ -450,14 +450,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2012/05/bucegi-cota-2000-padina-babele-martie-2012.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2012/05/1.-Cota-2000-Padina.jpg",
-      "lat": 45.3455492,
-      "lng": 25.5481496
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Circuit în Bucegi: Clincea - Vf. Omu - Valea Gaura",
       "localitate_start": "Bran",
-      "judet": "Brasov",
-      "durata_h": 17.0,
+      "judet": "Brașov",
+      "durata_h": 17,
       "dificultate": null,
       "denivelare_m": 2000,
       "distanta_km": null,
@@ -465,17 +465,17 @@
       "sursa_url": "https://bloguldecalatorii.ro/2011/08/bucegi-bran-clincea-vf-omu-valea-gaura-iulie-2011.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/08/DSC_0261.jpg",
-      "lat": 45.5163293,
-      "lng": 25.3715671
+      "lat": 45.43,
+      "lng": 25.35
     },
     {
       "nume": "Vf. Omu - Jepii Mici - Crucea Caraiman - Bucsoiu",
       "localitate_start": "Busteni",
       "judet": "Prahova",
-      "durata_h": 14.0,
+      "durata_h": 14,
       "dificultate": null,
       "denivelare_m": null,
-      "distanta_km": 20.0,
+      "distanta_km": 20,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2010/08/bucegi-jepii-mici-crucea-caraiman-omu-bucsoiu-busteni-iul-2010.html",
       "sursa_blog": "bloguldecalatorii",
@@ -487,7 +487,7 @@
       "nume": "Tura 2 zile: Cota 2000 - Cabana Padina - Sinaia",
       "localitate_start": "Sinaia",
       "judet": "Prahova",
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": 17.5,
@@ -495,14 +495,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2009/12/bucegi-cota-2000-padina-sinaia-decembrie-2009.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2009/12/IMG_1036-Copy-scaled.jpg",
-      "lat": 45.3455492,
-      "lng": 25.5481496
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Circuit Cabana Curmătura de la Fântâna lui Botorog",
       "localitate_start": "Zarnesti",
-      "judet": "Brasov",
-      "durata_h": 6.0,
+      "judet": "Brașov",
+      "durata_h": 6,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
@@ -510,14 +510,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2021/04/traseu-cabana-curmatura.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/04/Traseu-Cabana-Curmatura_16_jpg410_DSC7753.jpg",
-      "lat": 45.5607354,
-      "lng": 25.3161793
+      "lat": 45.52,
+      "lng": 25.22
     },
     {
       "nume": "Circuit Cabana Dragoș Bejan - Cabana Garofița",
       "localitate_start": "Saticu de sus",
-      "judet": "Arges",
-      "durata_h": 6.0,
+      "judet": "Argeș",
+      "durata_h": 6,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -531,8 +531,8 @@
     {
       "nume": "Magura Branului: Bran - Fantana lui Botorog",
       "localitate_start": "Bran",
-      "judet": "Brasov",
-      "durata_h": 6.0,
+      "judet": "Brașov",
+      "durata_h": 6,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -546,7 +546,7 @@
     {
       "nume": "Vf. Turnu prin Valea Crăpăturii si Padina Hotarului",
       "localitate_start": "Zarnesti",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": null,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -555,13 +555,13 @@
       "sursa_url": "https://bloguldecalatorii.ro/2020/06/piatra-craiului-valea-crapaturii-turnu-padina-hotarului-iun-2020.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2020/06/Piatra-Craiului-8600.jpg",
-      "lat": 45.5607354,
-      "lng": 25.3161793
+      "lat": 45.52,
+      "lng": 25.22
     },
     {
       "nume": "Piatra Craiului: Satul Ciocanu - La Table",
       "localitate_start": "Ciocanu",
-      "judet": "Arges",
+      "judet": "Brașov",
       "durata_h": null,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -576,7 +576,7 @@
     {
       "nume": "Circuit pe Muntele Pietricica, Piatra Craiului",
       "localitate_start": "Podu Dambovitei",
-      "judet": "Arges",
+      "judet": "Argeș",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -591,8 +591,8 @@
     {
       "nume": "Piatra Craiului: Creasta Nordică",
       "localitate_start": "Plaiul Foii",
-      "judet": "Brasov",
-      "durata_h": 13.0,
+      "judet": "Brașov",
+      "durata_h": 13,
       "dificultate": "greu",
       "denivelare_m": 1600,
       "distanta_km": null,
@@ -606,8 +606,8 @@
     {
       "nume": "Piatra Craiului: Circuit prin Cheile Pisicii de la Fantana lui Botorog",
       "localitate_start": "Zarnesti",
-      "judet": "Brasov",
-      "durata_h": 6.0,
+      "judet": "Brașov",
+      "durata_h": 6,
       "dificultate": null,
       "denivelare_m": 650,
       "distanta_km": null,
@@ -621,7 +621,7 @@
     {
       "nume": "Vf. Turnu prin Padina Hotarului si Padina Sindileriei",
       "localitate_start": "Zarnesti",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": 8.5,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -636,7 +636,7 @@
     {
       "nume": "Circuit satele Peștera - Măgura",
       "localitate_start": "Pestera",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": 3.25,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -651,7 +651,7 @@
     {
       "nume": "Din Satul Peștera spre Șaua Joaca",
       "localitate_start": "Satul Pestera",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": 2.17,
       "dificultate": "usor",
       "denivelare_m": 336,
@@ -666,7 +666,7 @@
     {
       "nume": "Piatra Craiului: Circuit Sat Ciocanu - La Table",
       "localitate_start": "Ciocanu",
-      "judet": "Arges",
+      "judet": "Brașov",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -681,7 +681,7 @@
     {
       "nume": "Circuit Piatra Mica",
       "localitate_start": "Zarnesti",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": null,
       "dificultate": "mediu",
       "denivelare_m": null,
@@ -696,8 +696,8 @@
     {
       "nume": "Piatra Craiului: Creasta Sudica de la Cabana Brusturet",
       "localitate_start": "Rucar",
-      "judet": "Arges",
-      "durata_h": 11.0,
+      "judet": "Argeș",
+      "durata_h": 11,
       "dificultate": "greu",
       "denivelare_m": 1450,
       "distanta_km": null,
@@ -711,7 +711,7 @@
     {
       "nume": "Piatra Craiului: Plaiul Foii - Brâul Ciorânga - Vf. Ascuțit - Cabana Curmătura",
       "localitate_start": "Zarnesti",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": 9.92,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -726,7 +726,7 @@
     {
       "nume": "Cabana Garofița Pietrei Craiului si Cerdacul Stanciului",
       "localitate_start": "Saticul de sus",
-      "judet": "Arges",
+      "judet": "Argeș",
       "durata_h": 5.5,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -741,7 +741,7 @@
     {
       "nume": "Weekend in satele Pestera si Magura",
       "localitate_start": "Pestera",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -756,7 +756,7 @@
     {
       "nume": "Piatra Craiului: Creasta Nordică - Plaiul Foii la Curmătura",
       "localitate_start": "Zarnesti",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": 18.58,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -771,8 +771,8 @@
     {
       "nume": "Valea Paltinu (Piscu Negru)",
       "localitate_start": "Piscu Negru",
-      "judet": "Arges",
-      "durata_h": 3.0,
+      "judet": "Argeș",
+      "durata_h": 3,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -787,10 +787,10 @@
       "nume": "Muchia Buteanu dinspre Bâlea Lac",
       "localitate_start": "Balea Lac",
       "judet": "Sibiu",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": 600,
-      "distanta_km": 6.0,
+      "distanta_km": 6,
       "elevatie_pozitiva_m": 600,
       "sursa_url": "https://bloguldecalatorii.ro/2021/09/drumetie-muchia-buteanu.html",
       "sursa_blog": "bloguldecalatorii",
@@ -802,7 +802,7 @@
       "nume": "Circuit Vf. Vânătoarea lui Buteanu – Vf. Capra, pe la Acul Revolver",
       "localitate_start": "Balea Lac",
       "judet": "Sibiu",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": "mediu",
       "denivelare_m": null,
       "distanta_km": null,
@@ -816,7 +816,7 @@
     {
       "nume": "Circuit Capra - Podragu",
       "localitate_start": "Piscu Negru",
-      "judet": "Arges",
+      "judet": "Argeș",
       "durata_h": 9.83,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -831,7 +831,7 @@
     {
       "nume": "Circuitul Varfului Negoiu de la Piscu Negru",
       "localitate_start": "Piscu Negru",
-      "judet": "Arges",
+      "judet": "Argeș",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -862,7 +862,7 @@
       "nume": "Creasta si Vanatoarea lui Buteanu de la Balea Lac",
       "localitate_start": "Balea Lac",
       "judet": "Sibiu",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": null,
       "denivelare_m": 650,
       "distanta_km": null,
@@ -877,10 +877,10 @@
       "nume": "X2 Race: Bâlea - Vârful Negoiu și retur",
       "localitate_start": "Balea",
       "judet": "Sibiu",
-      "durata_h": 10.0,
+      "durata_h": 10,
       "dificultate": "greu",
       "denivelare_m": 1900,
-      "distanta_km": 18.0,
+      "distanta_km": 18,
       "elevatie_pozitiva_m": 1900,
       "sursa_url": "https://bloguldecalatorii.ro/2017/03/fagaras-x2-race-20-august-2016.html",
       "sursa_blog": "bloguldecalatorii",
@@ -891,7 +891,7 @@
     {
       "nume": "Vf. Lespezi din Piscul Negru",
       "localitate_start": "Piscul Negru",
-      "judet": "Arges",
+      "judet": "Argeș",
       "durata_h": 9.25,
       "dificultate": null,
       "denivelare_m": 1250,
@@ -906,7 +906,7 @@
     {
       "nume": "Cabana Capra - Refugiul Fereastra Zmeilor",
       "localitate_start": "Cabana Capra",
-      "judet": "Arges",
+      "judet": "Argeș",
       "durata_h": 3.5,
       "dificultate": null,
       "denivelare_m": 550,
@@ -921,7 +921,7 @@
     {
       "nume": "Circuit Fereastra Zmeilor si Lacul Capra",
       "localitate_start": "Cabana Capra",
-      "judet": "Arges",
+      "judet": "Argeș",
       "durata_h": 5.5,
       "dificultate": null,
       "denivelare_m": 650,
@@ -936,7 +936,7 @@
     {
       "nume": "Vf. Moldoveanu circuit prin Valea Rea (Stana lui Burnei)",
       "localitate_start": "Slatina",
-      "judet": "Arges",
+      "judet": "Argeș",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -952,7 +952,7 @@
       "nume": "Circuit Bâlea Lac - Vârful Iezerul Caprei",
       "localitate_start": "Balea Lac",
       "judet": "Sibiu",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": null,
       "denivelare_m": 500,
       "distanta_km": null,
@@ -966,7 +966,7 @@
     {
       "nume": "Circuit Vf. Lespezi si Cornul Caltunului",
       "localitate_start": "Piscul Negru",
-      "judet": "Arges",
+      "judet": "Argeș",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -981,7 +981,7 @@
     {
       "nume": "Valea lui Stan",
       "localitate_start": "Vidraru",
-      "judet": "Arges",
+      "judet": "Argeș",
       "durata_h": 4.75,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -1000,7 +1000,7 @@
       "durata_h": 10.5,
       "dificultate": null,
       "denivelare_m": 1400,
-      "distanta_km": 14.0,
+      "distanta_km": 14,
       "elevatie_pozitiva_m": 1400,
       "sursa_url": "https://bloguldecalatorii.ro/2010/12/balea-lac-lacul-caltun-varful-negoiu.html",
       "sursa_blog": "bloguldecalatorii",
@@ -1012,7 +1012,7 @@
       "nume": "Bâlea Lac - Vârful Vânătoarea lui Buteanu",
       "localitate_start": "Balea Lac",
       "judet": "Sibiu",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": 477,
       "distanta_km": null,
@@ -1041,7 +1041,7 @@
     {
       "nume": "Circuit Vârful Urlea de la Cabana Sâmbăta",
       "localitate_start": "Sambata de sus",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": null,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -1101,7 +1101,7 @@
     {
       "nume": "Muchia Drăgușului, Munții Făgăraș",
       "localitate_start": "Sambata de Sus",
-      "judet": "Brasov",
+      "judet": "Brașov",
       "durata_h": 9.5,
       "dificultate": null,
       "denivelare_m": null,
@@ -1117,10 +1117,10 @@
       "nume": "Creasta Făgărașului: Bâlea Lac - Vârful Moldoveanu și retur",
       "localitate_start": "Balea Lac",
       "judet": "Sibiu",
-      "durata_h": 21.0,
+      "durata_h": 21,
       "dificultate": "greu",
       "denivelare_m": 2020,
-      "distanta_km": 33.0,
+      "distanta_km": 33,
       "elevatie_pozitiva_m": 2020,
       "sursa_url": "https://bloguldecalatorii.ro/2011/01/fagaras-balea-lac-moldoveanu-august-2010.html",
       "sursa_blog": "bloguldecalatorii",
@@ -1132,7 +1132,7 @@
       "nume": "Circuitul Varfului Retezat din Rausor",
       "localitate_start": "Rausor",
       "judet": "Hunedoara",
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": "greu",
       "denivelare_m": null,
       "distanta_km": null,
@@ -1230,8 +1230,8 @@
       "sursa_url": "https://bloguldecalatorii.ro/2010/11/retezat-poiana-pelegii-lacul-bucura-lacul-zanoaga-vf-peleaga-iulie-2010.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2010/11/DSC_0390.jpg",
-      "lat": 45.609725,
-      "lng": 22.9486986
+      "lat": 45.3,
+      "lng": 22.9
     },
     {
       "nume": "Circuit Retezat 4 zile, cu acces din Cârnic",
@@ -1245,8 +1245,8 @@
       "sursa_url": "https://bloguldecalatorii.ro/2019/07/muntii-retezat-rododendron-iunie-2019.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/07/DSC8256-Copy.jpg",
-      "lat": 45.4337522,
-      "lng": 22.893759
+      "lat": 45.3,
+      "lng": 22.9
     },
     {
       "nume": "Tura 3 zile Retezat, acces de la Stana de Rau",
@@ -1260,23 +1260,23 @@
       "sursa_url": "https://bloguldecalatorii.ro/2013/09/tura-3-zile-in-retezat-stana-de-rau.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2013/09/DSC08986-2.jpg",
-      "lat": 45.5167,
-      "lng": 23.0833
+      "lat": 45.3,
+      "lng": 22.9
     },
     {
       "nume": "Circuit Vârful Parângul Mare - Traseul Lacurilor",
       "localitate_start": "Cotul Jietului",
       "judet": "Hunedoara",
-      "durata_h": 12.0,
+      "durata_h": 12,
       "dificultate": "greu",
       "denivelare_m": 1300,
-      "distanta_km": 24.0,
+      "distanta_km": 24,
       "elevatie_pozitiva_m": 1300,
       "sursa_url": "https://bloguldecalatorii.ro/2019/07/muntii-parang-circuitul-lacurilor-rosiile-verde-rododendron-iunie-2019.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/07/Muntii-Parang-cu-rododendron-bujor-de-munte_29__DSC7186-Copy.jpg",
-      "lat": 45.4181,
-      "lng": 23.4936
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "Creasta Muntilor Parang",
@@ -1290,8 +1290,8 @@
       "sursa_url": "https://bloguldecalatorii.ro/2019/02/romania-creasta-muntilor-parang-cabana-telescaun-pasul-urdele-sept-2018.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/02/DSC08588_creasta-muntii-parang-parangul-mare.jpg",
-      "lat": 45.3986,
-      "lng": 23.4755
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "Pasul Urdele - Lacul Galcescu",
@@ -1305,8 +1305,8 @@
       "sursa_url": "https://bloguldecalatorii.ro/2012/02/transalpina-lacul-galcescu.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2012/02/DSC_0227-Copy.jpg",
-      "lat": 45.3451706,
-      "lng": 23.6566635
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "Traseu spre Lacul Mija, Muntii Parang",
@@ -1320,8 +1320,8 @@
       "sursa_url": "https://bloguldecalatorii.ro/2011/09/parangul-mic-lacul-mija-telescaun.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/09/DSC_0181.jpg",
-      "lat": 45.4141065,
-      "lng": 23.373969
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "Circuit Vârful Găinațul Mare, Munții Iezer-Păpușa",
@@ -1334,13 +1334,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2019/04/iezer-papusa-gainatul-mare-martie-2019.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/04/DSC2003.jpg",
-      "lat": 45.4891021,
-      "lng": 25.1471053
+      "lat": 45.43,
+      "lng": 24.93,
+      "judet": "Argeș"
     },
     {
       "nume": "Circuit de iarnă în Iezer – Păpușa de la Voina",
       "localitate_start": "Voina",
-      "durata_h": 10.0,
+      "durata_h": 10,
       "dificultate": null,
       "denivelare_m": 1500,
       "distanta_km": null,
@@ -1348,8 +1349,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2017/11/iezer-papusa-refugiul-iezer-culmea-vacarea-aprilie-2017.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2017/11/DSC05348.jpg",
-      "lat": 45.4891021,
-      "lng": 25.1471053
+      "lat": 45.43,
+      "lng": 24.93,
+      "judet": "Argeș"
     },
     {
       "nume": "Circuit Vârful Roșu din Munții Iezer-Păpușa",
@@ -1362,8 +1364,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2013/03/varful-rosu-iezer-papusa.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2013/03/Iezer-Papusa-Vf.-Rosu-Plaiul-lui-Patru_133.jpg",
-      "lat": 45.328833,
-      "lng": 25.0717585
+      "lat": 45.43,
+      "lng": 24.93,
+      "judet": "Argeș"
     },
     {
       "nume": "Vârful Păpușa de la Cabana Voina, via Cabana Cuca",
@@ -1371,18 +1374,19 @@
       "durata_h": 9.25,
       "dificultate": "greu",
       "denivelare_m": 1370,
-      "distanta_km": 20.0,
+      "distanta_km": 20,
       "elevatie_pozitiva_m": 1370,
       "sursa_url": "https://bloguldecalatorii.ro/2012/04/iezer-papusa-cabana-cuca-vf-papusa.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2012/04/DSC_0323-Copy.jpg",
-      "lat": 45.2697704,
-      "lng": 25.0438643
+      "lat": 45.43,
+      "lng": 24.93,
+      "judet": "Argeș"
     },
     {
       "nume": "Creasta Baiului: Azuga - Sinaia via Muntele Cumpatu",
       "localitate_start": "Azuga",
-      "durata_h": 7.0,
+      "durata_h": 7,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
@@ -1390,13 +1394,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2022/02/iarna-creasta-baiului-cumpatu.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2022/04/Traseu-iarna-Muntii-Baiului-Azuga-Cumpatu-Sinaia-6972.jpg",
-      "lat": 45.4444432,
-      "lng": 25.5693383
+      "lat": 45.48,
+      "lng": 25.72,
+      "judet": "Prahova"
     },
     {
       "nume": "Circuitul Rențea dinspre Săcele",
       "localitate_start": "Sacele",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -1404,8 +1409,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2021/11/traseu-cabana-rentea.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/11/DSC6258_Traseu-Rentea.jpg",
-      "lat": 45.616651,
-      "lng": 25.6910299
+      "lat": 45.59,
+      "lng": 25.56,
+      "judet": "Brașov"
     },
     {
       "nume": "Clabucetul Azugii",
@@ -1418,13 +1424,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2019/04/clabucetul-azugii-februarie-2019.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/04/DSC01624.jpg",
-      "lat": 45.4444432,
-      "lng": 25.5693383
+      "lat": 45.48,
+      "lng": 25.72,
+      "judet": "Prahova"
     },
     {
       "nume": "Clabucetul Taurului: Azuga - Predeal",
       "localitate_start": "Azuga",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": null,
       "denivelare_m": 600,
       "distanta_km": null,
@@ -1432,13 +1439,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2018/05/baiului-la-inceput-de-an-pe-clabucetul-taurului-1-ian-2018.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2018/05/DSC06803.jpg",
-      "lat": 45.4444432,
-      "lng": 25.5693383
+      "lat": 45.48,
+      "lng": 25.72,
+      "judet": "Prahova"
     },
     {
       "nume": "Culmea Petru-Orjogoaia",
       "localitate_start": "Azuga",
-      "durata_h": 7.0,
+      "durata_h": 7,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
@@ -1446,8 +1454,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2016/07/baiului-plimbare-solo-pe-culmea-petru-orjogoaia-22-mai-2016.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2016/07/DSC05547.jpg",
-      "lat": 45.4444432,
-      "lng": 25.5693383
+      "lat": 45.48,
+      "lng": 25.72,
+      "judet": "Prahova"
     },
     {
       "nume": "Creasta Baiului: Sinaia - Posada",
@@ -1460,8 +1469,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2015/01/creasta-baiului-sinaia-posada.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/01/DSC03222-cb.jpg",
-      "lat": 45.3455492,
-      "lng": 25.5481496
+      "lat": 45.48,
+      "lng": 25.72,
+      "judet": "Prahova"
     },
     {
       "nume": "Creasta Baiului: Azuga - Sinaia",
@@ -1469,13 +1479,14 @@
       "durata_h": 5.5,
       "dificultate": null,
       "denivelare_m": null,
-      "distanta_km": 20.0,
+      "distanta_km": 20,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2011/07/creasta-baiului-azuga-sinaia.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/07/DSC_0014-scaled.jpg",
-      "lat": 45.4444432,
-      "lng": 25.5693383
+      "lat": 45.48,
+      "lng": 25.72,
+      "judet": "Prahova"
     },
     {
       "nume": "Iarna pe Clăbucetul Taurului",
@@ -1483,13 +1494,14 @@
       "durata_h": 3.75,
       "dificultate": null,
       "denivelare_m": null,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2010/04/primavara-pe-clabucetul-taurului.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2010/04/DSC_0160-e1535361814199.jpg",
-      "lat": 45.5026879,
-      "lng": 25.5761577
+      "lat": 45.48,
+      "lng": 25.72,
+      "judet": "Prahova"
     },
     {
       "nume": "Traseu Cabana Garbova si Muchia Susaiului",
@@ -1503,7 +1515,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2010/02/IMG_1360.jpg",
       "lat": 45.5026879,
-      "lng": 25.5761577
+      "lng": 25.5761577,
+      "judet": "Prahova"
     },
     {
       "nume": "Muchia Ciorga / Horvatca iarna, Piatra Mare",
@@ -1517,12 +1530,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2020/03/DSC7741.jpg",
       "lat": 45.5276039,
-      "lng": 25.5783418
+      "lng": 25.5783418,
+      "judet": "Brașov"
     },
     {
       "nume": "Canionul 7 Scari iarna",
       "localitate_start": "Dambu Morii",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
@@ -1531,7 +1545,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2013/04/Sapte-scari-7-scari-iarna_137.jpg",
       "lat": 45.591573,
-      "lng": 25.6378965
+      "lng": 25.6378965,
+      "judet": "Brașov"
     },
     {
       "nume": "Vf. Piatra Mare de la Timisul de Sus la Predeal",
@@ -1545,7 +1560,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/04/12-Vf.-Piatra-Mare.jpg",
       "lat": 45.5197977,
-      "lng": 25.6097064
+      "lng": 25.6097064,
+      "judet": "Brașov"
     },
     {
       "nume": "Iarna in Piatra Mare - tura de 2 zile",
@@ -1559,12 +1575,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/04/1.jpg",
       "lat": 45.5947332,
-      "lng": 25.6381083
+      "lng": 25.6381083,
+      "judet": "Brașov"
     },
     {
       "nume": "Circuit 7 scări si Șirul Stâncilor, Piatra Mare",
       "localitate_start": "Timisu de Jos",
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": null,
       "denivelare_m": 940,
       "distanta_km": null,
@@ -1573,7 +1590,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2010/07/La-Cabana-Piatra-Mare-2.jpg",
       "lat": 45.5947332,
-      "lng": 25.6381083
+      "lng": 25.6381083,
+      "judet": "Brașov"
     },
     {
       "nume": "Ciucas: Circuit Cheile Vaii Stanii – Cheile Paraului Alb",
@@ -1608,7 +1626,7 @@
     {
       "nume": "Culmea Bratocea - Șaua Tigăilor",
       "localitate_start": "Pasul Bratocea",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": null,
       "denivelare_m": 570,
       "distanta_km": 12.5,
@@ -1617,12 +1635,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/03/DSC01258.jpg",
       "lat": 45.4804101,
-      "lng": 25.8966058
+      "lng": 25.8966058,
+      "judet": "Prahova"
     },
     {
       "nume": "Culmea Gropsoarele - Zaganu, Muntii Ciucas",
       "localitate_start": "Cheia",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": null,
       "denivelare_m": 650,
       "distanta_km": null,
@@ -1630,14 +1649,15 @@
       "sursa_url": "https://bloguldecalatorii.ro/2011/08/ciucas-gropsoarele-zaganu.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/08/DSC_0462.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.52,
+      "lng": 25.8,
+      "judet": "Prahova"
     },
     {
       "nume": "Culmea Bratocea - Vârful Ciucas",
       "localitate_start": "Cheia",
       "judet": "Prahova",
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": null,
       "denivelare_m": 1200,
       "distanta_km": null,
@@ -1651,7 +1671,7 @@
     {
       "nume": "Traseu de 1 zi in Muntii Ciucas: Muntele Rosu - La Rascruce",
       "localitate_start": "Cheia",
-      "durata_h": 7.0,
+      "durata_h": 7,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -1659,8 +1679,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2010/06/printre-branduse-in-ciucas.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2010/06/DSC_0010.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.498588,
+      "lng": 25.9613747,
+      "judet": "Prahova"
     },
     {
       "nume": "Cheile Cheitei",
@@ -1673,8 +1694,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2009/11/ciucas-cheile-cheitei-nov-2009.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2009/11/IMG_0518.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.454,
+      "lng": 25.934,
+      "judet": "Prahova"
     },
     {
       "nume": "Culmea Bratocea",
@@ -1687,13 +1709,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2009/11/ciucas-cheia-bratocea-nov-2009.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2009/11/IMG_0308-Copy.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.454,
+      "lng": 25.934,
+      "judet": "Prahova"
     },
     {
       "nume": "Cabana Vf. Ciucas - Vf. Ciucas si retur",
       "localitate_start": "Cheia",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": null,
       "denivelare_m": 350,
       "distanta_km": null,
@@ -1701,8 +1724,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2016/07/ciucas-la-vanatoare-de-lumini-si-branduse-15-17-aprilie-2016.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2016/07/DSC05210.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.454,
+      "lng": 25.934,
+      "judet": "Prahova"
     },
     {
       "nume": "Iarna pe Varful Ciucas pe la Cabana Ciucas",
@@ -1716,7 +1740,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2014/03/DSC015131.jpg",
       "lat": 45.498588,
-      "lng": 25.9613747
+      "lng": 25.9613747,
+      "judet": "Prahova"
     },
     {
       "nume": "Drumetii in Cheia: Pasul Bratocea si Cheile Cheitei",
@@ -1729,13 +1754,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2009/11/cheia-ciucas-2009.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2009/11/IMG_0308-Copy.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.454,
+      "lng": 25.934,
+      "judet": "Prahova"
     },
     {
       "nume": "Circuit Vârful lui Stan via Culmea Mazdronia",
       "localitate_start": "Godeanu",
-      "judet": "Mehedinti",
+      "judet": "Caraș-Severin",
       "durata_h": 5.33,
       "dificultate": "mediu",
       "denivelare_m": null,
@@ -1750,8 +1776,8 @@
     {
       "nume": "Circuit Isverna - Vf. Broscan - Poiana Beletina",
       "localitate_start": "Isverna",
-      "judet": "Mehedinti",
-      "durata_h": 10.0,
+      "judet": "Caraș-Severin",
+      "durata_h": 10,
       "dificultate": "greu",
       "denivelare_m": null,
       "distanta_km": null,
@@ -1765,7 +1791,7 @@
     {
       "nume": "Circuit pe Vf. Domogled",
       "localitate_start": "Baile Herculane",
-      "judet": "Caras-Severin",
+      "judet": "Caraș-Severin",
       "durata_h": 6.5,
       "dificultate": null,
       "denivelare_m": 1087,
@@ -1789,7 +1815,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/07/DSC_0807-Copy.jpg",
       "lat": 45.1285277,
-      "lng": 22.6857604
+      "lng": 22.6857604,
+      "judet": "Mehedinți"
     },
     {
       "nume": "Stânca lui Sisi – Grota cu Aburi – Foișorul Roșu – Băile Herculane",
@@ -1803,7 +1830,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/06/DSC08731.jpg",
       "lat": 44.8785058,
-      "lng": 22.4143883
+      "lng": 22.4143883,
+      "judet": "Caraș-Severin"
     },
     {
       "nume": "M. Mehedinți – Cheile Țăsnei & M. Cernei – satele Scărișoara și Ineleț",
@@ -1817,7 +1845,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/07/DSC_0319-Copy.jpg",
       "lat": 44.8785058,
-      "lng": 22.4143883
+      "lng": 22.4143883,
+      "judet": "Caraș-Severin"
     },
     {
       "nume": "Valea Gârda Seacă, Groapa Ruginoasă și Peștera Poarta lui Ionele",
@@ -1830,8 +1859,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2017/08/apuseni-valea-garda-seaca-groapa-rugionasa-pestera-ionele-nov-2016.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2017/08/DSC03389.jpg",
-      "lat": 44.9664175,
-      "lng": 25.1299693
+      "lat": 46.45,
+      "lng": 22.85,
+      "judet": "Alba"
     },
     {
       "nume": "Via ferrata Pietrele Negre",
@@ -1845,31 +1875,38 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2017/08/DSC02961-2.jpg",
       "lat": 46.56399,
-      "lng": 22.77474
+      "lng": 22.77474,
+      "judet": "Alba"
     },
     {
       "nume": "Cetățile Rădesei și Circuitul Someșului Cald",
       "localitate_start": null,
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": "greu",
       "denivelare_m": 300,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": 300,
       "sursa_url": "https://bloguldecalatorii.ro/2011/09/cetatile-radesei-cheile-somesului-cald-iulie-2011.html",
       "sursa_blog": "bloguldecalatorii",
-      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/09/DSC_0806.jpg"
+      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/09/DSC_0806.jpg",
+      "judet": "Cluj",
+      "lat": 46.5,
+      "lng": 23
     },
     {
       "nume": "Circuitul Galbenei",
       "localitate_start": null,
-      "durata_h": 7.0,
+      "durata_h": 7,
       "dificultate": "greu",
       "denivelare_m": 1000,
-      "distanta_km": 12.0,
+      "distanta_km": 12,
       "elevatie_pozitiva_m": 1000,
       "sursa_url": "https://bloguldecalatorii.ro/2011/09/turul-romaniei-11-ziua-4-circuitul.html",
       "sursa_blog": "bloguldecalatorii",
-      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/09/DSC_06091-e1417947283998.jpg"
+      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/09/DSC_06091-e1417947283998.jpg",
+      "judet": "Alba",
+      "lat": 46.4,
+      "lng": 22.8
     },
     {
       "nume": "Lumea Pierduta si Cetatile Ponorului",
@@ -1883,7 +1920,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/09/DSC_03881-scaled.jpg",
       "lat": 46.5966772,
-      "lng": 22.7331395
+      "lng": 22.7331395,
+      "judet": "Bihor"
     },
     {
       "nume": "Traseu spre Peștera Scărișoara",
@@ -1897,7 +1935,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2009/07/IMG_5615.jpg",
       "lat": 46.4554349,
-      "lng": 22.8285529
+      "lng": 22.8285529,
+      "judet": "Alba"
     },
     {
       "nume": "Circuit Vf. Ineu din Valea Vinului",
@@ -1905,13 +1944,14 @@
       "durata_h": 12.33,
       "dificultate": "greu",
       "denivelare_m": 1950,
-      "distanta_km": 25.0,
+      "distanta_km": 25,
       "elevatie_pozitiva_m": 1950,
       "sursa_url": "https://bloguldecalatorii.ro/2016/10/rodo-road-trip-2016-vf-ineu-rodnei-16-iunie.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2016/10/DSC06889.jpg",
       "lat": 47.4801985,
-      "lng": 24.8302966
+      "lng": 24.8302966,
+      "judet": "Maramureș"
     },
     {
       "nume": "Circuit Vf. Repede, Muntii Rodnei",
@@ -1919,13 +1959,14 @@
       "durata_h": 8.5,
       "dificultate": null,
       "denivelare_m": 1200,
-      "distanta_km": 16.0,
+      "distanta_km": 16,
       "elevatie_pozitiva_m": 1200,
       "sursa_url": "https://bloguldecalatorii.ro/2016/10/rodo-road-trip-2016-la-cartile-muntilor-rodnei-15-iunie-2016.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2016/10/DSC06678.jpg",
       "lat": 47.4134737,
-      "lng": 24.7685296
+      "lng": 24.7685296,
+      "judet": "Maramureș"
     },
     {
       "nume": "Drumetie pe dealuri in Valea Vinului",
@@ -1939,7 +1980,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2016/10/DSC06240.jpg",
       "lat": 47.4801985,
-      "lng": 24.8302966
+      "lng": 24.8302966,
+      "judet": "Maramureș"
     },
     {
       "nume": "Vf. Ineu prin Valea Lala",
@@ -1952,8 +1994,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2011/11/lacul-lala-mare-si-vf-ineu.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/11/1-lacul-lala-mare.jpg",
-      "lat": 46.0968066,
-      "lng": 22.9260579
+      "lat": 46.45,
+      "lng": 22.85,
+      "judet": "Alba"
     },
     {
       "nume": "Vf. Pietrosul Rodnei din Borșa",
@@ -1967,12 +2010,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/11/lacul-iezer-muntii-rodnei-romania.jpg",
       "lat": 47.6554079,
-      "lng": 24.6639308
+      "lng": 24.6639308,
+      "judet": "Maramureș"
     },
     {
       "nume": "Durau - Cascada Duruitoarea",
       "localitate_start": "Durau",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
@@ -1981,21 +2025,23 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/11/1.-lacul-bicaz.jpg",
       "lat": 46.9951336,
-      "lng": 25.9249892
+      "lng": 25.9249892,
+      "judet": "Neamț"
     },
     {
       "nume": "Circuit Ceahlău: Durău - Fântânele - Vf. Toaca - Dochia - Duruitoarea",
       "localitate_start": "Durau",
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": null,
       "denivelare_m": 1300,
-      "distanta_km": 17.0,
+      "distanta_km": 17,
       "elevatie_pozitiva_m": 1300,
       "sursa_url": "https://bloguldecalatorii.ro/2019/02/romania-masivul-ceahlau-durau-varful-toaca-cabana-dochia-cascada-duruitoarea-august-2018.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/02/DSC07941.jpg",
       "lat": 46.9951336,
-      "lng": 25.9249892
+      "lng": 25.9249892,
+      "judet": "Neamț"
     },
     {
       "nume": "Iarna in Ceahlau la Cabana Dochia",
@@ -2008,8 +2054,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2016/01/revelion-muntoman-in-ceahlau-30-decembrie-2015-2-ianuarie-2016.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2016/01/DSC02962.jpg",
-      "lat": 46.9408718,
-      "lng": 26.074601
+      "lat": 46.97,
+      "lng": 25.95,
+      "judet": "Neamț"
     },
     {
       "nume": "Circuit Ceahlau pe Varful Toaca",
@@ -2022,8 +2069,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2015/01/inca-un-vis-implinit-ceahlau-haine-de-toamna.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/01/Ceahlau.jpg",
-      "lat": 45.5186128,
-      "lng": 24.1761435
+      "lat": 46.97,
+      "lng": 25.95,
+      "judet": "Neamț"
     },
     {
       "nume": "Piatra Secuiului din Coltesti",
@@ -2037,7 +2085,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/08/DSC01345.jpg",
       "lat": 46.4214978,
-      "lng": 23.5597917
+      "lng": 23.5597917,
+      "judet": "Alba"
     },
     {
       "nume": "Piatra Secuiului din Rimetea",
@@ -2051,7 +2100,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/10/22-piatra-secuiului.jpg",
       "lat": 46.4531027,
-      "lng": 23.5676421
+      "lng": 23.5676421,
+      "judet": "Alba"
     },
     {
       "nume": "Cheile Rametului si Brana Caprelor - circuit",
@@ -2065,12 +2115,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/10/19-cheile-rametului.jpg",
       "lat": 46.3142155,
-      "lng": 23.5281887
+      "lng": 23.5281887,
+      "judet": "Alba"
     },
     {
       "nume": "Plimbare prin Cheile Turzii",
       "localitate_start": "Cheia",
-      "durata_h": 1.0,
+      "durata_h": 1,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -2079,7 +2130,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2009/08/IMG_65591-e1604735749745.jpg",
       "lat": 46.541535,
-      "lng": 23.7096356
+      "lng": 23.7096356,
+      "judet": "Cluj"
     },
     {
       "nume": "Vârful Leaota plin de rododendron",
@@ -2093,12 +2145,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/07/20_Leaota-rododendron-1356.jpg",
       "lat": 45.348165,
-      "lng": 25.169071
+      "lng": 25.169071,
+      "judet": "Argeș"
     },
     {
       "nume": "Circuit Piatra Dragoslavelor - Varful Vartoapele",
       "localitate_start": "Dragoslavele",
-      "durata_h": 7.0,
+      "durata_h": 7,
       "dificultate": "mediu",
       "denivelare_m": 800,
       "distanta_km": null,
@@ -2107,7 +2160,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2018/05/Cosmin-DSC08902.jpg",
       "lat": 45.348165,
-      "lng": 25.169071
+      "lng": 25.169071,
+      "judet": "Argeș"
     },
     {
       "nume": "Vf. Leaota de la Cabana Bratei",
@@ -2120,8 +2174,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2014/11/girl-power-pe-vf-leaota.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2014/11/0-25.jpg",
-      "lat": 45.2143769,
-      "lng": 25.4370789
+      "lat": 45.32,
+      "lng": 25.31,
+      "judet": "Argeș"
     },
     {
       "nume": "Turul Lacului Rosu",
@@ -2129,18 +2184,19 @@
       "durata_h": 1.25,
       "dificultate": "usor",
       "denivelare_m": null,
-      "distanta_km": 4.0,
+      "distanta_km": 4,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2021/09/turul-lacului-rosu.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/09/Turul-Lacului-Rosu-4361.jpg",
       "lat": 46.7930128,
-      "lng": 25.7953129
+      "lng": 25.7953129,
+      "judet": "Harghita"
     },
     {
       "nume": "Circuitul Ucigașul (Ghilcoș)",
       "localitate_start": "Lacu Rosu",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
@@ -2149,12 +2205,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/09/Circuitul-Ucigasul-4178.jpg",
       "lat": 46.7930128,
-      "lng": 25.7953129
+      "lng": 25.7953129,
+      "judet": "Harghita"
     },
     {
       "nume": "Circuitul Cheile Bicajelului - pod suspendat si cabina panoramica",
       "localitate_start": "Lacu Rosu",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
@@ -2163,7 +2220,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/09/Circuit-Cheile-Bicajelului-3960.jpg",
       "lat": 46.7930128,
-      "lng": 25.7953129
+      "lng": 25.7953129,
+      "judet": "Harghita"
     },
     {
       "nume": "Via ferrata Astragalus",
@@ -2177,12 +2235,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/02/DSC08084_Via-ferrata-Astragalus_2.jpg",
       "lat": 46.7930128,
-      "lng": 25.7953129
+      "lng": 25.7953129,
+      "judet": "Harghita"
     },
     {
       "nume": "Via ferrata Wild Ferenc",
       "localitate_start": "Lacu Rosu",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": null,
       "denivelare_m": 350,
       "distanta_km": null,
@@ -2191,7 +2250,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2017/08/DSC02173.jpg",
       "lat": 46.7930128,
-      "lng": 25.7953129
+      "lng": 25.7953129,
+      "judet": "Harghita"
     },
     {
       "nume": "Balan - Piatra Singuratica (Muntii Hasmas)",
@@ -2204,13 +2264,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2010/04/hasmas-piatra-singuratica-februarie-2010.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2010/04/DSC_0153_k.jpg",
-      "lat": 47.1543594,
-      "lng": 23.3076523
+      "lat": 46.78,
+      "lng": 25.85,
+      "judet": "Harghita"
     },
     {
       "nume": "Cabana Piatra Singuratică și Vf. Hășmașul Mare",
       "localitate_start": "Balan",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
@@ -2218,8 +2279,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2013/11/hasmas-cabana-piatra-singuratica-varful-hasmasul-mare.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2013/11/DSC07237.jpg",
-      "lat": 47.1543594,
-      "lng": 23.3076523
+      "lat": 46.78,
+      "lng": 25.85,
+      "judet": "Harghita"
     },
     {
       "nume": "Circuit Iarna in Cozia",
@@ -2227,13 +2289,14 @@
       "durata_h": 11.25,
       "dificultate": null,
       "denivelare_m": null,
-      "distanta_km": 17.0,
+      "distanta_km": 17,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2019/04/cozia-martie-2019.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/04/DSC1554.jpg",
       "lat": 45.2401542,
-      "lng": 24.3412638
+      "lng": 24.3412638,
+      "judet": "Vâlcea"
     },
     {
       "nume": "Circuitul Muntelui Cozia",
@@ -2245,7 +2308,10 @@
       "elevatie_pozitiva_m": 1400,
       "sursa_url": "https://bloguldecalatorii.ro/2013/04/tura-in-cozia-cea-mai-frumoasa-padure.html",
       "sursa_blog": "bloguldecalatorii",
-      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2013/04/DSC_0321-Copy-1.jpg"
+      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2013/04/DSC_0321-Copy-1.jpg",
+      "judet": "Vâlcea",
+      "lat": 45.22,
+      "lng": 24.05
     },
     {
       "nume": "Culmea Pricopanului",
@@ -2253,13 +2319,14 @@
       "durata_h": 3.5,
       "dificultate": null,
       "denivelare_m": 465,
-      "distanta_km": 9.0,
+      "distanta_km": 9,
       "elevatie_pozitiva_m": 465,
       "sursa_url": "https://bloguldecalatorii.ro/2019/05/muntii-macin-culmea-pricopanului-aprilie-2019.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/05/DSC2965-2.jpg",
       "lat": 45.247359,
-      "lng": 28.1341543
+      "lng": 28.1341543,
+      "judet": "Tulcea"
     },
     {
       "nume": "Traseul Cozluk, Muntii Macin",
@@ -2267,13 +2334,14 @@
       "durata_h": 3.67,
       "dificultate": null,
       "denivelare_m": 300,
-      "distanta_km": 13.0,
+      "distanta_km": 13,
       "elevatie_pozitiva_m": 300,
       "sursa_url": "https://bloguldecalatorii.ro/2019/05/muntii-macin-traseul-cozluk-aprilie-2019.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/05/DSC2723.jpg",
       "lat": 45.1901029,
-      "lng": 28.2329559
+      "lng": 28.2329559,
+      "judet": "Tulcea"
     },
     {
       "nume": "Culmea Pricopanului",
@@ -2287,7 +2355,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2014/07/DSC044461.jpg",
       "lat": 45.247359,
-      "lng": 28.1341543
+      "lng": 28.1341543,
+      "judet": "Tulcea"
     },
     {
       "nume": "Vf. Țuțuiatu din Valea Seacă",
@@ -2300,25 +2369,29 @@
       "sursa_url": "https://bloguldecalatorii.ro/2013/07/muntii-macin-vf-tutuiatu-467-m.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2013/07/DSC01375-Copy.jpg",
-      "lat": 45.0931277,
-      "lng": 22.2670334
+      "lat": 44.8,
+      "lng": 22.9,
+      "judet": "Mehedinți"
     },
     {
       "nume": "Lacul Sfânta Ana și circuit pe muchia craterului",
       "localitate_start": null,
-      "durata_h": 2.0,
+      "durata_h": 2,
       "dificultate": "usor",
       "denivelare_m": 100,
       "distanta_km": null,
       "elevatie_pozitiva_m": 100,
       "sursa_url": "https://bloguldecalatorii.ro/2017/08/lacul-sfanta-ana-muchia-craterului-tinovul-mohos.html",
       "sursa_blog": "bloguldecalatorii",
-      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2017/08/DSC02524.jpg"
+      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2017/08/DSC02524.jpg",
+      "judet": "Harghita",
+      "lat": 46.12,
+      "lng": 25.87
     },
     {
       "nume": "Circuitul Muntelui Puturosu",
       "localitate_start": "Bixad",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -2327,12 +2400,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2010/09/La-tinovul-Buffogo-1.jpg",
       "lat": 47.9197142,
-      "lng": 23.3905338
+      "lng": 23.3905338,
+      "judet": "Satu Mare"
     },
     {
       "nume": "Cheile Nerei: La Tunele, Lacul Ochiul Beiului si Cascada Beusnita",
       "localitate_start": "Sasca Montana",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -2341,7 +2415,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/03/LACUL-OCHIUL-BEIULUI.jpg",
       "lat": 44.8870081,
-      "lng": 21.7092861
+      "lng": 21.7092861,
+      "judet": "Caraș-Severin"
     },
     {
       "nume": "Pasul Gutai - Creasta Cocosului",
@@ -2355,26 +2430,28 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2011/10/19-creasta-cocosului_2.jpg",
       "lat": 47.7001495,
-      "lng": 23.7801215
+      "lng": 23.7801215,
+      "judet": "Maramureș"
     },
     {
       "nume": "Circuitul Gropilor - Avenul Groapa de Aur",
       "localitate_start": "Cheisoara",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": "mediu",
       "denivelare_m": 600,
-      "distanta_km": 9.0,
+      "distanta_km": 9,
       "elevatie_pozitiva_m": 600,
       "sursa_url": "https://bloguldecalatorii.ro/2022/01/traseu-avenul-groapa-de-aur.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2022/04/Iarna-Postavaru-traseu-Cheisoara-Avenul-Groapa-de-Aur-6620.jpg",
       "lat": 45.5611045,
-      "lng": 25.5164289
+      "lng": 25.5164289,
+      "judet": "Brașov"
     },
     {
       "nume": "Iarna pe Postavaru",
       "localitate_start": "Poiana Brasov",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": null,
       "denivelare_m": 784,
       "distanta_km": 10.6,
@@ -2383,7 +2460,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/03/DSC0271.jpg",
       "lat": 45.5967098,
-      "lng": 25.5561895
+      "lng": 25.5561895,
+      "judet": "Brașov"
     },
     {
       "nume": "Circuit Vf. Tâmpa din Brașov",
@@ -2397,7 +2475,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/02/DSC03988.jpg",
       "lat": 45.6525105,
-      "lng": 25.6105654
+      "lng": 25.6105654,
+      "judet": "Brașov"
     },
     {
       "nume": "Predeal – Trei Brazi – Cabana Poiana Secuilor",
@@ -2405,32 +2484,34 @@
       "durata_h": 2.25,
       "dificultate": "usor",
       "denivelare_m": null,
-      "distanta_km": 5.0,
+      "distanta_km": 5,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2012/04/romania-m-postavaru-trei-brazi-cabana-poiana-secuilor-feb-2012-2-2.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2012/04/DSC_0289.jpg",
       "lat": 45.5026879,
-      "lng": 25.5761577
+      "lng": 25.5761577,
+      "judet": "Prahova"
     },
     {
       "nume": "Ciucarul Mic - Cazanele Dunarii",
       "localitate_start": "Dubova",
-      "durata_h": 2.0,
+      "durata_h": 2,
       "dificultate": "usor",
       "denivelare_m": 256,
-      "distanta_km": 4.0,
+      "distanta_km": 4,
       "elevatie_pozitiva_m": 256,
       "sursa_url": "https://bloguldecalatorii.ro/2018/12/romania-muntii-almajului-ciucarul-mic-iulie-2018.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2018/12/DSC06186-2.jpg",
       "lat": 44.6200244,
-      "lng": 22.25578
+      "lng": 22.25578,
+      "judet": "Mehedinți"
     },
     {
       "nume": "Circuit Vf. Ciucarul Mare",
       "localitate_start": "Dubova",
-      "durata_h": 2.0,
+      "durata_h": 2,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -2439,12 +2520,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/06/DSC08112.jpg",
       "lat": 44.6200244,
-      "lng": 22.25578
+      "lng": 22.25578,
+      "judet": "Mehedinți"
     },
     {
       "nume": "Cheile Tisitei",
       "localitate_start": "Lepsa",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -2453,12 +2535,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/12/DSC09998.jpg",
       "lat": 45.9506168,
-      "lng": 26.5752205
+      "lng": 26.5752205,
+      "judet": "Vrancea"
     },
     {
       "nume": "Circuit 12 Apostoli, Muntii Calimani",
       "localitate_start": "Gura Haitii",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": null,
       "denivelare_m": 730,
       "distanta_km": 13.6,
@@ -2467,7 +2550,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/02/DSC07581.jpg",
       "lat": 47.1972575,
-      "lng": 25.2637591
+      "lng": 25.2637591,
+      "judet": "Mureș"
     },
     {
       "nume": "Traseu Vf. Bistriciorul si Vf. Zurzugau (Muntii Calimani)",
@@ -2481,7 +2565,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2018/03/DSC01598.jpg",
       "lat": 47.1709215,
-      "lng": 24.8876359
+      "lng": 24.8876359,
+      "judet": "Mureș"
     },
     {
       "nume": "Schitul Pahomie - Vf. Vânturarița",
@@ -2493,19 +2578,25 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2021/06/pahomie-vanturarita.html",
       "sursa_blog": "bloguldecalatorii",
-      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/06/8_Buila-Vanturarita-0231.jpg"
+      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/06/8_Buila-Vanturarita-0231.jpg",
+      "judet": "Vâlcea",
+      "lat": 45.22,
+      "lng": 24.05
     },
     {
       "nume": "Circuit creasta nordica Buila-Vanturarita de la Schitul Pahomie",
       "localitate_start": null,
-      "durata_h": 10.0,
+      "durata_h": 10,
       "dificultate": "greu",
       "denivelare_m": null,
       "distanta_km": null,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2021/06/circuit-pahomie-vanturarita.html",
       "sursa_blog": "bloguldecalatorii",
-      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/06/14_Buila-Vanturarita-9016.jpg"
+      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/06/14_Buila-Vanturarita-9016.jpg",
+      "judet": "Vâlcea",
+      "lat": 45.22,
+      "lng": 24.05
     },
     {
       "nume": "Traseu Cascada Scorus",
@@ -2519,7 +2610,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2020/06/DSC9502.jpg",
       "lat": 45.3432742,
-      "lng": 24.2442404
+      "lng": 24.2442404,
+      "judet": "Vâlcea"
     },
     {
       "nume": "Traversare Munții Căpățânii: Vârful lui Roman - Mălaia",
@@ -2533,7 +2625,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2020/06/DSC8884.jpg",
       "lat": 45.1879569,
-      "lng": 24.0006891
+      "lng": 24.0006891,
+      "judet": "Vâlcea"
     },
     {
       "nume": "Circuit Brâna Caprelor din Buila-Vânturărița",
@@ -2541,13 +2634,14 @@
       "durata_h": 6.5,
       "dificultate": "mediu",
       "denivelare_m": 948,
-      "distanta_km": 14.0,
+      "distanta_km": 14,
       "elevatie_pozitiva_m": 948,
       "sursa_url": "https://bloguldecalatorii.ro/2019/01/buila-vanturarita-brana-caprelor-cheile-cheii-cabana-cheia-iulie-2018.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/01/DSC06249-2.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.22,
+      "lng": 24.05,
+      "judet": "Vâlcea"
     },
     {
       "nume": "Circuit Vf. Buila de la Schitul Pahomie",
@@ -2560,13 +2654,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2018/01/buila-vanturarita-schitul-pahomie-curmatura-builei-vf-buila-mai-2017.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2018/01/DSC07904-Copy.jpg",
-      "lat": 44.8692799,
-      "lng": 23.5082167
+      "lat": 45.22,
+      "lng": 24.05,
+      "judet": "Vâlcea"
     },
     {
       "nume": "Vf. Zanoagei (Muntii Grohotis)",
       "localitate_start": "Valea Doftanei",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
@@ -2574,22 +2669,24 @@
       "sursa_url": "https://bloguldecalatorii.ro/2021/03/vf-zanoagei-muntii-grohotis.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2021/03/Traseu-1-zi-Muntii-Grohotis-Vf-Zanoagei_9__DSC5792.jpg",
-      "lat": 45.3638476,
-      "lng": 25.7449103
+      "lat": 45.52,
+      "lng": 25.8,
+      "judet": "Prahova"
     },
     {
       "nume": "Circuit Munții Grohotiș: Vf. Babeș - Vf. lui Gherghel",
       "localitate_start": "Cheia",
-      "durata_h": 8.0,
+      "durata_h": 8,
       "dificultate": null,
       "denivelare_m": 950,
-      "distanta_km": 14.0,
+      "distanta_km": 14,
       "elevatie_pozitiva_m": 950,
       "sursa_url": "https://bloguldecalatorii.ro/2020/02/grohotis-babes-feb-2020.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2020/01/DSC6951.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.52,
+      "lng": 25.8,
+      "judet": "Prahova"
     },
     {
       "nume": "Pasul Bratocea - Vârful lui Gherghel",
@@ -2601,7 +2698,10 @@
       "elevatie_pozitiva_m": 500,
       "sursa_url": "https://bloguldecalatorii.ro/2018/05/muntii-grohotis-la-plimbare-pe-urmele-lui-mos-martin-12-nov-2017.html",
       "sursa_blog": "bloguldecalatorii",
-      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2018/05/DSC06657.jpg"
+      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2018/05/DSC06657.jpg",
+      "judet": "Prahova",
+      "lat": 45.52,
+      "lng": 25.8
     },
     {
       "nume": "Circuit in Rezervatia Iezerul Latoritei",
@@ -2613,7 +2713,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2019/12/iezerul-latoritei-oct-2019.html",
       "sursa_blog": "bloguldecalatorii",
-      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/12/Latoritei-4286.jpg"
+      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/12/Latoritei-4286.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.3,
+      "lng": 22.9
     },
     {
       "nume": "Traseu de iarnă din Curmătura Vidruței",
@@ -2626,8 +2729,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2016/01/prima-data-in-latoritei-fratosteanu-mare.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2016/01/DSC026872.jpg",
-      "lat": 45.3432742,
-      "lng": 24.2442404
+      "lat": 45.22,
+      "lng": 24.05,
+      "judet": "Vâlcea"
     },
     {
       "nume": "Tura de 2 zile in Muntii Cindrel la Refugiul Canaia",
@@ -2640,13 +2744,14 @@
       "sursa_url": "https://bloguldecalatorii.ro/2017/11/cindrel-paltinis-vf-cindrel-ref-canaia-feb-2017.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2017/11/DSC05015.jpg",
-      "lat": 48.2157597,
-      "lng": 26.6507088
+      "lat": 45.6,
+      "lng": 24,
+      "judet": "Sibiu"
     },
     {
       "nume": "Pietrele Doamnei, Muntii Rarau",
       "localitate_start": "Campulung Moldovenesc",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": 287,
       "distanta_km": 6.3,
@@ -2654,8 +2759,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2019/02/romania-muntii-rarau-pietrele-doamnei-august-2018.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/02/DSC07313_2.jpg",
-      "lat": 47.5297764,
-      "lng": 25.5597482
+      "lat": 47.45,
+      "lng": 25.57,
+      "judet": "Suceava"
     },
     {
       "nume": "Traseele eco-didactice din Sovata",
@@ -2669,7 +2775,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2020/08/DSC1772.jpg",
       "lat": 46.5971683,
-      "lng": 25.07328
+      "lng": 25.07328,
+      "judet": "Mureș"
     },
     {
       "nume": "Traseu de 1 zi pe Vârful Saca Mare (Munții Gurghiului)",
@@ -2682,8 +2789,9 @@
       "sursa_url": "https://bloguldecalatorii.ro/2020/08/drumetie-varful-saca-mare-sovata-muntii-gurghiului.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2020/08/10__DSC1297_Vf.-Saca-Mare-Muntii-Gurghiului.jpg",
-      "lat": 46.5971683,
-      "lng": 25.07328
+      "lat": 46.58,
+      "lng": 25.1,
+      "judet": "Mureș"
     },
     {
       "nume": "Circuit pe Varful Toroiaga",
@@ -2691,13 +2799,14 @@
       "durata_h": 8.5,
       "dificultate": "greu",
       "denivelare_m": 1350,
-      "distanta_km": 15.0,
+      "distanta_km": 15,
       "elevatie_pozitiva_m": 1350,
       "sursa_url": "https://bloguldecalatorii.ro/2016/11/rodo-road-trip-2016-toroiaga-muntii-maramuresului-cea-mai-ghinionista-zi-17-iunie-2016.html",
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2016/10/DSC07127.jpg",
       "lat": 47.6841578,
-      "lng": 24.7139118
+      "lng": 24.7139118,
+      "judet": "Maramureș"
     },
     {
       "nume": "Voluntariat la Maraton Apuseni",
@@ -2705,11 +2814,14 @@
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
-      "distanta_km": 42.0,
+      "distanta_km": 42,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2014/11/romania-voluntariat-maraton-apuseni-mai-2014-2-3.html",
       "sursa_blog": "bloguldecalatorii",
-      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2014/11/DSC09367.jpg"
+      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2014/11/DSC09367.jpg",
+      "judet": "Cluj",
+      "lat": 46.5,
+      "lng": 22.8
     },
     {
       "nume": "Rimetea & Dealul Bradatel",
@@ -2723,7 +2835,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2014/11/05.jpg",
       "lat": 46.4531027,
-      "lng": 23.5676421
+      "lng": 23.5676421,
+      "judet": "Alba"
     },
     {
       "nume": "Via ferrata Casa Zmeului si Defileul Crisului Repede",
@@ -2737,7 +2850,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2018/03/DSC02034.jpg",
       "lat": 46.9860493,
-      "lng": 22.5169342
+      "lng": 22.5169342,
+      "judet": "Bihor"
     },
     {
       "nume": "Peștera și Cascada Vadu Crișului",
@@ -2751,7 +2865,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2009/07/IMG_6132.jpg",
       "lat": 46.9860493,
-      "lng": 22.5169342
+      "lng": 22.5169342,
+      "judet": "Bihor"
     },
     {
       "nume": "Cheile Varghisului (circuit)",
@@ -2765,7 +2880,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/03/DSC00831.jpg",
       "lat": 46.1277766,
-      "lng": 25.5567391
+      "lng": 25.5567391,
+      "judet": "Covasna"
     },
     {
       "nume": "Drumetie pe dealurile din Poiana Marului",
@@ -2779,12 +2895,13 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2017/03/DSC08313.jpg",
       "lat": 45.6061251,
-      "lng": 25.3067715
+      "lng": 25.3067715,
+      "judet": "Brașov"
     },
     {
       "nume": "Drumetie in Zarnesti - Poiana Marului",
       "localitate_start": "Poiana Marului",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": 330,
       "distanta_km": 8.5,
@@ -2793,7 +2910,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2015/01/DSC02834.jpg",
       "lat": 45.6061251,
-      "lng": 25.3067715
+      "lng": 25.3067715,
+      "judet": "Brașov"
     },
     {
       "nume": "Vf. si Iezerul Sureanu & Vf. lui Patru",
@@ -2807,7 +2925,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2020/11/25_23_Sureanu__DSC3540.jpg",
       "lat": 45.5838191,
-      "lng": 23.5265511
+      "lng": 23.5265511,
+      "judet": "Hunedoara"
     },
     {
       "nume": "Muntele Fetita din Luncile Prigoanei",
@@ -2821,7 +2940,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2020/11/12_10_Sureanu__DSC3065.jpg",
       "lat": 45.5827416,
-      "lng": 23.5694611
+      "lng": 23.5694611,
+      "judet": "Hunedoara"
     },
     {
       "nume": "Circuit Iezerul Sureanu, Vf. Sureanu si Vf. lui Patru",
@@ -2835,7 +2955,8 @@
       "sursa_blog": "bloguldecalatorii",
       "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2020/11/30_26_Sureanu__DSC3683.jpg",
       "lat": 45.5827416,
-      "lng": 23.5694611
+      "lng": 23.5694611,
+      "judet": "Hunedoara"
     },
     {
       "nume": "Creasta Oslea - Oslița",
@@ -2847,7 +2968,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://bloguldecalatorii.ro/2019/12/romania-creasta-oslea-oslita-sept-2019.html",
       "sursa_blog": "bloguldecalatorii",
-      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/12/DSC3560.jpg"
+      "poza_url": "https://bloguldecalatorii.ro/wp-content/uploads/2019/12/DSC3560.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "Traseu ecoturistic T7 Fundata",
@@ -2861,12 +2985,13 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2026/02/20260125_162219-2.jpg",
       "lat": 45.43662,
-      "lng": 25.2749067
+      "lng": 25.2749067,
+      "judet": "Brașov"
     },
     {
       "nume": "Traseul ecoturistic T1, Fundata",
       "localitate_start": "Fundata",
-      "durata_h": 2.0,
+      "durata_h": 2,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": 7.7,
@@ -2875,12 +3000,13 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2026/02/20260125_130824-2.jpg",
       "lat": 45.43662,
-      "lng": 25.2749067
+      "lng": 25.2749067,
+      "judet": "Brașov"
     },
     {
       "nume": "Traseul ecoturistic T6 – Prin hotar la Șleaul Mândrului",
       "localitate_start": "Moeciu de Sus",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": 10.5,
@@ -2889,7 +3015,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2026/02/20260124_132911-2.jpg",
       "lat": 45.4433462,
-      "lng": 25.3303975
+      "lng": 25.3303975,
+      "judet": "Brașov"
     },
     {
       "nume": "Circuit Vf. Pleșa - Vf. Piule",
@@ -2898,7 +3025,7 @@
       "durata_h": 9.58,
       "dificultate": null,
       "denivelare_m": 1400,
-      "distanta_km": 25.0,
+      "distanta_km": 25,
       "elevatie_pozitiva_m": 1400,
       "sursa_url": "https://chitaracalatoare.ro/2025/12/circuit-vf-plesa-vf-piule-o-zi-de-exceptie-in-retezatul-mic.html",
       "sursa_blog": "chitaracalatoare",
@@ -2909,7 +3036,7 @@
     {
       "nume": "Circuit Muntii Bodoc",
       "localitate_start": "Malnasi",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": "usor",
       "denivelare_m": 837,
       "distanta_km": 16.2,
@@ -2917,22 +3044,24 @@
       "sursa_url": "https://chitaracalatoare.ro/2025/12/circuit-usor-de-o-zi-in-muntii-bodoc.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-27-at-11.54.54.jpeg",
-      "lat": null,
-      "lng": null
+      "lat": 45.87,
+      "lng": 26.1,
+      "judet": "Covasna"
     },
     {
       "nume": "Circuit Clabucetul Taurului din Azuga",
       "localitate_start": "Azuga",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": null,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2025/12/tura-usoara-circuit-clabucetul-taurului-din-azuga.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-14-at-12.03.16-5.jpeg",
       "lat": 45.4444432,
-      "lng": 25.5693383
+      "lng": 25.5693383,
+      "judet": "Prahova"
     },
     {
       "nume": "Coborare Cabana Suru - Sebesu de Sus",
@@ -2940,25 +3069,29 @@
       "durata_h": 2.5,
       "dificultate": "usor",
       "denivelare_m": 1094,
-      "distanta_km": 9.0,
+      "distanta_km": 9,
       "elevatie_pozitiva_m": 67,
       "sursa_url": "https://chitaracalatoare.ro/2025/07/fagaras-la-revedere-suru.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/07/IMG-20250609-WA0050.jpg",
       "lat": 45.6532431,
-      "lng": 24.3539632
+      "lng": 24.3539632,
+      "judet": "Sibiu"
     },
     {
       "nume": "Circuit Vf. Suru si Vf. Budislavu",
       "localitate_start": null,
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": 13.1,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2025/07/fagaras-tura-de-cod-roz-spre-vf-suru-si-vf-budislavu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/07/DSC_1240.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/07/DSC_1240.jpg",
+      "judet": "Sibiu",
+      "lat": 45.65,
+      "lng": 24.35
     },
     {
       "nume": "Traseu Sebesu de Sus - Cabana Suru",
@@ -2966,18 +3099,19 @@
       "durata_h": 3.5,
       "dificultate": null,
       "denivelare_m": 1027,
-      "distanta_km": 9.0,
+      "distanta_km": 9,
       "elevatie_pozitiva_m": 1027,
       "sursa_url": "https://chitaracalatoare.ro/2025/07/fagaras-prima-intalnire-cu-cabana-suru.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/07/IMG_20250608_210138.jpg",
       "lat": 45.6532431,
-      "lng": 24.3539632
+      "lng": 24.3539632,
+      "judet": "Sibiu"
     },
     {
       "nume": "Circuit Predeal - Vf. Fetifoiu - Vf. Forbanul",
       "localitate_start": "Predeal",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": 629,
       "distanta_km": 13.6,
@@ -2986,7 +3120,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/12/DSC_0446.jpg",
       "lat": 45.5026879,
-      "lng": 25.5761577
+      "lng": 25.5761577,
+      "judet": "Prahova"
     },
     {
       "nume": "Jepii Mici - Varful Caraiman - Valea Cerbului",
@@ -3000,7 +3135,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/09/tk8TmHu8ZVAuneGNRGQmPfTmweQpORQq7bO66aep97A-2048x1536-1.jpg",
       "lat": 45.4147706,
-      "lng": 25.5354853
+      "lng": 25.5354853,
+      "judet": "Prahova"
     },
     {
       "nume": "Vf. Postăvaru cu plecare din Brașov",
@@ -3008,13 +3144,14 @@
       "durata_h": 6.25,
       "dificultate": null,
       "denivelare_m": null,
-      "distanta_km": 18.0,
+      "distanta_km": 18,
       "elevatie_pozitiva_m": 1400,
       "sursa_url": "https://chitaracalatoare.ro/2024/09/vf-postavaru-cu-plecare-din-brasov-tura-de-o-zi.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/09/DJI_0676.jpg",
       "lat": 45.6525105,
-      "lng": 25.6105654
+      "lng": 25.6105654,
+      "judet": "Brașov"
     },
     {
       "nume": "Circuit Piatra Secuiului",
@@ -3028,7 +3165,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/09/WhatsApp-Image-2024-08-17-at-14.20.39-scaled.jpeg",
       "lat": 46.4531027,
-      "lng": 23.5676421
+      "lng": 23.5676421,
+      "judet": "Alba"
     },
     {
       "nume": "Insulele Feroe: Capitala Torshavn, Muzeul de arta, Kikjubour",
@@ -3065,8 +3203,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2024/09/mini-vacanta-in-ardeal-ziua-2-vf-rozdesti-muntii-cindrel-cu-grindina-si-ploaie.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/09/DSC_0588.jpg",
-      "lat": 48.2157597,
-      "lng": 26.6507088
+      "lat": 45.64,
+      "lng": 24,
+      "judet": "Sibiu"
     },
     {
       "nume": "Perseide si rasarit de soare de la Cabana Omu",
@@ -3078,21 +3217,25 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2024/08/perseide-si-rasarit-de-soare-de-la-cabana-omu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/08/DSC00525.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/08/DSC00525.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Brezoi - firul apei Doabrele",
       "localitate_start": "Brezoi",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": "usor",
       "denivelare_m": 180,
-      "distanta_km": 7.0,
+      "distanta_km": 7,
       "elevatie_pozitiva_m": 180,
       "sursa_url": "https://chitaracalatoare.ro/2024/08/plimbare-lejera-in-zona-brezoi-muntii-lotrului.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/08/IMG_20240803_150715-1024x577.jpg",
       "lat": 45.3432742,
-      "lng": 24.2442404
+      "lng": 24.2442404,
+      "judet": "Vâlcea"
     },
     {
       "nume": "Vf. Postavaru cu plecare din Predeal",
@@ -3106,7 +3249,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/07/DSC_0101.jpg",
       "lat": 45.5026879,
-      "lng": 25.5761577
+      "lng": 25.5761577,
+      "judet": "Brașov"
     },
     {
       "nume": "Circuit Fântâna lui Botorog - Cabana Curmătura",
@@ -3120,7 +3264,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/07/IMG_20240601_145606.jpg",
       "lat": 45.5607354,
-      "lng": 25.3161793
+      "lng": 25.3161793,
+      "judet": "Brașov"
     },
     {
       "nume": "Creasta Baiului, de la Azuga la Comarnic",
@@ -3134,7 +3279,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/06/DSC_0870.jpg",
       "lat": 45.4444432,
-      "lng": 25.5693383
+      "lng": 25.5693383,
+      "judet": "Prahova"
     },
     {
       "nume": "Circuit Vârful Sântilia Mare (Munții Leaota)",
@@ -3147,8 +3293,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2024/06/muntii-leaota-tura-de-o-zi-pe-varful-santilia-mare.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/06/DSC8472.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 45.32,
+      "lng": 25.31,
+      "judet": "Dâmbovița"
     },
     {
       "nume": "Circuit Cabana Diham din Busteni",
@@ -3162,7 +3309,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/04/IMG_20240406_181042.jpg",
       "lat": 45.4147706,
-      "lng": 25.5354853
+      "lng": 25.5354853,
+      "judet": "Prahova"
     },
     {
       "nume": "Vârful Ursu, Munții Căpățânii",
@@ -3174,7 +3322,10 @@
       "elevatie_pozitiva_m": 508,
       "sursa_url": "https://chitaracalatoare.ro/2024/04/muntii-capatanii-tura-de-1-zi-pana-pe-varful-ursu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/04/IMG_20240323_125633.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/04/IMG_20240323_125633.jpg",
+      "judet": "Mehedinți",
+      "lat": 44.8,
+      "lng": 22.9
     },
     {
       "nume": "Vf. Gropșoarele cu plecare din Cheia",
@@ -3187,8 +3338,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2024/04/tura-1-zi-in-ciucas-vf-gropsoarele-cu-plecare-din-cheia.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/04/DSC5075.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.454,
+      "lng": 25.934,
+      "judet": "Prahova"
     },
     {
       "nume": "Muntii Baiului: de la Azuga pana pe creasta",
@@ -3202,7 +3354,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/03/DSC7191.jpg",
       "lat": 45.4444432,
-      "lng": 25.5693383
+      "lng": 25.5693383,
+      "judet": "Prahova"
     },
     {
       "nume": "Piatra Arsă - Vârfurile Omu și Bucura Dumbravă",
@@ -3216,12 +3369,13 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/03/IMG_20231014_131625.jpg",
       "lat": 45.3455492,
-      "lng": 25.5481496
+      "lng": 25.5481496,
+      "judet": "Prahova"
     },
     {
       "nume": "Circuit Cascada Moara Dracului din Simon",
       "localitate_start": "Simon",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": 15.4,
@@ -3230,12 +3384,13 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/03/DSC_1910.jpg",
       "lat": 45.4945781,
-      "lng": 25.3551349
+      "lng": 25.3551349,
+      "judet": "Dâmbovița"
     },
     {
       "nume": "Fereastra Zmeilor prin Vânătarea lui Buteanu și Capra",
       "localitate_start": "Balea Lac",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "mediu",
       "denivelare_m": null,
       "distanta_km": 10.2,
@@ -3244,12 +3399,13 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/03/1696093538516-01-scaled.jpeg",
       "lat": 45.6033145,
-      "lng": 24.6170492
+      "lng": 24.6170492,
+      "judet": "Sibiu"
     },
     {
       "nume": "Tura de o zi pe Vârful Postăvaru",
       "localitate_start": "Poiana Brasov",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": "usor",
       "denivelare_m": 814,
       "distanta_km": 8.3,
@@ -3258,7 +3414,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/02/DSC_0445.jpg",
       "lat": 45.5967098,
-      "lng": 25.5561895
+      "lng": 25.5561895,
+      "judet": "Brașov"
     },
     {
       "nume": "Circuit Varful lui Andrei",
@@ -3272,7 +3429,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/02/FB_IMG_1706117306566_22222.jpg",
       "lat": 45.5026879,
-      "lng": 25.5761577
+      "lng": 25.5761577,
+      "judet": "Brașov"
     },
     {
       "nume": "Tura de o zi pe Vârful Grecului, Munții Bucegi",
@@ -3286,7 +3444,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2024/01/DSC_0364.jpg",
       "lat": 45.4444432,
-      "lng": 25.5693383
+      "lng": 25.5693383,
+      "judet": "Prahova"
     },
     {
       "nume": "Circuit Vf. Furnica si Vf. cu Dor",
@@ -3300,7 +3459,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/08/IMG_20230610_131141.jpg",
       "lat": 45.3455492,
-      "lng": 25.5481496
+      "lng": 25.5481496,
+      "judet": "Prahova"
     },
     {
       "nume": "Vârfurile Arjana şi Zascol, Munții Cernei",
@@ -3314,12 +3474,13 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/07/DSC_0666.jpg",
       "lat": 45.015875,
-      "lng": 22.4850334
+      "lng": 22.4850334,
+      "judet": "Caraș-Severin"
     },
     {
       "nume": "Circuit Ciucarul Mare",
       "localitate_start": "Dubova",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": 5.3,
@@ -3328,7 +3489,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/07/DSC_0566.jpg",
       "lat": 44.6200244,
-      "lng": 22.25578
+      "lng": 22.25578,
+      "judet": "Mehedinți"
     },
     {
       "nume": "Întoarcerea acasă din Cernei-Mehedinți",
@@ -3340,12 +3502,15 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2023/07/tura-aniversara-in-cernei-mehedinti-ziua-5-intoarcerea-acasa.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/07/IMG_20230605_083001-scaled.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/07/IMG_20230605_083001-scaled.jpg",
+      "judet": "Mehedinți",
+      "lat": 44.8,
+      "lng": 22.9
     },
     {
       "nume": "Circuitul Foişoarelor şi Grota cu Aburi",
       "localitate_start": "Baile Herculane",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
@@ -3354,7 +3519,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/07/IMG_20230604_140709.jpg",
       "lat": 44.8785058,
-      "lng": 22.4143883
+      "lng": 22.4143883,
+      "judet": "Caraș-Severin"
     },
     {
       "nume": "Foişorul Galben şi Grota Haiducilor",
@@ -3368,7 +3534,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/07/DSC_0065.jpg",
       "lat": 44.8785058,
-      "lng": 22.4143883
+      "lng": 22.4143883,
+      "judet": "Caraș-Severin"
     },
     {
       "nume": "Circuit Domogledul Mic si Domogledul Mare",
@@ -3380,12 +3547,15 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2023/07/tura-aniversara-in-cernei-mehedinti-ziua-2-domogledul-mic-si-domogledul-mare.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/07/DSC_0027.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/07/DSC_0027.jpg",
+      "judet": "Mehedinți",
+      "lat": 44.8,
+      "lng": 22.9
     },
     {
       "nume": "Tura pe Vârful Baiul Mare, Munții Baiului",
       "localitate_start": "Busteni",
-      "durata_h": 7.0,
+      "durata_h": 7,
       "dificultate": null,
       "denivelare_m": 1130,
       "distanta_km": 25.4,
@@ -3393,8 +3563,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2023/05/bucegi-baiului-baiul-mare.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/05/DSC_1495.jpg",
-      "lat": 45.4147706,
-      "lng": 25.5354853
+      "lat": 45.48,
+      "lng": 25.72,
+      "judet": "Prahova"
     },
     {
       "nume": "Circuit Diham si Poiana Izvoarelor din Busteni",
@@ -3408,21 +3579,23 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/05/IMG_20230514_150722.jpg",
       "lat": 45.4147706,
-      "lng": 25.5354853
+      "lng": 25.5354853,
+      "judet": "Prahova"
     },
     {
       "nume": "Cabana Valea Sambetei",
       "localitate_start": "Sambata de Sus",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": 631,
-      "distanta_km": 15.0,
+      "distanta_km": 15,
       "elevatie_pozitiva_m": 617,
       "sursa_url": "https://chitaracalatoare.ro/2023/05/raiul-branduselor-valea-sambetei.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/05/IMG_20230429_140420.jpg",
       "lat": 45.760533,
-      "lng": 24.8275382
+      "lng": 24.8275382,
+      "judet": "Brașov"
     },
     {
       "nume": "Piatra Craiului: Circuit Cerdacul Stanciului",
@@ -3435,8 +3608,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2023/04/piatra-craiului-tura-1-zi-cerdacul-stanciului.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/04/IMG_20220515_144913.jpg",
-      "lat": 45.3885387,
-      "lng": 25.1740729
+      "lat": 45.52,
+      "lng": 25.22,
+      "judet": "Argeș"
     },
     {
       "nume": "Ciucas: Circuit Babarunca - Saua Teslei",
@@ -3449,8 +3623,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2023/03/ciucas-babarunca-poiana-teslei.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/03/DSC_0629.jpg",
-      "lat": 45.5150153,
-      "lng": 25.8446746
+      "lat": 45.45,
+      "lng": 25.93,
+      "judet": "Prahova"
     },
     {
       "nume": "Clabucetul Azugii: de la Azuga la Predeal",
@@ -3464,7 +3639,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/03/IMG_20230211_124903.jpg",
       "lat": 45.4444432,
-      "lng": 25.5693383
+      "lng": 25.5693383,
+      "judet": "Prahova"
     },
     {
       "nume": "Traseu Azuga - Cabana Diham - Busteni",
@@ -3478,7 +3654,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/03/IMG_20221127_090253.jpg",
       "lat": 45.4444432,
-      "lng": 25.5693383
+      "lng": 25.5693383,
+      "judet": "Prahova"
     },
     {
       "nume": "Vârful Ciucaş din Muntele Roşu",
@@ -3491,8 +3668,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2023/03/tura-1-zi-varful-ciucas-muntele-rosu.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/03/IMG_20220219_144211.jpg",
-      "lat": 45.498588,
-      "lng": 25.9613747
+      "lat": 45.45,
+      "lng": 25.93,
+      "judet": "Prahova"
     },
     {
       "nume": "Cheile Zanoagei, Lacul Scropoasa, Cascada 7 Izvoare",
@@ -3504,7 +3682,10 @@
       "elevatie_pozitiva_m": 304,
       "sursa_url": "https://chitaracalatoare.ro/2023/03/tura-usoara-o-zi-in-bucegi-cheile-zanoagei-lacul-scropoasa-cascada-7-izvoare.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/03/IMG_20230115_112727.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/03/IMG_20230115_112727.jpg",
+      "judet": "Argeș",
+      "lat": 45.43,
+      "lng": 24.93
     },
     {
       "nume": "Vf. Omu de la Salvamont Pestera",
@@ -3516,12 +3697,15 @@
       "elevatie_pozitiva_m": 1013,
       "sursa_url": "https://chitaracalatoare.ro/2023/02/bucegi-omu-tura-1-zi-valea-ialomitei.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/02/IMG_20221119_130600-1024x577.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2023/02/IMG_20221119_130600-1024x577.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Cabana Mălăiești pe Valea Glăjăriei",
       "localitate_start": "Rasnov",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": 7.8,
@@ -3530,7 +3714,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2022/11/IMG_20221105_134113-01-1-1024x577.jpeg",
       "lat": 45.5910307,
-      "lng": 25.4656159
+      "lng": 25.4656159,
+      "judet": "Brașov"
     },
     {
       "nume": "Piatra Arsa - Varful Omu",
@@ -3538,11 +3723,14 @@
       "durata_h": 6.5,
       "dificultate": "usor",
       "denivelare_m": null,
-      "distanta_km": 19.0,
+      "distanta_km": 19,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2022/09/traseu-usor-1-zi-bucegi-piatra-arsa-omu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2022/09/IMG_20220912_092223.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2022/09/IMG_20220912_092223.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Circuit Vf. Vârtoapele din Munții Leaota",
@@ -3555,8 +3743,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2022/03/leaota-piatra-dragoslavelor-vartoapele.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2022/03/DSC_0820.jpg",
-      "lat": 45.348165,
-      "lng": 25.169071
+      "lat": 45.32,
+      "lng": 25.31,
+      "judet": "Dâmbovița"
     },
     {
       "nume": "Piatra Craiului: vf Măgura Mare și vf Gălbinarea",
@@ -3569,8 +3758,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2022/03/piatra-craiului-magura-mare-galbinarea.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2022/03/DSC_1020-1.jpg",
-      "lat": 45.5163293,
-      "lng": 25.3715671
+      "lat": 45.52,
+      "lng": 25.22,
+      "judet": "Brașov"
     },
     {
       "nume": "Canionul Valea lui Stan",
@@ -3584,19 +3774,23 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/08/IMG_20210807_153335-1024x577.jpg",
       "lat": 45.4078239,
-      "lng": 24.6589778
+      "lng": 24.6589778,
+      "judet": "Argeș"
     },
     {
       "nume": "Vârful Ciucaș, între Pirușca și Dălghiu",
       "localitate_start": null,
-      "durata_h": 8.0,
+      "durata_h": 8,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": 13.8,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2021/07/ciucas-varful-ciucas-pirusca-dalghiu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/07/DSC_1714-1.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/07/DSC_1714-1.jpg",
+      "judet": "Prahova",
+      "lat": 45.45,
+      "lng": 25.93
     },
     {
       "nume": "Varful Gropsoarele din Muntii Ciucas",
@@ -3609,8 +3803,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2021/06/ciucas-gropsoarele-rhododendron.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_1516.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.52,
+      "lng": 25.8,
+      "judet": "Prahova"
     },
     {
       "nume": "Vf. Clabucetul Taurului din Azuga",
@@ -3618,13 +3813,14 @@
       "durata_h": 5.5,
       "dificultate": "usor",
       "denivelare_m": null,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2021/06/muntii-baiului-varful-clabucetul-taurului-panorama-bucegi.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_0742.jpg",
       "lat": 45.4444432,
-      "lng": 25.5693383
+      "lng": 25.5693383,
+      "judet": "Prahova"
     },
     {
       "nume": "Vârful Munticelu, Munții Giurgeu-Hășmaș",
@@ -3636,19 +3832,25 @@
       "elevatie_pozitiva_m": 670,
       "sursa_url": "https://chitaracalatoare.ro/2021/06/muntii-giurgeu-hasmas-varful-munticelu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_0358-1.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_0358-1.jpg",
+      "judet": "Harghita",
+      "lat": 46.78,
+      "lng": 25.85
     },
     {
       "nume": "Vf. Ursu si Vf. Cosana, Muntii Capatanii",
       "localitate_start": null,
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": "usor",
       "denivelare_m": 434,
       "distanta_km": 13.6,
       "elevatie_pozitiva_m": 434,
       "sursa_url": "https://chitaracalatoare.ro/2021/06/muntii-capatanii-varful-ursu-varful-cosana.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_1454-1.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_1454-1.jpg",
+      "judet": "Vrancea",
+      "lat": 45.68,
+      "lng": 26.45
     },
     {
       "nume": "Cascada Vanturatoarea, Muntii Cernei",
@@ -3660,7 +3862,10 @@
       "elevatie_pozitiva_m": 400,
       "sursa_url": "https://chitaracalatoare.ro/2021/06/muntii-cernei-scari-inelet-cascada-vanturatoarea.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_1262.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_1262.jpg",
+      "judet": "Mehedinți",
+      "lat": 44.8,
+      "lng": 22.9
     },
     {
       "nume": "Muntii Cernei: catunele Dobraia, Prisacina",
@@ -3674,7 +3879,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_1122-1.jpg",
       "lat": 44.8785058,
-      "lng": 22.4143883
+      "lng": 22.4143883,
+      "judet": "Caraș-Severin"
     },
     {
       "nume": "Vârful Penteleu, Munții Buzăului",
@@ -3686,7 +3892,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2021/06/muntii-buzaului-varful-penteleu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_0763-1.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_0763-1.jpg",
+      "judet": "Buzău",
+      "lat": 45.65,
+      "lng": 26.05
     },
     {
       "nume": "Cheile Ţăsnei, Moara Dracilor și Poiana Ţăsnei",
@@ -3698,40 +3907,45 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2021/06/mehedinti-cheile-tasnei-moara-dracilor.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_1033-1.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/06/DSC_1033-1.jpg",
+      "judet": "Mehedinți",
+      "lat": 44.82,
+      "lng": 22.65
     },
     {
       "nume": "Vf Magura Codlei (Muntii Persani)",
       "localitate_start": "Codlea",
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": null,
       "denivelare_m": 800,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": 800,
       "sursa_url": "https://chitaracalatoare.ro/2021/05/muntii-persani-varful-magura-codlei.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/05/DSC_1024-1.jpg",
       "lat": 45.6924431,
-      "lng": 25.4490362
+      "lng": 25.4490362,
+      "judet": "Brașov"
     },
     {
       "nume": "Circuit Culmea Pricopanului",
       "localitate_start": "Macin",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": "usor",
       "denivelare_m": null,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2021/05/muntii-macin-culmea-pricopanului.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/05/DSC_1639.jpg",
       "lat": 45.247359,
-      "lng": 28.1341543
+      "lng": 28.1341543,
+      "judet": "Tulcea"
     },
     {
       "nume": "Circuit Cheile Vârghişului",
       "localitate_start": "Varghis",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": 10.5,
@@ -3740,7 +3954,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/05/DSC_0446-1024x635.png",
       "lat": 46.1277766,
-      "lng": 25.5567391
+      "lng": 25.5567391,
+      "judet": "Harghita"
     },
     {
       "nume": "Tura pe Vârful Piatra Mică, Piatra Craiului",
@@ -3752,7 +3967,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2021/05/piatra-craiului-vf-piatra-mica.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/05/DSC_0332-1.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/05/DSC_0332-1.jpg",
+      "judet": "Brașov",
+      "lat": 45.52,
+      "lng": 25.22
     },
     {
       "nume": "Circuit Șpirlea - Umerii Pietrei Craiului - Tămășel",
@@ -3766,19 +3984,23 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/05/DSC_0629.jpg",
       "lat": 45.5607354,
-      "lng": 25.3161793
+      "lng": 25.3161793,
+      "judet": "Brașov"
     },
     {
       "nume": "Cabana Padina - Șaua Strunga",
       "localitate_start": null,
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": "mediu",
       "denivelare_m": 428,
       "distanta_km": 7.6,
       "elevatie_pozitiva_m": 428,
       "sursa_url": "https://chitaracalatoare.ro/2021/04/bucegi-saua-strunga.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/04/DSC_1606.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/04/DSC_1606.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Varful Fratosteanu Mare, Muntii Latoritei",
@@ -3790,7 +4012,10 @@
       "elevatie_pozitiva_m": 471,
       "sursa_url": "https://chitaracalatoare.ro/2021/04/muntii-latoritei-fratosteanu-mare.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/04/DSC_0181-1.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/04/DSC_0181-1.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.28,
+      "lng": 22.82
     },
     {
       "nume": "Circuit Fântâna lui Botorog - Cabana Curmătura - Prăpastiile Zărneștilor",
@@ -3798,25 +4023,29 @@
       "durata_h": 4.5,
       "dificultate": "usor",
       "denivelare_m": 750,
-      "distanta_km": 13.0,
+      "distanta_km": 13,
       "elevatie_pozitiva_m": 750,
       "sursa_url": "https://chitaracalatoare.ro/2021/04/botorog-curmatura-prapastiile-zarnestilor.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/04/DSC_1716.jpg",
       "lat": 45.5607354,
-      "lng": 25.3161793
+      "lng": 25.3161793,
+      "judet": "Brașov"
     },
     {
       "nume": "Cabana Padina - Refugiul Strunga (dus-intors)",
       "localitate_start": null,
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": null,
-      "distanta_km": 7.0,
+      "distanta_km": 7,
       "elevatie_pozitiva_m": 318,
       "sursa_url": "https://chitaracalatoare.ro/2021/02/bucegi-iesire-de-iarna-pana-aproape-de-refugiul-strunga.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/02/DSC_1439.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/02/DSC_1439.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Varfurile Suhardul Mic si Suhardul Mare",
@@ -3830,7 +4059,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/01/DSC_0229-1.jpg",
       "lat": 46.7930128,
-      "lng": 25.7953129
+      "lng": 25.7953129,
+      "judet": "Harghita"
     },
     {
       "nume": "Vf. Ineu si Ineut cu plecare din Pasul Rotunda",
@@ -3843,8 +4073,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2021/01/muntii-rodnei-ineu-ineut-pasul-rotunda.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/01/DSC_0126-1.jpg",
-      "lat": 47.5433381,
-      "lng": 25.0082002
+      "lat": 47.1,
+      "lng": 25.2,
+      "judet": "Suceava"
     },
     {
       "nume": "Varful Pietrosul Rodnei",
@@ -3858,7 +4089,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2021/01/DSC_1011.jpg",
       "lat": 47.6554079,
-      "lng": 24.6639308
+      "lng": 24.6639308,
+      "judet": "Maramureș"
     },
     {
       "nume": "Cheile Varghisului",
@@ -3872,12 +4104,13 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/12/DSC_1125.jpg",
       "lat": 46.1277766,
-      "lng": 25.5567391
+      "lng": 25.5567391,
+      "judet": "Harghita"
     },
     {
       "nume": "Leaota-Bucegi: Culmea Barbuletului si varful Bucsa",
       "localitate_start": "Moeciu de Sus",
-      "durata_h": 7.0,
+      "durata_h": 7,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": 15.8,
@@ -3886,7 +4119,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/12/DSC_1296.jpg",
       "lat": 45.4433462,
-      "lng": 25.3303975
+      "lng": 25.3303975,
+      "judet": "Dâmbovița"
     },
     {
       "nume": "Vf Galatului si Gargalau in Muntii Rodnei",
@@ -3900,7 +4134,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/12/48737624768_5914ba020f_k.jpg",
       "lat": 47.6554079,
-      "lng": 24.6639308
+      "lng": 24.6639308,
+      "judet": "Maramureș"
     },
     {
       "nume": "Padina - Refugiul Strunga - Varful Lucacila - Lacul Bolboci",
@@ -3913,36 +4148,39 @@
       "sursa_url": "https://chitaracalatoare.ro/2020/11/bucegi-strunga-lucacila-bolboci.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/11/DSC_0089.jpg",
-      "lat": 44.8310088,
-      "lng": 27.1122752
+      "lat": 45.4,
+      "lng": 25.48,
+      "judet": "Prahova"
     },
     {
       "nume": "Vf. Vanatarea lui Buteanu prin Moara Dracilor",
       "localitate_start": "Balea Lac",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": "mediu",
       "denivelare_m": null,
-      "distanta_km": 7.0,
+      "distanta_km": 7,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2020/11/fagaras-vanatarea-buteanu-moara-dracilor.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/11/Panorama-02-Lac-de-langa-Capra.jpg",
       "lat": 45.6033145,
-      "lng": 24.6170492
+      "lng": 24.6170492,
+      "judet": "Sibiu"
     },
     {
       "nume": "Circuit Varful Siriu (Bocarnea)",
       "localitate_start": "Siriu",
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": null,
       "denivelare_m": null,
-      "distanta_km": 20.0,
+      "distanta_km": 20,
       "elevatie_pozitiva_m": 1369,
       "sursa_url": "https://chitaracalatoare.ro/2020/11/muntii-siriu-varful-bocarnea.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/11/DSC_0435.jpg",
       "lat": 45.478573,
-      "lng": 26.2656836
+      "lng": 26.2656836,
+      "judet": "Buzău"
     },
     {
       "nume": "Vf. Nebunul Mare, Muntii Grohotis",
@@ -3955,13 +4193,14 @@
       "sursa_url": "https://chitaracalatoare.ro/2020/10/grohotis-nebunul-mare.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/10/DSC_0861.jpg",
-      "lat": 45.3941595,
-      "lng": 25.9293061
+      "lat": 45.52,
+      "lng": 25.8,
+      "judet": "Prahova"
     },
     {
       "nume": "Vf. Ciucas din Pasul Bratocea",
       "localitate_start": "Pasul Bratocea",
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": null,
       "denivelare_m": 1020,
       "distanta_km": 20.5,
@@ -3969,13 +4208,14 @@
       "sursa_url": "https://chitaracalatoare.ro/2020/10/varful-ciucas-pasul-bratocea.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/10/DSC_0681.jpg",
-      "lat": 45.4804101,
-      "lng": 25.8966058
+      "lat": 45.45,
+      "lng": 25.93,
+      "judet": "Prahova"
     },
     {
       "nume": "Muntii Fagaras – Vf Dara si Hartopul Darei",
       "localitate_start": "Sambata de Sus",
-      "durata_h": 15.0,
+      "durata_h": 15,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": 30.1,
@@ -3983,8 +4223,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2020/10/fagaras-dara-hartopul-darei.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/10/DSC_0522-1.jpg",
-      "lat": 45.760533,
-      "lng": 24.8275382
+      "lat": 45.6,
+      "lng": 24.7,
+      "judet": "Brașov"
     },
     {
       "nume": "Culmea Pricopanului, muntii Macin",
@@ -3998,7 +4239,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/10/DSC_0273-1.jpg",
       "lat": 45.247359,
-      "lng": 28.1341543
+      "lng": 28.1341543,
+      "judet": "Tulcea"
     },
     {
       "nume": "Muntii Fagaras – circuit de 5 varfuri intr-o singura zi",
@@ -4012,7 +4254,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/10/Panorama-07-scaled.jpg",
       "lat": 45.6033145,
-      "lng": 24.6170492
+      "lng": 24.6170492,
+      "judet": "Sibiu"
     },
     {
       "nume": "Hasmas: Vf Haghimasul Mare",
@@ -4024,7 +4267,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2020/09/hasmas-haghimasul-mare.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/09/DSC_0560.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/09/DSC_0560.jpg",
+      "judet": "Harghita",
+      "lat": 46.78,
+      "lng": 25.85
     },
     {
       "nume": "Remarcare traseu spre Lacul Gâlcescu, Munții Parâng",
@@ -4036,12 +4282,15 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2020/09/remarcare-parang-galcescu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/09/IMG_20200808_164337-01-scaled.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/09/IMG_20200808_164337-01-scaled.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "Vf Grohotis din Pasul Bratocea",
       "localitate_start": "Cheia",
-      "durata_h": 8.0,
+      "durata_h": 8,
       "dificultate": "mediu",
       "denivelare_m": null,
       "distanta_km": 20.4,
@@ -4049,8 +4298,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2020/07/muntii-grohotis-vf-grohotis.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/07/DSC_0336-1.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.52,
+      "lng": 25.8,
+      "judet": "Prahova"
     },
     {
       "nume": "Plimbare la Diham Phoenix din Busteni",
@@ -4064,7 +4314,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/07/DSC_1051.jpg",
       "lat": 45.4147706,
-      "lng": 25.5354853
+      "lng": 25.5354853,
+      "judet": "Prahova"
     },
     {
       "nume": "Vf. Clabucetul Taurului - Cabana Garbova - Cabana Susai",
@@ -4078,7 +4329,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/07/DSC_0282-1.jpg",
       "lat": 45.4444432,
-      "lng": 25.5693383
+      "lng": 25.5693383,
+      "judet": "Prahova"
     },
     {
       "nume": "Circuit Vf. Bucura Dumbrava si Vf. Omu",
@@ -4090,7 +4342,10 @@
       "elevatie_pozitiva_m": 1016,
       "sursa_url": "https://chitaracalatoare.ro/2020/01/muntii-bucegi-vf-bucura-dumbrava-omu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/01/DSC_0808.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2020/01/DSC_0808.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Nemarcat de Fagaras – Vf Museteica, Vf Mesteacanul, Vf Piscul Negru",
@@ -4103,8 +4358,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2019/08/vf-museteica-mesteacanul-piscul-negru.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2019/08/DSC_0178.jpg",
-      "lat": 45.8402331,
-      "lng": 26.312967
+      "lat": 45.6,
+      "lng": 24.7,
+      "judet": "Argeș"
     },
     {
       "nume": "Vinerea Mare in Piatra Mare",
@@ -4116,19 +4372,25 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2019/05/vinerea-mare-piatra-mare.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2019/05/DSC_0738.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2019/05/DSC_0738.jpg",
+      "judet": "Brașov",
+      "lat": 45.55,
+      "lng": 25.65
     },
     {
       "nume": "Sloeru Marcusanu",
       "localitate_start": null,
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": "usor",
       "denivelare_m": 800,
-      "distanta_km": 16.0,
+      "distanta_km": 16,
       "elevatie_pozitiva_m": 800,
       "sursa_url": "https://chitaracalatoare.ro/2019/05/sloeru-marcusanu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2019/05/DSC_0402.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2019/05/DSC_0402.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Tentativa de Vf Negoiu, Muntii Fagaras",
@@ -4140,7 +4402,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2018/10/aniversare-fagaras.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/10/DSC_1117.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/10/DSC_1117.jpg",
+      "judet": "Argeș",
+      "lat": 45.6,
+      "lng": 24.7
     },
     {
       "nume": "Varful lui Crai - Muntii Tataru",
@@ -4153,8 +4418,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2018/07/varful-lui-crai-muntii-tataru.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/07/DSC_0686.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 45.22,
+      "lng": 24.05,
+      "judet": "Vâlcea"
     },
     {
       "nume": "Traseu pe Vârful Leaota",
@@ -4167,8 +4433,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2018/07/leaota-vf-leaota.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/07/DSC_0518.jpg",
-      "lat": 46.4886776,
-      "lng": 23.7361948
+      "lat": 45.32,
+      "lng": 25.31,
+      "judet": "Dâmbovița"
     },
     {
       "nume": "Vf. Ciucas din Poiana Dalghiului",
@@ -4181,8 +4448,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2018/07/ciucas-poiana-dalghiului.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/07/DSC_0354.jpg",
-      "lat": 45.5512711,
-      "lng": 25.9143036
+      "lat": 45.45,
+      "lng": 25.93,
+      "judet": "Prahova"
     },
     {
       "nume": "Cabana Muntele Roșu - Vârful Gropșoarele",
@@ -4195,8 +4463,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2018/07/ciucas-gropsoarele-branduse.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/07/DSC_0198.jpg",
-      "lat": 45.498588,
-      "lng": 25.9613747
+      "lat": 45.52,
+      "lng": 25.8,
+      "judet": "Prahova"
     },
     {
       "nume": "Circuit Vf. Paduchiosu, Muntii Bucegi",
@@ -4209,8 +4478,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2018/07/bucegi-paduchiosu.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/07/DSC_0236.jpg",
-      "lat": 45.3455492,
-      "lng": 25.5481496
+      "lat": 45.4,
+      "lng": 25.48,
+      "judet": "Prahova"
     },
     {
       "nume": "Plimbare la Tăul dintre Brazi, Munții Retezat",
@@ -4222,7 +4492,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2018/05/taul-dintre-brazi-retezat.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/05/DSC_0184.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/05/DSC_0184.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.3,
+      "lng": 22.9
     },
     {
       "nume": "Cabana Codrin - Cabana Gentiana",
@@ -4234,7 +4507,10 @@
       "elevatie_pozitiva_m": 665,
       "sursa_url": "https://chitaracalatoare.ro/2018/05/revelion-2018-retezat.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/05/IMG_20171231_092250.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/05/IMG_20171231_092250.jpg",
+      "judet": "Alba",
+      "lat": 46.3,
+      "lng": 22.8
     },
     {
       "nume": "Manastirea Turnu - Cabana Cozia - Varful Ciuha Mare",
@@ -4247,8 +4523,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2018/05/cozia-ciuha-mare.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/05/DSC_1053.jpg",
-      "lat": 45.2401542,
-      "lng": 24.3412638
+      "lat": 45.22,
+      "lng": 24.05,
+      "judet": "Vâlcea"
     },
     {
       "nume": "Circuit nemarcat la Cuca, muntii Iezer-Papusa",
@@ -4260,7 +4537,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2018/02/aniversari-nemarcate-cuca.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/02/DSC_0165.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/02/DSC_0165.jpg",
+      "judet": "Argeș",
+      "lat": 45.43,
+      "lng": 24.93
     },
     {
       "nume": "Fagaras, varfurile Netedu si Buteanu",
@@ -4273,8 +4553,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2018/02/fagaras-netedu-buteanu.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/02/DSC_1038.jpg",
-      "lat": 45.6033145,
-      "lng": 24.6170492
+      "lat": 45.6,
+      "lng": 24.7,
+      "judet": "Sibiu"
     },
     {
       "nume": "Creasta Fagarasului: Lac Balea - Varful Laitel - Varful Paltinu",
@@ -4287,8 +4568,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2018/01/fagaras-ca-fetele.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2018/01/DSC_0896.jpg",
-      "lat": 45.6033145,
-      "lng": 24.6170492
+      "lat": 45.6,
+      "lng": 24.7,
+      "judet": "Sibiu"
     },
     {
       "nume": "Traseu spre Vf. Grecului in Bucegi",
@@ -4300,7 +4582,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2017/10/familie-bucegi.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/10/DSC_0778.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/10/DSC_0778.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Creasta Parangului",
@@ -4312,7 +4597,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2017/09/parang-creasta-parangul-mare.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/09/DSC_0590.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/09/DSC_0590.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "Cabana IEFS - Varful Parangul Mic - Varful Piatra",
@@ -4324,7 +4612,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2017/09/parang-paragul-mic-piatra.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/09/Liviu2BGhita2B252822529.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/09/Liviu2BGhita2B252822529.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "Plimbare de o zi pana pe Vf Grecului",
@@ -4337,8 +4628,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2017/04/bucegi-grecului.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/04/DSC_0095.jpg",
-      "lat": 45.4444432,
-      "lng": 25.5693383
+      "lat": 45.4,
+      "lng": 25.48,
+      "judet": "Prahova"
     },
     {
       "nume": "Rasarit pe Vf. Toaca, Muntii Ceahlau",
@@ -4351,8 +4643,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2017/03/ceahlau-toaca.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/03/DSC_0872.jpg",
-      "lat": 45.5186128,
-      "lng": 24.1761435
+      "lat": 46.97,
+      "lng": 25.95,
+      "judet": "Neamț"
     },
     {
       "nume": "Urcare la Cabana Dochia, Munții Ceahlău",
@@ -4364,7 +4657,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2017/03/ceahlau-dochia.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/03/DSC_0779.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/03/DSC_0779.jpg",
+      "judet": "Neamț",
+      "lat": 46.97,
+      "lng": 25.95
     },
     {
       "nume": "Transfăgărășan - Stâna Piscul Negru",
@@ -4376,7 +4672,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2017/03/stana-piscul-negru.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/03/DSC_0657.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/03/DSC_0657.jpg",
+      "judet": "Argeș",
+      "lat": 45.6,
+      "lng": 24.7
     },
     {
       "nume": "Memorial Alin Tava, editia a VIII-a",
@@ -4389,8 +4688,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2017/03/memorial-alin-tava.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/03/DSC_0489.jpg",
-      "lat": 45.8402331,
-      "lng": 26.312967
+      "lat": 45.6,
+      "lng": 24.7,
+      "judet": "Argeș"
     },
     {
       "nume": "Cabana Gura Diham - Cabana Diham",
@@ -4403,8 +4703,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2017/01/bucegi-diham.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2017/01/DSC_0057.jpg",
-      "lat": 45.4147706,
-      "lng": 25.5354853
+      "lat": 45.4,
+      "lng": 25.48,
+      "judet": "Prahova"
     },
     {
       "nume": "Plimbare de o zi pe varful Postavaru",
@@ -4418,7 +4719,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/12/DSC_0208.jpg",
       "lat": 45.5967098,
-      "lng": 25.5561895
+      "lng": 25.5561895,
+      "judet": "Brașov"
     },
     {
       "nume": "Vf. Omu de la Cabana Mălăiești prin Hornul Mare",
@@ -4430,7 +4732,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2016/12/bucegi-omu-cerb.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/12/IMG_1745_2.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/12/IMG_1745_2.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Spre Vârful Omu, via Cabana Mălăiești (ziua 1)",
@@ -4442,7 +4747,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2016/12/bucegi-diham-malaiesti.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/12/DSC_0030.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/12/DSC_0030.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Varful Haghimasul Mare, Muntii Hasmas",
@@ -4455,8 +4763,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2016/12/hasmas-haghimasu-mare.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/12/DSC_0043.jpg",
-      "lat": 47.1543594,
-      "lng": 23.3076523
+      "lat": 46.78,
+      "lng": 25.85,
+      "judet": "Harghita"
     },
     {
       "nume": "Vârful Lespezi, Munții Făgăraș",
@@ -4469,20 +4778,24 @@
       "sursa_url": "https://chitaracalatoare.ro/2016/11/fagaras-lespezi.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/11/DSC_04422BPanorama2B122B-2BUrcare2BVf2BLespezi.jpg",
-      "lat": 45.8402331,
-      "lng": 26.312967
+      "lat": 45.6,
+      "lng": 24.7,
+      "judet": "Argeș"
     },
     {
       "nume": "Cabana Capra - Vârful Mușeteica (nemarcat)",
       "localitate_start": null,
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": null,
       "denivelare_m": null,
-      "distanta_km": 4.0,
+      "distanta_km": 4,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2016/08/fagaras-museteica-nemarcat.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/08/DSC_0391.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/08/DSC_0391.jpg",
+      "judet": "Argeș",
+      "lat": 45.6,
+      "lng": 24.7
     },
     {
       "nume": "Vf. Scara si Lacul Avrig, Muntii Fagaras",
@@ -4494,7 +4807,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2016/08/fagaras-scara-avrig.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/08/DSC0387.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/08/DSC0387.jpg",
+      "judet": "Sibiu",
+      "lat": 45.6,
+      "lng": 24.7
     },
     {
       "nume": "Creasta Muntilor Iezer: Varful Iezerul Mare si Rosu",
@@ -4507,8 +4823,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2016/08/muntii-iezer-ziua-2-iezerul-mare-rosu.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/08/DSC_1220.jpg",
-      "lat": 45.2697704,
-      "lng": 25.0438643
+      "lat": 45.43,
+      "lng": 24.93,
+      "judet": "Argeș"
     },
     {
       "nume": "Refugiul Iezer si Crucea Ateneului",
@@ -4516,11 +4833,14 @@
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": 1185,
-      "distanta_km": 8.0,
+      "distanta_km": 8,
       "elevatie_pozitiva_m": 1185,
       "sursa_url": "https://chitaracalatoare.ro/2016/08/muntii-iezer-refugiu-lac-iezer.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/08/Panorama2B032B-2BApus.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/08/Panorama2B032B-2BApus.jpg",
+      "judet": "Argeș",
+      "lat": 45.43,
+      "lng": 24.93
     },
     {
       "nume": "Remarcare in Leaota – curs practic de trasat poteci",
@@ -4532,7 +4852,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2016/07/remarcare-muntii-leaota-oxigen.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/07/DSC_1379.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/07/DSC_1379.jpg",
+      "judet": "Dâmbovița",
+      "lat": 45.32,
+      "lng": 25.31
     },
     {
       "nume": "Cabana Curmătura - Sat Măgura, prin Prăpăstiile Zărneștilor",
@@ -4545,8 +4868,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2016/07/piatra-craiului-ziua-2-curmatura-magura.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/07/DSC_0896.jpg",
-      "lat": 45.5607354,
-      "lng": 25.3161793
+      "lat": 45.52,
+      "lng": 25.22,
+      "judet": "Brașov"
     },
     {
       "nume": "Vf. Piatra Mica, Piatra Craiului",
@@ -4559,8 +4883,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2016/07/tura-piatra-craiului-vf-piatra-mica.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/07/DSC_0843.jpg",
-      "lat": 45.5607354,
-      "lng": 25.3161793
+      "lat": 45.52,
+      "lng": 25.22,
+      "judet": "Brașov"
     },
     {
       "nume": "Plimbare pe Vf Ciucas si Saua Tigailor",
@@ -4572,7 +4897,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2016/06/aniversare-si-cantec-ziua2-ciucas-tigai.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/06/DSC_0786.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/06/DSC_0786.jpg",
+      "judet": "Prahova",
+      "lat": 45.45,
+      "lng": 25.93
     },
     {
       "nume": "Vf Gropșoarele, munții Ciucaș",
@@ -4584,7 +4912,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2016/06/aniversare-si-cantec-vf-gropsoarele.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/06/DSC_0742.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/06/DSC_0742.jpg",
+      "judet": "Prahova",
+      "lat": 45.52,
+      "lng": 25.8
     },
     {
       "nume": "Plimbare pe Vârful Tâmpa, Brașov",
@@ -4598,7 +4929,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/06/DSC_0663.jpg",
       "lat": 45.6525105,
-      "lng": 25.6105654
+      "lng": 25.6105654,
+      "judet": "Brașov"
     },
     {
       "nume": "Plimbare la Vârful Țuțuiatu, Munții Măcin",
@@ -4610,7 +4942,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2016/05/o-plimbare-in-macin-tutuiatu-si-o-super.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/05/DSC_0473.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/05/DSC_0473.jpg",
+      "judet": "Tulcea",
+      "lat": 45.25,
+      "lng": 28.15
     },
     {
       "nume": "Muntii Macin - Creasta Pricopanului",
@@ -4624,7 +4959,8 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/04/DSC_0678.jpg",
       "lat": 45.1901029,
-      "lng": 28.2329559
+      "lng": 28.2329559,
+      "judet": "Tulcea"
     },
     {
       "nume": "O zi in salbaticia Droabelor (Muntii Lotrului)",
@@ -4637,8 +4973,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2016/04/wild-wild-lotru-o-zi-in-salbaticia.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/04/DSC_0277.jpg",
-      "lat": 45.3561539,
-      "lng": 24.2768263
+      "lat": 45.22,
+      "lng": 24.05,
+      "judet": "Vâlcea"
     },
     {
       "nume": "Plaiurile Baiului si Vf Piscul Cainelui",
@@ -4646,13 +4983,14 @@
       "durata_h": 7.33,
       "dificultate": null,
       "denivelare_m": 996,
-      "distanta_km": 21.0,
+      "distanta_km": 21,
       "elevatie_pozitiva_m": 996,
       "sursa_url": "https://chitaracalatoare.ro/2016/03/plaiurile-baiului-si-vf-piscul-cainelui.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/03/DSC_0968.jpg",
-      "lat": 45.280788,
-      "lng": 25.6194161
+      "lat": 45.48,
+      "lng": 25.72,
+      "judet": "Prahova"
     },
     {
       "nume": "Plimbare in Fagaras – Piciorul Lespezilor",
@@ -4665,20 +5003,24 @@
       "sursa_url": "https://chitaracalatoare.ro/2016/02/plimbare-in-fagaras-piciorul-lespezilor.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2016/02/DSC_0771.jpg",
-      "lat": 45.8402331,
-      "lng": 26.312967
+      "lat": 45.6,
+      "lng": 24.7,
+      "judet": "Sibiu"
     },
     {
       "nume": "Canionul Valea lui Stan",
       "localitate_start": null,
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2015/12/valea-lui-stan-in-straie-de-toamna.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/12/DSC_0056.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/12/DSC_0056.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.3,
+      "lng": 22.9
     },
     {
       "nume": "Tura scurta in Piatra Mare",
@@ -4691,8 +5033,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2015/11/ce-faci-cand-n-ai-ce-face-tura-scurta.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/11/DSC_0478.jpg",
-      "lat": 45.5956639,
-      "lng": 25.6376746
+      "lat": 45.55,
+      "lng": 25.65,
+      "judet": "Brașov"
     },
     {
       "nume": "Vânătarea lui Buteanu, Munţii Făgăraş",
@@ -4705,8 +5048,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2015/09/s-lasat-asteptat-dar-meritat-vanatarea.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/09/DSC_0011.jpg",
-      "lat": 45.6033145,
-      "lng": 24.6170492
+      "lat": 45.6,
+      "lng": 24.7,
+      "judet": "Sibiu"
     },
     {
       "nume": "Vf. Laita si Laitel spre Lacul Caltun, Muntii Fagaras",
@@ -4719,8 +5063,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2015/09/zapada-si-sprot-laita-laitel-si-o.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/09/DSC_0825.jpg",
-      "lat": 45.6303913,
-      "lng": 24.6109691
+      "lat": 45.6,
+      "lng": 24.7,
+      "judet": "Sibiu"
     },
     {
       "nume": "Vârful Negoiu, Munții Făgăraș",
@@ -4732,7 +5077,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2015/08/un-fleac-ne-am-cam-lungit-varful-negoiu.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/08/DSC_0573.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/08/DSC_0573.jpg",
+      "judet": "Argeș",
+      "lat": 45.6,
+      "lng": 24.7
     },
     {
       "nume": "Traseu Refugiul Cânaia, Munții Cindrel",
@@ -4744,7 +5092,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2015/08/tura-contrastelor-refugiul-canaia.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/08/DSC_0153.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/08/DSC_0153.jpg",
+      "judet": "Sibiu",
+      "lat": 45.72,
+      "lng": 23.87
     },
     {
       "nume": "Vârful Parângul Mare, munții Parâng",
@@ -4756,7 +5107,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2015/07/la-multi-ani-mie-varful-parangul-mare_16.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/07/DSC_1051.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/07/DSC_1051.jpg",
+      "judet": "Gorj",
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "Varful Parangul Mare, Muntii Parang",
@@ -4768,7 +5122,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2015/07/la-multi-ani-mie-varful-parangul-mare.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/07/DSC_0892.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/07/DSC_0892.jpg",
+      "judet": "Gorj",
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "Vârful Parângul Mic, Munții Parâng",
@@ -4780,7 +5137,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2015/06/de-la-mic-la-mare-varful-parangul-mic.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/06/Panorama2B22B-2BUrcare2BParangul2BMic.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/06/Panorama2B22B-2BUrcare2BParangul2BMic.jpg",
+      "judet": "Gorj",
+      "lat": 45.34,
+      "lng": 23.52
     },
     {
       "nume": "In cautarea rhodondendronului prin Ciucas",
@@ -4793,8 +5153,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2015/06/in-cautarea-rhodondendronului-prin.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/06/DSC_0582.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.454,
+      "lng": 25.934,
+      "judet": "Prahova"
     },
     {
       "nume": "Vârful Ciucaş de la Cabana Silva",
@@ -4807,8 +5168,9 @@
       "sursa_url": "https://chitaracalatoare.ro/2015/06/punct-si-de-la-capat-varful-ciucas-si.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/06/DSC_0378.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.454,
+      "lng": 25.934,
+      "judet": "Prahova"
     },
     {
       "nume": "Vârful Păpușa, munții Iezer",
@@ -4820,38 +5182,45 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2015/01/cand-ai-lumea-la-picioare-varful-papusa.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/01/DSC_0952.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/01/DSC_0952.jpg",
+      "judet": "Argeș",
+      "lat": 45.43,
+      "lng": 24.93
     },
     {
       "nume": "Cabana Diham, muntii Bucegi",
       "localitate_start": null,
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": "usor",
       "denivelare_m": null,
       "distanta_km": null,
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2015/01/zapada-si-chitareala-cabana-diham.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/01/DSC_0895.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/01/DSC_0895.jpg",
+      "judet": "Prahova",
+      "lat": 45.4,
+      "lng": 25.48
     },
     {
       "nume": "Lacul Călțun, munții Făgăraș",
       "localitate_start": "Piscul Negru",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": null,
       "denivelare_m": 920,
-      "distanta_km": 7.0,
+      "distanta_km": 7,
       "elevatie_pozitiva_m": 920,
       "sursa_url": "https://chitaracalatoare.ro/2015/01/viscol-ger-zapada-si-un-urs-lacul.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/01/DSC_0082-1.jpg",
-      "lat": 45.8402331,
-      "lng": 26.312967
+      "lat": 45.6,
+      "lng": 24.7,
+      "judet": "Brașov"
     },
     {
       "nume": "Cursuri montane de iarna",
       "localitate_start": null,
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": null,
       "denivelare_m": null,
       "distanta_km": null,
@@ -4870,7 +5239,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2014/12/sarbatoreste-romaneste-ziua-nationala.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/12/DSC_0269.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/12/DSC_0269.jpg",
+      "judet": "Brașov",
+      "lat": 45.6,
+      "lng": 24.7
     },
     {
       "nume": "Circuit Vf. Vânturarița Mare, Parcul Național Buila-Vânturarița",
@@ -4882,7 +5254,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2014/12/adrenalina-si-durere-vf-vanturarita.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/12/DSC_0039.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/12/DSC_0039.jpg",
+      "judet": "Vâlcea",
+      "lat": 45.22,
+      "lng": 24.05
     },
     {
       "nume": "Lacul Vulturilor si Varful Malaia, Muntii Siriului",
@@ -4890,11 +5265,14 @@
       "durata_h": 8.5,
       "dificultate": null,
       "denivelare_m": 950,
-      "distanta_km": 16.0,
+      "distanta_km": 16,
       "elevatie_pozitiva_m": 950,
       "sursa_url": "https://chitaracalatoare.ro/2014/11/lacul-vulturilor-si-varful-malaia.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/11/DSC_0873.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/11/DSC_0873.jpg",
+      "judet": "Buzău",
+      "lat": 45.4,
+      "lng": 26
     },
     {
       "nume": "Vf. Moldoveanu prin Valea Rea si Caldarea Galbena",
@@ -4902,39 +5280,44 @@
       "durata_h": 8.5,
       "dificultate": "greu",
       "denivelare_m": 1200,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": 1200,
       "sursa_url": "https://chitaracalatoare.ro/2014/07/varful-moldoveanu-si-nu-numai-prin.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/07/Panorama21.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/07/Panorama21.jpg",
+      "judet": "Argeș",
+      "lat": 45.6,
+      "lng": 24.73
     },
     {
       "nume": "Plaiul Foii - Refugiul Spirlea - Saua Tamaselului",
       "localitate_start": "Zarnesti",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": null,
       "denivelare_m": 900,
-      "distanta_km": 11.0,
+      "distanta_km": 11,
       "elevatie_pozitiva_m": 900,
       "sursa_url": "https://chitaracalatoare.ro/2014/07/piatra-craiului-triughiul-bermudelor-si.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/07/DSC_3833.jpg",
-      "lat": 45.5607354,
-      "lng": 25.3161793
+      "lat": 45.52,
+      "lng": 25.22,
+      "judet": "Brașov"
     },
     {
       "nume": "Bucegi – Jepii Mici si Jepii Mari intr-o singura zi",
       "localitate_start": "Busteni",
-      "durata_h": 7.0,
+      "durata_h": 7,
       "dificultate": null,
       "denivelare_m": 1100,
-      "distanta_km": 21.0,
+      "distanta_km": 21,
       "elevatie_pozitiva_m": 1100,
       "sursa_url": "https://chitaracalatoare.ro/2014/07/bucegi-jepii-mici-si-jepii-mari-intr-o.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/07/Panorama1.jpg",
-      "lat": 45.4147706,
-      "lng": 25.5354853
+      "lat": 45.4,
+      "lng": 25.48,
+      "judet": "Prahova"
     },
     {
       "nume": "Apuseni cu Asociatia Oxigen si David Neacsu",
@@ -4946,7 +5329,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://chitaracalatoare.ro/2014/07/apuseni-cu-asociatia-oxigen-si-david-2.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/07/Panorama6-IndrumspreCosulBoului.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/07/Panorama6-IndrumspreCosulBoului.jpg",
+      "judet": "Alba",
+      "lat": 46.5,
+      "lng": 22.8
     },
     {
       "nume": "Apuseni cu Asociatia Oxigen si David Neacsu – partea I",
@@ -4960,19 +5346,23 @@
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2014/06/DSC_3223.jpg",
       "lat": 46.391475,
-      "lng": 23.4067778
+      "lng": 23.4067778,
+      "judet": "Alba"
     },
     {
       "nume": "Lacul Zanoaga - Lacul Bucura",
       "localitate_start": null,
-      "durata_h": 4.0,
+      "durata_h": 4,
       "dificultate": null,
       "denivelare_m": 450,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": 450,
       "sursa_url": "https://chitaracalatoare.ro/2013/10/retezat-ziua-2-lacul-zanoaga-aproape-de.html",
       "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2013/10/IMG_1389.jpg"
+      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2013/10/IMG_1389.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.3,
+      "lng": 22.9
     },
     {
       "nume": "Gura Zlata - Lacul Zanoaga",
@@ -4980,13 +5370,14 @@
       "durata_h": 5.5,
       "dificultate": null,
       "denivelare_m": 1320,
-      "distanta_km": 11.0,
+      "distanta_km": 11,
       "elevatie_pozitiva_m": 1320,
       "sursa_url": "https://chitaracalatoare.ro/2013/10/retezat-ziua-1-gura-zlata-lacul-zanoaga.html",
       "sursa_blog": "chitaracalatoare",
       "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2013/10/DSC_1563.jpg",
       "lat": 45.390386,
-      "lng": 22.7690876
+      "lng": 22.7690876,
+      "judet": "Hunedoara"
     },
     {
       "nume": "Retrospectivă 2025",
@@ -5047,22 +5438,24 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2020/09/varful-heniul-mare-muntii-bargau.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLMUgJ9jPZeqE_ZCuxz8-MqsXmJRVXVDJXNAh-2DCNHTjIFv_nX4B6tcOKELuJSZ4XKnHI7MnWwU-aO8WmpI5EWtQRmjs85JYzLaQ1nHrFfs6QJ-tedxuM04ryhFN6LctqSql7Dp-GSMA/w1200-h630-p-k-no-nu/IMG_20200912_153236.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 47.2,
+      "lng": 24.3,
+      "judet": "Bistrița-Năsăud"
     },
     {
       "nume": "Vârful Igniș, Munții Igniș",
       "localitate_start": "Baia Sprie",
-      "durata_h": 8.0,
+      "durata_h": 8,
       "dificultate": "mediu",
       "denivelare_m": 941,
-      "distanta_km": 15.0,
+      "distanta_km": 15,
       "elevatie_pozitiva_m": 941,
       "sursa_url": "http://www.jurnaldedrumetii.ro/2021/03/varful-ignis-muntii-ignis.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzjc47u7i-tbDzzb-D_8FP-1iLZJ6KhCPk09mvRU-T-6qVdmbufAGPlMKDqrz-Ee0L-Tnpu46NmwlLvVn5jCWk63cH0CE4c7gVEUsi6AjVwmc5_uMNrgA5EfoiRcEUKVwhbJUtqtQWM_g/w1200-h630-p-k-no-nu/IMG_20210313_135624.jpg",
       "lat": 47.6615913,
-      "lng": 23.6922094
+      "lng": 23.6922094,
+      "judet": "Maramureș"
     },
     {
       "nume": "Vârful Piatra Vâscului",
@@ -5076,7 +5469,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDJVydWHFBEjU4fnwPBCLQS0VNFtMWrUGIKXasCNNXZ2TJe76-TEL8_IsYpYWLqjnBPpI4rZSlDby3Pbu8t-yhLdOZ4ffrdPUOVWTJAfxg1FrL7HB__-AjY9YN2-2SospY1EF6RLTGF6TVpIbs16GpLhzhm-u8hYTjk8b1SPiy_2JJVLVMmOsYARvw67k/w1200-h630-p-k-no-nu/2022-06-06_13-56-33.jpg",
       "lat": 47.9197142,
-      "lng": 23.3905338
+      "lng": 23.3905338,
+      "judet": "Maramureș"
     },
     {
       "nume": "Varful Varatec din Muntii Lapusului",
@@ -5090,7 +5484,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJTwQafVGMQwbhD0wTrcqUqOAUdoMwvPA-Bd7FGNMcFk2ArpfZYvuTB68V2sTCkCX40FbM-QlPiifww88fBm1sxY0a5zUJdiixbcdU6KqTx8XwOB2hFkgGV0KprtbIuFKS2uM-5aMTdvk/w1200-h630-p-k-no-nu/2021-03-14_12-58-06.jpg",
       "lat": 47.6139872,
-      "lng": 23.9975195
+      "lng": 23.9975195,
+      "judet": "Maramureș"
     },
     {
       "nume": "Obcina Mare - Varful Sihloaia",
@@ -5104,7 +5499,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKgLcxh-5I8yqojP9YdjfOYoPnZ1n3lOZeIeIv41Rk_uAp93qHhKWO_5V-dubA-eLX-sdbfG9bLxExL-NIPlcidjOuCS4Q761BB5u-tbJChycw8f8vQGyz8Ma8f4MSyKcE1kPSzGaxOc89812PLUqrBDvNP1ifNTQl1_-Y9xNouxVSgLaxdl4LnXL4Btd8/w1200-h630-p-k-no-nu/obcina-mare-sihloaia-jurnal-de-drumetii.jpg",
       "lat": 47.7618504,
-      "lng": 25.4684029
+      "lng": 25.4684029,
+      "judet": "Suceava"
     },
     {
       "nume": "Obcina Feredeului - Varful Veju Mare",
@@ -5118,12 +5514,13 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEju8e4P93_rf5YswwEgj8JcfRRTHMm1D93CkCHzN1_mDJgwZHTnyqwowC__V1rxAjZlzxO5X132z7UQU0gqP6eaTf_TGOqizN4Ff2Onff0sQNe1KqdGej_is1iPTWxCDfQemvTIIEJxLAN677Qtgk-qMwZpJ-foklG2FHRsv02iwW_7RRMmGvkEzYt5Tagv/w1200-h630-p-k-no-nu/jurnaldedrumetii.ro_Veju_Mare_1494m_Obcina_Feredeului.jpg",
       "lat": 47.6645867,
-      "lng": 25.2669694
+      "lng": 25.2669694,
+      "judet": "Suceava"
     },
     {
       "nume": "Varful Lucina, Obcina Mestecanis",
       "localitate_start": "Moldova Sulita",
-      "durata_h": 5.0,
+      "durata_h": 5,
       "dificultate": "mediu",
       "denivelare_m": 533,
       "distanta_km": 13.69,
@@ -5132,7 +5529,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPtouP9vxOPKbByqpC81D92Py3u7re_x-jfwbHlTfat4NSxToWEPtunsnRysFIWVCcY21R7nOzF-XP40hFinV1V2nQiu2i7mM5kSXPTT5ohmpIhzTDBRXvhb9Bc1mQxy8iZm8UCKskXWRLsriOB_5-lr2os2GkLICx9uwcNB3GTduiDDghv_GJMWGMh_8v/w1200-h630-p-k-no-nu/varful-lucina-obcina-mestecanis-photo1.jpg",
       "lat": 47.6931655,
-      "lng": 25.2417229
+      "lng": 25.2417229,
+      "judet": "Suceava"
     },
     {
       "nume": "Obcina Surdin - Varful Poiana Sacalesti",
@@ -5146,7 +5544,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRp2PW5N9p6Sv8DjywOd5Mx9KMH24rqF9U3Pwl9A8H6Mztp92HmzDRmXseNoNaePjeSvAZ8jtdJrMnIzJ2me9Rm6BBd5D0npl2BgibMZpgSGDpJ4S3Y174OVYV9U12sT3yJns95689O5k9uhYLgiYEUmLyyaz2twYCvGkrr8Oh-QArLILkeqB144upmSdU/w1200-h630-p-k-no-nu/varful-skupova-obcina-surdin-varful-poiana-sacalesti.jpeg",
       "lat": 47.8897496,
-      "lng": 25.2893928
+      "lng": 25.2893928,
+      "judet": "Suceava"
     },
     {
       "nume": "Varful Farcau, Muntii Maramuresului",
@@ -5160,7 +5559,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvlkOHyItWagF-0QRDNMjqBJsb-V4H32Md9dbYOTFBVxf2vkKlWYJrL1JfNu6kvzAg8WElTEoojQNPFjeBcBmRSW_9GXro2hOodQC_9aw2O7P11BEWSpyHFZjOZbjlFMnKenST6UADKW7xdpJkT33BWAkRktiknF9Yis5waagQGbWV6Nzr2hwzIGME/w1200-h630-p-k-no-nu/2022-06-04_12-30-26.jpg",
       "lat": 47.8321184,
-      "lng": 24.4014159
+      "lng": 24.4014159,
+      "judet": "Maramureș"
     },
     {
       "nume": "Varful Pop Ivan si varful Serban, Muntii Maramuresului",
@@ -5173,8 +5573,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2022/06/varful-pop-ivan-pe-potecile.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLgw7jL8TXBJe9dkd_c0VZkYr_L1GeRlI2EJRmp9HME3xl9ZPiljCivMwaEptCx2bIPypqE7d9gMvEU2QmkrE24MN1k4AOuHspodlZPMIYDhSKn7cA8fJXVydGFiHIyjQ--GyxG4GAhz7E0pvKy9rYBChHXitFWiXyAgGeJ0VYSUhqlqzqycEMIVmL/w1200-h630-p-k-no-nu/IMG_20220605_135334.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 47.85,
+      "lng": 24.35,
+      "judet": "Maramureș"
     },
     {
       "nume": "Varful Omului, Muntii Suhard",
@@ -5186,24 +5587,30 @@
       "elevatie_pozitiva_m": 943,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2019/06/varful-omului-1932m-muntii-suhard.html",
       "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglruroEQaQdQlURzkZ5NOFwhw0e7CcISDtYHqIJeJ9LcYbspHdV4FU1eOp7Ig1L08vnakLvuIXRGMrTda2vk-FUGn-jYTNEF-2Txk2QeLNMfy4b0rw9P7KKlf2pw5jc5Rw_RTfUQ5igv1w/w1200-h630-p-k-no-nu/DSCN7386.jpg"
+      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglruroEQaQdQlURzkZ5NOFwhw0e7CcISDtYHqIJeJ9LcYbspHdV4FU1eOp7Ig1L08vnakLvuIXRGMrTda2vk-FUGn-jYTNEF-2Txk2QeLNMfy4b0rw9P7KKlf2pw5jc5Rw_RTfUQ5igv1w/w1200-h630-p-k-no-nu/DSCN7386.jpg",
+      "judet": "Suceava",
+      "lat": 47.65,
+      "lng": 25.15
     },
     {
       "nume": "Vârful Bran - Vârful Țibleș - Vârful Arcer",
       "localitate_start": null,
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": "greu",
       "denivelare_m": 1300,
       "distanta_km": 21.2,
       "elevatie_pozitiva_m": 1455,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2017/04/varful-bran-varful-tibles-varful-arcer.html",
       "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJ5AQdmLoVUXCxax94b4CSVvTtgLZCF9G7Qc2u-vf5HT82PZEIFJierHaFDQG9so_WIiiDcygEWuxLygWyX1IzAjRvlAWlKgdKaYCSHVq4iiYdd1Ci_HCIlQ_f0-zgxr7mwsrjnKdNE720/w1200-h630-p-k-no-nu/DSCN1664.jpg"
+      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJ5AQdmLoVUXCxax94b4CSVvTtgLZCF9G7Qc2u-vf5HT82PZEIFJierHaFDQG9so_WIiiDcygEWuxLygWyX1IzAjRvlAWlKgdKaYCSHVq4iiYdd1Ci_HCIlQ_f0-zgxr7mwsrjnKdNE720/w1200-h630-p-k-no-nu/DSCN1664.jpg",
+      "judet": "Maramureș",
+      "lat": 47.9,
+      "lng": 24.7
     },
     {
       "nume": "Varful Budacu, Muntii Bistritei",
       "localitate_start": "Borca",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": "mediu",
       "denivelare_m": 1194,
       "distanta_km": 16.4,
@@ -5212,7 +5619,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcLn30dmOScjJESqr9pAAy0-2Or5WsG9CPKKo2Xu3PxxoEKDZX_Fq7EoLbgtB2YKhoB3RR-yDsD-Qrd_IzCHeO1lUCX40fHXJWK-TjNR3Y6GEvYWKT1xIQ5bDM5_aUQcq7xSG3cfaRsVZsmar1-DIbybOuG9OC-2ef2EN_8adUURsmqUkL7UzlJvpYff-a/w1200-h630-p-k-no-nu/varful-budacu-muntii-bistritei.webp",
       "lat": 47.1789284,
-      "lng": 25.7886918
+      "lng": 25.7886918,
+      "judet": "Neamț"
     },
     {
       "nume": "Varful Giumalau din Rusca",
@@ -5220,18 +5628,19 @@
       "durata_h": 7.6,
       "dificultate": "mediu",
       "denivelare_m": 928,
-      "distanta_km": 15.0,
+      "distanta_km": 15,
       "elevatie_pozitiva_m": 928,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2017/03/varful-giumalau-1858-m.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisPh-Q5jH9dL1e4BLu3v3LII9F0YOGkRPiy-jYLwzyZs0l1uURouH3zsMYSCrl2z9H3FnqHsbtPE6vL3bW-6MZYnHuy0SsCxcv1-tdoo2IhzddNsC7Li4WztbPu2EHMDpTpYV7MM27LNQf/w1200-h630-p-k-no-nu/DSCN0862.jpg",
       "lat": 45.1461859,
-      "lng": 22.3358357
+      "lng": 22.3358357,
+      "judet": "Hunedoara"
     },
     {
       "nume": "Vârful Harghita Mădăraș",
       "localitate_start": "Madaras",
-      "durata_h": 1.0,
+      "durata_h": 1,
       "dificultate": "usor",
       "denivelare_m": 177,
       "distanta_km": 3.73,
@@ -5240,7 +5649,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYo8Q0Xj7TgTBK8QGS4-F8od9hZmIBIIoHUr7GfFkkb3ZcvOmJWkYQ6Ypzlgmw5QQumjLkhT9D3Epxa6XSARNzkDxUYjZLS30qgoKxgMvLgys4QLbCufwbFQ6_2V1LDU0qNMJKxDgQzUM/w1200-h630-p-k-no-nu/2020-08-12_13-36-19.jpg",
       "lat": 46.4395354,
-      "lng": 25.5813381
+      "lng": 25.5813381,
+      "judet": "Harghita"
     },
     {
       "nume": "Piatra Singuratică - Vârful Hășmașul Mare",
@@ -5248,13 +5658,14 @@
       "durata_h": 7.75,
       "dificultate": "mediu",
       "denivelare_m": 1272,
-      "distanta_km": 17.0,
+      "distanta_km": 17,
       "elevatie_pozitiva_m": 1272,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2017/05/muntii-hasmas-piatra-singuratica-varful.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZupTSS2iEZ5ICj6QtM-pfp9vIsig4xqryoJtLZP96F3ufyTkjGxR2GfAr7lvfHCW7EcFv8Ex6kTCVj_vno32OnfIB7Cs4fVRni3D__9eznSOQGJ8JpOEj8Xap2UNoM1Ueg6ucfex9/w1200-h630-p-k-no-nu/DSCN2560.JPG",
-      "lat": 47.1543594,
-      "lng": 23.3076523
+      "lat": 46.82,
+      "lng": 25.88,
+      "judet": "Harghita"
     },
     {
       "nume": "Muntii Giurgeului - Varful Prisca",
@@ -5268,12 +5679,13 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW0G2NM020IviYJnBQHQCy3_HstK-6jKADs-8aLi9sG54Ap4Dfh3EbZCo_sH1whWld5tGXYZ5CQfy77af2ci_0UQ8BO_F0NGiefXAoXZ_oLmWNwzEBhJwyq0bCBkE62nWjO75XTJvat-daHVxgLC8WW9YhT20l7gxbfqExaWNOh8e3EqphWdPnVpUzjw/w1200-h630-p-k-no-nu/2023-04-02_11-56-33.jpg",
       "lat": 46.7213467,
-      "lng": 25.5998915
+      "lng": 25.5998915,
+      "judet": "Harghita"
     },
     {
       "nume": "Creasta Muntilor Baiului de la Azuga",
       "localitate_start": "Azuga",
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": "mediu",
       "denivelare_m": 1133,
       "distanta_km": 24.64,
@@ -5281,22 +5693,24 @@
       "sursa_url": "http://www.jurnaldedrumetii.ro/2020/09/creasta-muntii-baiului-de-la-azuga-la.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTNUOdfXbtvQSqhSXOYAOl8m1rSEzzVwzukFcxR7S_wsF6_RmBEJgs7DxZn6_kO94SGORnw4pBiy1wxTtxCtU6lfkQlZe-84mD4UZj1MKrdIHXhbuRefAYWDAp-8dclRFOnm3htRHnGIE/w1200-h630-p-k-no-nu/IMG_20200926_113626.jpg",
-      "lat": 45.4444432,
-      "lng": 25.5693383
+      "lat": 45.48,
+      "lng": 25.72,
+      "judet": "Prahova"
     },
     {
       "nume": "Varful Grohotis din Pasul Bratocea",
       "localitate_start": "Cheia",
-      "durata_h": 6.0,
+      "durata_h": 6,
       "dificultate": "mediu",
       "denivelare_m": 811,
-      "distanta_km": 21.0,
+      "distanta_km": 21,
       "elevatie_pozitiva_m": 811,
       "sursa_url": "http://www.jurnaldedrumetii.ro/2021/06/varful-grohotis-1768m-muntii-grohotis.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJYHZjW60yM6iPCAAdG4GHLUmxXt_syYOB5y3HiVKfZpXL35ghyHetUwKlDdNzaOrDZPVlzFWn9DfxiuDmFdybhnDW9-O0n7HZbcbnKgtAfIBzSDw47l4LW0ERq-FGDlEUXLLGPGDNgs7O/w1200-h630-p-k-no-nu/IMG_20210620_120056.jpg",
-      "lat": 46.541535,
-      "lng": 23.7096356
+      "lat": 45.52,
+      "lng": 25.8,
+      "judet": "Prahova"
     },
     {
       "nume": "Varful Pilistea - Muntii Intorsurii",
@@ -5310,7 +5724,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPPRXhk979S6D7J3nbU0rLVE9iYuS_VEIU9-1A1uF1a-AWwAYSZXK0UToee5iZWoOYLed9nO9vELBkf-POAqvZ5f0yj5tERyheGQLK0DHKLOU0CKod3IxCMZmECrSrPwM99wt5SLJrmdq5/w1200-h630-p-k-no-nu/2021-08-13_13-06-09.jpg",
       "lat": 45.7374928,
-      "lng": 25.886992
+      "lng": 25.886992,
+      "judet": "Covasna"
     },
     {
       "nume": "Circuit Varful Neamtului, Muntii Neamtului",
@@ -5323,8 +5738,9 @@
       "sursa_url": "http://www.jurnaldedrumetii.ro/2020/09/varful-neamtului-muntii-neamtului.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiY4R_1YGWkIMJ_0d14JB2M5dLov-z-Xym1GQx_pCO1g6mbLNboCSacZbs4kvJVsAFTiSsAM066QX3k-7yJ4BZEbzErbjYHVGZkem13i8_1AYsejn3MBtBVxx-JMQHYY27wWRuwNN8SwB4/w1200-h630-p-k-no-nu/DSCN8529.jpg",
-      "lat": 45.4444432,
-      "lng": 25.5693383
+      "lat": 46.97,
+      "lng": 25.95,
+      "judet": "Neamț"
     },
     {
       "nume": "Circuit Varful Penteleu, Masivul Penteleu",
@@ -5338,7 +5754,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiv08nVDP6yjMe-FjAyKtrCgjuAFwsxuAz18AGTzr7C7TmtFGFmgqE8gZPAbfEmOuwYS9tUDxIi8LzNbV8DA5Dvgpgn1ng2GxqOpiWGJJEj7b78jkEEWTspn5FMREHsEYjS1btT-YJAc8pS/w1200-h630-p-k-no-nu/2021-08-12_12-54-18.jpg",
       "lat": 45.5089008,
-      "lng": 26.4415445
+      "lng": 26.4415445,
+      "judet": "Buzău"
     },
     {
       "nume": "Varful Malaia si Lacul Vulturilor, Muntii Siriu",
@@ -5351,8 +5768,9 @@
       "sursa_url": "http://www.jurnaldedrumetii.ro/2021/08/varful-malaia-masivul-siriu.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgd5O8TW2XVAxamp5s8KxTaoTFQtsHOoaI2G_27SE4ns8wKXZOX9rmkYcd4i1j8f9lsPyYuGACERKcNfv4UG8IuMZaMq6q5EB_SFnmFbEkcusRU0WzwC8YwlbOak-dAEw8s6p_-J2y4eTeiezzA5HiMw6J-DDq024GWnoGcsRyoRAhs6e8eKO_T3E1eIox-/w1200-h630-p-k-no-nu/IMG_20210811_114357.jpg",
-      "lat": 45.1793393,
-      "lng": 23.5199932
+      "lat": 45.35,
+      "lng": 26.65,
+      "judet": "Buzău"
     },
     {
       "nume": "Vârful Roșu și Vârful Păpușa, Munții Iezer-Păpușa",
@@ -5364,7 +5782,10 @@
       "elevatie_pozitiva_m": 2902,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2016/06/varful-rosu-muntii-iezer-papusa.html",
       "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLWJ5g6FEeM8VrEoG6jvjtlcEW1s3S8539jrScDtGoN9mRPaLCgF99sBemAvimx1EK_RKGRBQDC7HirI8vBmZgJMFvnMLwIJqNyg0uElLbcaBCdEnIFv565UD0jW7MSgw903aSNaZ-/w1200-h630-p-k-no-nu/44.JPG"
+      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLWJ5g6FEeM8VrEoG6jvjtlcEW1s3S8539jrScDtGoN9mRPaLCgF99sBemAvimx1EK_RKGRBQDC7HirI8vBmZgJMFvnMLwIJqNyg0uElLbcaBCdEnIFv565UD0jW7MSgw903aSNaZ-/w1200-h630-p-k-no-nu/44.JPG",
+      "judet": "Argeș",
+      "lat": 45.43,
+      "lng": 24.93
     },
     {
       "nume": "Varful Ghitu, Muntii Ghitu",
@@ -5378,7 +5799,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-ui7aKWABP9D2jvefICE1RrIEKFyT7Z0V1ThmCF9rAuYboBKb1Fv6p2smBTNzPm043dk2cOBydaxjvCJbmUunH-8J2ZdRJd8WivVpcLEcq3ThINwvz5HlOYjQ1RFU40-o5PMRlZBycIE5p1wILxkbbdPy_ups8bi3rgzrXDrgbVruRwUNFfBO17pP/w1200-h630-p-k-no-nu/IMG_20220522_110416.jpg",
       "lat": 45.3229463,
-      "lng": 24.664844
+      "lng": 24.664844,
+      "judet": "Argeș"
     },
     {
       "nume": "Varful Fata lui Ilie si Varful Tagla, Muntii Taga",
@@ -5392,7 +5814,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpNVpbTO-rd5bt9PHbYjdEgZ_b6qTDns46a4erWassvCykpnXcm-DV0myU3B8yixxyK2lt5TjM4IrZWS1q_A_ThWLV9nr5Fuav1F7tVjUXSX0xxr_HWVXiutn_zMdaBBLGe5fzMMmfSL0i9SbP7SOUeYg2qyHKKzlELqIFKOMHQ-nWdWNXLmhGa55mAQ/w1200-h630-p-k-no-nu/taglei%20si%20fata%20lui%20ilie.jpg",
       "lat": 45.5607354,
-      "lng": 25.3161793
+      "lng": 25.3161793,
+      "judet": "Brașov"
     },
     {
       "nume": "Varful Cristesti si Varful Steflesti",
@@ -5406,12 +5829,13 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJUjsk6J0jZu6Fn9tNbkKX0TRqgcJJmMti5TidirlFsDrKHeS80I70T8Fq_sG5y2sElOAjfMCSkFCh0i8bKQyMhrt9NliXopsgY0A-KINsOe_yizoXTK1C3ONtt2LExHfHyi6F4-9xQLd4/w1200-h630-p-k-no-nu/Picture+%2528149%2529.JPG",
       "lat": 45.6236062,
-      "lng": 24.0605369
+      "lng": 24.0605369,
+      "judet": "Sibiu"
     },
     {
       "nume": "Varful Tulisa",
       "localitate_start": "Uricani",
-      "durata_h": 7.0,
+      "durata_h": 7,
       "dificultate": "greu",
       "denivelare_m": 1117,
       "distanta_km": 17.38,
@@ -5420,7 +5844,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiz1a3Z_m72QPdaa__ggo77Br4cMJFdiP3gP63EUTPqPZf0HPd2qaxzak9g9iYeCK-zShAuuUh_HFFCOT23pmqOrphyq11a8Vtk-XHntBb32w8pwf3-kyc72gyqUN3J2E_Qi-rM9M3Bjq02/w1200-h630-p-k-no-nu/IMG_20190519_131938.jpg",
       "lat": 47.156943,
-      "lng": 27.4861112
+      "lng": 27.4861112,
+      "judet": "Botoșani"
     },
     {
       "nume": "Vârful Gugu de la Barajul Gura Apelor",
@@ -5428,13 +5853,14 @@
       "durata_h": 7.58,
       "dificultate": "greu",
       "denivelare_m": 1191,
-      "distanta_km": 14.0,
+      "distanta_km": 14,
       "elevatie_pozitiva_m": 1230,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2016/09/varful-gugu-2291-m_25.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKqQBahE4iqTFuxhYD4IKNN8sm0IRD3xJSTdYcmakf87zCq5pvogTk29pPs6FiFCn9gOoS2I6XkpaCrSSP9incE2rkcMcU9AVydfc9_AUtKj9TqGaWk28mMMUORicoyIHBfF-_3BRCDuVF/w1200-h630-p-k-no-nu/DSCN9150.jpg",
       "lat": 45.326156,
-      "lng": 22.7241724
+      "lng": 22.7241724,
+      "judet": "Hunedoara"
     },
     {
       "nume": "Varful Muntele Mic",
@@ -5446,7 +5872,10 @@
       "elevatie_pozitiva_m": null,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2017/06/varful-muntele-mic.html",
       "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBFmKT-UjVtdDbLZdz4qpbPM5X4UVhyewaIZ2MCcp7_vA2RksRQHdcOS6DK4-I7_-98n9pp6tTr8PrYfQuXZKdqFpgb29VtAvuXeCxr4D-f0KQDR1LhBMKnQTLFFOpDqf15VI9BnrR/w1200-h630-p-k-no-nu/20170624_192634.jpg"
+      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBFmKT-UjVtdDbLZdz4qpbPM5X4UVhyewaIZ2MCcp7_vA2RksRQHdcOS6DK4-I7_-98n9pp6tTr8PrYfQuXZKdqFpgb29VtAvuXeCxr4D-f0KQDR1LhBMKnQTLFFOpDqf15VI9BnrR/w1200-h630-p-k-no-nu/20170624_192634.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.25,
+      "lng": 22.9
     },
     {
       "nume": "Circuit Munții Țarcu: Vârful Țarcu - Vârful Căleanu",
@@ -5458,12 +5887,15 @@
       "elevatie_pozitiva_m": 1391,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2017/06/circuit-muntii-tarcu.html",
       "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidZHPnRGdadUSvH-Ni89eTJuKuwN3OxVSsdPp4LLtAsEx6sFBqWnGMzITT7oSzm26WjhcwstgSzYGEjuvSfbO1xm3J69_vNiuhicYcKL-uDlJD5G50HeBXLRv7H-ThDMGmxkeEM9ps/w1200-h630-p-k-no-nu/DSCN3273.jpg"
+      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidZHPnRGdadUSvH-Ni89eTJuKuwN3OxVSsdPp4LLtAsEx6sFBqWnGMzITT7oSzm26WjhcwstgSzYGEjuvSfbO1xm3J69_vNiuhicYcKL-uDlJD5G50HeBXLRv7H-ThDMGmxkeEM9ps/w1200-h630-p-k-no-nu/DSCN3273.jpg",
+      "judet": "Hunedoara",
+      "lat": 45.27,
+      "lng": 22.85
     },
     {
       "nume": "Creasta Oslea",
       "localitate_start": "Campusel",
-      "durata_h": 8.0,
+      "durata_h": 8,
       "dificultate": "mediu",
       "denivelare_m": 870,
       "distanta_km": 16.21,
@@ -5471,8 +5903,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2020/08/creasta-oslea.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSJ7JZYOfmdeXxE9yO6S7QefHfuUNNNRDZumCdx4GNuq4uSP_wU7rRYZ1h8RjvvmAZQkUzydUQLwv_cQj37Sxsf0uXRHIrxdTeXjbgn5WdxrN74Rx30cnBL-V5vHWSrhq8GLydGSJ5Bnk/w1200-h630-p-k-no-nu/IMG_20200822_140649.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 45.32,
+      "lng": 22.88,
+      "judet": "Hunedoara"
     },
     {
       "nume": "Varful Gaina",
@@ -5486,12 +5919,13 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLwOKaU-54_buQ87J1nNh8CJ5ssPKheNGZ1s9JjBL-ZtBoPumr-DDIEeurDp3sNmk2Gw7ZpGno1idPu-Xmip1DMCWSQwvg6ihpds54SLotXky33PkeREb8Z7gnnRgeTv3zf8hdeqwSq6yc/w1200-h630-p-k-no-nu/IMG_20200126_125536.JPG",
       "lat": 46.2703654,
-      "lng": 22.6183853
+      "lng": 22.6183853,
+      "judet": "Alba"
     },
     {
       "nume": "Varful Chicera Comorii, Muntii Gilaului",
       "localitate_start": "Maguri",
-      "durata_h": 1.0,
+      "durata_h": 1,
       "dificultate": "usor",
       "denivelare_m": 136,
       "distanta_km": 4.4,
@@ -5500,7 +5934,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjS9omLGeTQuBjeoEVFf078TmUNL4IStgj7gKBlEpaG33t5n2LYFd4ose5nDzKSRvu7YEnApNKFSEquULQ6bh4b0QLCDFurFlBfnLgFEobxEboEfqiTorCDdB28OpRejc4Z7rbbQtAtfuPn/w1200-h630-p-k-no-nu/2020-05-24_12-09-55.jpg",
       "lat": 46.6279364,
-      "lng": 23.1216271
+      "lng": 23.1216271,
+      "judet": "Cluj"
     },
     {
       "nume": "Traseu Vârful Poienița, Munții Metaliferi",
@@ -5514,12 +5949,13 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUjqe5bydKEOCeVuB0OuwFQ3L9ZMGspfL84VnbZj7Vx6U2nCaqmrt0d4wz9tpKy7J5Li3J2niXCpkMtlXzCFzfShsBqKFOk_tCTQp13tWUZU8jzZbnEF10B-11FRytuFDr78MLvM5tI38L/w1200-h630-p-k-no-nu/177.jpg",
       "lat": 46.3351172,
-      "lng": 23.4024522
+      "lng": 23.4024522,
+      "judet": "Alba"
     },
     {
       "nume": "Vârful Vlădeasa",
       "localitate_start": "Rachitele",
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": "mediu",
       "denivelare_m": 1263,
       "distanta_km": 23.45,
@@ -5528,7 +5964,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiC70YDIVD3N8TcWy3_KuvNaUwL6pbAXXwlAmo5kcNjt8w-SYFrYAON_qIvlka4uqQ8qmkaEr_hLCHm3UJa7oS1GFu9easNDHBLFGPvuBvZMfGizRvEvcZjKw1Zo-ZpYzFkXs6QzlbdyBQX/w1200-h630-p-k-no-nu/026.jpg",
       "lat": 46.7065334,
-      "lng": 22.8941635
+      "lng": 22.8941635,
+      "judet": "Cluj"
     },
     {
       "nume": "Varful Vulcan, Muntii Vulcan",
@@ -5542,7 +5979,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYrdutx2q5ZG3DKzFNCScrKFvuBCNyslKeGUAtFFJCpfg8Am852dujxgXRJzlNgyIeaCKvG82E3jJGgjZYnDG51XG1gkFD_237hDAPvQukdvzooyxXoKvLs_ZCnax3O4UHJgT88TuFVgw/w1200-h630-p-k-no-nu/IMG_20210411_115840.jpg",
       "lat": 46.2233288,
-      "lng": 22.967064
+      "lng": 22.967064,
+      "judet": "Hunedoara"
     },
     {
       "nume": "Varful Plesu, Muntii Codru-Moma",
@@ -5556,12 +5994,13 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCfSHL_hwhQ4IyoJ3JqFN8rAZZTaRE_zprtEgsp38l0wvx8QHNZL-f6deLR9xRV5-v_ujacapKQ26H1OTQTObbsUhzQuIBn0xt7JWCzEU4J4HhMxURYXkHgJNeB4oVH4GIX3R9G5ZVM34Q/w1200-h630-p-k-no-nu/2020-02-23_13-56-00.jpg",
       "lat": 46.4611115,
-      "lng": 22.2567395
+      "lng": 22.2567395,
+      "judet": "Arad"
     },
     {
       "nume": "Varful Magura Priei, Muntii Meses",
       "localitate_start": "Pria",
-      "durata_h": 3.0,
+      "durata_h": 3,
       "dificultate": "usor",
       "denivelare_m": 369,
       "distanta_km": 6.79,
@@ -5570,7 +6009,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjd4jJiIhP4GeiTxJDz1A9qmoEhgP_lLH1YnxioDZZUjYMGX_xmF6G1mI57-jmHOb6KAT3MlTrdVdpgTkQ4xnDdjC8AeglekBU0Iqhdt6H0Fz-2mlaUgPgcOBDAGjXUzUl7EVGmw4rL_Uch/w1200-h630-p-k-no-nu/IMG_20200102_130616.jpg",
       "lat": 47.0487825,
-      "lng": 22.8902966
+      "lng": 22.8902966,
+      "judet": "Sălaj"
     },
     {
       "nume": "Varful Hodrangusa, Muntii Padurea Craiului",
@@ -5583,8 +6023,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2023/04/varful-hodrangusa-muntii-padurea.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbbkZeOdtJAuNd-OmVeYQFGBt8DHjLuNWgNt8fMmfHKwjLAJHZDPzpmGHDjaXGL_1ehlm3SMHw1_SgOyn1elPCk-rRBO094Arwo1vSjCd61pOygQUn3QYwSLHR9KCCaCRtGKyiAaTM1MaZXvNngFezZoKLcTTeqz7TLWnbTgFz3_rOa7BD3RwzU8_1Zw/w1200-h630-p-k-no-nu/2023-04-17_11-39-09.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 46.58,
+      "lng": 22.72,
+      "judet": "Bihor"
     },
     {
       "nume": "Varful Magura Mare, Muntii Plopis",
@@ -5592,13 +6033,14 @@
       "durata_h": 2.58,
       "dificultate": "usor",
       "denivelare_m": 368,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": 368,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2020/02/varful-magura-mare-muntii-plopis.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjf0pU7-NTAiTipOC5kD8jtDWkTKxZxmIxDBhrWdt-X36KaSGLVlau36oUL4IBZJNTpASbaa0fbDI-DT7_g0xcRMDJOjct-vF9nG-1Ri7GZLCht4AP1CuiXoCJaw_o-_UB7O5XeHmTDCIPd/w1200-h630-p-k-no-nu/IMG_20200209_114539.JPG",
       "lat": 46.7117488,
-      "lng": 23.0661138
+      "lng": 23.0661138,
+      "judet": "Sălaj"
     },
     {
       "nume": "Varful Drocea, Muntii Zarandului",
@@ -5612,7 +6054,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0iFeW524r6g-6D5ewdm80qRcmnJAADWHaXP_7-z5BSeKaEMHTAc5bxY9_45pellBXAdvBDBkqLBIFuHjyiSjRrQwLcHXIb6hkJSI0gT_wpWiFrilMgxmn-GZYKjd5_xO6kwWruYqeJeIXyl8ep0Ic-9mH15-gRpWyBBpGospt8hZCX5MNf8ScJYi1IA/w1200-h630-p-k-no-nu/2022-04-18_13-49-50.jpg",
       "lat": 46.156105,
-      "lng": 22.184437
+      "lng": 22.184437,
+      "judet": "Arad"
     },
     {
       "nume": "Varful Pades, Muntii Poiana Rusca",
@@ -5626,7 +6069,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNbKZLunZ2S2IZc07iwex92F1CRYlpg1YzBuQAI0XmCY_yw542YG9DjxET_hv-KyWUoB0vPz7GARIJYFdzST_BoZc2g-Kz3_H76o325oOdY86Fp3mC3NGOuTr6YkxBzRM9p-_qWtOG0SE/w1200-h630-p-k-no-nu/IMG_20210307_123527.jpg",
       "lat": 45.7198528,
-      "lng": 22.3133526
+      "lng": 22.3133526,
+      "judet": "Hunedoara"
     },
     {
       "nume": "Varful Culmea Poetii, Muntii Dognecei",
@@ -5640,7 +6084,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEii8hfC3MyF1KN5wm5OFCe6I4NVQPvtVoNIezixt2LiVIaeer_MI9Lp8a-W6iTDVzv7QGCQxpUjZsRcko6lAUmkQSToFhjh-ZaTtPfDOvN6HhNWjj9WRHACU0TcRLAwtrQBJh8_AJqRgCo5_jKOymeseSDD-34DDj2DGk4ixd00L_d8Tl9M5zW_DWvonQ/w1200-h630-p-k-no-nu/2022-04-17_18-00-34.jpg",
       "lat": 45.2746952,
-      "lng": 21.7513654
+      "lng": 21.7513654,
+      "judet": "Caraș-Severin"
     },
     {
       "nume": "Gjirokastra - cetatea de piatra a Albaniei",
@@ -5653,8 +6098,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2022/07/gjirokastra-cetatea-de-piatra-albaniei.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyz9od0bZHRqghxCAGFTOd_qEAk-Y_PmiWsIa-v0QidVEyD7R8TNlWHn-HdNco_blRSV1JtLpBMP8aNd0Xgii6I5H28-eqgEeZ2Cl-BtemSE-J6mL0AeI4B4g5ZId43BKmb0-wMSwGv4dNVucvSnv8zuVOO8SjjpxQ91Chht9UGfqIn9HGggM_uZd3ZA0e/w1200-h630-p-k-no-nu/Gjirokastra_jurnaldedrumetii.ro-49.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 40.075,
+      "lng": 20.138,
+      "judet": "Albania"
     },
     {
       "nume": "Varful Korab",
@@ -5667,8 +6113,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2022/07/varful-korab-2764m.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWdW1fz4YO2OHa4ngazREwgsdQP0EW3bOZ0ylNwb01Dh70aRqUxydIqwQK20j7_1q-kMAvyuLrByWpxKTAsQDwLbo9xoySIuGl69iJ6ZZBguoW_B0DfyZlr7-JjwLFOTapYdjYQDKiy7q2ku-U728pfAORQVaF1Gr4jXN-xzgFco1CNMYpiSlPa0az/w1200-h630-p-k-no-nu/IMG_20220724_130222.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 41.789,
+      "lng": 20.548,
+      "judet": "Macedonia"
     },
     {
       "nume": "The Blue Eye (Ochiul Albastru)",
@@ -5681,8 +6128,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2023/02/the-blue-eye-ochiul-albastru-syri-i.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhphoGto1QO1KAaQc8a4FpDC5msMwhPsvShm0ofPjjdtRJeLiLTREwIVHe9zddOCRpedcGbtgtxUe_COV1hs7uAGM0BkMnCzwGZ8edcPLw_QbFdq5XTtUrq-FFZcRNgtqh3uoErFwA7GNRZb1OZqPhSSI5cGaK62SRAy1l3_0JbTj4zMfU9otVG1DRI/w1200-h630-p-k-no-nu/IMG_20220729_132043.jpg",
-      "lat": 45.1695738,
-      "lng": 23.7611447
+      "lat": 39.875,
+      "lng": 20.018,
+      "judet": "Albania"
     },
     {
       "nume": "Varful Zla Kolata, Alpii Dinarici",
@@ -5695,8 +6143,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2023/08/varful-zla-kolata-alpii-dinarici.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRa1C0eq9YyR2fdKAtkRdrC6tXO5lCByZbjtKFr6VDe5WiRHCsprTcAb-oeo5nBt7592UVixF-_6ggndFd6swqr2IK6Ur3Hx874I8DF5z0Ha0HuFRc6CLaDyU98A8foALvLjp2h2ra0EYr0ypURIyHk9tAzQT9VguZhmIwXJPvu-pGGv678HxSnuUTt5V9/w1200-h630-p-k-no-nu/ZLA-KOLATA.webp",
-      "lat": null,
-      "lng": null
+      "lat": 42.443,
+      "lng": 19.803,
+      "judet": "Muntenegru"
     },
     {
       "nume": "Varful Bobotov Kuk, Muntii Durmitor",
@@ -5709,13 +6158,14 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2023/07/varful-bobotov-kuk-muntii-durmitor.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW03unukNLFp13Efr-ft0mhWbMei29XwfvX1jKph1AGPdp-m6uHHqgJBHLPNFx1ZdaGMCTdFVlShmiVnt_f7D-nvV1UrebXj0AbA9-qVzcKKO_Q2aQKoSJsTCVzT6i02wqdVKkGZuqeWj-DHWN7Z34ST61Q5DuANj-b-WGicEJMdqwlxAf97SuHv49_OF9/w1200-h630-p-k-no-nu/PANO-BOBOTOV-KUK.webp",
-      "lat": null,
-      "lng": null
+      "lat": 43.135,
+      "lng": 19.022,
+      "judet": "Muntenegru"
     },
     {
       "nume": "Cascadele Krushuna si Lacul Albastru",
       "localitate_start": "Krushuna",
-      "durata_h": 2.0,
+      "durata_h": 2,
       "dificultate": "usor",
       "denivelare_m": 140,
       "distanta_km": 4.31,
@@ -5723,8 +6173,9 @@
       "sursa_url": "http://www.jurnaldedrumetii.ro/2021/08/cascadele-krushuna-piscina-albastra.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5qzFRJTg4Ji-xWD5gK1Udx2kiUpu5WzPJ4NqBimVjaN4ADWcaTGcttjyemaux7yYUc46Sq_n-uYHlhnBZ_5I2ePUuh5A4p1bHoW3N4nPUGHPn7BZkhR4s7eQcGhRObyy-JZwu6FPDHpOn/w1200-h630-p-k-no-nu/2021-08-10_14-16-43.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 43.261,
+      "lng": 24.737,
+      "judet": "Bulgaria"
     },
     {
       "nume": "Pestera Devetashka",
@@ -5737,13 +6188,14 @@
       "sursa_url": "http://www.jurnaldedrumetii.ro/2021/08/pestera-devetashka.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhs0FLIR760Z6C-0a6-b91TMOpjkjOFGBnFPuKGyJ2vM5MdeF54v_KDc4XMSyMRXE0-1tLMUxt-N7R1surLbcaWBB3HVf-85VbJFmUyGvgvZnR1zjaVjmdbBMEJdQR_EfkkOr2HCzZTDgY6/w1200-h630-p-k-no-nu/IMG_20210810_131136.jpg",
-      "lat": 43.8961275,
-      "lng": 25.9656448
+      "lat": 43.234,
+      "lng": 24.889,
+      "judet": "Bulgaria"
     },
     {
       "nume": "Cetatea Belogradchik",
       "localitate_start": "Belogradchik",
-      "durata_h": 2.0,
+      "durata_h": 2,
       "dificultate": "usor",
       "denivelare_m": 155,
       "distanta_km": 3.88,
@@ -5751,13 +6203,14 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2022/08/cetatea-belogradchik-bulgaria.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCE-UT3TJG5p05WQ9NRhIIJMfAf2tv1p3VIkqZiAt4jGEfy7Zv-zswgHTuNt1JUfLVv1VznjMI22vfPutBOEJXx3kBiX3L1MbsGrE5jEXkoWOk9pqxmg7VNn6lQlVbnX2oxg55VwMo-KiVWRUFSZGLBRhvOdiLc9Y2c7tNNYgxQwkV6iz2veSRtAskMGG5/w1200-h630-p-k-no-nu/belogradchik_jurnaldedrumetii.ro%20(17).webp",
-      "lat": null,
-      "lng": null
+      "lat": 43.626,
+      "lng": 22.681,
+      "judet": "Bulgaria"
     },
     {
       "nume": "Circuit Cabana Vihren - Kutelo - Koncheto - Banski Suhodol - Vihren",
       "localitate_start": "Bansko",
-      "durata_h": 9.0,
+      "durata_h": 9,
       "dificultate": "greu",
       "denivelare_m": 1236,
       "distanta_km": 12.5,
@@ -5765,8 +6218,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2022/08/kutelo-koncheto-banski-suhodol-vihren.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCpPpQnsdc4KtK1ZKpFw1-UBX4JlTExq3EMPlw5MR6jfIxdMPWSxvpbgwfvi4aSeGfcuKXkpTl8sV1C8Qn1Qe0xZMQ5Ae6pV_VMX0TEZvWKRfRuVxOGtkusF7Un7_3XaUXn_TOUohpmXwh-iyDunnNdB5ESwAkRQWnTEC7HdGThGlDpPfT-1MiNRne/w1200-h630-p-k-no-nu/2.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 41.837,
+      "lng": 23.484,
+      "judet": "Bulgaria"
     },
     {
       "nume": "Varful Musala, Muntii Rila",
@@ -5779,13 +6233,14 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2018/07/varful-musala-2925-m-muntii-rila.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9WwLTQqAfJIldNod2lP020f71X8FS86VpCPMgYw3EkqbB7XtN4HX6O2S6R-8_lq7XdhaLj3vLg_RcOLI72AkaQr8OCHdqg179kRrDNNcfz9fg9ZkuifUno1cpn73Ii3ZKUF9q-jFKjSFU/w1200-h630-p-k-no-nu/DSCN5960.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 42.179,
+      "lng": 23.585,
+      "judet": "Bulgaria"
     },
     {
       "nume": "Circuit Pestera Prohodna - Ochii lui Dumnezeu",
       "localitate_start": "Karlukovo",
-      "durata_h": 1.0,
+      "durata_h": 1,
       "dificultate": "usor",
       "denivelare_m": 100,
       "distanta_km": 2.49,
@@ -5793,8 +6248,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2022/08/pestera-prohodna-ochii-lui-dumnezeu.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6OPIuG6z2C5ofRSiBSaovHnmEk2acgsctXvJ17eTIfBJQlvoCCbYd8qSep3IU_LasFjPHLEtDCu3fn5yfZo7CpGeEQH9ejsiIfZ6EW2ZGm3h9BNCXI8bGEbiGYGAMORMjxCRT9KrHyL9SVoGQmdxauo-UKLElPdcsyaxA3DMGeP77grURIg3Ok0zs/w1200-h630-p-k-no-nu/IMG_20220811_095116.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 43.117,
+      "lng": 24.058,
+      "judet": "Bulgaria"
     },
     {
       "nume": "Manastirile Meteora",
@@ -5807,8 +6263,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2008/09/meteora.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiToPfc1OXtqFYu1O4MH2_PgHLv-vAUGIfug95-uVC1DqToUBeIoFHJHy1UzYuEUzQ9_2Swhovx1h9kE6r4B1oLO4pzTYsqlLFg6suxq6kLB5Stlh1RAoQBPLAbn5BhZHGD_3OkWCjReQBORbRNetIvYtDCEJKsX0c3frr1hwJGL0WeeMxgtsaphYnSbiF0/w1200-h630-p-k-no-nu/meteora_jurnaldedrumetii.ro-2.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 39.715,
+      "lng": 21.631,
+      "judet": "Grecia"
     },
     {
       "nume": "Varful Mytikas, Muntele Olimp",
@@ -5821,8 +6278,9 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2022/08/varful-mytikas-muntele-olimp-grecia.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUf222C5OTm0oLiAyYoElD1-v-fCXbvr6TYeSz1QQDZvBFzx4H3MRnqPlobcA0RKw9LeWOrAod8tg4gwarDfm3r46kpvw4RaNiYnvCfy7Ewg47dw1-RTERcoWMMEBzIkNHr-auDsU66kUV3K-8eQ2RT3BAX7MxSAbIu6Uc5hCFrDVXgYweVoOiKemT/w1200-h630-p-k-no-nu/Mytikas_jurnaldedrumetii.ro.jpg",
-      "lat": null,
-      "lng": null
+      "lat": 40.085,
+      "lng": 22.359,
+      "judet": "Grecia"
     },
     {
       "nume": "Varful Timios Stavros - Muntele Psiloritis",
@@ -5830,7 +6288,7 @@
       "durata_h": null,
       "dificultate": "usor",
       "denivelare_m": null,
-      "distanta_km": 10.0,
+      "distanta_km": 10,
       "elevatie_pozitiva_m": 900,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2020/08/varful-timios-stavros-2456mpsiloritis.html",
       "sursa_blog": "jurnaldedrumetii",
@@ -5894,7 +6352,7 @@
       "durata_h": 2.5,
       "dificultate": "usor",
       "denivelare_m": 440,
-      "distanta_km": 4.0,
+      "distanta_km": 4,
       "elevatie_pozitiva_m": 440,
       "sursa_url": "https://www.jurnaldedrumetii.ro/2023/06/valea-fluturilor-ghid-complet.html",
       "sursa_blog": "jurnaldedrumetii",
@@ -5950,7 +6408,7 @@
       "durata_h": 0.33,
       "dificultate": "usor",
       "denivelare_m": 200,
-      "distanta_km": 2.0,
+      "distanta_km": 2,
       "elevatie_pozitiva_m": 200,
       "sursa_url": "http://www.jurnaldedrumetii.ro/2010/07/giola-piscina-sirenelor-insula-thassos.html",
       "sursa_blog": "jurnaldedrumetii",
@@ -6104,7 +6562,8 @@
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiU5lkUR9oWEsSAttYv3ymg_L3VWx_5LbrXV2fowlvfVZqG5eOEclHHRll73sLU8WkmZL5WNE4gfYkFYSLlu3nmjoCFm8P1SVuAZWllLtUn33ug8A9QQN_o95KMcLGdf_JIWwLK1jUQ92OMUe6GOJRQy2rZzipE16I-rUFTBRIMkh4wuTFI6FUFeh0OyBiz/w1200-h630-p-k-no-nu/sfaturi_pentru_incepatori_jurnal_de_drumetii.jpg",
       "lat": 46.7930128,
-      "lng": 25.7953129
+      "lng": 25.7953129,
+      "judet": "Harghita"
     },
     {
       "nume": "Hiking vs Trekking",
