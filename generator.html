@@ -799,21 +799,26 @@ function renderDropdown(items) {
 async function fetchSugestii(text) {
   inp.classList.add('loading');
   try {
-    const res = await fetch(
-      `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(text)}&format=json&limit=6&countrycodes=ro&addressdetails=1`,
-      { headers: { 'Accept-Language': 'ro' } }
-    );
+    const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(text)}&lang=ro&limit=6&bbox=20.0,43.5,30.0,48.5`;
+    const res = await fetch(url);
     const data = await res.json();
-    const items = data
-      .filter(d => ['city','town','village','municipality','county'].includes(d.addresstype) || d.type === 'administrative')
+
+    const items = (data.features || [])
+      .filter(f => {
+        const p = f.properties;
+        return ['city','town','village','municipality','district','county'].includes(p.type) || p.osm_type === 'R';
+      })
       .slice(0, 5)
-      .map(d => {
-        const addr = d.address || {};
-        const name = d.name || d.display_name.split(',')[0];
-        const parts = [addr.county, addr.state].filter(Boolean);
-        const sub = parts.length ? parts[0] + ', România' : 'România';
-        return { name, sub, lat: parseFloat(d.lat), lng: parseFloat(d.lon) };
-      });
+      .map(f => {
+        const p = f.properties;
+        const name = p.name || p.city || '';
+        const parts = [p.county, p.state, 'România'].filter(Boolean);
+        const sub = parts.slice(0, 2).join(', ');
+        const [lng, lat] = f.geometry.coordinates;
+        return { name, sub, lat, lng };
+      })
+      .filter(i => i.name);
+
     renderDropdown(items);
   } catch {
     closeDropdown();
@@ -826,7 +831,7 @@ inp.addEventListener('input', e => {
   const val = e.target.value.trim();
   clearTimeout(acTimer);
   if (val.length < 2) { closeDropdown(); return; }
-  acTimer = setTimeout(() => fetchSugestii(val), 300);
+  acTimer = setTimeout(() => fetchSugestii(val), 150);
 });
 
 inp.addEventListener('keydown', e => {
