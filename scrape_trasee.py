@@ -54,7 +54,7 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
         return None
 
     genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel("gemini-2.5-flash-preview-04-17")
+    model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
     prompt = f"""Esti un asistent care extrage informatii structurate despre trasee montane din Romania.
 
