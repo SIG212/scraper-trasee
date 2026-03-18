@@ -177,44 +177,30 @@ def scrape_bloguldecalatorii() -> list[dict]:
 def scrape_thechillinbear() -> list[dict]:
     print("\n[2/5] thechillinbear.com...", flush=True)
     links = []
-    page = 1
 
-    while True:
-        try:
-            url = f"https://ro.thechillinbear.com/trasee/page/{page}/" if page > 1 else "https://ro.thechillinbear.com/trasee/"
-            r = requests.get(url, headers=HEADERS, timeout=15)
-            if r.status_code == 404:
-                break
-            soup = BeautifulSoup(r.text, "html.parser")
+    try:
+        r = requests.get("https://ro.thechillinbear.com/trasee/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
 
-            # Linkurile sunt pe imagini si titluri h5, nu in <article>
-            # Extragem toate linkurile interne care nu sunt categorii/autori/pagini
-            found = False
-            for a in soup.find_all("a", href=True):
-                href = a["href"]
-                if (
-                    href.startswith("https://ro.thechillinbear.com/")
-                    and "/category/" not in href
-                    and "/author/" not in href
-                    and "/page/" not in href
-                    and href not in ["https://ro.thechillinbear.com/trasee/",
-                                     "https://ro.thechillinbear.com/",
-                                     "https://ro.thechillinbear.com/cabane/",
-                                     "https://ro.thechillinbear.com/map/",
-                                     "https://ro.thechillinbear.com/experiente/",
-                                     "https://ro.thechillinbear.com/fotografii/"]
-                    and href.count("/") == 4  # slug direct, nu subpagini
-                ):
-                    links.append(href)
-                    found = True
-
-            if not found:
-                break
-            page += 1
-            time.sleep(1)
-        except Exception as e:
-            print(f"  Eroare pagina {page}: {e}", flush=True)
-            break
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if (
+                href.startswith("https://ro.thechillinbear.com/")
+                and "/category/" not in href
+                and "/author/" not in href
+                and "/page/" not in href
+                and href not in ["https://ro.thechillinbear.com/trasee/",
+                                 "https://ro.thechillinbear.com/",
+                                 "https://ro.thechillinbear.com/cabane/",
+                                 "https://ro.thechillinbear.com/map/",
+                                 "https://ro.thechillinbear.com/experiente/",
+                                 "https://ro.thechillinbear.com/fotografii/"]
+                and href.count("/") == 4
+            ):
+                links.append(href)
+    except Exception as e:
+        print(f"  Eroare index: {e}", flush=True)
+        return []
 
     links = list(dict.fromkeys(links))
     print(f"  Gasit {len(links)} linkuri", flush=True)
