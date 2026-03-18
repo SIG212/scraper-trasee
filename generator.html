@@ -9,296 +9,138 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --g9: #0a2e1a;
-  --g7: #145c32;
-  --g5: #1e8a4a;
-  --g3: #5bb87a;
-  --g1: #d6f0df;
-  --cream: #f5f0e8;
-  --stone: #e2d9cc;
-  --ink: #1a1612;
-  --ink2: #5a5248;
-  --ink3: #9a9088;
-  --white: #ffffff;
-  --r-sm: 6px;
-  --r-md: 12px;
-  --r-lg: 20px;
+  --g9:#0a2e1a; --g7:#145c32; --g5:#1e8a4a; --g3:#5bb87a; --g1:#d6f0df;
+  --cream:#f5f0e8; --stone:#e2d9cc; --ink:#1a1612; --ink2:#5a5248; --ink3:#9a9088;
+  --white:#fff; --rsm:6px; --rmd:12px; --rlg:20px;
 }
+body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--ink); min-height:100vh; }
 
-body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); min-height: 100vh; }
+header { background:var(--g9); padding:1.25rem 2rem; }
+.logo { font-family:'Fraunces',serif; font-size:20px; font-weight:300; color:var(--cream); letter-spacing:-0.02em; }
+.logo em { font-style:italic; color:var(--g3); }
 
-header {
-  background: var(--g9);
-  padding: 1.25rem 2rem;
-  display: flex;
-  align-items: center;
-}
-.logo { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 300; color: var(--cream); letter-spacing: -0.02em; }
-.logo em { font-style: italic; color: var(--g3); }
-
-.hero {
-  background: var(--g9);
-  padding: 2.5rem 1.5rem 3.5rem;
-  text-align: center;
-}
-.hero h1 {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(1.8rem, 5vw, 3rem);
-  font-weight: 300;
-  color: var(--cream);
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
-}
-.hero h1 em { font-style: italic; color: var(--g3); }
-.hero p { color: var(--g1); font-size: 15px; opacity: 0.7; margin-bottom: 2rem; }
+.hero { background:var(--g9); padding:2.5rem 1.5rem 3.5rem; text-align:center; }
+.hero h1 { font-family:'Fraunces',serif; font-size:clamp(1.8rem,5vw,3rem); font-weight:300; color:var(--cream); line-height:1.2; margin-bottom:0.5rem; letter-spacing:-0.02em; }
+.hero h1 em { font-style:italic; color:var(--g3); }
+.hero p { color:var(--g1); font-size:15px; opacity:0.7; margin-bottom:2rem; }
 
 .filter-card {
-  background: var(--white);
-  border-radius: var(--r-lg);
-  padding: 1.25rem;
-  max-width: 780px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr auto;
-  gap: 10px;
-  align-items: end;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+  background:var(--white); border-radius:var(--rlg); padding:1.25rem;
+  max-width:780px; margin:0 auto;
+  display:grid; grid-template-columns:2fr 1fr 1fr 1fr auto;
+  gap:10px; align-items:end;
+  box-shadow:0 8px 40px rgba(0,0,0,0.2);
 }
-@media (max-width: 700px) {
-  .filter-card { grid-template-columns: 1fr 1fr; }
-  .btn-search { grid-column: 1 / -1; }
+@media(max-width:700px){
+  .filter-card{grid-template-columns:1fr 1fr;}
+  .btn-search{grid-column:1/-1;}
 }
 
-.fg { display: flex; flex-direction: column; gap: 5px; }
-.fg label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink3); }
-
-.fg input, .fg select {
-  appearance: none;
-  background: var(--cream);
-  border: 1.5px solid var(--stone);
-  border-radius: var(--r-sm);
-  padding: 9px 12px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  color: var(--ink);
-  width: 100%;
-  transition: border-color 0.15s;
+.fg { display:flex; flex-direction:column; gap:5px; }
+.fg label { font-size:10px; font-weight:500; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink3); }
+.fg input,.fg select {
+  appearance:none; background:var(--cream); border:1.5px solid var(--stone);
+  border-radius:var(--rsm); padding:9px 12px;
+  font-family:'DM Sans',sans-serif; font-size:14px; color:var(--ink);
+  width:100%; transition:border-color 0.15s;
 }
 .fg select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235a5248' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  padding-right: 28px;
-  cursor: pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235a5248' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 10px center; padding-right:28px; cursor:pointer;
 }
-.fg input:focus, .fg select:focus { outline: none; border-color: var(--g5); }
+.fg input:focus,.fg select:focus { outline:none; border-color:var(--g5); }
 
-.oras-wrap { position: relative; }
+.oras-wrap { position:relative; }
 .ac-list {
-  display: none;
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0; right: 0;
-  background: var(--white);
-  border: 1.5px solid var(--stone);
-  border-radius: var(--r-sm);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  z-index: 999;
-  overflow: hidden;
+  display:none; position:absolute; top:calc(100% + 4px); left:0; right:0;
+  background:var(--white); border:1.5px solid var(--stone); border-radius:var(--rsm);
+  box-shadow:0 8px 24px rgba(0,0,0,0.12); z-index:999; overflow:hidden;
 }
-.ac-list.open { display: block; }
-.ac-item {
-  padding: 9px 12px;
-  cursor: pointer;
-  border-bottom: 0.5px solid var(--stone);
-  transition: background 0.1s;
-}
-.ac-item:last-child { border-bottom: none; }
-.ac-item:hover, .ac-item.sel { background: var(--cream); }
-.ac-name { font-size: 13px; font-weight: 500; color: var(--ink); }
-.ac-sub { font-size: 11px; color: var(--ink3); margin-top: 1px; }
+.ac-list.open { display:block; }
+.ac-item { padding:9px 12px; cursor:pointer; border-bottom:0.5px solid var(--stone); transition:background 0.1s; }
+.ac-item:last-child { border-bottom:none; }
+.ac-item:hover,.ac-item.sel { background:var(--cream); }
+.ac-name { font-size:13px; font-weight:500; color:var(--ink); }
+.ac-sub { font-size:11px; color:var(--ink3); margin-top:1px; }
 
 .btn-search {
-  background: var(--g7);
-  color: var(--white);
-  border: none;
-  border-radius: var(--r-sm);
-  padding: 10px 20px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.15s, transform 0.1s;
-  height: 38px;
+  background:var(--g7); color:var(--white); border:none; border-radius:var(--rsm);
+  padding:10px 20px; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500;
+  cursor:pointer; white-space:nowrap; height:38px;
+  transition:background 0.15s, transform 0.1s;
 }
-.btn-search:hover { background: var(--g5); }
-.btn-search:active { transform: scale(0.98); }
-.btn-search:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn-search:hover { background:var(--g5); }
+.btn-search:active { transform:scale(0.98); }
+.btn-search:disabled { opacity:0.6; cursor:not-allowed; }
 
-.status-bar {
-  text-align: center;
-  font-size: 11px;
-  color: var(--g1);
-  opacity: 0.7;
-  margin-top: 10px;
-  min-height: 16px;
-}
-.status-bar.err { color: #f9a8a8; opacity: 1; }
+.status-bar { text-align:center; font-size:11px; color:var(--g1); opacity:0.7; margin-top:10px; min-height:16px; }
+.status-bar.err { color:#f9a8a8; opacity:1; }
+.status-bar.ok { color:var(--g3); opacity:1; }
 
-.main { max-width: 920px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+.main { max-width:920px; margin:0 auto; padding:2rem 1.5rem 4rem; }
+.results-hd { display:flex; align-items:baseline; gap:8px; margin-bottom:1.25rem; }
+.results-count { font-family:'Fraunces',serif; font-size:18px; font-weight:300; }
+.results-count strong { color:var(--g7); font-style:italic; }
+.results-note { font-size:12px; color:var(--ink3); }
 
-.results-header {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 1.25rem;
-}
-.results-count {
-  font-family: 'Fraunces', serif;
-  font-size: 18px;
-  font-weight: 300;
-  color: var(--ink);
-}
-.results-count strong { color: var(--g7); font-style: italic; }
-.results-note { font-size: 12px; color: var(--ink3); }
-
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1.1rem; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:1.1rem; }
 
 .card {
-  background: var(--white);
-  border-radius: var(--r-md);
-  border: 1px solid var(--stone);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.18s, box-shadow 0.18s;
+  background:var(--white); border-radius:var(--rmd); border:1px solid var(--stone);
+  overflow:hidden; display:flex; flex-direction:column;
+  transition:transform 0.18s, box-shadow 0.18s;
 }
-.card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.09); }
+.card:hover { transform:translateY(-3px); box-shadow:0 10px 32px rgba(0,0,0,0.09); }
 
-.card-img {
-  height: 155px;
-  position: relative;
-  overflow: hidden;
-  background: var(--g7);
-}
-.card-img img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s;
-}
-.card:hover .card-img img { transform: scale(1.04); }
+.card-img { height:155px; position:relative; overflow:hidden; background:var(--g7); }
+.card-img img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.3s; }
+.card:hover .card-img img { transform:scale(1.04); }
 
-.card-badges { position: absolute; top: 9px; right: 9px; display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
-.badge {
-  font-size: 10px;
-  font-weight: 500;
-  padding: 3px 8px;
-  border-radius: 20px;
-  backdrop-filter: blur(6px);
-}
-.b-usor { background: rgba(214,240,223,0.9); color: #145c32; }
-.b-mediu { background: rgba(250,238,218,0.9); color: #854f0b; }
-.b-greu { background: rgba(252,235,235,0.9); color: #a32d2d; }
-.b-tip { background: rgba(255,255,255,0.85); color: #5a5248; }
-
+.badges { position:absolute; top:9px; right:9px; display:flex; gap:5px; flex-wrap:wrap; justify-content:flex-end; }
+.badge { font-size:10px; font-weight:500; padding:3px 8px; border-radius:20px; backdrop-filter:blur(6px); }
+.b-usor { background:rgba(214,240,223,0.9); color:#145c32; }
+.b-mediu { background:rgba(250,238,218,0.9); color:#854f0b; }
+.b-greu { background:rgba(252,235,235,0.9); color:#a32d2d; }
+.b-tip { background:rgba(255,255,255,0.85); color:#5a5248; }
 .card-munte {
-  position: absolute;
-  bottom: 9px; left: 9px;
-  background: rgba(10,46,26,0.72);
-  color: var(--g1);
-  font-size: 9px;
-  font-weight: 500;
-  padding: 3px 8px;
-  border-radius: 20px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  position:absolute; bottom:9px; left:9px;
+  background:rgba(10,46,26,0.72); color:var(--g1);
+  font-size:9px; font-weight:500; padding:3px 8px; border-radius:20px;
+  letter-spacing:0.05em; text-transform:uppercase;
 }
 
-.card-body { padding: 0.9rem 1rem; flex: 1; display: flex; flex-direction: column; }
+.card-body { padding:0.9rem 1rem; flex:1; display:flex; flex-direction:column; }
 .card-title {
-  font-family: 'Fraunces', serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.4;
-  color: var(--ink);
-  margin-bottom: 5px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  font-family:'Fraunces',serif; font-size:14px; font-weight:300; line-height:1.4;
+  color:var(--ink); margin-bottom:5px;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
 }
-.card-meta { font-size: 11px; color: var(--ink3); margin-bottom: 10px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
-.chip { background: var(--cream); border: 1px solid var(--stone); border-radius: 20px; padding: 1px 7px; font-size: 10px; color: var(--ink3); }
+.card-meta { font-size:11px; color:var(--ink3); margin-bottom:10px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+.chip { background:var(--cream); border:1px solid var(--stone); border-radius:20px; padding:1px 7px; font-size:10px; color:var(--ink3); }
 
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: 10px; }
-.stat { background: var(--cream); border-radius: 5px; padding: 6px 4px; text-align: center; }
-.sv { font-size: 12px; font-weight: 500; color: var(--ink); display: block; }
-.sl { font-size: 9px; color: var(--ink3); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-top: 1px; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:5px; margin-bottom:10px; }
+.stat { background:var(--cream); border-radius:5px; padding:6px 4px; text-align:center; }
+.sv { font-size:12px; font-weight:500; color:var(--ink); display:block; }
+.sl { font-size:9px; color:var(--ink3); text-transform:uppercase; letter-spacing:0.04em; display:block; margin-top:1px; }
 
-.card-foot {
-  margin-top: auto;
-  padding-top: 9px;
-  border-top: 1px solid var(--stone);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.drive {
-  font-size: 11px;
-  color: var(--ink2);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.drive svg { flex-shrink: 0; }
-.art-link {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--g7);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  transition: color 0.15s;
-}
-.art-link:hover { color: var(--g5); }
+.card-foot { margin-top:auto; padding-top:9px; border-top:1px solid var(--stone); display:flex; align-items:center; justify-content:space-between; }
+.drive { font-size:11px; color:var(--ink2); display:flex; align-items:center; gap:4px; }
+.art-link { font-size:12px; font-weight:500; color:var(--g7); text-decoration:none; display:flex; align-items:center; gap:3px; transition:color 0.15s; }
+.art-link:hover { color:var(--g5); }
 
-.empty {
-  text-align: center;
-  padding: 4rem 2rem;
-  color: var(--ink2);
-}
-.empty p { font-size: 14px; line-height: 1.6; }
+.empty { text-align:center; padding:4rem 2rem; color:var(--ink2); }
+.empty p { font-size:14px; line-height:1.7; }
+.empty strong { color:var(--ink); }
 
-.loader {
-  text-align: center;
-  padding: 4rem 2rem;
-  color: var(--ink3);
-  font-size: 14px;
+.progress {
+  display:none; text-align:center; padding:3rem 2rem;
 }
-
-.progress-wrap {
-  display: none;
-  text-align: center;
-  padding: 3rem 2rem;
-}
-.progress-wrap.show { display: block; }
-.spinner {
-  width: 36px; height: 36px;
-  border: 3px solid var(--stone);
-  border-top-color: var(--g5);
-  border-radius: 50%;
-  animation: spin 0.7s linear infinite;
-  margin: 0 auto 1rem;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-.progress-txt { font-size: 13px; color: var(--ink2); margin-bottom: 4px; }
-.progress-sub { font-size: 11px; color: var(--ink3); }
+.progress.show { display:block; }
+.spinner { width:36px; height:36px; border:3px solid var(--stone); border-top-color:var(--g5); border-radius:50%; animation:spin 0.7s linear infinite; margin:0 auto 1rem; }
+@keyframes spin{to{transform:rotate(360deg)}}
+.prog-txt { font-size:13px; color:var(--ink2); margin-bottom:4px; }
+.prog-sub { font-size:11px; color:var(--ink3); }
 </style>
 </head>
 <body>
@@ -310,7 +152,6 @@ header {
 <div class="hero">
   <h1>Unde mergi <em>în weekend?</em></h1>
   <p>Trasee montane filtrate după distanța reală de condus.</p>
-
   <div class="filter-card">
     <div class="fg">
       <label>Plecare din</label>
@@ -348,36 +189,41 @@ header {
     </div>
     <button class="btn-search" id="btn-search" onclick="porneste()">Caută</button>
   </div>
-  <div class="status-bar" id="status-bar"></div>
+  <div class="status-bar" id="status-bar">Introdu un oraș și apasă Caută.</div>
 </div>
 
 <div class="main">
-  <div id="results-header" class="results-header" style="display:none">
+  <div id="results-hd" class="results-hd" style="display:none">
     <div class="results-count" id="results-count"></div>
     <div class="results-note" id="results-note"></div>
   </div>
-  <div id="progress" class="progress-wrap">
+  <div id="progress" class="progress">
     <div class="spinner"></div>
-    <div class="progress-txt" id="prog-txt">Se calculează distanțele...</div>
-    <div class="progress-sub" id="prog-sub"></div>
+    <div class="prog-txt">Se calculează distanțele pe șosea...</div>
+    <div class="prog-sub" id="prog-sub"></div>
   </div>
-  <div id="output" class="loader">Se încarcă traseele...</div>
+  <div id="output">
+    <div class="empty"><p>Se încarcă traseele...</p></div>
+  </div>
 </div>
 
 <script>
-const MAPBOX_TOKEN = 'pk.eyJ1Ijoic2VyZ2l1ZzI2IiwiYSI6ImNtbXZ1czBoYjJmcTgycnF4OGVtenprYW0ifQ.EjmcKrTUnaOZbrCW-tnvSg';
+const MAPBOX_TOKEN = 'PUNE_TOKEN_TAU_AICI';
 const JSON_URL = 'trasee.json';
+const OSRM = 'https://router.project-osrm.org/table/v1/driving';
+const BATCH = 90;
 
 let TRASEE = [];
 let userLat = null, userLng = null;
-let cache = {};
-let sessionToken = uuid();
-let acIdx = -1, acItems = [];
+let distCache = {};
+let acItems = [], acIdx = -1;
+let acTimer = null;
+let sessionToken = newUUID();
 
-function uuid() {
+function newUUID() {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
-    const r = Math.random() * 16 | 0;
-    return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    const r = Math.random()*16|0;
+    return (c==='x'?r:(r&0x3|0x8)).toString(16);
   });
 }
 
@@ -393,61 +239,54 @@ function culoare(m) {
   return '#1D9E75';
 }
 
-function haversineSecs(lat1, lng1, lat2, lng2) {
-  const R = 6371, r = Math.PI / 180;
-  const dLat = (lat2 - lat1) * r, dLng = (lng2 - lng1) * r;
-  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*r)*Math.cos(lat2*r)*Math.sin(dLng/2)**2;
-  const km = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-  return km / 70 * 3600;
-}
-
-function fmtTime(secs) {
-  if (!secs && secs !== 0) return '—';
-  const h = Math.floor(secs / 3600), m = Math.round((secs % 3600) / 60);
-  if (h === 0) return m + ' min';
-  return m > 0 ? `${h}h ${m}min` : `${h}h`;
+function fmtTime(s) {
+  if (s == null) return '—';
+  const h = Math.floor(s/3600), m = Math.round((s%3600)/60);
+  if (h===0) return m+' min';
+  return m>0 ? `${h}h ${m}min` : `${h}h`;
 }
 
 function badge(dif) {
-  if (!dif || dif === 'null') return '';
-  const c = {usor:'b-usor',mediu:'b-mediu',greu:'b-greu'}[dif]||'';
-  const l = {usor:'ușor',mediu:'mediu',greu:'greu'}[dif]||dif;
-  return `<span class="badge ${c}">${l}</span>`;
+  if (!dif||dif==='null') return '';
+  const cls = {usor:'b-usor',mediu:'b-mediu',greu:'b-greu'}[dif]||'';
+  const lbl = {usor:'ușor',mediu:'mediu',greu:'greu'}[dif]||dif;
+  return `<span class="badge ${cls}">${lbl}</span>`;
 }
 
-function renderCard(t, secs, useHaversine) {
+const BLOG = {
+  bloguldecalatorii:'Blogul de Călătorii',
+  thechillinbear:'TheChillinBear',
+  chitaracalatoare:'Chitara Călătoare',
+  jurnaldedrumetii:'Jurnal de Drumeții',
+  suspemunte:'SusPeMunte',
+};
+
+function renderCard(t, secs) {
   const bg = culoare(t.munte);
   const img = t.poza_url
     ? `<img src="${t.poza_url}" loading="lazy" onerror="this.style.display='none'">`
     : '';
-  const blogNames = {
-    bloguldecalatorii:'Blogul de Călătorii',thechillinbear:'TheChillinBear',
-    chitaracalatoare:'Chitara Călătoare',jurnaldedrumetii:'Jurnal de Drumeții',suspemunte:'SusPeMunte'
-  };
-  const blog = blogNames[t.sursa_blog] || t.sursa_blog || '';
-  const driveLabel = useHaversine ? `~${fmtTime(secs)}` : fmtTime(secs);
-
   return `<div class="card">
     <div class="card-img" style="background:${bg}">
       ${img}
-      <div class="card-badges">
+      <div class="badges">
         ${badge(t.dificultate)}
-        ${t.tip && t.tip !== 'null' ? `<span class="badge b-tip">${t.tip}</span>` : ''}
+        ${t.tip&&t.tip!=='null'?`<span class="badge b-tip">${t.tip}</span>`:''}
       </div>
-      ${t.munte ? `<div class="card-munte">${t.munte}</div>` : ''}
+      ${t.munte?`<div class="card-munte">${t.munte}</div>`:''}
     </div>
     <div class="card-body">
       <div class="card-title">${t.nume}</div>
       <div class="card-meta">
-        ${t.localitate_start ? `<span>${t.localitate_start}</span>` : ''}
-        ${t.sezon && t.sezon !== 'null' ? `<span class="chip">${t.sezon}</span>` : ''}
-        ${blog ? `<span class="chip">${blog}</span>` : ''}
+        ${t.localitate_start?`<span>${t.localitate_start}</span>`:''}
+        ${t.sezon&&t.sezon!=='null'?`<span class="chip">${t.sezon}</span>`:''}
+        ${BLOG[t.sursa_blog]?`<span class="chip">${BLOG[t.sursa_blog]}</span>`:''}
       </div>
       <div class="stats">
-        <div class="stat"><span class="sv">${t.durata_h != null ? t.durata_h+'h' : '—'}</span><span class="sl">durată</span></div>
-        <div class="stat"><span class="sv">${t.km != null ? t.km+' km' : '—'}</span><span class="sl">dist.</span></div>
-        <div class="stat"><span class="sv">${t.denivelare_m != null ? t.denivelare_m+'m' : '—'}</span><span class="sl">deniv.</span></div>
-        <div class="stat"><span class="sv">${t.zile != null ? (t.zile===1?'1 zi':t.zile+' zile') : '—'}</span><span class="sl">zile</span></div>
+        <div class="stat"><span class="sv">${t.durata_h!=null?t.durata_h+'h':'—'}</span><span class="sl">durată</span></div>
+        <div class="stat"><span class="sv">${t.km!=null?t.km+' km':'—'}</span><span class="sl">dist.</span></div>
+        <div class="stat"><span class="sv">${t.denivelare_m!=null?t.denivelare_m+'m':'—'}</span><span class="sl">deniv.</span></div>
+        <div class="stat"><span class="sv">${t.zile!=null?(t.zile===1?'1 zi':t.zile+' zile'):'—'}</span><span class="sl">zile</span></div>
       </div>
       <div class="card-foot">
         <div class="drive">
@@ -457,7 +296,7 @@ function renderCard(t, secs, useHaversine) {
             <circle cx="3.5" cy="9" r="1" fill="currentColor"/>
             <circle cx="9.5" cy="9" r="1" fill="currentColor"/>
           </svg>
-          ${driveLabel} cu mașina
+          ${fmtTime(secs)} cu mașina
         </div>
         <a class="art-link" href="${t.sursa_url}" target="_blank" rel="noopener">
           Articol
@@ -470,126 +309,118 @@ function renderCard(t, secs, useHaversine) {
   </div>`;
 }
 
-async function calcMapboxDirections(origin, destinations) {
+async function calcOSRM(origin, destinations) {
   const results = {};
-  const BATCH = 25;
 
   for (let i = 0; i < destinations.length; i += BATCH) {
-    const batch = destinations.slice(i, i + BATCH);
-    const coords = [
-      `${origin.lng},${origin.lat}`,
-      ...batch.map(d => `${d.lng},${d.lat}`)
+    const batch = destinations.slice(i, i+BATCH);
+    const coordStr = [
+      `${origin.lng.toFixed(6)},${origin.lat.toFixed(6)}`,
+      ...batch.map(d => `${d.lng.toFixed(6)},${d.lat.toFixed(6)}`)
     ].join(';');
+    const destIdxs = batch.map((_,j) => j+1).join(';');
 
     try {
-      const url = `https://api.mapbox.com/directions-matrix/v1/mapbox/driving/${coords}?sources=0&destinations=${batch.map((_,j)=>j+1).join(';')}&annotations=duration&access_token=${MAPBOX_TOKEN}`;
+      const url = `${OSRM}/${coordStr}?sources=0&destinations=${destIdxs}&annotations=duration`;
       const res = await fetch(url);
-      if (!res.ok) {
-        console.warn('Mapbox matrix error:', res.status, await res.text());
-        throw new Error('matrix_error');
-      }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       if (data.code !== 'Ok') throw new Error(data.code);
       batch.forEach((d, j) => {
         results[d.key] = data.durations[0][j];
       });
-    } catch (e) {
-      console.warn('Falling back to haversine for batch:', e.message);
-      batch.forEach(d => {
-        results[d.key] = haversineSecs(origin.lat, origin.lng, d.lat, d.lng);
-      });
+    } catch(e) {
+      console.error('OSRM error:', e.message);
+      batch.forEach(d => { results[d.key] = null; });
     }
 
     document.getElementById('prog-sub').textContent =
-      `${Math.min(i + BATCH, destinations.length)} / ${destinations.length} trasee`;
-    await new Promise(r => setTimeout(r, 50));
+      `${Math.min(i+BATCH, destinations.length)} / ${destinations.length} trasee`;
+
+    await new Promise(r => setTimeout(r, 100));
   }
   return results;
 }
 
-function dedup(trasee) {
+function dedup(arr) {
   const seen = new Set();
-  return trasee.filter(t => {
-    const key = t.sursa_url.replace(/#.*$/, '');
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
+  return arr.filter(t => {
+    const k = t.sursa_url.replace(/#.*$/,'');
+    if (seen.has(k)) return false;
+    seen.add(k); return true;
   });
 }
 
 async function porneste() {
   if (!userLat || !userLng) {
-    setStatus('Alege mai întâi un oraș de plecare.', true);
-    return;
+    setStatus('Alege mai întâi un oraș de plecare.', 'err'); return;
   }
 
   const maxSecs = Number(document.getElementById('sel-timp').value);
   const dif = document.getElementById('sel-dif').value;
   const zile = document.getElementById('sel-zile').value;
-
   const btn = document.getElementById('btn-search');
   btn.disabled = true;
 
   const candidati = dedup(TRASEE).filter(t => {
     if (!t.lat || !t.lng) return false;
-    if (dif && (t.dificultate || '') !== dif) return false;
+    if (dif && (t.dificultate||'') !== dif) return false;
     if (zile && String(t.zile) !== zile) return false;
     return true;
-  }).map(t => ({ t, key: `${t.lat.toFixed(5)},${t.lng.toFixed(5)}`, lat: t.lat, lng: t.lng }));
+  }).map(t => ({
+    t,
+    key: `${t.lat.toFixed(5)},${t.lng.toFixed(5)}`,
+    lat: t.lat, lng: t.lng
+  }));
 
   const cacheKey = `${userLat.toFixed(4)},${userLng.toFixed(4)}`;
-  if (!cache[cacheKey]) cache[cacheKey] = {};
-  const c = cache[cacheKey];
+  if (!distCache[cacheKey]) distCache[cacheKey] = {};
+  const c = distCache[cacheKey];
 
   const needFetch = candidati.filter(d => c[d.key] === undefined);
 
-  document.getElementById('output').style.display = 'none';
-  document.getElementById('results-header').style.display = 'none';
+  setOutput('');
+  document.getElementById('results-hd').style.display = 'none';
 
   if (needFetch.length > 0) {
     showProgress(true);
-    const fresh = await calcMapboxDirections({ lat: userLat, lng: userLng }, needFetch);
+    const fresh = await calcOSRM({lat:userLat, lng:userLng}, needFetch);
     Object.assign(c, fresh);
     showProgress(false);
   }
 
   const results = candidati
-    .map(({ t, key }) => ({ t, secs: c[key] }))
-    .filter(({ secs }) => secs != null && secs <= maxSecs)
-    .sort((a, b) => a.secs - b.secs);
-
-  const useHav = !MAPBOX_TOKEN || MAPBOX_TOKEN === 'PUNE_TOKEN_TAU_AICI';
-
-  const output = document.getElementById('output');
-  output.style.display = 'block';
-  output.className = '';
-
-  if (results.length === 0) {
-    document.getElementById('results-header').style.display = 'none';
-    output.innerHTML = `<div class="empty">
-      <p>Niciun traseu găsit.<br>Încearcă o rază mai mare sau schimbă filtrele.</p>
-    </div>`;
-  } else {
-    document.getElementById('results-header').style.display = 'flex';
-    document.getElementById('results-count').innerHTML = `<strong>${results.length}</strong> trasee găsite`;
-    document.getElementById('results-note').textContent = useHav ? '(distanțe estimate)' : '';
-    output.innerHTML = `<div class="grid">${results.map(({t,secs}) => renderCard(t, secs, useHav)).join('')}</div>`;
-  }
+    .map(({t,key}) => ({t, secs:c[key]}))
+    .filter(({secs}) => secs != null && secs <= maxSecs)
+    .sort((a,b) => a.secs - b.secs);
 
   btn.disabled = false;
+  document.getElementById('results-hd').style.display = results.length ? 'flex' : 'none';
+
+  if (!results.length) {
+    document.getElementById('results-count').innerHTML = '';
+    setOutput(`<div class="empty"><p>Niciun traseu găsit.<br>Încearcă o rază mai mare sau schimbă filtrele.</p></div>`);
+    return;
+  }
+
+  document.getElementById('results-count').innerHTML = `<strong>${results.length}</strong> trasee găsite`;
+  document.getElementById('results-note').textContent = '';
+  setOutput(`<div class="grid">${results.map(({t,secs})=>renderCard(t,secs)).join('')}</div>`);
 }
 
 function showProgress(show) {
-  document.getElementById('progress').className = show ? 'progress-wrap show' : 'progress-wrap';
+  document.getElementById('progress').className = show ? 'progress show' : 'progress';
 }
 
-function setStatus(msg, err) {
+function setOutput(html) {
+  document.getElementById('output').innerHTML = html;
+}
+
+function setStatus(msg, type) {
   const el = document.getElementById('status-bar');
   el.textContent = msg;
-  el.className = 'status-bar' + (err ? ' err' : '');
+  el.className = 'status-bar' + (type ? ' '+type : '');
 }
-
-let acTimer = null;
 
 const inp = document.getElementById('inp-oras');
 const acList = document.getElementById('ac-list');
@@ -597,8 +428,7 @@ const acList = document.getElementById('ac-list');
 function closeAc() {
   acList.classList.remove('open');
   acList.innerHTML = '';
-  acIdx = -1;
-  acItems = [];
+  acIdx = -1; acItems = [];
 }
 
 async function suggest(q) {
@@ -607,13 +437,13 @@ async function suggest(q) {
     const url = `https://api.mapbox.com/search/searchbox/v1/suggest?q=${encodeURIComponent(q)}&language=ro&country=RO&types=city,town,village,locality,municipality&limit=6&session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`;
     const res = await fetch(url);
     const data = await res.json();
-    acItems = (data.suggestions || []).slice(0, 6);
+    acItems = (data.suggestions||[]).slice(0,6);
     if (!acItems.length) { closeAc(); return; }
     acIdx = -1;
-    acList.innerHTML = acItems.map((s, i) =>
+    acList.innerHTML = acItems.map((s,i) =>
       `<div class="ac-item" data-i="${i}">
         <div class="ac-name">${s.name}</div>
-        <div class="ac-sub">${s.place_formatted || 'România'}</div>
+        <div class="ac-sub">${s.place_formatted||'România'}</div>
       </div>`
     ).join('');
     acList.querySelectorAll('.ac-item').forEach(el => {
@@ -623,25 +453,26 @@ async function suggest(q) {
       });
     });
     acList.classList.add('open');
-  } catch { closeAc(); }
+  } catch(e) { console.error('Autocomplete error:', e); closeAc(); }
 }
 
-async function pick(suggestion) {
-  inp.value = suggestion.name;
+async function pick(s) {
+  inp.value = s.name;
   closeAc();
-  setStatus('Se încarcă locația...', false);
+  setStatus('Se încarcă locația...', '');
   try {
-    const url = `https://api.mapbox.com/search/searchbox/v1/retrieve/${suggestion.mapbox_id}?session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`;
+    const url = `https://api.mapbox.com/search/searchbox/v1/retrieve/${s.mapbox_id}?session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`;
     const res = await fetch(url);
     const data = await res.json();
     const f = data.features?.[0];
     if (!f) throw new Error('no feature');
     [userLng, userLat] = f.geometry.coordinates;
-    sessionToken = uuid();
-    cache = {};
-    setStatus(`✓ ${suggestion.name} — apasă Caută`, false);
-  } catch {
-    setStatus('Eroare la încărcarea locației.', true);
+    sessionToken = newUUID();
+    distCache = {};
+    setStatus(`✓ ${s.name} selectat — apasă Caută`, 'ok');
+  } catch(e) {
+    console.error('Retrieve error:', e);
+    setStatus('Eroare la încărcarea locației.', 'err');
   }
 }
 
@@ -652,20 +483,20 @@ inp.addEventListener('input', e => {
 
 inp.addEventListener('keydown', e => {
   const items = acList.querySelectorAll('.ac-item');
-  if (e.key === 'ArrowDown') {
+  if (e.key==='ArrowDown') {
     e.preventDefault();
-    acIdx = Math.min(acIdx + 1, items.length - 1);
-    items.forEach((el, i) => el.classList.toggle('sel', i === acIdx));
-  } else if (e.key === 'ArrowUp') {
+    acIdx = Math.min(acIdx+1, items.length-1);
+    items.forEach((el,i) => el.classList.toggle('sel', i===acIdx));
+  } else if (e.key==='ArrowUp') {
     e.preventDefault();
-    acIdx = Math.max(acIdx - 1, 0);
-    items.forEach((el, i) => el.classList.toggle('sel', i === acIdx));
-  } else if (e.key === 'Enter') {
+    acIdx = Math.max(acIdx-1, 0);
+    items.forEach((el,i) => el.classList.toggle('sel', i===acIdx));
+  } else if (e.key==='Enter') {
     e.preventDefault();
-    if (acIdx >= 0 && acItems[acIdx]) pick(acItems[acIdx]);
-    else if (acItems.length > 0) pick(acItems[0]);
+    if (acIdx>=0 && acItems[acIdx]) pick(acItems[acIdx]);
+    else if (acItems.length>0) pick(acItems[0]);
     else porneste();
-  } else if (e.key === 'Escape') {
+  } else if (e.key==='Escape') {
     closeAc();
   }
 });
@@ -673,15 +504,13 @@ inp.addEventListener('keydown', e => {
 inp.addEventListener('blur', () => setTimeout(closeAc, 180));
 
 fetch(JSON_URL)
-  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
   .then(data => {
-    TRASEE = data.trasee || [];
-    document.getElementById('output').innerHTML = `<div class="empty"><p>Introdu un oraș de plecare și apasă <strong>Caută</strong>.</p></div>`;
-    document.getElementById('output').className = '';
+    TRASEE = data.trasee||[];
+    setOutput(`<div class="empty"><p>Introdu un oraș de plecare și apasă <strong>Caută</strong>.</p></div>`);
   })
   .catch(e => {
-    document.getElementById('output').innerHTML = `<div class="empty"><p>Eroare la încărcarea traseelor: ${e.message}</p></div>`;
-    document.getElementById('output').className = '';
+    setOutput(`<div class="empty"><p>Eroare la încărcarea traseelor: ${e.message}</p></div>`);
   });
 </script>
 </body>
