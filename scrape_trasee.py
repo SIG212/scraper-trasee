@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Scraper trasee montane Romania
-Surse: bloguldecalatorii.ro, thechillinbear.com, chitaracalatoare.ro,
+Surse: bloguldecalatorii.ro, chitaracalatoare.ro,
        jurnaldedrumetii.ro, suspemunte.com
 Output: trasee.json
 
@@ -41,15 +41,15 @@ HEADERS = {
     "Accept-Language": "ro-RO,ro;q=0.9,en;q=0.8",
 }
 
-GEMINI_API_KEY      = os.environ.get("GEMINI_API_KEY", "")
-gemini_client       = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
-_last_gemini_call   = 0.0
+GEMINI_API_KEY    = os.environ.get("GEMINI_API_KEY", "")
+gemini_client     = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
+_last_gemini_call = 0.0
 
-MAX_PER_SOURCE      = 4    # coboara la 3 pentru test rapid (3 x 5 surse = 15 trasee)
-SLEEP_HTTP          = 1.5    # pauza intre request-uri HTTP
-GEMINI_INTERVAL     = 1.0    # rate-limit: 1 req/s (Tier-1 = 150 RPM)
-GEMINI_MODEL        = "gemini-2.5-pro"
-OUTPUT_FILE         = "trasee.json"
+MAX_PER_SOURCE    = 999   # coboara la 3 pentru test rapid (3 x 4 surse = 12 trasee)
+SLEEP_HTTP        = 1.5   # pauza intre request-uri HTTP
+GEMINI_INTERVAL   = 1.0   # rate-limit: 1 req/s (Tier-1 = 150 RPM)
+GEMINI_MODEL      = "gemini-2.5-pro"
+OUTPUT_FILE       = "trasee.json"
 
 
 # ---------------------------------------------------------------------------
@@ -79,12 +79,11 @@ Cauta cu atentie in TOT textul si raspunde DOAR cu JSON valid, fara text suplime
 }}
 
 Reguli stricte:
-- durata_h: cauta "ore", "h", "timp de mers", "durata" — converteste minute in ore (ex: 90 min = 1.5)
-- distanta_km: cauta "km", "kilometri", "distanta"
-- denivelare_m: diferenta totala de nivel intre start si cel mai inalt punct
-- elevatie_pozitiva_m: totalul de metri urcati (D+ sau "urcare totala" sau "diferenta nivel urcare") — diferit de denivelare!
-  Cauta: "D+", "urcare", "pozitiv", "ascensiune", "metri urcare", "diferenta nivel pozitiva"
-  Exemplu: un circuit cu urcare 800m si coborare 800m are elevatie_pozitiva_m=800 si denivelare_m=800
+- durata_h: cauta "Durata", "ore", "h", "timp de mers" — converteste (ex: 9h35 = 9.58, 90 min = 1.5)
+- distanta_km: cauta "Distanta parcursa", "km", "kilometri"
+- denivelare_m: cauta "Diferente de nivel", "diferenta de nivel", "denivelare" — valoarea totala
+- elevatie_pozitiva_m: cauta "D+", "Total urcare", "urcare totala", "elevatie pozitiva"
+  Daca gasesti doar "Diferente de nivel" fara D+ explicit, foloseste acea valoare si pentru elevatie_pozitiva_m
 - dificultate: normalizeaza la usor / mediu / greu (ex: "moderat" -> "mediu", "dificil" -> "greu")
 - localitate_start: fara diacritice (Busteni nu Bușteni, Brasov nu Brașov)
 - Nu inventa date. Daca nu gasesti o informatie, pune null.
@@ -98,8 +97,19 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
         print("  [!] GEMINI_API_KEY lipsa — skip AI", flush=True)
         return None
 
-    # Trimite inceputul + finalul — datele tehnice sunt adesea la final
-    text_trimmed = text[:1000] + "\n\n[...]\n\n" + text[-2000:] if len(text) > 3000 else text
+    # Trimite inceput + mijloc + final pentru a prinde datele tehnice
+    # indiferent de pozitia lor in articol
+    if len(text) > 4000:
+        mid = len(text) // 2
+        text_trimmed = (
+            text[:1000]
+            + "\n\n[...]\n\n"
+            + text[mid - 500 : mid + 500]
+            + "\n\n[...]\n\n"
+            + text[-1500:]
+        )
+    else:
+        text_trimmed = text
 
     for attempt in range(3):
         try:
@@ -175,24 +185,40 @@ def h1_text(soup: BeautifulSoup) -> str:
     return tag.get_text(strip=True) if tag else ""
 
 
+def extract_technical_block(text: str) -> str | None:
+    """
+    Extrage blocul cu date tehnice din articolele jurnaldedrumetii.
+    Datele tehnice sunt in format bullet list:
+    * Durata: 9h35
+    * Distanta parcursa: 17.8km
+    * Diferente de nivel: 1037m
+    etc.
+    """
+    match = re.search(
+        r'((?:Durata|Distanta|Diferent[ae]|Dificultate).{0,1200})',
+        text, re.IGNORECASE | re.DOTALL
+    )
+    return match.group(1)[:1200] if match else None
+
+
 def build_record(data: dict, url: str, blog: str, img: str | None) -> dict:
     return {
-        "nume":                  data.get("nume"),
-        "localitate_start":      data.get("localitate_start"),
-        "durata_h":              data.get("durata_h"),
-        "dificultate":           data.get("dificultate"),
-        "denivelare_m":          data.get("denivelare_m"),
-        "distanta_km":           data.get("distanta_km"),
-        "elevatie_pozitiva_m":   data.get("elevatie_pozitiva_m"),
-        "sursa_url":             url,
-        "sursa_blog":            blog,
-        "poza_url":              img,
+        "nume":                data.get("nume"),
+        "localitate_start":    data.get("localitate_start"),
+        "durata_h":            data.get("durata_h"),
+        "dificultate":         data.get("dificultate"),
+        "denivelare_m":        data.get("denivelare_m"),
+        "distanta_km":         data.get("distanta_km"),
+        "elevatie_pozitiva_m": data.get("elevatie_pozitiva_m"),
+        "sursa_url":           url,
+        "sursa_blog":          blog,
+        "poza_url":            img,
     }
 
 
 def scrape_articles(links: list[str], blog_name: str) -> list[dict]:
     results = []
-    total = min(len(links), MAX_PER_SOURCE)
+    total   = min(len(links), MAX_PER_SOURCE)
 
     for i, url in enumerate(links[:MAX_PER_SOURCE]):
         print(f"  [{i+1}/{total}] {url}", flush=True)
@@ -211,6 +237,12 @@ def scrape_articles(links: list[str], blog_name: str) -> list[dict]:
             print("    skip: fara continut", flush=True)
             continue
 
+        # jurnaldedrumetii: prependuieste blocul tehnic ca sa fie garantat vizibil
+        if blog_name == "jurnaldedrumetii":
+            tech = extract_technical_block(text)
+            if tech:
+                text = "=== DATE TEHNICE ===\n" + tech + "\n=== TEXT COMPLET ===\n" + text
+
         data = extract_with_gemini(title, text, url)
         if not data:
             continue
@@ -218,9 +250,9 @@ def scrape_articles(links: list[str], blog_name: str) -> list[dict]:
         record = build_record(data, url, blog_name, img)
         results.append(record)
 
-        durata  = f"{record['durata_h']}h"      if record['durata_h']             else "?h"
-        dist    = f"{record['distanta_km']}km"   if record['distanta_km']          else "?km"
-        elev    = f"D+{record['elevatie_pozitiva_m']}m" if record['elevatie_pozitiva_m'] else "?D+"
+        durata = f"{record['durata_h']}h"              if record['durata_h']           else "?h"
+        dist   = f"{record['distanta_km']}km"           if record['distanta_km']        else "?km"
+        elev   = f"D+{record['elevatie_pozitiva_m']}m"  if record['elevatie_pozitiva_m'] else "?D+"
         print(
             f"    OK: {record['nume'] or '(fara nume)'} | "
             f"{record['localitate_start'] or '?'} | "
@@ -236,7 +268,7 @@ def scrape_articles(links: list[str], blog_name: str) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def scrape_bloguldecalatorii() -> list[dict]:
-    print("\n[1/5] bloguldecalatorii.ro", flush=True)
+    print("\n[1/4] bloguldecalatorii.ro", flush=True)
     index = "https://bloguldecalatorii.ro/articole/idei-de-ture-pe-munte-clasificate-pe-munti"
 
     r = http_get(index)
@@ -264,53 +296,11 @@ def scrape_bloguldecalatorii() -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# Scraper 2: thechillinbear.com
-# ---------------------------------------------------------------------------
-
-def scrape_thechillinbear() -> list[dict]:
-    print("\n[2/5] thechillinbear.com", flush=True)
-    index = "https://ro.thechillinbear.com/trasee/"
-
-    r = http_get(index)
-    if not r:
-        return []
-
-    soup  = BeautifulSoup(r.text, "html.parser")
-    skip  = {
-        "https://ro.thechillinbear.com/trasee/",
-        "https://ro.thechillinbear.com/",
-        "https://ro.thechillinbear.com/cabane/",
-        "https://ro.thechillinbear.com/map/",
-        "https://ro.thechillinbear.com/experiente/",
-        "https://ro.thechillinbear.com/fotografii/",
-    }
-    links = []
-
-    for a in soup.find_all("a", href=True):
-        href = a["href"]
-        if (
-            href.startswith("https://ro.thechillinbear.com/")
-            and "/category/" not in href
-            and "/author/" not in href
-            and "/page/" not in href
-            and "/tag/" not in href
-            and href not in skip
-            and href.count("/") == 4
-            and "#" not in href
-        ):
-            links.append(href)
-
-    links = list(dict.fromkeys(links))
-    print(f"  Gasit {len(links)} linkuri", flush=True)
-    return scrape_articles(links, "thechillinbear")
-
-
-# ---------------------------------------------------------------------------
-# Scraper 3: chitaracalatoare.ro
+# Scraper 2: chitaracalatoare.ro
 # ---------------------------------------------------------------------------
 
 def scrape_chitaracalatoare() -> list[dict]:
-    print("\n[3/5] chitaracalatoare.ro", flush=True)
+    print("\n[2/4] chitaracalatoare.ro", flush=True)
     links = []
 
     for page in range(1, 20):
@@ -330,7 +320,7 @@ def scrape_chitaracalatoare() -> list[dict]:
             href = a["href"]
             if (
                 "chitaracalatoare.ro/20" in href
-                and href.startswith("https://")   # exclude mailto: si altele
+                and href.startswith("https://")
                 and "#" not in href
                 and href not in links
             ):
@@ -347,18 +337,17 @@ def scrape_chitaracalatoare() -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# Scraper 4: jurnaldedrumetii.ro  (Blogger — fara pagini de categorie)
+# Scraper 3: jurnaldedrumetii.ro  (Blogger — fara pagini de categorie)
 # ---------------------------------------------------------------------------
 
 def scrape_jurnaldedrumetii() -> list[dict]:
-    print("\n[4/5] jurnaldedrumetii.ro", flush=True)
+    print("\n[3/4] jurnaldedrumetii.ro", flush=True)
     links = []
 
     for page in range(1, 20):
         if page == 1:
             url = "https://www.jurnaldedrumetii.ro/"
         else:
-            # Blogger foloseste paginare cu start offset
             url = f"https://www.jurnaldedrumetii.ro/search?updated-max=2099-01-01&max-results=20&start={(page - 1) * 20}"
 
         r = http_get(url)
@@ -389,15 +378,13 @@ def scrape_jurnaldedrumetii() -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# Scraper 5: suspemunte.com
+# Scraper 4: suspemunte.com
 # ---------------------------------------------------------------------------
 
 def scrape_suspemunte() -> list[dict]:
-    print("\n[5/5] suspemunte.com", flush=True)
+    print("\n[4/4] suspemunte.com", flush=True)
     links = []
 
-    # suspemunte poate returna 403 din GitHub Actions (Cloudflare)
-    # Incercam cu Referer de Google ca sa mimam trafic organic
     extra = {"Referer": "https://www.google.com/"}
 
     for page in range(1, 20):
@@ -445,13 +432,11 @@ def scrape_suspemunte() -> list[dict]:
 def deduplicate(trasee: list[dict]) -> list[dict]:
     seen_urls = set()
     unique    = []
-
     for t in trasee:
         url = t.get("sursa_url", "")
         if url and url not in seen_urls:
             seen_urls.add(url)
             unique.append(t)
-
     return unique
 
 
@@ -472,14 +457,13 @@ def main():
 
     all_trasee = []
     all_trasee += scrape_bloguldecalatorii()
-    all_trasee += scrape_thechillinbear()
     all_trasee += scrape_chitaracalatoare()
     all_trasee += scrape_jurnaldedrumetii()
     all_trasee += scrape_suspemunte()
 
     before = len(all_trasee)
     all_trasee = deduplicate(all_trasee)
-    after = len(all_trasee)
+    after  = len(all_trasee)
     print(f"\n[dedup] {before} → {after} trasee (eliminate {before - after} duplicate)", flush=True)
 
     valid = [
