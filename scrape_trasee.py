@@ -48,7 +48,7 @@ _last_gemini_call   = 0.0
 MAX_PER_SOURCE      = 999    # limita articole per sursa (coboara la 10 pentru test rapid)
 SLEEP_HTTP          = 1.5    # pauza intre request-uri HTTP (politete fata de servere)
 GEMINI_INTERVAL     = 1.0    # rate-limit: 1 req/s (Tier-1 = 150 RPM)
-GEMINI_MODEL        = "gemini-2.5-flash-lite"  # schimba cu "gemini-2.5-pro" pentru calitate mai buna
+GEMINI_MODEL        = "gemini-2.5-pro"  # schimba cu "gemini-2.5-pro" pentru calitate mai buna
 OUTPUT_FILE         = "trasee.json"
 
 
