@@ -6,6 +6,9 @@ Surse: bloguldecalatorii.ro, thechillinbear.com, jurnaldedrumetii.ro,
 Output: trasee.json
 """
 
+import sys
+sys.stdout.reconfigure(line_buffering=True)
+
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -39,7 +42,7 @@ def geocode(location_text: str) -> tuple[float, float] | None:
         if data:
             return float(data[0]["lat"]), float(data[0]["lon"])
     except Exception as e:
-        print(f"  [geocode] Eroare pentru '{location_text}': {e}")
+        print(f"  [geocode] Eroare pentru '{location_text}': {e}", flush=True)
     return None
 
 
@@ -50,7 +53,7 @@ def geocode(location_text: str) -> tuple[float, float] | None:
 def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
     """Trimite textul unui articol catre Gemini si returneaza date structurate."""
     if not GEMINI_API_KEY:
-        print("  [gemini] GEMINI_API_KEY lipsa, sar extragerea AI")
+        print("  [gemini] GEMINI_API_KEY lipsa, sar extragerea AI", flush=True)
         return None
 
     client = genai.Client(api_key=GEMINI_API_KEY)
@@ -95,10 +98,10 @@ Daca o informatie nu apare explicit in text, pune null. Nu inventa date."""
             err = str(e)
             if "429" in err:
                 wait = 30 * (attempt + 1)
-                print(f"  [gemini] Rate limit, astept {wait}s...")
+                print(f"  [gemini] Rate limit, astept {wait}s...", flush=True)
                 time.sleep(wait)
             else:
-                print(f"  [gemini] Eroare extragere: {e}")
+                print(f"  [gemini] Eroare extragere: {e}", flush=True)
                 return None
     return None
 
@@ -108,12 +111,12 @@ Daca o informatie nu apare explicit in text, pune null. Nu inventa date."""
 # ---------------------------------------------------------------------------
 
 def scrape_bloguldecalatorii() -> list[dict]:
-    print("\n[1/5] bloguldecalatorii.ro...")
+    print("\n[1/5] bloguldecalatorii.ro...", flush=True)
     links = []
     index_url = "https://bloguldecalatorii.ro/articole/idei-de-ture-pe-munte-clasificate-pe-munti"
 
     try:
-        r = requests.get(index_url, headers=HEADERS, timeout=15)
+        r = requests.get(index_url, headers=HEADERS, timeout=10)
         soup = BeautifulSoup(r.text, "html.parser")
         content = soup.find("div", class_="entry-content") or soup.find("article")
         if content:
@@ -122,16 +125,16 @@ def scrape_bloguldecalatorii() -> list[dict]:
                 if "bloguldecalatorii.ro" in href and "/20" in href:
                     links.append(href)
         links = list(dict.fromkeys(links))  # dedup
-        print(f"  Gasit {len(links)} linkuri")
+        print(f"  Gasit {len(links)} linkuri", flush=True)
     except Exception as e:
-        print(f"  Eroare index: {e}")
+        print(f"  Eroare index: {e}", flush=True)
         return []
 
     results = []
     for i, url in enumerate(links[:80]):  # limit pentru test
         try:
             time.sleep(1.5)
-            r = requests.get(url, headers=HEADERS, timeout=15)
+            r = requests.get(url, headers=HEADERS, timeout=10)
             soup = BeautifulSoup(r.text, "html.parser")
             title = soup.find("h1")
             title_text = title.get_text(strip=True) if title else ""
@@ -150,11 +153,11 @@ def scrape_bloguldecalatorii() -> list[dict]:
                 data["sursa_blog"] = "bloguldecalatorii"
                 data["poza_url"] = img_url
                 results.append(data)
-                print(f"  [{i+1}/{min(len(links),80)}] OK: {data.get('nume','?')}")
+                print(f"  [{i+1}/{min(len(links),80)}] OK: {data.get('nume','?')}", flush=True)
             else:
-                print(f"  [{i+1}/{min(len(links),80)}] Skip: {url}")
+                print(f"  [{i+1}/{min(len(links),80)}] Skip: {url}", flush=True)
         except Exception as e:
-            print(f"  Eroare {url}: {e}")
+            print(f"  Eroare {url}: {e}", flush=True)
 
     return results
 
@@ -164,7 +167,7 @@ def scrape_bloguldecalatorii() -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def scrape_thechillinbear() -> list[dict]:
-    print("\n[2/5] thechillinbear.com...")
+    print("\n[2/5] thechillinbear.com...", flush=True)
     links = []
     page = 1
 
@@ -185,11 +188,11 @@ def scrape_thechillinbear() -> list[dict]:
             page += 1
             time.sleep(1)
         except Exception as e:
-            print(f"  Eroare pagina {page}: {e}")
+            print(f"  Eroare pagina {page}: {e}", flush=True)
             break
 
     links = list(dict.fromkeys(links))
-    print(f"  Gasit {len(links)} linkuri")
+    print(f"  Gasit {len(links)} linkuri", flush=True)
 
     results = []
     for i, url in enumerate(links):
@@ -230,9 +233,9 @@ def scrape_thechillinbear() -> list[dict]:
                 data["sursa_blog"] = "thechillinbear"
                 data["poza_url"] = img_url
                 results.append(data)
-                print(f"  [{i+1}/{len(links)}] OK: {data.get('nume','?')}")
+                print(f"  [{i+1}/{len(links)}] OK: {data.get('nume','?')}", flush=True)
         except Exception as e:
-            print(f"  Eroare {url}: {e}")
+            print(f"  Eroare {url}: {e}", flush=True)
 
     return results
 
@@ -242,7 +245,7 @@ def scrape_thechillinbear() -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def scrape_chitaracalatoare() -> list[dict]:
-    print("\n[3/5] chitaracalatoare.ro...")
+    print("\n[3/5] chitaracalatoare.ro...", flush=True)
     links = []
     page = 1
 
@@ -264,11 +267,11 @@ def scrape_chitaracalatoare() -> list[dict]:
             page += 1
             time.sleep(1)
         except Exception as e:
-            print(f"  Eroare pagina {page}: {e}")
+            print(f"  Eroare pagina {page}: {e}", flush=True)
             break
 
     links = list(dict.fromkeys(links))
-    print(f"  Gasit {len(links)} linkuri")
+    print(f"  Gasit {len(links)} linkuri", flush=True)
 
     results = []
     for i, url in enumerate(links[:50]):
@@ -292,9 +295,9 @@ def scrape_chitaracalatoare() -> list[dict]:
                 data["sursa_blog"] = "chitaracalatoare"
                 data["poza_url"] = img_url
                 results.append(data)
-                print(f"  [{i+1}/{min(len(links),50)}] OK: {data.get('nume','?')}")
+                print(f"  [{i+1}/{min(len(links),50)}] OK: {data.get('nume','?')}", flush=True)
         except Exception as e:
-            print(f"  Eroare {url}: {e}")
+            print(f"  Eroare {url}: {e}", flush=True)
 
     return results
 
@@ -304,7 +307,7 @@ def scrape_chitaracalatoare() -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def add_coordinates(trasee: list[dict]) -> list[dict]:
-    print(f"\n[geocoding] {len(trasee)} trasee...")
+    print(f"\n[geocoding] {len(trasee)} trasee...", flush=True)
     cache = {}
 
     for i, t in enumerate(trasee):
@@ -318,7 +321,7 @@ def add_coordinates(trasee: list[dict]) -> list[dict]:
             if coords:
                 t["lat"], t["lng"] = coords
                 cache[loc] = coords
-                print(f"  [{i+1}] {loc} → {coords[0]:.4f}, {coords[1]:.4f}")
+                print(f"  [{i+1}] {loc} → {coords[0]:.4f}, {coords[1]:.4f}", flush=True)
             time.sleep(1.1)  # Nominatim rate limit: 1 req/sec
 
     return trasee
@@ -329,6 +332,7 @@ def add_coordinates(trasee: list[dict]) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def main():
+    print("=== Scraper pornit ===", flush=True)
     all_trasee = []
 
     all_trasee += scrape_bloguldecalatorii()
@@ -350,7 +354,7 @@ def main():
     with open("trasee.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"\nDone! {len(valid)} trasee salvate in trasee.json")
+    print(f"\nDone! {len(valid)} trasee salvate in trasee.json", flush=True)
 
 
 if __name__ == "__main__":
