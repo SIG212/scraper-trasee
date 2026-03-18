@@ -642,6 +642,18 @@ function renderCard(t, driveSecs) {
   </div>`;
 }
 
+function haversine(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+function haversineSecs(lat1, lng1, lat2, lng2) {
+  return haversine(lat1, lng1, lat2, lng2) / 70 * 3600;
+}
+
 async function osrmBatch(origin, destinations, token) {
   const results = {};
   const batches = [];
@@ -651,38 +663,51 @@ async function osrmBatch(origin, destinations, token) {
 
   let done = 0;
   const progress = document.getElementById('osrm-progress');
+  let osrmWorking = true;
 
   for (const batch of batches) {
     if (token.cancelled) break;
 
     const coords = [[origin.lng, origin.lat], ...batch.map(d => [d.lng, d.lat])];
-    const coordStr = coords.map(c => c.join(',')).join(';');
-    const sources = '0';
+    const coordStr = coords.map(c => c.map(v => v.toFixed(6)).join(',')).join(';');
     const destinations_idx = batch.map((_, i) => i + 1).join(';');
 
-    try {
-      const url = `https://router.project-osrm.org/table/1/driving/${coordStr}?sources=${sources}&destinations=${destinations_idx}&annotations=duration`;
-      const res = await fetch(url);
-      const data = await res.json();
-      if (data.durations && data.durations[0]) {
-        batch.forEach((d, i) => {
-          results[d.key] = data.durations[0][i];
+    if (osrmWorking) {
+      try {
+        const url = `https://router.project-osrm.org/table/1/driving/${coordStr}?sources=0&destinations=${destinations_idx}&annotations=duration`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`OSRM ${res.status}`);
+        const data = await res.json();
+        if (data.code === 'Ok' && data.durations?.[0]) {
+          batch.forEach((d, i) => {
+            results[d.key] = data.durations[0][i];
+          });
+        } else {
+          throw new Error('OSRM bad response');
+        }
+      } catch (e) {
+        console.warn('OSRM failed, falling back to haversine:', e.message);
+        osrmWorking = false;
+        batch.forEach(d => {
+          results[d.key] = haversineSecs(origin.lat, origin.lng, d.lat, d.lng);
         });
       }
-    } catch {
-      batch.forEach(d => { results[d.key] = null; });
+    } else {
+      batch.forEach(d => {
+        results[d.key] = haversineSecs(origin.lat, origin.lng, d.lat, d.lng);
+      });
     }
 
     done += batch.length;
     if (progress) progress.textContent = `${done} / ${destinations.length} trasee procesate`;
-    await new Promise(r => setTimeout(r, 150));
+    if (osrmWorking) await new Promise(r => setTimeout(r, 200));
   }
 
   return results;
 }
 
 async function calculeazaSiAfiseaza() {
-  const maxSecs = Number(document.getElementById('sel-timp').value) * 60;
+  const maxSecs = Number(document.getElementById('sel-timp').value);
   const dif = document.getElementById('sel-dif').value;
   const zile = document.getElementById('sel-zile').value;
 
@@ -895,7 +920,7 @@ async function geocodeOras(text) {
 
   if (ORASE_PRESET[key]) {
     [userLat, userLng] = ORASE_PRESET[key];
-    status.textContent = '';
+    status.textContent = '✓ ' + text;
     status.className = 'oras-status ok';
     calculeazaSiAfiseaza();
     return;
@@ -907,15 +932,13 @@ async function geocodeOras(text) {
 
   try {
     const res = await fetch(
-      `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(text+', Romania')}&format=json&limit=1`,
-      { headers: { 'Accept-Language': 'ro' } }
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(text)}.json?country=RO&types=place,locality&limit=1&access_token=${MAPBOX_TOKEN}`
     );
     const data = await res.json();
-    if (data.length > 0) {
-      userLat = parseFloat(data[0].lat);
-      userLng = parseFloat(data[0].lon);
-      const name = data[0].display_name.split(',')[0];
-      status.textContent = '✓ ' + name;
+    const feature = data.features?.[0];
+    if (feature) {
+      [userLng, userLat] = feature.center;
+      status.textContent = '✓ ' + feature.place_name.split(',')[0];
       status.className = 'oras-status ok';
       calculeazaSiAfiseaza();
     } else {
