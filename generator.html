@@ -175,11 +175,18 @@ header { background:var(--g9); padding:1.25rem 2rem; }
 <script>
 const JSON_URL = 'trasee.json';
 const OSRM     = 'https://router.project-osrm.org/table/v1/driving';
-const BATCH    = 90;
+const BATCH    = 200;
+const LS_KEY   = 'mlm_dist_cache';
 
-let TRASEE   = [];
-let userLat  = null, userLng = null;
+let TRASEE    = [];
+let userLat   = null, userLng = null;
 let distCache = {};
+
+// Incarca cache din localStorage
+try {
+  const saved = localStorage.getItem(LS_KEY);
+  if (saved) distCache = JSON.parse(saved);
+} catch {}
 
 const BLOG = {
   bloguldecalatorii: 'Blogul de Călătorii',
@@ -315,15 +322,18 @@ async function porneste() {
   if (!distCache[cacheKey]) distCache[cacheKey] = {};
   const c = distCache[cacheKey];
 
-  const needFetch = candidati.filter(d => c[d.key] === undefined);
+  const needFetch   = candidati.filter(d => c[d.key] === undefined);
+  // Deduplica coordonatele — trasee din aceeasi localitate au acelasi lat/lng
+  const uniqueCoords = [...new Map(needFetch.map(d => [d.key, d])).values()];
 
   setOutput('');
   document.getElementById('results-hd').style.display = 'none';
 
-  if (needFetch.length > 0) {
+  if (uniqueCoords.length > 0) {
     showProgress(true);
-    const fresh = await calcOSRM({ lat: userLat, lng: userLng }, needFetch);
+    const fresh = await calcOSRM({ lat: userLat, lng: userLng }, uniqueCoords);
     Object.assign(c, fresh);
+    try { localStorage.setItem(LS_KEY, JSON.stringify(distCache)); } catch {}
     showProgress(false);
   }
 
