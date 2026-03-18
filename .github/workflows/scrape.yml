@@ -19,7 +19,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependente
-        run: pip install requests beautifulsoup4 google-generativeai
+        run: pip install requests beautifulsoup4 google-genai
 
       - name: Ruleaza scraper
         env:
