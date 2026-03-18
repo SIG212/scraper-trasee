@@ -766,13 +766,28 @@ function closeDropdown() {
   acResults = [];
 }
 
-function selectResult(item) {
+async function selectResult(item) {
   inp.value = item.name;
-  userLat = item.lat;
-  userLng = item.lng;
+  status.textContent = 'Se încarcă...';
+  status.className = 'oras-status';
+  closeDropdown();
+
+  if (item.lat && item.lng) {
+    userLat = item.lat;
+    userLng = item.lng;
+  } else if (item.mapbox_id) {
+    const coords = await retrieveLocation(item.mapbox_id);
+    if (!coords) {
+      status.textContent = 'Eroare la încărcarea locației';
+      status.className = 'oras-status err';
+      return;
+    }
+    userLat = coords.lat;
+    userLng = coords.lng;
+  }
+
   status.textContent = '✓ ' + item.name;
   status.className = 'oras-status ok';
-  closeDropdown();
   osrmCache = {};
   calculeazaSiAfiseaza();
 }
@@ -796,28 +811,29 @@ function renderDropdown(items) {
   dropdown.classList.add('open');
 }
 
+const MAPBOX_TOKEN = 'pk.eyJ1Ijoic2VyZ2l1ZzI2IiwiYSI6ImNtbXZ1czBoYjJmcTgycnF4OGVtenprYW0ifQ.EjmcKrTUnaOZbrCW-tnvSg';
+
+function generateSessionToken() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+    const r = Math.random() * 16 | 0;
+    return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+  });
+}
+
+let sessionToken = generateSessionToken();
+
 async function fetchSugestii(text) {
   inp.classList.add('loading');
   try {
-    const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(text)}&lang=ro&limit=6&bbox=20.0,43.5,30.0,48.5`;
+    const url = `https://api.mapbox.com/search/searchbox/v1/suggest?q=${encodeURIComponent(text)}&language=ro&country=RO&types=city,town,village,municipality&session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`;
     const res = await fetch(url);
     const data = await res.json();
 
-    const items = (data.features || [])
-      .filter(f => {
-        const p = f.properties;
-        return ['city','town','village','municipality','district','county'].includes(p.type) || p.osm_type === 'R';
-      })
-      .slice(0, 5)
-      .map(f => {
-        const p = f.properties;
-        const name = p.name || p.city || '';
-        const parts = [p.county, p.state, 'România'].filter(Boolean);
-        const sub = parts.slice(0, 2).join(', ');
-        const [lng, lat] = f.geometry.coordinates;
-        return { name, sub, lat, lng };
-      })
-      .filter(i => i.name);
+    const items = (data.suggestions || []).slice(0, 5).map(s => ({
+      name: s.name,
+      sub: s.place_formatted || 'România',
+      mapbox_id: s.mapbox_id,
+    }));
 
     renderDropdown(items);
   } catch {
@@ -825,6 +841,18 @@ async function fetchSugestii(text) {
   } finally {
     inp.classList.remove('loading');
   }
+}
+
+async function retrieveLocation(mapbox_id) {
+  const res = await fetch(
+    `https://api.mapbox.com/search/searchbox/v1/retrieve/${mapbox_id}?session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`
+  );
+  const data = await res.json();
+  const feature = data.features?.[0];
+  if (!feature) return null;
+  const [lng, lat] = feature.geometry.coordinates;
+  sessionToken = generateSessionToken();
+  return { lat, lng };
 }
 
 inp.addEventListener('input', e => {
@@ -852,7 +880,6 @@ inp.addEventListener('keydown', e => {
       selectResult(acResults[0]);
     } else {
       closeDropdown();
-      clearTimeout(geocodeTimer);
       geocodeOras(inp.value.trim());
     }
   } else if (e.key === 'Escape') {
