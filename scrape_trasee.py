@@ -100,13 +100,12 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
             if elapsed < GEMINI_INTERVAL:
                 time.sleep(GEMINI_INTERVAL - elapsed)
 
-            _last_gemini_call = time.time()
+_last_gemini_call = time.time()
 
+            text_trimmed = text[:1000] + "\n\n[...]\n\n" + text[-2000:] if len(text) > 3000 else text
             response = gemini_client.models.generate_content(
                 model=GEMINI_MODEL,
-                # Trimite inceputul + finalul — datele tehnice sunt adesea la final
-text_trimmed = text[:6000] + "\n\n[...]\n\n" + text[-2000:] if len(text) > 8000 else text
-contents=PROMPT.format(title=title, url=url, text=text_trimmed),
+                contents=PROMPT.format(title=title, url=url, text=text_trimmed),
             )
             raw = response.text.strip()
             raw = re.sub(r"^```json\s*|^```\s*|```$", "", raw, flags=re.MULTILINE).strip()
