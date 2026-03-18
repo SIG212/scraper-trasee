@@ -1,0 +1,35 @@
+name: Scrape trasee montane
+
+on:
+  schedule:
+    - cron: "0 4 1 * *"  # Prima zi a lunii, ora 4 UTC
+  workflow_dispatch:       # Permite rulare manuala din GitHub UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependente
+        run: pip install requests beautifulsoup4 google-generativeai
+
+      - name: Ruleaza scraper
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scrape_trasee.py
+
+      - name: Commit trasee.json actualizat
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add trasee.json
+          git diff --staged --quiet || git commit -m "chore: update trasee.json [$(date +'%Y-%m-%d')]"
+          git push
