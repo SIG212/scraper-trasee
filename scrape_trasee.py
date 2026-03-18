@@ -108,7 +108,14 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
             )
             raw = response.text.strip()
             raw = re.sub(r"^```json\s*|^```\s*|```$", "", raw, flags=re.MULTILINE).strip()
-            return json.loads(raw)
+
+            parsed = json.loads(raw)
+            if isinstance(parsed, list):
+                parsed = parsed[0] if parsed else None
+            if not isinstance(parsed, dict):
+                print(f"  [!] Tip neasteptat de la Gemini: {type(parsed)}, skip", flush=True)
+                return None
+            return parsed
 
         except Exception as e:
             err = str(e)
