@@ -89,19 +89,15 @@ Reguli stricte:
 
 def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
     global _last_gemini_call
-
     if not gemini_client:
         print("  [!] GEMINI_API_KEY lipsa — skip AI", flush=True)
         return None
-
     for attempt in range(3):
         try:
             elapsed = time.time() - _last_gemini_call
             if elapsed < GEMINI_INTERVAL:
                 time.sleep(GEMINI_INTERVAL - elapsed)
-
-_last_gemini_call = time.time()
-
+            _last_gemini_call = time.time()
             text_trimmed = text[:1000] + "\n\n[...]\n\n" + text[-2000:] if len(text) > 3000 else text
             response = gemini_client.models.generate_content(
                 model=GEMINI_MODEL,
@@ -109,7 +105,6 @@ _last_gemini_call = time.time()
             )
             raw = response.text.strip()
             raw = re.sub(r"^```json\s*|^```\s*|```$", "", raw, flags=re.MULTILINE).strip()
-
             parsed = json.loads(raw)
             if isinstance(parsed, list):
                 parsed = parsed[0] if parsed else None
@@ -117,7 +112,6 @@ _last_gemini_call = time.time()
                 print(f"  [!] Tip neasteptat de la Gemini: {type(parsed)}, skip", flush=True)
                 return None
             return parsed
-
         except Exception as e:
             err = str(e)
             if "429" in err:
@@ -127,7 +121,6 @@ _last_gemini_call = time.time()
             else:
                 print(f"  [!] Eroare Gemini: {e}", flush=True)
                 return None
-
     return None
 
 
