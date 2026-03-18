@@ -398,6 +398,33 @@
   .oras-status.err { color: #a32d2d; }
   .oras-status.ok { color: var(--green-700); }
 
+  .ac-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0; right: 0;
+    background: var(--white);
+    border: 1.5px solid var(--stone);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 100;
+    overflow: hidden;
+  }
+  .ac-dropdown.open { display: block; }
+  .ac-item {
+    padding: 9px 12px;
+    font-size: 13px;
+    color: var(--ink);
+    cursor: pointer;
+    border-bottom: 0.5px solid var(--stone);
+    line-height: 1.35;
+    transition: background 0.1s;
+  }
+  .ac-item:last-child { border-bottom: none; }
+  .ac-item:hover, .ac-item.active { background: var(--cream); }
+  .ac-item-name { font-weight: 500; }
+  .ac-item-sub { font-size: 11px; color: var(--ink-faint); margin-top: 1px; }
+
   .osrm-overlay {
     display: none;
     position: absolute;
@@ -447,7 +474,8 @@
     <div class="filter-group">
       <label>Plecare din</label>
       <div class="oras-wrap">
-        <input type="text" id="inp-oras" placeholder="ex: Cluj-Napoca" value="Cluj-Napoca" autocomplete="off">
+        <input type="text" id="inp-oras" placeholder="ex: Brașov, Turda..." value="Cluj-Napoca" autocomplete="off">
+        <div class="ac-dropdown" id="ac-dropdown"></div>
       </div>
       <div class="oras-status" id="oras-status"></div>
     </div>
@@ -723,12 +751,114 @@ async function calculeazaSiAfiseaza() {
 function cauta() { calculeazaSiAfiseaza(); }
 
 let geocodeTimer = null;
+let acTimer = null;
+let acActive = -1;
+let acResults = [];
+
+const inp = document.getElementById('inp-oras');
+const dropdown = document.getElementById('ac-dropdown');
+const status = document.getElementById('oras-status');
+
+function closeDropdown() {
+  dropdown.classList.remove('open');
+  dropdown.innerHTML = '';
+  acActive = -1;
+  acResults = [];
+}
+
+function selectResult(item) {
+  inp.value = item.name;
+  userLat = item.lat;
+  userLng = item.lng;
+  status.textContent = '✓ ' + item.name;
+  status.className = 'oras-status ok';
+  closeDropdown();
+  osrmCache = {};
+  calculeazaSiAfiseaza();
+}
+
+function renderDropdown(items) {
+  if (!items.length) { closeDropdown(); return; }
+  acResults = items;
+  acActive = -1;
+  dropdown.innerHTML = items.map((item, i) =>
+    `<div class="ac-item" data-i="${i}">
+      <div class="ac-item-name">${item.name}</div>
+      <div class="ac-item-sub">${item.sub}</div>
+    </div>`
+  ).join('');
+  dropdown.querySelectorAll('.ac-item').forEach(el => {
+    el.addEventListener('mousedown', e => {
+      e.preventDefault();
+      selectResult(acResults[parseInt(el.dataset.i)]);
+    });
+  });
+  dropdown.classList.add('open');
+}
+
+async function fetchSugestii(text) {
+  inp.classList.add('loading');
+  try {
+    const res = await fetch(
+      `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(text)}&format=json&limit=6&countrycodes=ro&addressdetails=1`,
+      { headers: { 'Accept-Language': 'ro' } }
+    );
+    const data = await res.json();
+    const items = data
+      .filter(d => ['city','town','village','municipality','county'].includes(d.addresstype) || d.type === 'administrative')
+      .slice(0, 5)
+      .map(d => {
+        const addr = d.address || {};
+        const name = d.name || d.display_name.split(',')[0];
+        const parts = [addr.county, addr.state].filter(Boolean);
+        const sub = parts.length ? parts[0] + ', România' : 'România';
+        return { name, sub, lat: parseFloat(d.lat), lng: parseFloat(d.lon) };
+      });
+    renderDropdown(items);
+  } catch {
+    closeDropdown();
+  } finally {
+    inp.classList.remove('loading');
+  }
+}
+
+inp.addEventListener('input', e => {
+  const val = e.target.value.trim();
+  clearTimeout(acTimer);
+  if (val.length < 2) { closeDropdown(); return; }
+  acTimer = setTimeout(() => fetchSugestii(val), 300);
+});
+
+inp.addEventListener('keydown', e => {
+  const items = dropdown.querySelectorAll('.ac-item');
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    acActive = Math.min(acActive + 1, items.length - 1);
+    items.forEach((el, i) => el.classList.toggle('active', i === acActive));
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    acActive = Math.max(acActive - 1, -1);
+    items.forEach((el, i) => el.classList.toggle('active', i === acActive));
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (acActive >= 0 && acResults[acActive]) {
+      selectResult(acResults[acActive]);
+    } else if (acResults.length > 0) {
+      selectResult(acResults[0]);
+    } else {
+      closeDropdown();
+      clearTimeout(geocodeTimer);
+      geocodeOras(inp.value.trim());
+    }
+  } else if (e.key === 'Escape') {
+    closeDropdown();
+  }
+});
+
+inp.addEventListener('blur', () => setTimeout(closeDropdown, 150));
 
 async function geocodeOras(text) {
   const key = text.trim().toLowerCase();
-  const status = document.getElementById('oras-status');
-  const inp = document.getElementById('inp-oras');
-
   osrmCache = {};
 
   if (ORASE_PRESET[key]) {
@@ -767,17 +897,6 @@ async function geocodeOras(text) {
     inp.classList.remove('loading');
   }
 }
-
-document.getElementById('inp-oras').addEventListener('input', e => {
-  clearTimeout(geocodeTimer);
-  geocodeTimer = setTimeout(() => {
-    if (e.target.value.trim().length >= 2) geocodeOras(e.target.value.trim());
-  }, 700);
-});
-
-document.getElementById('inp-oras').addEventListener('keydown', e => {
-  if (e.key === 'Enter') { clearTimeout(geocodeTimer); geocodeOras(e.target.value.trim()); }
-});
 
 document.getElementById('sel-timp').addEventListener('change', cauta);
 document.getElementById('sel-dif').addEventListener('change', cauta);
