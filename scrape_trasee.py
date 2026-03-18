@@ -86,7 +86,7 @@ Daca o informatie nu apare explicit in text, pune null. Nu inventa date."""
 
     for attempt in range(3):
         try:
-            time.sleep(4)  # ~15 req/min pe free tier
+            time.sleep(5)  # 15 RPM pe free tier = 1 req/4s, 5s e safe
             response = client.models.generate_content(
                 model="gemini-2.5-flash-lite",
                 contents=prompt,
