@@ -62,18 +62,21 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
         return None
 
     prompt = f"""Esti un asistent care extrage informatii structurate despre trasee montane din Romania.
+Articolele sunt jurnale de drumetie - datele tehnice pot aparea oriunde in text, nu doar la inceput.
 
 Articol: {title}
 URL: {url}
 
-Text (primele 3000 caractere):
-{text[:3000]}
+Text complet:
+{text[:8000]}
 
-Extrage urmatoarele informatii si raspunde DOAR cu JSON valid, fara text suplimentar:
+Cauta cu atentie in TOT textul urmatoarele informatii. Datele tehnice apar adesea la finalul articolului sau intercalate in naratiune (ex: "am mers 6 ore", "18 km", "1200 m diferenta de nivel", "dificil", "circuit").
+
+Raspunde DOAR cu JSON valid, fara text suplimentar:
 {{
-  "nume": "numele traseului",
-  "munte": "masivul/muntii (ex: Apuseni, Bucegi, Fagaras)",
-  "localitate_start": "orasul sau satul cel mai apropiat de punctul de start",
+  "nume": "numele traseului (scurt, descriptiv)",
+  "munte": "masivul/muntii (ex: Apuseni, Bucegi, Fagaras, Retezat, Piatra Craiului)",
+  "localitate_start": "satul sau orasul de unde incepe traseul (ex: Plaiul Foii, Busteni, Zarnesti)",
   "km": numar_float_sau_null,
   "durata_h": numar_float_ore_totale_sau_null,
   "denivelare_m": numar_int_metri_sau_null,
@@ -85,7 +88,12 @@ Extrage urmatoarele informatii si raspunde DOAR cu JSON valid, fara text suplime
   "descriere_scurta": "1-2 propozitii despre ce e special la acest traseu"
 }}
 
-Daca o informatie nu apare explicit in text, pune null. Nu inventa date."""
+Reguli stricte:
+- Extrage date DOAR daca sunt mentionate explicit in text
+- Pentru durata: cauta "ore", "h", "timp de mers", "durata"
+- Pentru km: cauta "kilometri", "km", "distanta"  
+- Pentru denivelare: cauta "diferenta de nivel", "denivelare", "metri urcare", "D+"
+- Nu inventa date. Daca nu gasesti o informatie, pune null."""
 
     for attempt in range(3):
         try:
@@ -326,18 +334,37 @@ def add_coordinates(trasee: list[dict]) -> list[dict]:
     cache = {}
 
     for i, t in enumerate(trasee):
-        loc = t.get("localitate_start") or t.get("munte")
-        if not loc:
+        loc = t.get("localitate_start")
+        munte = t.get("munte")
+
+        if not loc and not munte:
             continue
-        if loc in cache:
-            t["lat"], t["lng"] = cache[loc]
-        else:
-            coords = geocode(loc)
+
+        # Incearca mai intai cu localitate + munte pentru precizie maxima
+        queries = []
+        if loc and munte:
+            queries.append(f"{loc}, {munte}, Romania")
+        if loc:
+            queries.append(f"{loc}, Romania")
+        if munte:
+            queries.append(f"{munte}, Romania")
+
+        coords = None
+        for q in queries:
+            if q in cache:
+                coords = cache[q]
+                break
+            coords = geocode(q)
+            time.sleep(1.1)
             if coords:
-                t["lat"], t["lng"] = coords
-                cache[loc] = coords
-                print(f"  [{i+1}] {loc} → {coords[0]:.4f}, {coords[1]:.4f}", flush=True)
-            time.sleep(1.1)  # Nominatim rate limit: 1 req/sec
+                cache[q] = coords
+                print(f"  [{i+1}] '{q}' → {coords[0]:.4f}, {coords[1]:.4f}", flush=True)
+                break
+            else:
+                print(f"  [{i+1}] '{q}' → nu gasit, incerc alternativa...", flush=True)
+
+        if coords:
+            t["lat"], t["lng"] = coords
 
     return trasee
 
