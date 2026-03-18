@@ -28,7 +28,7 @@ jobs:
       - name: Ruleaza scraper-ul
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python scraper_trasee.py
+        run: python scrape_trasee.py
 
       - name: Commit si push trasee.json
         run: |
