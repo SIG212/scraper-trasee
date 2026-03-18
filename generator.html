@@ -379,11 +379,58 @@
     padding: 2px 8px;
   }
 
-  @media (max-width: 600px) {
-    .hero { padding: 2rem 1rem 3rem; }
-    .filter-card { grid-template-columns: 1fr 1fr; }
-    .main { padding: 1.5rem 1rem 3rem; }
+  .oras-wrap { position: relative; }
+  .oras-wrap input {
+    appearance: none;
+    background: var(--cream);
+    border: 1.5px solid var(--stone);
+    border-radius: var(--radius-sm);
+    padding: 9px 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+    width: 100%;
+    transition: border-color 0.15s;
   }
+  .oras-wrap input:focus { outline: none; border-color: var(--green-500); }
+  .oras-wrap input.loading { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%235a5248' stroke-width='2' fill='none' opacity='0.3'/%3E%3Cpath d='M12 2a10 10 0 0 1 10 10' stroke='%231e8a4a' stroke-width='2' fill='none' stroke-linecap='round'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 12 12' to='360 12 12' dur='0.8s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+  .oras-status { font-size: 11px; margin-top: 4px; min-height: 16px; color: var(--ink-faint); }
+  .oras-status.err { color: #a32d2d; }
+  .oras-status.ok { color: var(--green-700); }
+
+  .osrm-overlay {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: rgba(245,240,232,0.85);
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: var(--radius-md);
+  }
+  .osrm-overlay.visible { display: flex; }
+  .osrm-spinner {
+    width: 40px; height: 40px;
+    border: 3px solid var(--stone);
+    border-top-color: var(--green-500);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .osrm-label {
+    font-size: 13px;
+    color: var(--ink-muted);
+    text-align: center;
+  }
+  .osrm-progress {
+    font-size: 11px;
+    color: var(--ink-faint);
+  }
+  .main-wrap { position: relative; }
+
+  @media (max-width: 600px) {
 </style>
 </head>
 <body>
@@ -399,24 +446,18 @@
   <div class="filter-card">
     <div class="filter-group">
       <label>Plecare din</label>
-      <select id="sel-oras">
-        <option value="46.77,23.59">Cluj-Napoca</option>
-        <option value="44.43,26.10">București</option>
-        <option value="45.65,25.61">Brașov</option>
-        <option value="45.75,21.23">Timișoara</option>
-        <option value="47.16,27.58">Iași</option>
-        <option value="44.32,23.80">Craiova</option>
-        <option value="47.05,21.93">Oradea</option>
-        <option value="45.80,24.15">Sibiu</option>
-      </select>
+      <div class="oras-wrap">
+        <input type="text" id="inp-oras" placeholder="ex: Cluj-Napoca" value="Cluj-Napoca" autocomplete="off">
+      </div>
+      <div class="oras-status" id="oras-status"></div>
     </div>
     <div class="filter-group">
       <label>Timp cu mașina</label>
       <select id="sel-timp">
-        <option value="80">1h</option>
-        <option value="130" selected>2h</option>
-        <option value="200">3h</option>
-        <option value="999">oriunde</option>
+        <option value="3600">1h</option>
+        <option value="7200" selected>2h</option>
+        <option value="10800">3h</option>
+        <option value="999999">oriunde</option>
       </select>
     </div>
     <div class="filter-group">
@@ -444,23 +485,55 @@
   </div>
 </div>
 
-<div class="main">
-  <div class="result-bar" id="result-bar" style="display:none">
-    <div class="result-count" id="result-count"></div>
+<div class="main-wrap">
+  <div class="osrm-overlay" id="osrm-overlay">
+    <div class="osrm-spinner"></div>
+    <div class="osrm-label">Se calculează distanțele reale pe șosea...</div>
+    <div class="osrm-progress" id="osrm-progress"></div>
   </div>
-  <div id="output"><div class="loading">Se încarcă traseele...</div></div>
+  <div class="main">
+    <div class="result-bar" id="result-bar" style="display:none">
+      <div class="result-count" id="result-count"></div>
+    </div>
+    <div id="output"><div class="loading">Se încarcă traseele...</div></div>
+  </div>
 </div>
 
 <script>
 const JSON_URL = 'trasee.json';
+const OSRM = 'https://router.project-osrm.org/route/v1/driving';
+const BATCH = 10;
 
 let TRASEE = [];
+let userLat = 46.77, userLng = 23.59;
+let osrmCache = {};
+let currentCancelToken = { cancelled: false };
+
+const ORASE_PRESET = {
+  'cluj-napoca':[46.77,23.59],'cluj':[46.77,23.59],
+  'bucurești':[44.43,26.10],'bucuresti':[44.43,26.10],'bucharest':[44.43,26.10],
+  'brașov':[45.65,25.61],'brasov':[45.65,25.61],
+  'timișoara':[45.75,21.23],'timisoara':[45.75,21.23],
+  'iași':[47.16,27.58],'iasi':[47.16,27.58],
+  'craiova':[44.32,23.80],'oradea':[47.05,21.93],
+  'sibiu':[45.80,24.15],'constanța':[44.18,28.63],'constanta':[44.18,28.63],
+  'târgu mureș':[46.54,24.56],'targu mures':[46.54,24.56],
+  'alba iulia':[46.07,23.57],'deva':[45.88,22.91],
+  'pitești':[44.85,24.87],'pitesti':[44.85,24.87],
+  'ploiești':[44.93,26.02],'ploiesti':[44.93,26.02],
+  'galați':[45.43,28.05],'galati':[45.43,28.05],
+  'târgoviște':[44.93,25.46],'targoviste':[44.93,25.46],
+  'focșani':[45.70,27.18],'focsani':[45.70,27.18],
+  'bacău':[46.57,26.91],'bacau':[46.57,26.91],
+  'suceava':[47.65,26.25],'baia mare':[47.66,23.58],
+  'satu mare':[47.79,22.88],'drobeta':[44.63,22.66],
+};
 
 const CULORI = {
-  'Bucegi': '#0F6E56', 'Făgăraș': '#185FA5', 'Piatra Craiului': '#534AB7',
-  'Retezat': '#993C1D', 'Apuseni': '#854F0B', 'Cindrel': '#3B6D11',
-  'Postăvaru': '#0F6E56', 'Baiului': '#5F5E5A', 'Leaota': '#3B6D11',
-  'Buila': '#854F0B', 'Maramureș': '#185FA5', 'Trascău': '#534AB7',
+  'Bucegi':'#0F6E56','Făgăraș':'#185FA5','Piatra Craiului':'#534AB7',
+  'Retezat':'#993C1D','Apuseni':'#854F0B','Cindrel':'#3B6D11',
+  'Postăvaru':'#0F6E56','Baiului':'#5F5E5A','Leaota':'#3B6D11',
+  'Buila':'#854F0B','Maramureș':'#185FA5','Trascău':'#534AB7',
 };
 
 function culoare(munte) {
@@ -469,25 +542,18 @@ function culoare(munte) {
   return '#1D9E75';
 }
 
-function haversine(lat1, lng1, lat2, lng2) {
-  const R = 6371;
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLng = (lng2 - lng1) * Math.PI / 180;
-  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLng/2)**2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-}
-
-function driveTime(km) {
-  const mins = Math.round(km / 70 * 60);
-  if (mins < 60) return mins + ' min';
-  const h = Math.floor(mins / 60), m = mins % 60;
+function fmtDuration(seconds) {
+  if (!seconds) return '—';
+  const h = Math.floor(seconds / 3600);
+  const m = Math.round((seconds % 3600) / 60);
+  if (h === 0) return m + ' min';
   return m > 0 ? `${h}h ${m}min` : `${h}h`;
 }
 
 function badge(dif) {
   if (!dif || dif === 'null') return '';
-  const cls = { usor: 'badge-usor', mediu: 'badge-mediu', greu: 'badge-greu' }[dif] || 'badge-default';
-  const label = { usor: 'ușor', mediu: 'mediu', greu: 'greu' }[dif] || dif;
+  const cls = {usor:'badge-usor',mediu:'badge-mediu',greu:'badge-greu'}[dif]||'badge-default';
+  const label = {usor:'ușor',mediu:'mediu',greu:'greu'}[dif]||dif;
   return `<span class="badge ${cls}">${label}</span>`;
 }
 
@@ -496,7 +562,7 @@ function tipBadge(tip) {
   return `<span class="badge badge-default">${tip}</span>`;
 }
 
-function renderCard(t, distKm) {
+function renderCard(t, driveSecs) {
   const bg = culoare(t.munte);
   const imgSrc = t.poza_url || '';
   const imgHtml = imgSrc
@@ -504,40 +570,40 @@ function renderCard(t, distKm) {
     : `<div class="card-img-fallback" style="background:${bg}"></div>`;
 
   const stats = [
-    { val: t.durata_h != null ? t.durata_h + 'h' : '—', lbl: 'durată' },
-    { val: t.km != null ? t.km + ' km' : '—', lbl: 'distanță' },
-    { val: t.denivelare_m != null ? t.denivelare_m + 'm' : '—', lbl: 'denivelare' },
-    { val: t.zile != null ? (t.zile === 1 ? '1 zi' : t.zile + ' zile') : '—', lbl: 'zile' },
+    {val: t.durata_h != null ? t.durata_h+'h' : '—', lbl:'durată'},
+    {val: t.km != null ? t.km+' km' : '—', lbl:'distanță'},
+    {val: t.denivelare_m != null ? t.denivelare_m+'m' : '—', lbl:'denivelare'},
+    {val: t.zile != null ? (t.zile===1?'1 zi':t.zile+' zile') : '—', lbl:'zile'},
   ];
 
   const blogName = {
-    bloguldecalatorii: 'Blogul de Călătorii',
-    thechillinbear: 'TheChillinBear',
-    chitaracalatoare: 'Chitara Călătoare',
-    jurnaldedrumetii: 'Jurnal de Drumeții',
-    suspemunte: 'SusPeMunte',
+    bloguldecalatorii:'Blogul de Călătorii',
+    thechillinbear:'TheChillinBear',
+    chitaracalatoare:'Chitara Călătoare',
+    jurnaldedrumetii:'Jurnal de Drumeții',
+    suspemunte:'SusPeMunte',
   }[t.sursa_blog] || t.sursa_blog;
 
   return `<div class="card">
     <div class="card-img">
       ${imgHtml}
       <div class="card-badges">${badge(t.dificultate)}${tipBadge(t.tip)}</div>
-      ${t.munte ? `<div class="card-munte">${t.munte}</div>` : ''}
+      ${t.munte?`<div class="card-munte">${t.munte}</div>`:''}
     </div>
     <div class="card-body">
       <div class="card-title">${t.nume}</div>
       <div class="card-meta">
-        ${t.localitate_start ? `<span>${t.localitate_start}</span><span class="card-meta-sep">·</span>` : ''}
-        ${t.sezon && t.sezon !== 'null' ? `<span>${t.sezon}</span><span class="card-meta-sep">·</span>` : ''}
+        ${t.localitate_start?`<span>${t.localitate_start}</span><span class="card-meta-sep">·</span>`:''}
+        ${t.sezon&&t.sezon!=='null'?`<span>${t.sezon}</span><span class="card-meta-sep">·</span>`:''}
         <span class="source-chip">${blogName}</span>
       </div>
       <div class="card-stats">
-        ${stats.map(s => `<div class="stat"><span class="stat-val">${s.val}</span><span class="stat-lbl">${s.lbl}</span></div>`).join('')}
+        ${stats.map(s=>`<div class="stat"><span class="stat-val">${s.val}</span><span class="stat-lbl">${s.lbl}</span></div>`).join('')}
       </div>
       <div class="card-footer">
         <div class="card-drive">
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="5" width="11" height="6" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M3 5V4a3.5 3.5 0 017 0v1" stroke="currentColor" stroke-width="1.2"/><circle cx="3.5" cy="9" r="1" fill="currentColor"/><circle cx="9.5" cy="9" r="1" fill="currentColor"/></svg>
-          ${driveTime(distKm)} de mers
+          ${fmtDuration(driveSecs)} cu mașina
         </div>
         <a class="card-link" href="${t.sursa_url}" target="_blank" rel="noopener">
           Articol
@@ -548,31 +614,97 @@ function renderCard(t, distKm) {
   </div>`;
 }
 
-function cauta() {
-  const [lat, lng] = document.getElementById('sel-oras').value.split(',').map(Number);
-  const maxKm = Number(document.getElementById('sel-timp').value);
+async function osrmBatch(origin, destinations, token) {
+  const results = {};
+  const batches = [];
+  for (let i = 0; i < destinations.length; i += BATCH) {
+    batches.push(destinations.slice(i, i + BATCH));
+  }
+
+  let done = 0;
+  const progress = document.getElementById('osrm-progress');
+
+  for (const batch of batches) {
+    if (token.cancelled) break;
+
+    const coords = [[origin.lng, origin.lat], ...batch.map(d => [d.lng, d.lat])];
+    const coordStr = coords.map(c => c.join(',')).join(';');
+    const sources = '0';
+    const destinations_idx = batch.map((_, i) => i + 1).join(';');
+
+    try {
+      const url = `https://router.project-osrm.org/table/1/driving/${coordStr}?sources=${sources}&destinations=${destinations_idx}&annotations=duration`;
+      const res = await fetch(url);
+      const data = await res.json();
+      if (data.durations && data.durations[0]) {
+        batch.forEach((d, i) => {
+          results[d.key] = data.durations[0][i];
+        });
+      }
+    } catch {
+      batch.forEach(d => { results[d.key] = null; });
+    }
+
+    done += batch.length;
+    if (progress) progress.textContent = `${done} / ${destinations.length} trasee procesate`;
+    await new Promise(r => setTimeout(r, 150));
+  }
+
+  return results;
+}
+
+async function calculeazaSiAfiseaza() {
+  const maxSecs = Number(document.getElementById('sel-timp').value) * 60;
   const dif = document.getElementById('sel-dif').value;
   const zile = document.getElementById('sel-zile').value;
 
+  currentCancelToken.cancelled = true;
+  const token = { cancelled: false };
+  currentCancelToken = token;
+
   const seen = new Set();
-  const results = TRASEE
-    .filter(t => {
-      if (!t.lat || !t.lng) return false;
-      const dist = haversine(lat, lng, t.lat, t.lng);
-      if (dist > maxKm) return false;
-      if (dif && (t.dificultate || '') !== dif) return false;
-      if (zile && String(t.zile) !== zile) return false;
-      const key = t.sursa_url.replace(/#.*$/, '');
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    })
-    .map(t => ({ t, dist: haversine(lat, lng, t.lat, t.lng) }))
-    .sort((a, b) => a.dist - b.dist);
+  const candidati = TRASEE.filter(t => {
+    if (!t.lat || !t.lng) return false;
+    if (dif && (t.dificultate || '') !== dif) return false;
+    if (zile && String(t.zile) !== zile) return false;
+    const key = t.sursa_url.replace(/#.*$/, '');
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  }).map(t => ({
+    t,
+    key: `${t.lat},${t.lng}`,
+    lat: t.lat,
+    lng: t.lng,
+  }));
+
+  const cacheKey = `${userLat.toFixed(4)},${userLng.toFixed(4)}`;
+  if (!osrmCache[cacheKey]) osrmCache[cacheKey] = {};
+  const cache = osrmCache[cacheKey];
+
+  const needFetch = candidati.filter(d => cache[d.key] === undefined);
+
+  const overlay = document.getElementById('osrm-overlay');
+  const output = document.getElementById('output');
+
+  if (needFetch.length > 0) {
+    overlay.classList.add('visible');
+    document.getElementById('osrm-progress').textContent = `0 / ${needFetch.length} trasee procesate`;
+
+    const fresh = await osrmBatch({ lat: userLat, lng: userLng }, needFetch, token);
+    if (token.cancelled) { overlay.classList.remove('visible'); return; }
+
+    Object.assign(cache, fresh);
+    overlay.classList.remove('visible');
+  }
+
+  const results = candidati
+    .map(({ t, key }) => ({ t, secs: cache[key] }))
+    .filter(({ secs }) => secs != null && secs <= maxSecs)
+    .sort((a, b) => a.secs - b.secs);
 
   const bar = document.getElementById('result-bar');
   const count = document.getElementById('result-count');
-  const output = document.getElementById('output');
 
   bar.style.display = results.length > 0 ? 'flex' : 'none';
   count.innerHTML = `<span>${results.length}</span> trasee găsite`;
@@ -580,28 +712,86 @@ function cauta() {
   if (results.length === 0) {
     output.innerHTML = `<div class="empty-state">
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M8 40L20 16l8 14 6-8 6 10" stroke="#1a1612" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <p>Niciun traseu găsit cu filtrele selectate.<br>Încearcă o rază mai mare sau schimbă filtrele.</p>
+      <p>Niciun traseu găsit.<br>Încearcă o rază mai mare sau schimbă filtrele.</p>
     </div>`;
     return;
   }
 
-  output.innerHTML = `<div class="cards-grid">${results.map(({ t, dist }) => renderCard(t, dist)).join('')}</div>`;
+  output.innerHTML = `<div class="cards-grid">${results.map(({t, secs}) => renderCard(t, secs)).join('')}</div>`;
 }
+
+function cauta() { calculeazaSiAfiseaza(); }
+
+let geocodeTimer = null;
+
+async function geocodeOras(text) {
+  const key = text.trim().toLowerCase();
+  const status = document.getElementById('oras-status');
+  const inp = document.getElementById('inp-oras');
+
+  osrmCache = {};
+
+  if (ORASE_PRESET[key]) {
+    [userLat, userLng] = ORASE_PRESET[key];
+    status.textContent = '';
+    status.className = 'oras-status ok';
+    calculeazaSiAfiseaza();
+    return;
+  }
+
+  inp.classList.add('loading');
+  status.textContent = 'Se caută...';
+  status.className = 'oras-status';
+
+  try {
+    const res = await fetch(
+      `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(text+', Romania')}&format=json&limit=1`,
+      { headers: { 'Accept-Language': 'ro' } }
+    );
+    const data = await res.json();
+    if (data.length > 0) {
+      userLat = parseFloat(data[0].lat);
+      userLng = parseFloat(data[0].lon);
+      const name = data[0].display_name.split(',')[0];
+      status.textContent = '✓ ' + name;
+      status.className = 'oras-status ok';
+      calculeazaSiAfiseaza();
+    } else {
+      status.textContent = 'Orașul nu a fost găsit';
+      status.className = 'oras-status err';
+    }
+  } catch {
+    status.textContent = 'Eroare la geocoding';
+    status.className = 'oras-status err';
+  } finally {
+    inp.classList.remove('loading');
+  }
+}
+
+document.getElementById('inp-oras').addEventListener('input', e => {
+  clearTimeout(geocodeTimer);
+  geocodeTimer = setTimeout(() => {
+    if (e.target.value.trim().length >= 2) geocodeOras(e.target.value.trim());
+  }, 700);
+});
+
+document.getElementById('inp-oras').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { clearTimeout(geocodeTimer); geocodeOras(e.target.value.trim()); }
+});
+
+document.getElementById('sel-timp').addEventListener('change', cauta);
+document.getElementById('sel-dif').addEventListener('change', cauta);
+document.getElementById('sel-zile').addEventListener('change', cauta);
 
 fetch(JSON_URL)
   .then(r => r.json())
   .then(data => {
     TRASEE = data.trasee || [];
-    cauta();
+    geocodeOras('Cluj-Napoca');
   })
   .catch(err => {
     document.getElementById('output').innerHTML = `<div class="empty-state"><p>Eroare la încărcarea traseelor: ${err.message}</p></div>`;
   });
-
-document.getElementById('sel-oras').addEventListener('change', cauta);
-document.getElementById('sel-timp').addEventListener('change', cauta);
-document.getElementById('sel-dif').addEventListener('change', cauta);
-document.getElementById('sel-zile').addEventListener('change', cauta);
 </script>
 </body>
 </html>
