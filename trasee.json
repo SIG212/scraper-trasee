@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-03-18T19:30:00.000000Z",
   "model": "gemini-2.5-pro",
-  "count": 446,
+  "count": 409,
   "trasee": [
     {
       "nume": "Vf. Grecului: traseu nemarcat Busteni - Azuga",
@@ -1880,7 +1880,7 @@
     },
     {
       "nume": "Cetățile Rădesei și Circuitul Someșului Cald",
-      "localitate_start": null,
+      "localitate_start": "Câmpeni",
       "durata_h": 5,
       "dificultate": "greu",
       "denivelare_m": 300,
@@ -1895,7 +1895,7 @@
     },
     {
       "nume": "Circuitul Galbenei",
-      "localitate_start": null,
+      "localitate_start": "Câmpeni",
       "durata_h": 7,
       "dificultate": "greu",
       "denivelare_m": 1000,
@@ -2300,7 +2300,7 @@
     },
     {
       "nume": "Circuitul Muntelui Cozia",
-      "localitate_start": null,
+      "localitate_start": "Olănești",
       "durata_h": 10.5,
       "dificultate": null,
       "denivelare_m": 1400,
@@ -2375,7 +2375,7 @@
     },
     {
       "nume": "Lacul Sfânta Ana și circuit pe muchia craterului",
-      "localitate_start": null,
+      "localitate_start": "Băile Tușnad",
       "durata_h": 2,
       "dificultate": "usor",
       "denivelare_m": 100,
@@ -2570,7 +2570,7 @@
     },
     {
       "nume": "Schitul Pahomie - Vf. Vânturarița",
-      "localitate_start": null,
+      "localitate_start": "Olănești",
       "durata_h": 3.83,
       "dificultate": "mediu",
       "denivelare_m": null,
@@ -2585,7 +2585,7 @@
     },
     {
       "nume": "Circuit creasta nordica Buila-Vanturarita de la Schitul Pahomie",
-      "localitate_start": null,
+      "localitate_start": "Olănești",
       "durata_h": 10,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -2690,7 +2690,7 @@
     },
     {
       "nume": "Pasul Bratocea - Vârful lui Gherghel",
-      "localitate_start": null,
+      "localitate_start": "Cheia",
       "durata_h": 4.5,
       "dificultate": "usor",
       "denivelare_m": 500,
@@ -2705,7 +2705,7 @@
     },
     {
       "nume": "Circuit in Rezervatia Iezerul Latoritei",
-      "localitate_start": null,
+      "localitate_start": "Câmpu lui Neag",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -2810,7 +2810,7 @@
     },
     {
       "nume": "Voluntariat la Maraton Apuseni",
-      "localitate_start": null,
+      "localitate_start": "Beliș",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -2960,7 +2960,7 @@
     },
     {
       "nume": "Creasta Oslea - Oslița",
-      "localitate_start": null,
+      "localitate_start": "Petroșani",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -3080,7 +3080,7 @@
     },
     {
       "nume": "Circuit Vf. Suru si Vf. Budislavu",
-      "localitate_start": null,
+      "localitate_start": "Sibiu",
       "durata_h": 6,
       "dificultate": null,
       "denivelare_m": null,
@@ -3169,30 +3169,6 @@
       "judet": "Alba"
     },
     {
-      "nume": "Insulele Feroe: Capitala Torshavn, Muzeul de arta, Kikjubour",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://chitaracalatoare.ro/2025/12/insulele-feroe-capitala-torshavn-muzeul-de-arta-kikjubour.html",
-      "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/12/IMG_20240827_161127.jpg"
-    },
-    {
-      "nume": "Insulele Feroe: Marmennilin, Elduvik, Mikladalur, Kopakonan",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://chitaracalatoare.ro/2025/12/insulele-feroe-marmennilin-elduvik-mikladalur-kopakonan-2.html",
-      "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/12/DSC_1018.jpg"
-    },
-    {
       "nume": "Circuit Vf. Rozdești, Munții Cindrel",
       "localitate_start": "Paltinis",
       "durata_h": 4.25,
@@ -3209,7 +3185,7 @@
     },
     {
       "nume": "Perseide si rasarit de soare de la Cabana Omu",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -3314,7 +3290,7 @@
     },
     {
       "nume": "Vârful Ursu, Munții Căpățânii",
-      "localitate_start": null,
+      "localitate_start": "Băile Herculane",
       "durata_h": 3.08,
       "dificultate": "usor",
       "denivelare_m": 508,
@@ -3494,7 +3470,7 @@
     },
     {
       "nume": "Întoarcerea acasă din Cernei-Mehedinți",
-      "localitate_start": null,
+      "localitate_start": "Băile Herculane",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -3539,7 +3515,7 @@
     },
     {
       "nume": "Circuit Domogledul Mic si Domogledul Mare",
-      "localitate_start": null,
+      "localitate_start": "Băile Herculane",
       "durata_h": null,
       "dificultate": "mediu",
       "denivelare_m": null,
@@ -3674,7 +3650,7 @@
     },
     {
       "nume": "Cheile Zanoagei, Lacul Scropoasa, Cascada 7 Izvoare",
-      "localitate_start": null,
+      "localitate_start": "Câmpulung Muscel",
       "durata_h": 3.33,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -3689,7 +3665,7 @@
     },
     {
       "nume": "Vf. Omu de la Salvamont Pestera",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": 4.33,
       "dificultate": "usor",
       "denivelare_m": 1013,
@@ -3719,7 +3695,7 @@
     },
     {
       "nume": "Piatra Arsa - Varful Omu",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": 6.5,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -3779,7 +3755,7 @@
     },
     {
       "nume": "Vârful Ciucaș, între Pirușca și Dălghiu",
-      "localitate_start": null,
+      "localitate_start": "Cheia",
       "durata_h": 8,
       "dificultate": null,
       "denivelare_m": null,
@@ -3824,7 +3800,7 @@
     },
     {
       "nume": "Vârful Munticelu, Munții Giurgeu-Hășmaș",
-      "localitate_start": null,
+      "localitate_start": "Lacul Roșu",
       "durata_h": 5.5,
       "dificultate": "usor",
       "denivelare_m": 670,
@@ -3839,7 +3815,7 @@
     },
     {
       "nume": "Vf. Ursu si Vf. Cosana, Muntii Capatanii",
-      "localitate_start": null,
+      "localitate_start": "Întorsura Buzăului",
       "durata_h": 5,
       "dificultate": "usor",
       "denivelare_m": 434,
@@ -3854,7 +3830,7 @@
     },
     {
       "nume": "Cascada Vanturatoarea, Muntii Cernei",
-      "localitate_start": null,
+      "localitate_start": "Băile Herculane",
       "durata_h": 1.75,
       "dificultate": "usor",
       "denivelare_m": 400,
@@ -3884,7 +3860,7 @@
     },
     {
       "nume": "Vârful Penteleu, Munții Buzăului",
-      "localitate_start": null,
+      "localitate_start": "Cheia",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -3899,7 +3875,7 @@
     },
     {
       "nume": "Cheile Ţăsnei, Moara Dracilor și Poiana Ţăsnei",
-      "localitate_start": null,
+      "localitate_start": "Orșova",
       "durata_h": 2.67,
       "dificultate": null,
       "denivelare_m": null,
@@ -3959,7 +3935,7 @@
     },
     {
       "nume": "Tura pe Vârful Piatra Mică, Piatra Craiului",
-      "localitate_start": null,
+      "localitate_start": "Fundata",
       "durata_h": null,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -3989,7 +3965,7 @@
     },
     {
       "nume": "Cabana Padina - Șaua Strunga",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": 5,
       "dificultate": "mediu",
       "denivelare_m": 428,
@@ -4004,7 +3980,7 @@
     },
     {
       "nume": "Varful Fratosteanu Mare, Muntii Latoritei",
-      "localitate_start": null,
+      "localitate_start": "Câmpu lui Neag",
       "durata_h": 4.33,
       "dificultate": "usor",
       "denivelare_m": 471,
@@ -4034,7 +4010,7 @@
     },
     {
       "nume": "Cabana Padina - Refugiul Strunga (dus-intors)",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": 4,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -4259,7 +4235,7 @@
     },
     {
       "nume": "Hasmas: Vf Haghimasul Mare",
-      "localitate_start": null,
+      "localitate_start": "Lacul Roșu",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -4274,7 +4250,7 @@
     },
     {
       "nume": "Remarcare traseu spre Lacul Gâlcescu, Munții Parâng",
-      "localitate_start": null,
+      "localitate_start": "Petroșani",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -4334,7 +4310,7 @@
     },
     {
       "nume": "Circuit Vf. Bucura Dumbrava si Vf. Omu",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": 7.5,
       "dificultate": "mediu",
       "denivelare_m": 1016,
@@ -4364,7 +4340,7 @@
     },
     {
       "nume": "Vinerea Mare in Piatra Mare",
-      "localitate_start": null,
+      "localitate_start": "Predeal",
       "durata_h": null,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -4379,7 +4355,7 @@
     },
     {
       "nume": "Sloeru Marcusanu",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": 6,
       "dificultate": "usor",
       "denivelare_m": 800,
@@ -4394,7 +4370,7 @@
     },
     {
       "nume": "Tentativa de Vf Negoiu, Muntii Fagaras",
-      "localitate_start": null,
+      "localitate_start": "Bâlea Lac",
       "durata_h": null,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -4484,7 +4460,7 @@
     },
     {
       "nume": "Plimbare la Tăul dintre Brazi, Munții Retezat",
-      "localitate_start": null,
+      "localitate_start": "Câmpu lui Neag",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -4499,7 +4475,7 @@
     },
     {
       "nume": "Cabana Codrin - Cabana Gentiana",
-      "localitate_start": null,
+      "localitate_start": "Câmpeni",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": 665,
@@ -4529,7 +4505,7 @@
     },
     {
       "nume": "Circuit nemarcat la Cuca, muntii Iezer-Papusa",
-      "localitate_start": null,
+      "localitate_start": "Câmpulung Muscel",
       "durata_h": 5.67,
       "dificultate": null,
       "denivelare_m": null,
@@ -4574,7 +4550,7 @@
     },
     {
       "nume": "Traseu spre Vf. Grecului in Bucegi",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": null,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -4589,7 +4565,7 @@
     },
     {
       "nume": "Creasta Parangului",
-      "localitate_start": null,
+      "localitate_start": "Petroșani",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -4604,7 +4580,7 @@
     },
     {
       "nume": "Cabana IEFS - Varful Parangul Mic - Varful Piatra",
-      "localitate_start": null,
+      "localitate_start": "Petroșani",
       "durata_h": 3.5,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -4649,7 +4625,7 @@
     },
     {
       "nume": "Urcare la Cabana Dochia, Munții Ceahlău",
-      "localitate_start": null,
+      "localitate_start": "Durău",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -4664,7 +4640,7 @@
     },
     {
       "nume": "Transfăgărășan - Stâna Piscul Negru",
-      "localitate_start": null,
+      "localitate_start": "Bâlea Lac",
       "durata_h": 3.5,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -4724,7 +4700,7 @@
     },
     {
       "nume": "Vf. Omu de la Cabana Mălăiești prin Hornul Mare",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": 3.5,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -4739,7 +4715,7 @@
     },
     {
       "nume": "Spre Vârful Omu, via Cabana Mălăiești (ziua 1)",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -4784,7 +4760,7 @@
     },
     {
       "nume": "Cabana Capra - Vârful Mușeteica (nemarcat)",
-      "localitate_start": null,
+      "localitate_start": "Bâlea Lac",
       "durata_h": 4,
       "dificultate": null,
       "denivelare_m": null,
@@ -4799,7 +4775,7 @@
     },
     {
       "nume": "Vf. Scara si Lacul Avrig, Muntii Fagaras",
-      "localitate_start": null,
+      "localitate_start": "Bâlea Lac",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -4829,7 +4805,7 @@
     },
     {
       "nume": "Refugiul Iezer si Crucea Ateneului",
-      "localitate_start": null,
+      "localitate_start": "Câmpulung Muscel",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": 1185,
@@ -4844,7 +4820,7 @@
     },
     {
       "nume": "Remarcare in Leaota – curs practic de trasat poteci",
-      "localitate_start": null,
+      "localitate_start": "Rucăr",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -4889,7 +4865,7 @@
     },
     {
       "nume": "Plimbare pe Vf Ciucas si Saua Tigailor",
-      "localitate_start": null,
+      "localitate_start": "Cheia",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -4904,7 +4880,7 @@
     },
     {
       "nume": "Vf Gropșoarele, munții Ciucaș",
-      "localitate_start": null,
+      "localitate_start": "Cheia",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -4934,7 +4910,7 @@
     },
     {
       "nume": "Plimbare la Vârful Țuțuiatu, Munții Măcin",
-      "localitate_start": null,
+      "localitate_start": "Greci",
       "durata_h": null,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -5009,7 +4985,7 @@
     },
     {
       "nume": "Canionul Valea lui Stan",
-      "localitate_start": null,
+      "localitate_start": "Câmpu lui Neag",
       "durata_h": 5,
       "dificultate": null,
       "denivelare_m": null,
@@ -5069,7 +5045,7 @@
     },
     {
       "nume": "Vârful Negoiu, Munții Făgăraș",
-      "localitate_start": null,
+      "localitate_start": "Bâlea Lac",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -5084,7 +5060,7 @@
     },
     {
       "nume": "Traseu Refugiul Cânaia, Munții Cindrel",
-      "localitate_start": null,
+      "localitate_start": "Păltiniș",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -5099,7 +5075,7 @@
     },
     {
       "nume": "Vârful Parângul Mare, munții Parâng",
-      "localitate_start": null,
+      "localitate_start": "Petroșani",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -5114,7 +5090,7 @@
     },
     {
       "nume": "Varful Parangul Mare, Muntii Parang",
-      "localitate_start": null,
+      "localitate_start": "Petroșani",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -5129,7 +5105,7 @@
     },
     {
       "nume": "Vârful Parângul Mic, Munții Parâng",
-      "localitate_start": null,
+      "localitate_start": "Petroșani",
       "durata_h": null,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -5174,7 +5150,7 @@
     },
     {
       "nume": "Vârful Păpușa, munții Iezer",
-      "localitate_start": null,
+      "localitate_start": "Câmpulung Muscel",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -5189,7 +5165,7 @@
     },
     {
       "nume": "Cabana Diham, muntii Bucegi",
-      "localitate_start": null,
+      "localitate_start": "Bușteni",
       "durata_h": 5,
       "dificultate": "usor",
       "denivelare_m": null,
@@ -5218,20 +5194,8 @@
       "judet": "Brașov"
     },
     {
-      "nume": "Cursuri montane de iarna",
-      "localitate_start": null,
-      "durata_h": 5,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://chitaracalatoare.ro/2015/01/ce-am-invatat-la-cursurile-montane-de.html",
-      "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2015/01/DSC_3476.jpg"
-    },
-    {
       "nume": "Ziua Naţională a României în Munţii Făgăraș (antrenament)",
-      "localitate_start": null,
+      "localitate_start": "Bâlea Lac",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -5246,7 +5210,7 @@
     },
     {
       "nume": "Circuit Vf. Vânturarița Mare, Parcul Național Buila-Vânturarița",
-      "localitate_start": null,
+      "localitate_start": "Olănești",
       "durata_h": null,
       "dificultate": "greu",
       "denivelare_m": null,
@@ -5261,7 +5225,7 @@
     },
     {
       "nume": "Lacul Vulturilor si Varful Malaia, Muntii Siriului",
-      "localitate_start": null,
+      "localitate_start": "Cheia",
       "durata_h": 8.5,
       "dificultate": null,
       "denivelare_m": 950,
@@ -5276,7 +5240,7 @@
     },
     {
       "nume": "Vf. Moldoveanu prin Valea Rea si Caldarea Galbena",
-      "localitate_start": null,
+      "localitate_start": "Bâlea Lac",
       "durata_h": 8.5,
       "dificultate": "greu",
       "denivelare_m": 1200,
@@ -5321,7 +5285,7 @@
     },
     {
       "nume": "Apuseni cu Asociatia Oxigen si David Neacsu",
-      "localitate_start": null,
+      "localitate_start": "Beliș",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -5351,7 +5315,7 @@
     },
     {
       "nume": "Lacul Zanoaga - Lacul Bucura",
-      "localitate_start": null,
+      "localitate_start": "Câmpu lui Neag",
       "durata_h": 4,
       "dificultate": null,
       "denivelare_m": 450,
@@ -5378,54 +5342,6 @@
       "lat": 45.390386,
       "lng": 22.7690876,
       "judet": "Hunedoara"
-    },
-    {
-      "nume": "Retrospectivă 2025",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://chitaracalatoare.ro/2025/12/retrospectiva-2025.html",
-      "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/12/DSC_9093-scaled.jpg"
-    },
-    {
-      "nume": "Insulele Feroe: cascada Fossá, Viðareiði, Kunoy Park, Funningur",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://chitaracalatoare.ro/2025/08/insulele-feroe-cascada-fossa-vidareidi-kunoy-park-funningur.html",
-      "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/08/IMG_20240824_133545.jpg"
-    },
-    {
-      "nume": "Insulele Feroe: Gjógv, Múlafossur, Gásadalur, Bøur",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://chitaracalatoare.ro/2025/08/insulele-feroe-gjogv-mulafossur-gasadalur-bour.html",
-      "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/08/IMG_20240822_123834-1.jpg"
-    },
-    {
-      "nume": "Biserica San Pietro si Orto Medievale",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://chitaracalatoare.ro/2025/08/umbria-2025-ziua-4-biserica-san-pietro-si-orto-medievale.html",
-      "sursa_blog": "chitaracalatoare",
-      "poza_url": "https://chitaracalatoare.ro/wp-content/uploads/2025/08/20250617_094207.jpg"
     },
     {
       "nume": "Varful Heniul Mare, Muntii Bargau",
@@ -5579,7 +5495,7 @@
     },
     {
       "nume": "Varful Omului, Muntii Suhard",
-      "localitate_start": null,
+      "localitate_start": "Cârlibaba",
       "durata_h": 7.5,
       "dificultate": "mediu",
       "denivelare_m": 660,
@@ -5594,7 +5510,7 @@
     },
     {
       "nume": "Vârful Bran - Vârful Țibleș - Vârful Arcer",
-      "localitate_start": null,
+      "localitate_start": "Moisei",
       "durata_h": 9,
       "dificultate": "greu",
       "denivelare_m": 1300,
@@ -5774,7 +5690,7 @@
     },
     {
       "nume": "Vârful Roșu și Vârful Păpușa, Munții Iezer-Păpușa",
-      "localitate_start": null,
+      "localitate_start": "Câmpulung Muscel",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": 2902,
@@ -5864,7 +5780,7 @@
     },
     {
       "nume": "Varful Muntele Mic",
-      "localitate_start": null,
+      "localitate_start": "Câmpu lui Neag",
       "durata_h": null,
       "dificultate": null,
       "denivelare_m": null,
@@ -5879,7 +5795,7 @@
     },
     {
       "nume": "Circuit Munții Țarcu: Vârful Țarcu - Vârful Căleanu",
-      "localitate_start": null,
+      "localitate_start": "Câmpu lui Neag",
       "durata_h": 11.42,
       "dificultate": "greu",
       "denivelare_m": 1391,
@@ -6088,111 +6004,6 @@
       "judet": "Caraș-Severin"
     },
     {
-      "nume": "Gjirokastra - cetatea de piatra a Albaniei",
-      "localitate_start": "Gjirokastra",
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2022/07/gjirokastra-cetatea-de-piatra-albaniei.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyz9od0bZHRqghxCAGFTOd_qEAk-Y_PmiWsIa-v0QidVEyD7R8TNlWHn-HdNco_blRSV1JtLpBMP8aNd0Xgii6I5H28-eqgEeZ2Cl-BtemSE-J6mL0AeI4B4g5ZId43BKmb0-wMSwGv4dNVucvSnv8zuVOO8SjjpxQ91Chht9UGfqIn9HGggM_uZd3ZA0e/w1200-h630-p-k-no-nu/Gjirokastra_jurnaldedrumetii.ro-49.jpg",
-      "lat": 40.075,
-      "lng": 20.138,
-      "judet": "Albania"
-    },
-    {
-      "nume": "Varful Korab",
-      "localitate_start": "Strezimir",
-      "durata_h": 6.95,
-      "dificultate": "greu",
-      "denivelare_m": 1365,
-      "distanta_km": 17.22,
-      "elevatie_pozitiva_m": 1365,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2022/07/varful-korab-2764m.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWdW1fz4YO2OHa4ngazREwgsdQP0EW3bOZ0ylNwb01Dh70aRqUxydIqwQK20j7_1q-kMAvyuLrByWpxKTAsQDwLbo9xoySIuGl69iJ6ZZBguoW_B0DfyZlr7-JjwLFOTapYdjYQDKiy7q2ku-U728pfAORQVaF1Gr4jXN-xzgFco1CNMYpiSlPa0az/w1200-h630-p-k-no-nu/IMG_20220724_130222.jpg",
-      "lat": 41.789,
-      "lng": 20.548,
-      "judet": "Macedonia"
-    },
-    {
-      "nume": "The Blue Eye (Ochiul Albastru)",
-      "localitate_start": "Saranda",
-      "durata_h": 1.5,
-      "dificultate": "usor",
-      "denivelare_m": 77,
-      "distanta_km": 4.11,
-      "elevatie_pozitiva_m": 77,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2023/02/the-blue-eye-ochiul-albastru-syri-i.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhphoGto1QO1KAaQc8a4FpDC5msMwhPsvShm0ofPjjdtRJeLiLTREwIVHe9zddOCRpedcGbtgtxUe_COV1hs7uAGM0BkMnCzwGZ8edcPLw_QbFdq5XTtUrq-FFZcRNgtqh3uoErFwA7GNRZb1OZqPhSSI5cGaK62SRAy1l3_0JbTj4zMfU9otVG1DRI/w1200-h630-p-k-no-nu/IMG_20220729_132043.jpg",
-      "lat": 39.875,
-      "lng": 20.018,
-      "judet": "Albania"
-    },
-    {
-      "nume": "Varful Zla Kolata, Alpii Dinarici",
-      "localitate_start": "Vusanje",
-      "durata_h": 9.87,
-      "dificultate": "greu",
-      "denivelare_m": 1656,
-      "distanta_km": 26.43,
-      "elevatie_pozitiva_m": 1656,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2023/08/varful-zla-kolata-alpii-dinarici.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRa1C0eq9YyR2fdKAtkRdrC6tXO5lCByZbjtKFr6VDe5WiRHCsprTcAb-oeo5nBt7592UVixF-_6ggndFd6swqr2IK6Ur3Hx874I8DF5z0Ha0HuFRc6CLaDyU98A8foALvLjp2h2ra0EYr0ypURIyHk9tAzQT9VguZhmIwXJPvu-pGGv678HxSnuUTt5V9/w1200-h630-p-k-no-nu/ZLA-KOLATA.webp",
-      "lat": 42.443,
-      "lng": 19.803,
-      "judet": "Muntenegru"
-    },
-    {
-      "nume": "Varful Bobotov Kuk, Muntii Durmitor",
-      "localitate_start": "Ivan Do",
-      "durata_h": 9.87,
-      "dificultate": "greu",
-      "denivelare_m": 1487,
-      "distanta_km": 17.93,
-      "elevatie_pozitiva_m": 1487,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2023/07/varful-bobotov-kuk-muntii-durmitor.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW03unukNLFp13Efr-ft0mhWbMei29XwfvX1jKph1AGPdp-m6uHHqgJBHLPNFx1ZdaGMCTdFVlShmiVnt_f7D-nvV1UrebXj0AbA9-qVzcKKO_Q2aQKoSJsTCVzT6i02wqdVKkGZuqeWj-DHWN7Z34ST61Q5DuANj-b-WGicEJMdqwlxAf97SuHv49_OF9/w1200-h630-p-k-no-nu/PANO-BOBOTOV-KUK.webp",
-      "lat": 43.135,
-      "lng": 19.022,
-      "judet": "Muntenegru"
-    },
-    {
-      "nume": "Cascadele Krushuna si Lacul Albastru",
-      "localitate_start": "Krushuna",
-      "durata_h": 2,
-      "dificultate": "usor",
-      "denivelare_m": 140,
-      "distanta_km": 4.31,
-      "elevatie_pozitiva_m": 140,
-      "sursa_url": "http://www.jurnaldedrumetii.ro/2021/08/cascadele-krushuna-piscina-albastra.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5qzFRJTg4Ji-xWD5gK1Udx2kiUpu5WzPJ4NqBimVjaN4ADWcaTGcttjyemaux7yYUc46Sq_n-uYHlhnBZ_5I2ePUuh5A4p1bHoW3N4nPUGHPn7BZkhR4s7eQcGhRObyy-JZwu6FPDHpOn/w1200-h630-p-k-no-nu/2021-08-10_14-16-43.jpg",
-      "lat": 43.261,
-      "lng": 24.737,
-      "judet": "Bulgaria"
-    },
-    {
-      "nume": "Pestera Devetashka",
-      "localitate_start": "Giurgiu",
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "http://www.jurnaldedrumetii.ro/2021/08/pestera-devetashka.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhs0FLIR760Z6C-0a6-b91TMOpjkjOFGBnFPuKGyJ2vM5MdeF54v_KDc4XMSyMRXE0-1tLMUxt-N7R1surLbcaWBB3HVf-85VbJFmUyGvgvZnR1zjaVjmdbBMEJdQR_EfkkOr2HCzZTDgY6/w1200-h630-p-k-no-nu/IMG_20210810_131136.jpg",
-      "lat": 43.234,
-      "lng": 24.889,
-      "judet": "Bulgaria"
-    },
-    {
       "nume": "Cetatea Belogradchik",
       "localitate_start": "Belogradchik",
       "durata_h": 2,
@@ -6206,117 +6017,6 @@
       "lat": 43.626,
       "lng": 22.681,
       "judet": "Bulgaria"
-    },
-    {
-      "nume": "Circuit Cabana Vihren - Kutelo - Koncheto - Banski Suhodol - Vihren",
-      "localitate_start": "Bansko",
-      "durata_h": 9,
-      "dificultate": "greu",
-      "denivelare_m": 1236,
-      "distanta_km": 12.5,
-      "elevatie_pozitiva_m": 1236,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2022/08/kutelo-koncheto-banski-suhodol-vihren.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCpPpQnsdc4KtK1ZKpFw1-UBX4JlTExq3EMPlw5MR6jfIxdMPWSxvpbgwfvi4aSeGfcuKXkpTl8sV1C8Qn1Qe0xZMQ5Ae6pV_VMX0TEZvWKRfRuVxOGtkusF7Un7_3XaUXn_TOUohpmXwh-iyDunnNdB5ESwAkRQWnTEC7HdGThGlDpPfT-1MiNRne/w1200-h630-p-k-no-nu/2.jpg",
-      "lat": 41.837,
-      "lng": 23.484,
-      "judet": "Bulgaria"
-    },
-    {
-      "nume": "Varful Musala, Muntii Rila",
-      "localitate_start": "Borovets",
-      "durata_h": 6.83,
-      "dificultate": "mediu",
-      "denivelare_m": 735,
-      "distanta_km": 14.68,
-      "elevatie_pozitiva_m": 735,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2018/07/varful-musala-2925-m-muntii-rila.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9WwLTQqAfJIldNod2lP020f71X8FS86VpCPMgYw3EkqbB7XtN4HX6O2S6R-8_lq7XdhaLj3vLg_RcOLI72AkaQr8OCHdqg179kRrDNNcfz9fg9ZkuifUno1cpn73Ii3ZKUF9q-jFKjSFU/w1200-h630-p-k-no-nu/DSCN5960.jpg",
-      "lat": 42.179,
-      "lng": 23.585,
-      "judet": "Bulgaria"
-    },
-    {
-      "nume": "Circuit Pestera Prohodna - Ochii lui Dumnezeu",
-      "localitate_start": "Karlukovo",
-      "durata_h": 1,
-      "dificultate": "usor",
-      "denivelare_m": 100,
-      "distanta_km": 2.49,
-      "elevatie_pozitiva_m": 100,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2022/08/pestera-prohodna-ochii-lui-dumnezeu.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6OPIuG6z2C5ofRSiBSaovHnmEk2acgsctXvJ17eTIfBJQlvoCCbYd8qSep3IU_LasFjPHLEtDCu3fn5yfZo7CpGeEQH9ejsiIfZ6EW2ZGm3h9BNCXI8bGEbiGYGAMORMjxCRT9KrHyL9SVoGQmdxauo-UKLElPdcsyaxA3DMGeP77grURIg3Ok0zs/w1200-h630-p-k-no-nu/IMG_20220811_095116.jpg",
-      "lat": 43.117,
-      "lng": 24.058,
-      "judet": "Bulgaria"
-    },
-    {
-      "nume": "Manastirile Meteora",
-      "localitate_start": "Kalambaka",
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2008/09/meteora.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiToPfc1OXtqFYu1O4MH2_PgHLv-vAUGIfug95-uVC1DqToUBeIoFHJHy1UzYuEUzQ9_2Swhovx1h9kE6r4B1oLO4pzTYsqlLFg6suxq6kLB5Stlh1RAoQBPLAbn5BhZHGD_3OkWCjReQBORbRNetIvYtDCEJKsX0c3frr1hwJGL0WeeMxgtsaphYnSbiF0/w1200-h630-p-k-no-nu/meteora_jurnaldedrumetii.ro-2.jpg",
-      "lat": 39.715,
-      "lng": 21.631,
-      "judet": "Grecia"
-    },
-    {
-      "nume": "Varful Mytikas, Muntele Olimp",
-      "localitate_start": "Litochoro",
-      "durata_h": 11.77,
-      "dificultate": "greu",
-      "denivelare_m": 2113,
-      "distanta_km": 19.5,
-      "elevatie_pozitiva_m": 2113,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2022/08/varful-mytikas-muntele-olimp-grecia.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUf222C5OTm0oLiAyYoElD1-v-fCXbvr6TYeSz1QQDZvBFzx4H3MRnqPlobcA0RKw9LeWOrAod8tg4gwarDfm3r46kpvw4RaNiYnvCfy7Ewg47dw1-RTERcoWMMEBzIkNHr-auDsU66kUV3K-8eQ2RT3BAX7MxSAbIu6Uc5hCFrDVXgYweVoOiKemT/w1200-h630-p-k-no-nu/Mytikas_jurnaldedrumetii.ro.jpg",
-      "lat": 40.085,
-      "lng": 22.359,
-      "judet": "Grecia"
-    },
-    {
-      "nume": "Varful Timios Stavros - Muntele Psiloritis",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": "usor",
-      "denivelare_m": null,
-      "distanta_km": 10,
-      "elevatie_pozitiva_m": 900,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2020/08/varful-timios-stavros-2456mpsiloritis.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihzTONYLf1Ndnc9S3Z1UxOFu8ob4l23A6Y0NLOsV6K-nycpJsa7ou9GdVV7Hkkek7ZsER_sjJGHgP-iyalPcZTnNz4qFS1SZjmCmcYWBVqMDMFLP0VWe9gQI0Puu2jTPDr_Wpg35LOCi4/w1200-h630-p-k-no-nu/IMG_20200804_101253.jpg"
-    },
-    {
-      "nume": "Samaria Gorges, Insula Creta",
-      "localitate_start": null,
-      "durata_h": 5.22,
-      "dificultate": "mediu",
-      "denivelare_m": 1173,
-      "distanta_km": 18.63,
-      "elevatie_pozitiva_m": 9,
-      "sursa_url": "http://www.jurnaldedrumetii.ro/2020/08/samaria-gorges-insula-creta.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbaK7Ray53U_cklFwjMSKfamHpRNJlZpTZy8-0xl3d96urayNg9iMJpNJ48t-lybNbRLQFn4EcnMAD_6hvee_N3eUtGxTNLgmAAn0jcINPng1SQfFYhm2pB50iMQwCL8uXM3mte01lA4c/w1200-h630-p-k-no-nu/IMG_20200803_120051.jpg"
-    },
-    {
-      "nume": "Ghid de vacanta Insula Rodos, Grecia",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2023/06/35-de-motive-sa-vizitezi-insula-rodos.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3kXTRuHYKx4O2IC52b5PU2yiLgbip5zTVNtzcFvyapKADNaQANyiAwfc3xf9spDBdincieNcG8Lanr-XXVtaoIYsmNZQHhBIYY5o_PdpiJTg6TL6NHV5kIYCK1h_METWzhaL8aBd-iomNIAPjq6YBu-MHH06nMP_ZXsp2ZMBvHmowAQ2dudJzVCycvWho/w1200-h630-p-k-no-nu/IMG_20230701_115500.jpg"
     },
     {
       "nume": "Varful Attaviros",
@@ -6357,20 +6057,6 @@
       "sursa_url": "https://www.jurnaldedrumetii.ro/2023/06/valea-fluturilor-ghid-complet.html",
       "sursa_blog": "jurnaldedrumetii",
       "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzu7EwemBp3ESCYSbvL_hyzb9AlKpx0Av01Xj2S9xQH2U63HDzm5iWVC8VCVTbjv2qitlfAJ9oxWl0CZpdr-vGSLZapHV2bl66GHnhsY17v9rH7tpW_X1xAyn7K8BW3h9iAU3lqGuFO2jtfXnCtwbYGLcaxSt3jYVV45xTkR6TC2fUAmEDEuNLuSshFXd_/w1200-h630-p-k-no-nu/jurnal-de-drumetii_butterfly-valley_1.jpg",
-      "lat": null,
-      "lng": null
-    },
-    {
-      "nume": "Jacob's Canyon (Sideritisa Canyon), Insula Rodos",
-      "localitate_start": "Embonas",
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2023/06/jacobs-canyon-insula-rodos-sideritisa.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhF-qStVeQYbdJakAwhoDNALouccBPBIJXv7dfeiFS3Ch73NqVokItuv4rcC34YzVF84ye22a9nupD-Sy_M3MQo7qjy70oEkhWI8JPqAbdyccZ-nzBkhf_5zgwehYcOeU2VGdpuK28bsiPU77DBtbf8RTvbu1X17I3blNp_V8slYkQu66YeccLcKGKKB38D/w1200-h630-p-k-no-nu/jacobs-canyon-rodos-jurnal-de-drumetii-photo1.jpg",
       "lat": null,
       "lng": null
     },
@@ -6431,126 +6117,6 @@
       "lng": null
     },
     {
-      "nume": "Lacuri din Macedonia",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2022/07/lacuri-din-macedonia.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjntbV8nWJBICXjyGh2EwNX8jwtbcEggGb-BygDTGTsgIWqBWUxLcaSj1sZy9iK6I_VSIJbgIkzqGokcaEKIytwZo9YkXC_cIPf9KP_Q-ooWrEf3I8dhj5a3G14FMlSmU-Pyqh8JANSl2tA6Yi5i30mX3G1UjSmQSF2v9WMa0RK4SNyKCuJFuPNSZcE/w1200-h630-p-k-no-nu/IMG_20220723_145757.jpg"
-    },
-    {
-      "nume": "Ghid pentru incepatori in drumetii",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2010/06/ghid-pentru-incepatori-in-drumetiile.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoWJJA6YbirCIM9MdAkIHBiMPpHkx6EGKt2yzyHZ0nWJbsOoy4L2zJuaUfaMpRyJBY1DSXyclsgNWNn8cNRdRkU4dcVW8K8cfPE2HTzGDahlFdyGWNw0yJDo6oWwb3UVFSb6i6EeyvUHsJJMjYmsYgAMmfkEVlilaHlY1GPJyc2kfPDNHSlltjrxmYjz1T/w1200-h630-p-k-no-nu/sfaturi_pentru_incepatori_jurnal_de_drumetii.jpg"
-    },
-    {
-      "nume": "Ghid practic: Cum sa-ti aranjezi rucsacul",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2010/05/cum-sa-ti-aranjezi-rucsacul-ghid-practic.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiU5lkUR9oWEsSAttYv3ymg_L3VWx_5LbrXV2fowlvfVZqG5eOEclHHRll73sLU8WkmZL5WNE4gfYkFYSLlu3nmjoCFm8P1SVuAZWllLtUn33ug8A9QQN_o95KMcLGdf_JIWwLK1jUQ92OMUe6GOJRQy2rZzipE16I-rUFTBRIMkh4wuTFI6FUFeh0OyBiz/w1200-h630-p-k-no-nu/sfaturi_pentru_incepatori_jurnal_de_drumetii.jpg"
-    },
-    {
-      "nume": "Sfaturi pentru incepatori cum sa eviti oboseala",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2010/05/sfaturi-pentru-incepatori-cum-eviti.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiU5lkUR9oWEsSAttYv3ymg_L3VWx_5LbrXV2fowlvfVZqG5eOEclHHRll73sLU8WkmZL5WNE4gfYkFYSLlu3nmjoCFm8P1SVuAZWllLtUn33ug8A9QQN_o95KMcLGdf_JIWwLK1jUQ92OMUe6GOJRQy2rZzipE16I-rUFTBRIMkh4wuTFI6FUFeh0OyBiz/w1200-h630-p-k-no-nu/sfaturi_pentru_incepatori_jurnal_de_drumetii.jpg"
-    },
-    {
-      "nume": "Echipament necesar pentru drumetii",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2010/05/echipament-necesar-pentru-drumetii.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiS882lilBpYPdvTtxYTsoNDnvoW4-Fg9s6bYmqvVashSXWJ6FQGxnAS_0f57a_ecZGfjsb2t3qnoo2TJgpsAheONmfXpUCc7rAYHVvHtVgdPZghyphenhyphenkGrI6K5Q36kMo45yLkOWd_WQ6xK-Xbi2291Aq7x8cLZ2P5sXwBoltLn4AQAsswScp_p5XKvOkzkyk/w1200-h630-p-k-no-nu/echipament_drumetii_jurnal_de_drumetii.ro.png"
-    },
-    {
-      "nume": "Marcajele si indicatoarele turistice",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2018/03/marcajele-si-indicatoarele-turistice.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTMZ3ELlNKyI3rY68c9UWPa-qkVeV774a05JgYAWq0bWFFzlBXliY4lvjvM9-YLYsMixmJDTh54ooL7DYdnGK0ezJoJE-U1AZoEJH7i5H3DgIdFnlCYGRfCxDzUU74P4qyR6EkKKbxt7Bx/w1200-h630-p-k-no-nu/logo.png"
-    },
-    {
-      "nume": "Criteriile de clasificare a traseelor montane",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2018/03/criteriile-de-clasificare-traseelor.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiU5lkUR9oWEsSAttYv3ymg_L3VWx_5LbrXV2fowlvfVZqG5eOEclHHRll73sLU8WkmZL5WNE4gfYkFYSLlu3nmjoCFm8P1SVuAZWllLtUn33ug8A9QQN_o95KMcLGdf_JIWwLK1jUQ92OMUe6GOJRQy2rZzipE16I-rUFTBRIMkh4wuTFI6FUFeh0OyBiz/w1200-h630-p-k-no-nu/sfaturi_pentru_incepatori_jurnal_de_drumetii.jpg"
-    },
-    {
-      "nume": "Ghid practic - Protectia fata de cainii de la stana",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2016/11/cainii-de-la-stana.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEim3CXbSiZzd_K63pRW3cjOnrjrj-kDQpnteoGTCyC-OF_pS9H33A8lDytzyQBAn5uEVtfMCFXUSBPuEOrXbbaWWpWlpsyY-lXYDqT4tFV7bWb1VM6cUuvL7DW6O2MwHZgZ2Xbu27TA2m_0oQWsHk8nLHI4uuA4Zunizb_phKUAqcT3uH2w8X_bQypM_A/w1200-h630-p-k-no-nu/DSCF6932.jpg"
-    },
-    {
-      "nume": "Cum sa reduci efectele unui fulger",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2010/05/cum-sa-reduci-efectele-unui-fulger.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiQcbxo5DUHrFsGW2dOohXxyBFSpGzkPQvbsT8ZePJtdHHRNI_zXnFpodn8orHlix6VGbEhUwikgvMQOic9mPZFjVjuy8i78_de21KeV0WwBkIsPzzkrasyNAmQMVQZ9WB44twsRln2CzLT4tWPI-dAxVxJVCYfuZ6Y5ikF9l9xPFqOaG5mZrWFRqmqj4/w1200-h630-p-k-no-nu/jurnaldedrumetii.ro%20(2).png"
-    },
-    {
-      "nume": "Echipament necesar pentru Via Ferrata",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2010/05/via-ferrata-echipament-necesar.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBoDazabuSObRJSYKStHMCT-BQ2X7hMDgbYj_4xnIUi80_o0gJC8EP3wtQT4PuyOE9sOzSuJKQtzZ3o0CNmW660FnFE-x4waAl-fsn4n15t4PMtz_SttFzDn8Ep-zsILoT_MDynayGwGlx64koS8_s-Sz0aGB9CwxlR0Jou9RX8u24YS9VaYEjCKhF6js/w1200-h630-p-k-no-nu/196cfbe5-bf67-4e8a-8200-030aa3382932.webp"
-    },
-    {
       "nume": "Via Ferrata Wild Ferenc - Lacul Rosu",
       "localitate_start": "Lacu Rosu",
       "durata_h": null,
@@ -6564,54 +6130,6 @@
       "lat": 46.7930128,
       "lng": 25.7953129,
       "judet": "Harghita"
-    },
-    {
-      "nume": "Hiking vs Trekking",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2018/03/hiking-vs-trekking.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoWJJA6YbirCIM9MdAkIHBiMPpHkx6EGKt2yzyHZ0nWJbsOoy4L2zJuaUfaMpRyJBY1DSXyclsgNWNn8cNRdRkU4dcVW8K8cfPE2HTzGDahlFdyGWNw0yJDo6oWwb3UVFSb6i6EeyvUHsJJMjYmsYgAMmfkEVlilaHlY1GPJyc2kfPDNHSlltjrxmYjz1T/w1200-h630-p-k-no-nu/sfaturi_pentru_incepatori_jurnal_de_drumetii.jpg"
-    },
-    {
-      "nume": "Cele zece porunci ale turismului pe munte",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2000/01/cele-zece-porunci-ale-turismului-pe.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8aiFKtLfQscMgBM85dt_f0-a6eBBEsEl6Ab4vThTn3xjKrtKI6nte8rUSDepyWw_8U3ZR8XxN3m1bEmzwOctMyE1bsvAnnBUVagQfek3zjApNqm92NDUrtpJP86BjzO9JLR2I2YEBJY0F/w1200-h630-p-k-no-nu/logo.png"
-    },
-    {
-      "nume": "Cel mai inalt varf din Muntii Romaniei",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2014/07/cel-mai-inalt-varf-din-muntii-romaniei.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_uQwZjQQicpYEWEUqSwSy1SvSxceMpgWV_kt1GgmMaMUCOhiLEicVTmKQuEMOyY=w1200-h630-p-k-no-nu"
-    },
-    {
-      "nume": "Lista varfurilor urcate",
-      "localitate_start": null,
-      "durata_h": null,
-      "dificultate": null,
-      "denivelare_m": null,
-      "distanta_km": null,
-      "elevatie_pozitiva_m": null,
-      "sursa_url": "https://www.jurnaldedrumetii.ro/2026/02/varfuri-urcate.html",
-      "sursa_blog": "jurnaldedrumetii",
-      "poza_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEib1aUo8gdQQ6SsATsOafBqS4I0pUkGFGgDeAXX5m_wAz2ZWMB8OAiiVco_VcwS1ax7Tg7kTlb17gR799e9nm2oaeJHRmxaO_neAj-49vERPOwpq4tpdRe_rl_5BcPLCwQVE77CvzmeS3etm0hzSdboW1oVZ6UKJxa6FHRZmEPcIIpWl7dV_gNysIXr-iZ_/w1200-h630-p-k-no-nu/logofoto.png"
     }
   ]
 }
