@@ -139,7 +139,7 @@ def scrape_bloguldecalatorii() -> list[dict]:
             for a in content.find_all("a", href=True):
                 href = a["href"]
                 if "bloguldecalatorii.ro" in href and "/20" in href:
-                    links.append(href)
+                    if "#" not in href: links.append(href)
         links = list(dict.fromkeys(links))  # dedup
         print(f"  Gasit {len(links)} linkuri", flush=True)
     except Exception as e:
@@ -147,7 +147,7 @@ def scrape_bloguldecalatorii() -> list[dict]:
         return []
 
     results = []
-    for i, url in enumerate(links[:80]):  # limit pentru test
+    for i, url in enumerate(links[:5]):  # limit pentru test
         try:
             time.sleep(1.5)
             r = requests.get(url, headers=HEADERS, timeout=10)
@@ -205,7 +205,7 @@ def scrape_thechillinbear() -> list[dict]:
                                  "https://ro.thechillinbear.com/fotografii/"]
                 and href.count("/") == 4
             ):
-                links.append(href)
+                if "#" not in href: links.append(href)
     except Exception as e:
         print(f"  Eroare index: {e}", flush=True)
         return []
@@ -214,7 +214,7 @@ def scrape_thechillinbear() -> list[dict]:
     print(f"  Gasit {len(links)} linkuri", flush=True)
 
     results = []
-    for i, url in enumerate(links):
+    for i, url in enumerate(links[:5]):
         try:
             time.sleep(1.5)
             r = requests.get(url, headers=HEADERS, timeout=15)
@@ -283,7 +283,7 @@ def scrape_chitaracalatoare() -> list[dict]:
                     and href not in links
                     and href.startswith("http")  # exclude mailto: si altele
                 ):
-                    links.append(href)
+                    if "#" not in href: links.append(href)
                     found = True
             if not found:
                 break
@@ -297,7 +297,7 @@ def scrape_chitaracalatoare() -> list[dict]:
     print(f"  Gasit {len(links)} linkuri", flush=True)
 
     results = []
-    for i, url in enumerate(links[:50]):
+    for i, url in enumerate(links[:5]):
         try:
             time.sleep(1.5)
             r = requests.get(url, headers=HEADERS, timeout=15)
