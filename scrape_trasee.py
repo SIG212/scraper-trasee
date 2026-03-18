@@ -54,7 +54,7 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
         return None
 
     genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel("gemini-2.0-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash-preview-04-17")
 
     prompt = f"""Esti un asistent care extrage informatii structurate despre trasee montane din Romania.
 
@@ -82,14 +82,23 @@ Extrage urmatoarele informatii si raspunde DOAR cu JSON valid, fara text suplime
 
 Daca o informatie nu apare explicit in text, pune null. Nu inventa date."""
 
-    try:
-        response = model.generate_content(prompt)
-        raw = response.text.strip()
-        raw = re.sub(r"^```json\s*|^```\s*|```$", "", raw, flags=re.MULTILINE).strip()
-        return json.loads(raw)
-    except Exception as e:
-        print(f"  [gemini] Eroare extragere: {e}")
-        return None
+    for attempt in range(3):
+        try:
+            time.sleep(4)  # ~15 req/min pe free tier
+            response = model.generate_content(prompt)
+            raw = response.text.strip()
+            raw = re.sub(r"^```json\s*|^```\s*|```$", "", raw, flags=re.MULTILINE).strip()
+            return json.loads(raw)
+        except Exception as e:
+            err = str(e)
+            if "429" in err:
+                wait = 30 * (attempt + 1)
+                print(f"  [gemini] Rate limit, astept {wait}s...")
+                time.sleep(wait)
+            else:
+                print(f"  [gemini] Eroare extragere: {e}")
+                return None
+    return None
 
 
 # ---------------------------------------------------------------------------
