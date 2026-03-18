@@ -1,10 +1,7 @@
 name: Scraper Trasee
 
 on:
-  # Ruleaza automat in fiecare duminica la 03:00 UTC
-  schedule:
-    - cron: "0 3 * * 0"
-  # Sau manual din tab-ul Actions
+ 
   workflow_dispatch:
 
 jobs:
