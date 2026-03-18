@@ -51,19 +51,6 @@ header { background:var(--g9); padding:1.25rem 2rem; }
 }
 .fg input:focus,.fg select:focus { outline:none; border-color:var(--g5); }
 
-.oras-wrap { position:relative; }
-.ac-list {
-  display:none; position:absolute; top:calc(100% + 4px); left:0; right:0;
-  background:var(--white); border:1.5px solid var(--stone); border-radius:var(--rsm);
-  box-shadow:0 8px 24px rgba(0,0,0,0.12); z-index:999; overflow:hidden;
-}
-.ac-list.open { display:block; }
-.ac-item { padding:9px 12px; cursor:pointer; border-bottom:0.5px solid var(--stone); transition:background 0.1s; }
-.ac-item:last-child { border-bottom:none; }
-.ac-item:hover,.ac-item.sel { background:var(--cream); }
-.ac-name { font-size:13px; font-weight:500; color:var(--ink); }
-.ac-sub { font-size:11px; color:var(--ink3); margin-top:1px; }
-
 .btn-search {
   background:var(--g7); color:var(--white); border:none; border-radius:var(--rsm);
   padding:10px 20px; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500;
@@ -155,10 +142,34 @@ header { background:var(--g9); padding:1.25rem 2rem; }
   <div class="filter-card">
     <div class="fg">
       <label>Plecare din</label>
-      <div class="oras-wrap">
-        <input type="text" id="inp-oras" placeholder="Cluj-Napoca, Brașov..." autocomplete="off" spellcheck="false">
-        <div class="ac-list" id="ac-list"></div>
-      </div>
+      <select id="sel-oras">
+        <option value="46.7712,23.6236">Cluj-Napoca</option>
+        <option value="44.4268,26.1025">București</option>
+        <option value="45.6427,25.5887">Brașov</option>
+        <option value="45.7489,21.2087">Timișoara</option>
+        <option value="47.1585,27.6014">Iași</option>
+        <option value="45.7537,21.2257">Arad</option>
+        <option value="47.0458,21.9189">Oradea</option>
+        <option value="45.7983,24.1519">Sibiu</option>
+        <option value="44.1755,28.6389">Constanța</option>
+        <option value="46.5386,24.5578">Târgu Mureș</option>
+        <option value="44.8565,24.8694">Pitești</option>
+        <option value="44.9337,26.0082">Ploiești</option>
+        <option value="47.6535,23.5840">Baia Mare</option>
+        <option value="47.7931,22.8858">Satu Mare</option>
+        <option value="46.0767,23.5805">Alba Iulia</option>
+        <option value="45.8671,22.9142">Deva</option>
+        <option value="46.9244,26.3681">Piatra Neamț</option>
+        <option value="46.5656,26.9126">Bacău</option>
+        <option value="47.6369,26.2527">Suceava</option>
+        <option value="45.4333,28.0500">Galați</option>
+        <option value="45.6944,27.1883">Focșani</option>
+        <option value="44.9272,25.4573">Târgoviște</option>
+        <option value="44.3167,23.8000">Craiova</option>
+        <option value="44.6306,22.6567">Drobeta-Turnu Severin</option>
+        <option value="45.3378,25.5345">Sinaia</option>
+        <option value="46.4531,23.5676">Rîmetea</option>
+      </select>
     </div>
     <div class="fg">
       <label>Timp cu mașina</label>
@@ -208,7 +219,6 @@ header { background:var(--g9); padding:1.25rem 2rem; }
 </div>
 
 <script>
-const MAPBOX_TOKEN = 'PUNE_TOKEN_TAU_AICI';
 const JSON_URL = 'trasee.json';
 const OSRM = 'https://router.project-osrm.org/table/v1/driving';
 const BATCH = 90;
@@ -216,16 +226,6 @@ const BATCH = 90;
 let TRASEE = [];
 let userLat = null, userLng = null;
 let distCache = {};
-let acItems = [], acIdx = -1;
-let acTimer = null;
-let sessionToken = newUUID();
-
-function newUUID() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
-    const r = Math.random()*16|0;
-    return (c==='x'?r:(r&0x3|0x8)).toString(16);
-  });
-}
 
 const CULORI = {
   'Bucegi':'#0F6E56','Făgăraș':'#185FA5','Piatra Craiului':'#534AB7',
@@ -422,86 +422,16 @@ function setStatus(msg, type) {
   el.className = 'status-bar' + (type ? ' '+type : '');
 }
 
-const inp = document.getElementById('inp-oras');
-const acList = document.getElementById('ac-list');
-
-function closeAc() {
-  acList.classList.remove('open');
-  acList.innerHTML = '';
-  acIdx = -1; acItems = [];
-}
-
-async function suggest(q) {
-  if (q.length < 2) { closeAc(); return; }
-  try {
-    const url = `https://api.mapbox.com/search/searchbox/v1/suggest?q=${encodeURIComponent(q)}&language=ro&country=RO&types=city,town,village,locality,municipality&limit=6&session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    acItems = (data.suggestions||[]).slice(0,6);
-    if (!acItems.length) { closeAc(); return; }
-    acIdx = -1;
-    acList.innerHTML = acItems.map((s,i) =>
-      `<div class="ac-item" data-i="${i}">
-        <div class="ac-name">${s.name}</div>
-        <div class="ac-sub">${s.place_formatted||'România'}</div>
-      </div>`
-    ).join('');
-    acList.querySelectorAll('.ac-item').forEach(el => {
-      el.addEventListener('mousedown', e => {
-        e.preventDefault();
-        pick(acItems[+el.dataset.i]);
-      });
-    });
-    acList.classList.add('open');
-  } catch(e) { console.error('Autocomplete error:', e); closeAc(); }
-}
-
-async function pick(s) {
-  inp.value = s.name;
-  closeAc();
-  setStatus('Se încarcă locația...', '');
-  try {
-    const url = `https://api.mapbox.com/search/searchbox/v1/retrieve/${s.mapbox_id}?session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    const f = data.features?.[0];
-    if (!f) throw new Error('no feature');
-    [userLng, userLat] = f.geometry.coordinates;
-    sessionToken = newUUID();
-    distCache = {};
-    setStatus(`✓ ${s.name} selectat — apasă Caută`, 'ok');
-  } catch(e) {
-    console.error('Retrieve error:', e);
-    setStatus('Eroare la încărcarea locației.', 'err');
-  }
-}
-
-inp.addEventListener('input', e => {
-  clearTimeout(acTimer);
-  acTimer = setTimeout(() => suggest(e.target.value.trim()), 200);
+document.getElementById('sel-oras').addEventListener('change', e => {
+  const [lat, lng] = e.target.value.split(',').map(Number);
+  userLat = lat; userLng = lng;
+  distCache = {};
+  const name = e.target.options[e.target.selectedIndex].text;
+  setStatus(`✓ ${name} selectat — apasă Caută`, 'ok');
 });
 
-inp.addEventListener('keydown', e => {
-  const items = acList.querySelectorAll('.ac-item');
-  if (e.key==='ArrowDown') {
-    e.preventDefault();
-    acIdx = Math.min(acIdx+1, items.length-1);
-    items.forEach((el,i) => el.classList.toggle('sel', i===acIdx));
-  } else if (e.key==='ArrowUp') {
-    e.preventDefault();
-    acIdx = Math.max(acIdx-1, 0);
-    items.forEach((el,i) => el.classList.toggle('sel', i===acIdx));
-  } else if (e.key==='Enter') {
-    e.preventDefault();
-    if (acIdx>=0 && acItems[acIdx]) pick(acItems[acIdx]);
-    else if (acItems.length>0) pick(acItems[0]);
-    else porneste();
-  } else if (e.key==='Escape') {
-    closeAc();
-  }
-});
-
-inp.addEventListener('blur', () => setTimeout(closeAc, 180));
+const firstVal = document.getElementById('sel-oras').value.split(',').map(Number);
+userLat = firstVal[0]; userLng = firstVal[1];
 
 fetch(JSON_URL)
   .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
