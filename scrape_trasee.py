@@ -13,7 +13,7 @@ import time
 import re
 import os
 from urllib.parse import urljoin, urlparse
-import google.generativeai as genai
+from google import genai
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -53,8 +53,7 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
         print("  [gemini] GEMINI_API_KEY lipsa, sar extragerea AI")
         return None
 
-    genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel("gemini-2.5-flash-lite")
+    client = genai.Client(api_key=GEMINI_API_KEY)
 
     prompt = f"""Esti un asistent care extrage informatii structurate despre trasee montane din Romania.
 
@@ -85,7 +84,10 @@ Daca o informatie nu apare explicit in text, pune null. Nu inventa date."""
     for attempt in range(3):
         try:
             time.sleep(4)  # ~15 req/min pe free tier
-            response = model.generate_content(prompt)
+            response = client.models.generate_content(
+                model="gemini-2.5-flash-lite",
+                contents=prompt,
+            )
             raw = response.text.strip()
             raw = re.sub(r"^```json\s*|^```\s*|```$", "", raw, flags=re.MULTILINE).strip()
             return json.loads(raw)
