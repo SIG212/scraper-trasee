@@ -29,24 +29,20 @@ last_gemini_call = 0.0  # timestamp ultimului request
 
 
 # ---------------------------------------------------------------------------
-# Geocoding via ArcGIS (gratuit, fara API key, functioneaza din cloud)
+# Coordonate din coords.json (generat o singura data cu build_coords.py)
 # ---------------------------------------------------------------------------
 
-def geocode(location_text: str) -> tuple[float, float] | None:
-    """Returneaza (lat, lng) folosind ArcGIS geocoder."""
+def load_coords() -> dict:
+    """Incarca coords.json daca exista."""
     try:
-        from geopy.geocoders import ArcGIS
-        from geopy.exc import GeocoderTimedOut, GeocoderServiceError
-
-        geolocator = ArcGIS(user_agent="MergLaMunte-Scraper/1.0", timeout=10)
-        location = geolocator.geocode(location_text)
-        if location:
-            return float(location.latitude), float(location.longitude)
-        else:
-            print(f"  [geocode] Nu gasit: '{location_text}'", flush=True)
+        with open("coords.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print("  [coords] coords.json nu exista - ruleaza build_coords.py", flush=True)
+        return {}
     except Exception as e:
-        print(f"  [geocode] Eroare pentru '{location_text}': {e}", flush=True)
-    return None
+        print(f"  [coords] Eroare la citire coords.json: {e}", flush=True)
+        return {}
 
 
 # ---------------------------------------------------------------------------
@@ -76,7 +72,8 @@ Raspunde DOAR cu JSON valid, fara text suplimentar:
 {{
   "nume": "numele traseului (scurt, descriptiv)",
   "munte": "masivul/muntii (ex: Apuseni, Bucegi, Fagaras, Retezat, Piatra Craiului)",
-  "localitate_start": "satul sau orasul de unde incepe traseul (ex: Plaiul Foii, Busteni, Zarnesti)",
+  "localitate_start": "satul sau orasul de unde incepe traseul (ex: Plaiul Foii, Busteni, Zarnesti) - FARA diacritice",
+  "judet_start": "judetul in care se afla localitate_start (ex: Brasov, Prahova, Hunedoara) - FARA diacritice",
   "km": numar_float_sau_null,
   "durata_h": numar_float_ore_totale_sau_null,
   "denivelare_m": numar_int_metri_sau_null,
@@ -91,8 +88,9 @@ Raspunde DOAR cu JSON valid, fara text suplimentar:
 Reguli stricte:
 - Extrage date DOAR daca sunt mentionate explicit in text
 - Pentru durata: cauta "ore", "h", "timp de mers", "durata"
-- Pentru km: cauta "kilometri", "km", "distanta"  
+- Pentru km: cauta "kilometri", "km", "distanta"
 - Pentru denivelare: cauta "diferenta de nivel", "denivelare", "metri urcare", "D+"
+- localitate_start si judet_start: fara diacritice (Busteni nu Bușteni, Brasov nu Brașov)
 - Nu inventa date. Daca nu gasesti o informatie, pune null."""
 
     for attempt in range(3):
@@ -329,47 +327,31 @@ def scrape_chitaracalatoare() -> list[dict]:
 # Geocoding batch - adauga lat/lng la toate traseele
 # ---------------------------------------------------------------------------
 
-def add_coordinates(trasee: list[dict]) -> list[dict]:
-    print(f"\n[geocoding] {len(trasee)} trasee...", flush=True)
-    cache = {}
+# ---------------------------------------------------------------------------
+# Adauga coordonate din coords.json
+# ---------------------------------------------------------------------------
 
-    for i, t in enumerate(trasee):
-        loc = t.get("localitate_start")
-        munte = t.get("munte")
+def add_coordinates(trasee: list[dict], coords: dict) -> list[dict]:
+    print(f"\n[coords] Aplicare coordonate pentru {len(trasee)} trasee...", flush=True)
+    found = 0
+    for t in trasee:
+        loc = (t.get("localitate_start") or "").strip().lower()
+        judet = (t.get("judet_start") or "").strip().lower()
+        key_full = f"{loc}, {judet}" if loc and judet else loc or judet
+        key_loc = loc
 
-        # Ignora valori "null" string
-        if loc in (None, "null", ""): loc = None
-        if munte in (None, "null", ""): munte = None
+        if key_full in coords:
+            t["lat"] = coords[key_full]["lat"]
+            t["lng"] = coords[key_full]["lng"]
+            found += 1
+        elif key_loc in coords:
+            t["lat"] = coords[key_loc]["lat"]
+            t["lng"] = coords[key_loc]["lng"]
+            found += 1
+        else:
+            print(f"  [coords] Negasit: '{key_full}'", flush=True)
 
-        if not loc and not munte:
-            continue
-
-        # Queries in ordine descrescatoare de precizie
-        queries = []
-        if loc and munte:
-            queries.append(f"{loc}, {munte}, Romania")
-        if loc:
-            queries.append(f"{loc}, Romania")
-        if munte:
-            queries.append(f"Muntii {munte}, Romania")
-
-        coords = None
-        for q in queries:
-            if q in cache:
-                coords = cache[q]
-                break
-            coords = geocode(q)
-            time.sleep(1.2)
-            if coords:
-                cache[q] = coords
-                print(f"  [{i+1}] '{q}' → {coords[0]:.4f}, {coords[1]:.4f}", flush=True)
-                break
-            else:
-                print(f"  [{i+1}] '{q}' → nu gasit", flush=True)
-
-        if coords:
-            t["lat"], t["lng"] = coords
-
+    print(f"  {found}/{len(trasee)} trasee cu coordonate", flush=True)
     return trasee
 
 
@@ -385,8 +367,11 @@ def main():
     all_trasee += scrape_thechillinbear()
     all_trasee += scrape_chitaracalatoare()
 
+    # Incarca coordonate statice
+    coords = load_coords()
+
     # Adauga coordonate
-    all_trasee = add_coordinates(all_trasee)
+    all_trasee = add_coordinates(all_trasee, coords)
 
     # Filtreaza traseele fara date minime
     valid = [t for t in all_trasee if t.get("nume") and (t.get("lat") or t.get("munte"))]
