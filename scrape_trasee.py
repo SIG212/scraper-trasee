@@ -89,10 +89,10 @@ Daca o informatie nu apare explicit in text, pune null. Nu inventa date."""
 
     for attempt in range(3):
         try:
-            # Rate limiter global: minim 5s intre requesturi
+            # Rate limiter global: 1s intre requesturi (Tier 1 = 150 RPM)
             elapsed = time.time() - last_gemini_call
-            if elapsed < 5.0:
-                time.sleep(5.0 - elapsed)
+            if elapsed < 1.0:
+                time.sleep(1.0 - elapsed)
 
             last_gemini_call = time.time()
             response = gemini_client.models.generate_content(
