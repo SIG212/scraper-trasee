@@ -8,554 +8,378 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --green-900: #0a2e1a;
-    --green-700: #145c32;
-    --green-500: #1e8a4a;
-    --green-300: #5bb87a;
-    --green-100: #d6f0df;
-    --cream: #f5f0e8;
-    --stone: #e8e0d0;
-    --ink: #1a1612;
-    --ink-muted: #5a5248;
-    --ink-faint: #9a9088;
-    --white: #fff;
-    --radius-sm: 6px;
-    --radius-md: 12px;
-    --radius-lg: 20px;
-  }
+:root {
+  --g9: #0a2e1a;
+  --g7: #145c32;
+  --g5: #1e8a4a;
+  --g3: #5bb87a;
+  --g1: #d6f0df;
+  --cream: #f5f0e8;
+  --stone: #e2d9cc;
+  --ink: #1a1612;
+  --ink2: #5a5248;
+  --ink3: #9a9088;
+  --white: #ffffff;
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+}
 
-  html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); min-height: 100vh; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    min-height: 100vh;
-  }
+header {
+  background: var(--g9);
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+}
+.logo { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 300; color: var(--cream); letter-spacing: -0.02em; }
+.logo em { font-style: italic; color: var(--g3); }
 
-  header {
-    background: var(--green-900);
-    padding: 1.5rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+.hero {
+  background: var(--g9);
+  padding: 2.5rem 1.5rem 3.5rem;
+  text-align: center;
+}
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+.hero h1 em { font-style: italic; color: var(--g3); }
+.hero p { color: var(--g1); font-size: 15px; opacity: 0.7; margin-bottom: 2rem; }
 
-  .logo {
-    font-family: 'Fraunces', serif;
-    font-size: 22px;
-    color: var(--cream);
-    font-weight: 300;
-    letter-spacing: -0.02em;
-  }
+.filter-card {
+  background: var(--white);
+  border-radius: var(--r-lg);
+  padding: 1.25rem;
+  max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 10px;
+  align-items: end;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+}
+@media (max-width: 700px) {
+  .filter-card { grid-template-columns: 1fr 1fr; }
+  .btn-search { grid-column: 1 / -1; }
+}
 
-  .logo span {
-    color: var(--green-300);
-    font-style: italic;
-  }
+.fg { display: flex; flex-direction: column; gap: 5px; }
+.fg label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink3); }
 
-  .hero {
-    background: var(--green-900);
-    padding: 3rem 2rem 4rem;
-    text-align: center;
-  }
+.fg input, .fg select {
+  appearance: none;
+  background: var(--cream);
+  border: 1.5px solid var(--stone);
+  border-radius: var(--r-sm);
+  padding: 9px 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  width: 100%;
+  transition: border-color 0.15s;
+}
+.fg select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235a5248' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+  cursor: pointer;
+}
+.fg input:focus, .fg select:focus { outline: none; border-color: var(--g5); }
 
-  .hero h1 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 300;
-    color: var(--cream);
-    line-height: 1.15;
-    margin-bottom: 0.75rem;
-    letter-spacing: -0.02em;
-  }
+.oras-wrap { position: relative; }
+.ac-list {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0; right: 0;
+  background: var(--white);
+  border: 1.5px solid var(--stone);
+  border-radius: var(--r-sm);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 999;
+  overflow: hidden;
+}
+.ac-list.open { display: block; }
+.ac-item {
+  padding: 9px 12px;
+  cursor: pointer;
+  border-bottom: 0.5px solid var(--stone);
+  transition: background 0.1s;
+}
+.ac-item:last-child { border-bottom: none; }
+.ac-item:hover, .ac-item.sel { background: var(--cream); }
+.ac-name { font-size: 13px; font-weight: 500; color: var(--ink); }
+.ac-sub { font-size: 11px; color: var(--ink3); margin-top: 1px; }
 
-  .hero h1 em {
-    font-style: italic;
-    color: var(--green-300);
-  }
+.btn-search {
+  background: var(--g7);
+  color: var(--white);
+  border: none;
+  border-radius: var(--r-sm);
+  padding: 10px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.1s;
+  height: 38px;
+}
+.btn-search:hover { background: var(--g5); }
+.btn-search:active { transform: scale(0.98); }
+.btn-search:disabled { opacity: 0.6; cursor: not-allowed; }
 
-  .hero p {
-    color: var(--green-100);
-    font-size: 16px;
-    opacity: 0.7;
-    margin-bottom: 2.5rem;
-  }
+.status-bar {
+  text-align: center;
+  font-size: 11px;
+  color: var(--g1);
+  opacity: 0.7;
+  margin-top: 10px;
+  min-height: 16px;
+}
+.status-bar.err { color: #f9a8a8; opacity: 1; }
 
-  .filter-card {
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 12px;
-    align-items: end;
-    box-shadow: 0 4px 40px rgba(0,0,0,0.18);
-  }
+.main { max-width: 920px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
 
-  .filter-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+.results-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+.results-count {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--ink);
+}
+.results-count strong { color: var(--g7); font-style: italic; }
+.results-note { font-size: 12px; color: var(--ink3); }
 
-  .filter-group label {
-    font-size: 11px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--ink-faint);
-  }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1.1rem; }
 
-  .filter-group select {
-    appearance: none;
-    background: var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a5248' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center;
-    border: 1.5px solid var(--stone);
-    border-radius: var(--radius-sm);
-    padding: 9px 32px 9px 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    color: var(--ink);
-    cursor: pointer;
-    transition: border-color 0.15s;
-    width: 100%;
-  }
+.card {
+  background: var(--white);
+  border-radius: var(--r-md);
+  border: 1px solid var(--stone);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.09); }
 
-  .filter-group select:focus {
-    outline: none;
-    border-color: var(--green-500);
-  }
+.card-img {
+  height: 155px;
+  position: relative;
+  overflow: hidden;
+  background: var(--g7);
+}
+.card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+.card:hover .card-img img { transform: scale(1.04); }
 
-  .btn-cauta {
-    background: var(--green-700);
-    color: var(--white);
-    border: none;
-    border-radius: var(--radius-sm);
-    padding: 11px 24px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.15s, transform 0.1s;
-    white-space: nowrap;
-    width: 100%;
-  }
+.card-badges { position: absolute; top: 9px; right: 9px; display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
+.badge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+}
+.b-usor { background: rgba(214,240,223,0.9); color: #145c32; }
+.b-mediu { background: rgba(250,238,218,0.9); color: #854f0b; }
+.b-greu { background: rgba(252,235,235,0.9); color: #a32d2d; }
+.b-tip { background: rgba(255,255,255,0.85); color: #5a5248; }
 
-  .btn-cauta:hover { background: var(--green-500); }
-  .btn-cauta:active { transform: scale(0.98); }
+.card-munte {
+  position: absolute;
+  bottom: 9px; left: 9px;
+  background: rgba(10,46,26,0.72);
+  color: var(--g1);
+  font-size: 9px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 
-  .main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem 4rem;
-  }
+.card-body { padding: 0.9rem 1rem; flex: 1; display: flex; flex-direction: column; }
+.card-title {
+  font-family: 'Fraunces', serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-meta { font-size: 11px; color: var(--ink3); margin-bottom: 10px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.chip { background: var(--cream); border: 1px solid var(--stone); border-radius: 20px; padding: 1px 7px; font-size: 10px; color: var(--ink3); }
 
-  .result-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-  }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: 10px; }
+.stat { background: var(--cream); border-radius: 5px; padding: 6px 4px; text-align: center; }
+.sv { font-size: 12px; font-weight: 500; color: var(--ink); display: block; }
+.sl { font-size: 9px; color: var(--ink3); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-top: 1px; }
 
-  .result-count {
-    font-family: 'Fraunces', serif;
-    font-size: 20px;
-    font-weight: 300;
-    color: var(--ink);
-  }
+.card-foot {
+  margin-top: auto;
+  padding-top: 9px;
+  border-top: 1px solid var(--stone);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.drive {
+  font-size: 11px;
+  color: var(--ink2);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.drive svg { flex-shrink: 0; }
+.art-link {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--g7);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: color 0.15s;
+}
+.art-link:hover { color: var(--g5); }
 
-  .result-count span {
-    color: var(--green-700);
-    font-style: italic;
-  }
+.empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--ink2);
+}
+.empty p { font-size: 14px; line-height: 1.6; }
 
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.25rem;
-  }
+.loader {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--ink3);
+  font-size: 14px;
+}
 
-  .card {
-    background: var(--white);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    border: 1px solid var(--stone);
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-  }
-
-  .card-img {
-    height: 160px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s;
-  }
-
-  .card:hover .card-img img {
-    transform: scale(1.04);
-  }
-
-  .card-img-fallback {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card-badges {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 5px;
-  }
-
-  .badge {
-    font-size: 10px;
-    font-weight: 500;
-    padding: 3px 9px;
-    border-radius: 20px;
-    backdrop-filter: blur(4px);
-  }
-
-  .badge-usor { background: rgba(214,240,223,0.92); color: #145c32; }
-  .badge-mediu { background: rgba(250,238,218,0.92); color: #854f0b; }
-  .badge-greu { background: rgba(252,235,235,0.92); color: #a32d2d; }
-  .badge-default { background: rgba(255,255,255,0.85); color: #5a5248; }
-
-  .card-munte {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: rgba(10,46,26,0.75);
-    color: var(--green-100);
-    font-size: 10px;
-    font-weight: 500;
-    padding: 3px 9px;
-    border-radius: 20px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .card-body {
-    padding: 1rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card-title {
-    font-family: 'Fraunces', serif;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.4;
-    color: var(--ink);
-    margin-bottom: 6px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .card-meta {
-    font-size: 12px;
-    color: var(--ink-faint);
-    margin-bottom: 12px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .card-meta-sep { opacity: 0.4; }
-
-  .card-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-    margin-bottom: 12px;
-  }
-
-  .stat {
-    background: var(--cream);
-    border-radius: var(--radius-sm);
-    padding: 7px 4px;
-    text-align: center;
-  }
-
-  .stat-val {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--ink);
-    display: block;
-  }
-
-  .stat-lbl {
-    font-size: 9px;
-    color: var(--ink-faint);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    display: block;
-    margin-top: 2px;
-  }
-
-  .card-footer {
-    margin-top: auto;
-    padding-top: 10px;
-    border-top: 1px solid var(--stone);
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .card-drive {
-    font-size: 12px;
-    color: var(--ink-muted);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .card-link {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--green-700);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    transition: color 0.15s;
-  }
-
-  .card-link:hover { color: var(--green-500); }
-
-  .empty-state {
-    text-align: center;
-    padding: 4rem 2rem;
-    color: var(--ink-muted);
-  }
-
-  .empty-state svg {
-    display: block;
-    margin: 0 auto 1rem;
-    opacity: 0.25;
-  }
-
-  .empty-state p { font-size: 15px; }
-
-  .loading {
-    text-align: center;
-    padding: 4rem;
-    color: var(--ink-muted);
-    font-size: 15px;
-  }
-
-  .source-chip {
-    font-size: 10px;
-    color: var(--ink-faint);
-    background: var(--cream);
-    border: 1px solid var(--stone);
-    border-radius: 20px;
-    padding: 2px 8px;
-  }
-
-  .oras-wrap { position: relative; }
-  .oras-wrap input {
-    appearance: none;
-    background: var(--cream);
-    border: 1.5px solid var(--stone);
-    border-radius: var(--radius-sm);
-    padding: 9px 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    color: var(--ink);
-    width: 100%;
-    transition: border-color 0.15s;
-  }
-  .oras-wrap input:focus { outline: none; border-color: var(--green-500); }
-  .oras-wrap input.loading { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%235a5248' stroke-width='2' fill='none' opacity='0.3'/%3E%3Cpath d='M12 2a10 10 0 0 1 10 10' stroke='%231e8a4a' stroke-width='2' fill='none' stroke-linecap='round'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 12 12' to='360 12 12' dur='0.8s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
-  .oras-status { font-size: 11px; margin-top: 4px; min-height: 16px; color: var(--ink-faint); }
-  .oras-status.err { color: #a32d2d; }
-  .oras-status.ok { color: var(--green-700); }
-
-  .ac-dropdown {
-    display: none;
-    position: absolute;
-    top: calc(100% + 4px);
-    left: 0; right: 0;
-    background: var(--white);
-    border: 1.5px solid var(--stone);
-    border-radius: var(--radius-sm);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    z-index: 100;
-    overflow: hidden;
-  }
-  .ac-dropdown.open { display: block; }
-  .ac-item {
-    padding: 9px 12px;
-    font-size: 13px;
-    color: var(--ink);
-    cursor: pointer;
-    border-bottom: 0.5px solid var(--stone);
-    line-height: 1.35;
-    transition: background 0.1s;
-  }
-  .ac-item:last-child { border-bottom: none; }
-  .ac-item:hover, .ac-item.active { background: var(--cream); }
-  .ac-item-name { font-weight: 500; }
-  .ac-item-sub { font-size: 11px; color: var(--ink-faint); margin-top: 1px; }
-
-  .osrm-overlay {
-    display: none;
-    position: absolute;
-    inset: 0;
-    background: rgba(245,240,232,0.85);
-    z-index: 10;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 16px;
-    border-radius: var(--radius-md);
-  }
-  .osrm-overlay.visible { display: flex; }
-  .osrm-spinner {
-    width: 40px; height: 40px;
-    border: 3px solid var(--stone);
-    border-top-color: var(--green-500);
-    border-radius: 50%;
-    animation: spin 0.7s linear infinite;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .osrm-label {
-    font-size: 13px;
-    color: var(--ink-muted);
-    text-align: center;
-  }
-  .osrm-progress {
-    font-size: 11px;
-    color: var(--ink-faint);
-  }
-  .main-wrap { position: relative; }
-
-  @media (max-width: 600px) {
+.progress-wrap {
+  display: none;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.progress-wrap.show { display: block; }
+.spinner {
+  width: 36px; height: 36px;
+  border: 3px solid var(--stone);
+  border-top-color: var(--g5);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 1rem;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.progress-txt { font-size: 13px; color: var(--ink2); margin-bottom: 4px; }
+.progress-sub { font-size: 11px; color: var(--ink3); }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Merg<span>LaMunte</span></div>
+  <div class="logo">Merg<em>LaMunte</em></div>
 </header>
 
 <div class="hero">
   <h1>Unde mergi <em>în weekend?</em></h1>
-  <p>Descoperă trasee montane după cât timp ai la dispoziție.</p>
+  <p>Trasee montane filtrate după distanța reală de condus.</p>
 
   <div class="filter-card">
-    <div class="filter-group">
+    <div class="fg">
       <label>Plecare din</label>
       <div class="oras-wrap">
-        <input type="text" id="inp-oras" placeholder="ex: Brașov, Turda..." value="Cluj-Napoca" autocomplete="off">
-        <div class="ac-dropdown" id="ac-dropdown"></div>
+        <input type="text" id="inp-oras" placeholder="Cluj-Napoca, Brașov..." autocomplete="off" spellcheck="false">
+        <div class="ac-list" id="ac-list"></div>
       </div>
-      <div class="oras-status" id="oras-status"></div>
     </div>
-    <div class="filter-group">
+    <div class="fg">
       <label>Timp cu mașina</label>
       <select id="sel-timp">
-        <option value="3600">1h</option>
-        <option value="7200" selected>2h</option>
-        <option value="10800">3h</option>
-        <option value="999999">oriunde</option>
+        <option value="3600">1 oră</option>
+        <option value="7200" selected>2 ore</option>
+        <option value="10800">3 ore</option>
+        <option value="99999">Oriunde</option>
       </select>
     </div>
-    <div class="filter-group">
+    <div class="fg">
       <label>Dificultate</label>
       <select id="sel-dif">
-        <option value="">orice</option>
-        <option value="usor">ușor</option>
-        <option value="mediu">mediu</option>
-        <option value="greu">greu</option>
+        <option value="">Orice</option>
+        <option value="usor">Ușor</option>
+        <option value="mediu">Mediu</option>
+        <option value="greu">Greu</option>
       </select>
     </div>
-    <div class="filter-group">
+    <div class="fg">
       <label>Zile</label>
       <select id="sel-zile">
-        <option value="">orice</option>
+        <option value="">Orice</option>
         <option value="1">1 zi</option>
         <option value="2">2 zile</option>
-        <option value="3">3 zile</option>
+        <option value="3">3+ zile</option>
       </select>
     </div>
-    <div class="filter-group">
-      <label>&nbsp;</label>
-      <button class="btn-cauta" onclick="cauta()">Caută trasee</button>
-    </div>
+    <button class="btn-search" id="btn-search" onclick="porneste()">Caută</button>
   </div>
+  <div class="status-bar" id="status-bar"></div>
 </div>
 
-<div class="main-wrap">
-  <div class="osrm-overlay" id="osrm-overlay">
-    <div class="osrm-spinner"></div>
-    <div class="osrm-label">Se calculează distanțele reale pe șosea...</div>
-    <div class="osrm-progress" id="osrm-progress"></div>
+<div class="main">
+  <div id="results-header" class="results-header" style="display:none">
+    <div class="results-count" id="results-count"></div>
+    <div class="results-note" id="results-note"></div>
   </div>
-  <div class="main">
-    <div class="result-bar" id="result-bar" style="display:none">
-      <div class="result-count" id="result-count"></div>
-    </div>
-    <div id="output"><div class="loading">Se încarcă traseele...</div></div>
+  <div id="progress" class="progress-wrap">
+    <div class="spinner"></div>
+    <div class="progress-txt" id="prog-txt">Se calculează distanțele...</div>
+    <div class="progress-sub" id="prog-sub"></div>
   </div>
+  <div id="output" class="loader">Se încarcă traseele...</div>
 </div>
 
 <script>
+const MAPBOX_TOKEN = 'pk.eyJ1Ijoic2VyZ2l1ZzI2IiwiYSI6ImNtbXZ1czBoYjJmcTgycnF4OGVtenprYW0ifQ.EjmcKrTUnaOZbrCW-tnvSg';
 const JSON_URL = 'trasee.json';
-const OSRM = 'https://router.project-osrm.org/route/v1/driving';
-const BATCH = 10;
 
 let TRASEE = [];
-let userLat = 46.77, userLng = 23.59;
-let osrmCache = {};
-let currentCancelToken = { cancelled: false };
+let userLat = null, userLng = null;
+let cache = {};
+let sessionToken = uuid();
+let acIdx = -1, acItems = [];
 
-const ORASE_PRESET = {
-  'cluj-napoca':[46.77,23.59],'cluj':[46.77,23.59],
-  'bucurești':[44.43,26.10],'bucuresti':[44.43,26.10],'bucharest':[44.43,26.10],
-  'brașov':[45.65,25.61],'brasov':[45.65,25.61],
-  'timișoara':[45.75,21.23],'timisoara':[45.75,21.23],
-  'iași':[47.16,27.58],'iasi':[47.16,27.58],
-  'craiova':[44.32,23.80],'oradea':[47.05,21.93],
-  'sibiu':[45.80,24.15],'constanța':[44.18,28.63],'constanta':[44.18,28.63],
-  'târgu mureș':[46.54,24.56],'targu mures':[46.54,24.56],
-  'alba iulia':[46.07,23.57],'deva':[45.88,22.91],
-  'pitești':[44.85,24.87],'pitesti':[44.85,24.87],
-  'ploiești':[44.93,26.02],'ploiesti':[44.93,26.02],
-  'galați':[45.43,28.05],'galati':[45.43,28.05],
-  'târgoviște':[44.93,25.46],'targoviste':[44.93,25.46],
-  'focșani':[45.70,27.18],'focsani':[45.70,27.18],
-  'bacău':[46.57,26.91],'bacau':[46.57,26.91],
-  'suceava':[47.65,26.25],'baia mare':[47.66,23.58],
-  'satu mare':[47.79,22.88],'drobeta':[44.63,22.66],
-};
+function uuid() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+    const r = Math.random() * 16 | 0;
+    return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+  });
+}
 
 const CULORI = {
   'Bucegi':'#0F6E56','Făgăraș':'#185FA5','Piatra Craiului':'#534AB7',
@@ -563,408 +387,301 @@ const CULORI = {
   'Postăvaru':'#0F6E56','Baiului':'#5F5E5A','Leaota':'#3B6D11',
   'Buila':'#854F0B','Maramureș':'#185FA5','Trascău':'#534AB7',
 };
-
-function culoare(munte) {
-  if (!munte) return '#1D9E75';
-  for (const k in CULORI) if (munte.includes(k)) return CULORI[k];
+function culoare(m) {
+  if (!m) return '#1D9E75';
+  for (const k in CULORI) if (m.includes(k)) return CULORI[k];
   return '#1D9E75';
 }
 
-function fmtDuration(seconds) {
-  if (!seconds) return '—';
-  const h = Math.floor(seconds / 3600);
-  const m = Math.round((seconds % 3600) / 60);
+function haversineSecs(lat1, lng1, lat2, lng2) {
+  const R = 6371, r = Math.PI / 180;
+  const dLat = (lat2 - lat1) * r, dLng = (lng2 - lng1) * r;
+  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*r)*Math.cos(lat2*r)*Math.sin(dLng/2)**2;
+  const km = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return km / 70 * 3600;
+}
+
+function fmtTime(secs) {
+  if (!secs && secs !== 0) return '—';
+  const h = Math.floor(secs / 3600), m = Math.round((secs % 3600) / 60);
   if (h === 0) return m + ' min';
   return m > 0 ? `${h}h ${m}min` : `${h}h`;
 }
 
 function badge(dif) {
   if (!dif || dif === 'null') return '';
-  const cls = {usor:'badge-usor',mediu:'badge-mediu',greu:'badge-greu'}[dif]||'badge-default';
-  const label = {usor:'ușor',mediu:'mediu',greu:'greu'}[dif]||dif;
-  return `<span class="badge ${cls}">${label}</span>`;
+  const c = {usor:'b-usor',mediu:'b-mediu',greu:'b-greu'}[dif]||'';
+  const l = {usor:'ușor',mediu:'mediu',greu:'greu'}[dif]||dif;
+  return `<span class="badge ${c}">${l}</span>`;
 }
 
-function tipBadge(tip) {
-  if (!tip || tip === 'null') return '';
-  return `<span class="badge badge-default">${tip}</span>`;
-}
-
-function renderCard(t, driveSecs) {
+function renderCard(t, secs, useHaversine) {
   const bg = culoare(t.munte);
-  const imgSrc = t.poza_url || '';
-  const imgHtml = imgSrc
-    ? `<img src="${imgSrc}" alt="${t.nume}" loading="lazy" onerror="this.parentElement.style.background='${bg}';this.remove();">`
-    : `<div class="card-img-fallback" style="background:${bg}"></div>`;
-
-  const stats = [
-    {val: t.durata_h != null ? t.durata_h+'h' : '—', lbl:'durată'},
-    {val: t.km != null ? t.km+' km' : '—', lbl:'distanță'},
-    {val: t.denivelare_m != null ? t.denivelare_m+'m' : '—', lbl:'denivelare'},
-    {val: t.zile != null ? (t.zile===1?'1 zi':t.zile+' zile') : '—', lbl:'zile'},
-  ];
-
-  const blogName = {
-    bloguldecalatorii:'Blogul de Călătorii',
-    thechillinbear:'TheChillinBear',
-    chitaracalatoare:'Chitara Călătoare',
-    jurnaldedrumetii:'Jurnal de Drumeții',
-    suspemunte:'SusPeMunte',
-  }[t.sursa_blog] || t.sursa_blog;
+  const img = t.poza_url
+    ? `<img src="${t.poza_url}" loading="lazy" onerror="this.style.display='none'">`
+    : '';
+  const blogNames = {
+    bloguldecalatorii:'Blogul de Călătorii',thechillinbear:'TheChillinBear',
+    chitaracalatoare:'Chitara Călătoare',jurnaldedrumetii:'Jurnal de Drumeții',suspemunte:'SusPeMunte'
+  };
+  const blog = blogNames[t.sursa_blog] || t.sursa_blog || '';
+  const driveLabel = useHaversine ? `~${fmtTime(secs)}` : fmtTime(secs);
 
   return `<div class="card">
-    <div class="card-img">
-      ${imgHtml}
-      <div class="card-badges">${badge(t.dificultate)}${tipBadge(t.tip)}</div>
-      ${t.munte?`<div class="card-munte">${t.munte}</div>`:''}
+    <div class="card-img" style="background:${bg}">
+      ${img}
+      <div class="card-badges">
+        ${badge(t.dificultate)}
+        ${t.tip && t.tip !== 'null' ? `<span class="badge b-tip">${t.tip}</span>` : ''}
+      </div>
+      ${t.munte ? `<div class="card-munte">${t.munte}</div>` : ''}
     </div>
     <div class="card-body">
       <div class="card-title">${t.nume}</div>
       <div class="card-meta">
-        ${t.localitate_start?`<span>${t.localitate_start}</span><span class="card-meta-sep">·</span>`:''}
-        ${t.sezon&&t.sezon!=='null'?`<span>${t.sezon}</span><span class="card-meta-sep">·</span>`:''}
-        <span class="source-chip">${blogName}</span>
+        ${t.localitate_start ? `<span>${t.localitate_start}</span>` : ''}
+        ${t.sezon && t.sezon !== 'null' ? `<span class="chip">${t.sezon}</span>` : ''}
+        ${blog ? `<span class="chip">${blog}</span>` : ''}
       </div>
-      <div class="card-stats">
-        ${stats.map(s=>`<div class="stat"><span class="stat-val">${s.val}</span><span class="stat-lbl">${s.lbl}</span></div>`).join('')}
+      <div class="stats">
+        <div class="stat"><span class="sv">${t.durata_h != null ? t.durata_h+'h' : '—'}</span><span class="sl">durată</span></div>
+        <div class="stat"><span class="sv">${t.km != null ? t.km+' km' : '—'}</span><span class="sl">dist.</span></div>
+        <div class="stat"><span class="sv">${t.denivelare_m != null ? t.denivelare_m+'m' : '—'}</span><span class="sl">deniv.</span></div>
+        <div class="stat"><span class="sv">${t.zile != null ? (t.zile===1?'1 zi':t.zile+' zile') : '—'}</span><span class="sl">zile</span></div>
       </div>
-      <div class="card-footer">
-        <div class="card-drive">
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="5" width="11" height="6" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M3 5V4a3.5 3.5 0 017 0v1" stroke="currentColor" stroke-width="1.2"/><circle cx="3.5" cy="9" r="1" fill="currentColor"/><circle cx="9.5" cy="9" r="1" fill="currentColor"/></svg>
-          ${fmtDuration(driveSecs)} cu mașina
+      <div class="card-foot">
+        <div class="drive">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <rect x="1" y="5" width="11" height="6" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M3 5V4a3.5 3.5 0 017 0v1" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="3.5" cy="9" r="1" fill="currentColor"/>
+            <circle cx="9.5" cy="9" r="1" fill="currentColor"/>
+          </svg>
+          ${driveLabel} cu mașina
         </div>
-        <a class="card-link" href="${t.sursa_url}" target="_blank" rel="noopener">
+        <a class="art-link" href="${t.sursa_url}" target="_blank" rel="noopener">
           Articol
-          <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 9L9 2M9 2H4M9 2v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M2 8L8 2M8 2H4M8 2v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
         </a>
       </div>
     </div>
   </div>`;
 }
 
-function haversine(lat1, lng1, lat2, lng2) {
-  const R = 6371;
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLng = (lng2 - lng1) * Math.PI / 180;
-  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLng/2)**2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-}
-
-function haversineSecs(lat1, lng1, lat2, lng2) {
-  return haversine(lat1, lng1, lat2, lng2) / 70 * 3600;
-}
-
-async function osrmBatch(origin, destinations, token) {
+async function calcMapboxDirections(origin, destinations) {
   const results = {};
-  const batches = [];
+  const BATCH = 25;
+
   for (let i = 0; i < destinations.length; i += BATCH) {
-    batches.push(destinations.slice(i, i + BATCH));
-  }
+    const batch = destinations.slice(i, i + BATCH);
+    const coords = [
+      `${origin.lng},${origin.lat}`,
+      ...batch.map(d => `${d.lng},${d.lat}`)
+    ].join(';');
 
-  let done = 0;
-  const progress = document.getElementById('osrm-progress');
-  let osrmWorking = true;
-
-  for (const batch of batches) {
-    if (token.cancelled) break;
-
-    const coords = [[origin.lng, origin.lat], ...batch.map(d => [d.lng, d.lat])];
-    const coordStr = coords.map(c => c.map(v => v.toFixed(6)).join(',')).join(';');
-    const destinations_idx = batch.map((_, i) => i + 1).join(';');
-
-    if (osrmWorking) {
-      try {
-        const url = `https://router.project-osrm.org/table/1/driving/${coordStr}?sources=0&destinations=${destinations_idx}&annotations=duration`;
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`OSRM ${res.status}`);
-        const data = await res.json();
-        if (data.code === 'Ok' && data.durations?.[0]) {
-          batch.forEach((d, i) => {
-            results[d.key] = data.durations[0][i];
-          });
-        } else {
-          throw new Error('OSRM bad response');
-        }
-      } catch (e) {
-        console.warn('OSRM failed, falling back to haversine:', e.message);
-        osrmWorking = false;
-        batch.forEach(d => {
-          results[d.key] = haversineSecs(origin.lat, origin.lng, d.lat, d.lng);
-        });
+    try {
+      const url = `https://api.mapbox.com/directions-matrix/v1/mapbox/driving/${coords}?sources=0&destinations=${batch.map((_,j)=>j+1).join(';')}&annotations=duration&access_token=${MAPBOX_TOKEN}`;
+      const res = await fetch(url);
+      if (!res.ok) {
+        console.warn('Mapbox matrix error:', res.status, await res.text());
+        throw new Error('matrix_error');
       }
-    } else {
+      const data = await res.json();
+      if (data.code !== 'Ok') throw new Error(data.code);
+      batch.forEach((d, j) => {
+        results[d.key] = data.durations[0][j];
+      });
+    } catch (e) {
+      console.warn('Falling back to haversine for batch:', e.message);
       batch.forEach(d => {
         results[d.key] = haversineSecs(origin.lat, origin.lng, d.lat, d.lng);
       });
     }
 
-    done += batch.length;
-    if (progress) progress.textContent = `${done} / ${destinations.length} trasee procesate`;
-    if (osrmWorking) await new Promise(r => setTimeout(r, 200));
+    document.getElementById('prog-sub').textContent =
+      `${Math.min(i + BATCH, destinations.length)} / ${destinations.length} trasee`;
+    await new Promise(r => setTimeout(r, 50));
   }
-
   return results;
 }
 
-async function calculeazaSiAfiseaza() {
-  const maxSecs = Number(document.getElementById('sel-timp').value);
-  const dif = document.getElementById('sel-dif').value;
-  const zile = document.getElementById('sel-zile').value;
-
-  currentCancelToken.cancelled = true;
-  const token = { cancelled: false };
-  currentCancelToken = token;
-
+function dedup(trasee) {
   const seen = new Set();
-  const candidati = TRASEE.filter(t => {
-    if (!t.lat || !t.lng) return false;
-    if (dif && (t.dificultate || '') !== dif) return false;
-    if (zile && String(t.zile) !== zile) return false;
+  return trasee.filter(t => {
     const key = t.sursa_url.replace(/#.*$/, '');
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
-  }).map(t => ({
-    t,
-    key: `${t.lat},${t.lng}`,
-    lat: t.lat,
-    lng: t.lng,
-  }));
+  });
+}
+
+async function porneste() {
+  if (!userLat || !userLng) {
+    setStatus('Alege mai întâi un oraș de plecare.', true);
+    return;
+  }
+
+  const maxSecs = Number(document.getElementById('sel-timp').value);
+  const dif = document.getElementById('sel-dif').value;
+  const zile = document.getElementById('sel-zile').value;
+
+  const btn = document.getElementById('btn-search');
+  btn.disabled = true;
+
+  const candidati = dedup(TRASEE).filter(t => {
+    if (!t.lat || !t.lng) return false;
+    if (dif && (t.dificultate || '') !== dif) return false;
+    if (zile && String(t.zile) !== zile) return false;
+    return true;
+  }).map(t => ({ t, key: `${t.lat.toFixed(5)},${t.lng.toFixed(5)}`, lat: t.lat, lng: t.lng }));
 
   const cacheKey = `${userLat.toFixed(4)},${userLng.toFixed(4)}`;
-  if (!osrmCache[cacheKey]) osrmCache[cacheKey] = {};
-  const cache = osrmCache[cacheKey];
+  if (!cache[cacheKey]) cache[cacheKey] = {};
+  const c = cache[cacheKey];
 
-  const needFetch = candidati.filter(d => cache[d.key] === undefined);
+  const needFetch = candidati.filter(d => c[d.key] === undefined);
 
-  const overlay = document.getElementById('osrm-overlay');
-  const output = document.getElementById('output');
+  document.getElementById('output').style.display = 'none';
+  document.getElementById('results-header').style.display = 'none';
 
   if (needFetch.length > 0) {
-    overlay.classList.add('visible');
-    document.getElementById('osrm-progress').textContent = `0 / ${needFetch.length} trasee procesate`;
-
-    const fresh = await osrmBatch({ lat: userLat, lng: userLng }, needFetch, token);
-    if (token.cancelled) { overlay.classList.remove('visible'); return; }
-
-    Object.assign(cache, fresh);
-    overlay.classList.remove('visible');
+    showProgress(true);
+    const fresh = await calcMapboxDirections({ lat: userLat, lng: userLng }, needFetch);
+    Object.assign(c, fresh);
+    showProgress(false);
   }
 
   const results = candidati
-    .map(({ t, key }) => ({ t, secs: cache[key] }))
+    .map(({ t, key }) => ({ t, secs: c[key] }))
     .filter(({ secs }) => secs != null && secs <= maxSecs)
     .sort((a, b) => a.secs - b.secs);
 
-  const bar = document.getElementById('result-bar');
-  const count = document.getElementById('result-count');
+  const useHav = !MAPBOX_TOKEN || MAPBOX_TOKEN === 'PUNE_TOKEN_TAU_AICI';
 
-  bar.style.display = results.length > 0 ? 'flex' : 'none';
-  count.innerHTML = `<span>${results.length}</span> trasee găsite`;
+  const output = document.getElementById('output');
+  output.style.display = 'block';
+  output.className = '';
 
   if (results.length === 0) {
-    output.innerHTML = `<div class="empty-state">
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M8 40L20 16l8 14 6-8 6 10" stroke="#1a1612" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    document.getElementById('results-header').style.display = 'none';
+    output.innerHTML = `<div class="empty">
       <p>Niciun traseu găsit.<br>Încearcă o rază mai mare sau schimbă filtrele.</p>
     </div>`;
-    return;
+  } else {
+    document.getElementById('results-header').style.display = 'flex';
+    document.getElementById('results-count').innerHTML = `<strong>${results.length}</strong> trasee găsite`;
+    document.getElementById('results-note').textContent = useHav ? '(distanțe estimate)' : '';
+    output.innerHTML = `<div class="grid">${results.map(({t,secs}) => renderCard(t, secs, useHav)).join('')}</div>`;
   }
 
-  output.innerHTML = `<div class="cards-grid">${results.map(({t, secs}) => renderCard(t, secs)).join('')}</div>`;
+  btn.disabled = false;
 }
 
-function cauta() { calculeazaSiAfiseaza(); }
+function showProgress(show) {
+  document.getElementById('progress').className = show ? 'progress-wrap show' : 'progress-wrap';
+}
 
-let geocodeTimer = null;
+function setStatus(msg, err) {
+  const el = document.getElementById('status-bar');
+  el.textContent = msg;
+  el.className = 'status-bar' + (err ? ' err' : '');
+}
+
 let acTimer = null;
-let acActive = -1;
-let acResults = [];
 
 const inp = document.getElementById('inp-oras');
-const dropdown = document.getElementById('ac-dropdown');
-const status = document.getElementById('oras-status');
+const acList = document.getElementById('ac-list');
 
-function closeDropdown() {
-  dropdown.classList.remove('open');
-  dropdown.innerHTML = '';
-  acActive = -1;
-  acResults = [];
+function closeAc() {
+  acList.classList.remove('open');
+  acList.innerHTML = '';
+  acIdx = -1;
+  acItems = [];
 }
 
-async function selectResult(item) {
-  inp.value = item.name;
-  status.textContent = 'Se încarcă...';
-  status.className = 'oras-status';
-  closeDropdown();
-
-  if (item.lat && item.lng) {
-    userLat = item.lat;
-    userLng = item.lng;
-  } else if (item.mapbox_id) {
-    const coords = await retrieveLocation(item.mapbox_id);
-    if (!coords) {
-      status.textContent = 'Eroare la încărcarea locației';
-      status.className = 'oras-status err';
-      return;
-    }
-    userLat = coords.lat;
-    userLng = coords.lng;
-  }
-
-  status.textContent = '✓ ' + item.name;
-  status.className = 'oras-status ok';
-  osrmCache = {};
-  calculeazaSiAfiseaza();
-}
-
-function renderDropdown(items) {
-  if (!items.length) { closeDropdown(); return; }
-  acResults = items;
-  acActive = -1;
-  dropdown.innerHTML = items.map((item, i) =>
-    `<div class="ac-item" data-i="${i}">
-      <div class="ac-item-name">${item.name}</div>
-      <div class="ac-item-sub">${item.sub}</div>
-    </div>`
-  ).join('');
-  dropdown.querySelectorAll('.ac-item').forEach(el => {
-    el.addEventListener('mousedown', e => {
-      e.preventDefault();
-      selectResult(acResults[parseInt(el.dataset.i)]);
-    });
-  });
-  dropdown.classList.add('open');
-}
-
-const MAPBOX_TOKEN = 'pk.eyJ1Ijoic2VyZ2l1ZzI2IiwiYSI6ImNtbXZ1czBoYjJmcTgycnF4OGVtenprYW0ifQ.EjmcKrTUnaOZbrCW-tnvSg';
-
-function generateSessionToken() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
-    const r = Math.random() * 16 | 0;
-    return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-  });
-}
-
-let sessionToken = generateSessionToken();
-
-async function fetchSugestii(text) {
-  inp.classList.add('loading');
+async function suggest(q) {
+  if (q.length < 2) { closeAc(); return; }
   try {
-    const url = `https://api.mapbox.com/search/searchbox/v1/suggest?q=${encodeURIComponent(text)}&language=ro&country=RO&types=city,town,village,municipality&session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`;
+    const url = `https://api.mapbox.com/search/searchbox/v1/suggest?q=${encodeURIComponent(q)}&language=ro&country=RO&types=city,town,village,locality,municipality&limit=6&session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`;
     const res = await fetch(url);
     const data = await res.json();
-
-    const items = (data.suggestions || []).slice(0, 5).map(s => ({
-      name: s.name,
-      sub: s.place_formatted || 'România',
-      mapbox_id: s.mapbox_id,
-    }));
-
-    renderDropdown(items);
-  } catch {
-    closeDropdown();
-  } finally {
-    inp.classList.remove('loading');
-  }
+    acItems = (data.suggestions || []).slice(0, 6);
+    if (!acItems.length) { closeAc(); return; }
+    acIdx = -1;
+    acList.innerHTML = acItems.map((s, i) =>
+      `<div class="ac-item" data-i="${i}">
+        <div class="ac-name">${s.name}</div>
+        <div class="ac-sub">${s.place_formatted || 'România'}</div>
+      </div>`
+    ).join('');
+    acList.querySelectorAll('.ac-item').forEach(el => {
+      el.addEventListener('mousedown', e => {
+        e.preventDefault();
+        pick(acItems[+el.dataset.i]);
+      });
+    });
+    acList.classList.add('open');
+  } catch { closeAc(); }
 }
 
-async function retrieveLocation(mapbox_id) {
-  const res = await fetch(
-    `https://api.mapbox.com/search/searchbox/v1/retrieve/${mapbox_id}?session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`
-  );
-  const data = await res.json();
-  const feature = data.features?.[0];
-  if (!feature) return null;
-  const [lng, lat] = feature.geometry.coordinates;
-  sessionToken = generateSessionToken();
-  return { lat, lng };
+async function pick(suggestion) {
+  inp.value = suggestion.name;
+  closeAc();
+  setStatus('Se încarcă locația...', false);
+  try {
+    const url = `https://api.mapbox.com/search/searchbox/v1/retrieve/${suggestion.mapbox_id}?session_token=${sessionToken}&access_token=${MAPBOX_TOKEN}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    const f = data.features?.[0];
+    if (!f) throw new Error('no feature');
+    [userLng, userLat] = f.geometry.coordinates;
+    sessionToken = uuid();
+    cache = {};
+    setStatus(`✓ ${suggestion.name} — apasă Caută`, false);
+  } catch {
+    setStatus('Eroare la încărcarea locației.', true);
+  }
 }
 
 inp.addEventListener('input', e => {
-  const val = e.target.value.trim();
   clearTimeout(acTimer);
-  if (val.length < 2) { closeDropdown(); return; }
-  acTimer = setTimeout(() => fetchSugestii(val), 150);
+  acTimer = setTimeout(() => suggest(e.target.value.trim()), 200);
 });
 
 inp.addEventListener('keydown', e => {
-  const items = dropdown.querySelectorAll('.ac-item');
+  const items = acList.querySelectorAll('.ac-item');
   if (e.key === 'ArrowDown') {
     e.preventDefault();
-    acActive = Math.min(acActive + 1, items.length - 1);
-    items.forEach((el, i) => el.classList.toggle('active', i === acActive));
+    acIdx = Math.min(acIdx + 1, items.length - 1);
+    items.forEach((el, i) => el.classList.toggle('sel', i === acIdx));
   } else if (e.key === 'ArrowUp') {
     e.preventDefault();
-    acActive = Math.max(acActive - 1, -1);
-    items.forEach((el, i) => el.classList.toggle('active', i === acActive));
+    acIdx = Math.max(acIdx - 1, 0);
+    items.forEach((el, i) => el.classList.toggle('sel', i === acIdx));
   } else if (e.key === 'Enter') {
     e.preventDefault();
-    if (acActive >= 0 && acResults[acActive]) {
-      selectResult(acResults[acActive]);
-    } else if (acResults.length > 0) {
-      selectResult(acResults[0]);
-    } else {
-      closeDropdown();
-      geocodeOras(inp.value.trim());
-    }
+    if (acIdx >= 0 && acItems[acIdx]) pick(acItems[acIdx]);
+    else if (acItems.length > 0) pick(acItems[0]);
+    else porneste();
   } else if (e.key === 'Escape') {
-    closeDropdown();
+    closeAc();
   }
 });
 
-inp.addEventListener('blur', () => setTimeout(closeDropdown, 150));
-
-async function geocodeOras(text) {
-  const key = text.trim().toLowerCase();
-  osrmCache = {};
-
-  if (ORASE_PRESET[key]) {
-    [userLat, userLng] = ORASE_PRESET[key];
-    status.textContent = '✓ ' + text;
-    status.className = 'oras-status ok';
-    calculeazaSiAfiseaza();
-    return;
-  }
-
-  inp.classList.add('loading');
-  status.textContent = 'Se caută...';
-  status.className = 'oras-status';
-
-  try {
-    const res = await fetch(
-      `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(text)}.json?country=RO&types=place,locality&limit=1&access_token=${MAPBOX_TOKEN}`
-    );
-    const data = await res.json();
-    const feature = data.features?.[0];
-    if (feature) {
-      [userLng, userLat] = feature.center;
-      status.textContent = '✓ ' + feature.place_name.split(',')[0];
-      status.className = 'oras-status ok';
-      calculeazaSiAfiseaza();
-    } else {
-      status.textContent = 'Orașul nu a fost găsit';
-      status.className = 'oras-status err';
-    }
-  } catch {
-    status.textContent = 'Eroare la geocoding';
-    status.className = 'oras-status err';
-  } finally {
-    inp.classList.remove('loading');
-  }
-}
-
-document.getElementById('sel-timp').addEventListener('change', cauta);
-document.getElementById('sel-dif').addEventListener('change', cauta);
-document.getElementById('sel-zile').addEventListener('change', cauta);
+inp.addEventListener('blur', () => setTimeout(closeAc, 180));
 
 fetch(JSON_URL)
-  .then(r => r.json())
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(data => {
     TRASEE = data.trasee || [];
-    geocodeOras('Cluj-Napoca');
+    document.getElementById('output').innerHTML = `<div class="empty"><p>Introdu un oraș de plecare și apasă <strong>Caută</strong>.</p></div>`;
+    document.getElementById('output').className = '';
   })
-  .catch(err => {
-    document.getElementById('output').innerHTML = `<div class="empty-state"><p>Eroare la încărcarea traseelor: ${err.message}</p></div>`;
+  .catch(e => {
+    document.getElementById('output').innerHTML = `<div class="empty"><p>Eroare la încărcarea traseelor: ${e.message}</p></div>`;
+    document.getElementById('output').className = '';
   });
 </script>
 </body>
