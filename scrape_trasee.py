@@ -45,7 +45,7 @@ GEMINI_API_KEY      = os.environ.get("GEMINI_API_KEY", "")
 gemini_client       = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 _last_gemini_call   = 0.0
 
-MAX_PER_SOURCE      = 999    # limita articole per sursa (coboara la 10 pentru test rapid)
+MAX_PER_SOURCE      = 5   # limita articole per sursa (coboara la 10 pentru test rapid)
 SLEEP_HTTP          = 1.5    # pauza intre request-uri HTTP (politete fata de servere)
 GEMINI_INTERVAL     = 1.0    # rate-limit: 1 req/s (Tier-1 = 150 RPM)
 GEMINI_MODEL        = "gemini-2.5-pro"  # schimba cu "gemini-2.5-pro" pentru calitate mai buna
@@ -104,7 +104,9 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
 
             response = gemini_client.models.generate_content(
                 model=GEMINI_MODEL,
-                contents=PROMPT.format(title=title, url=url, text=text[:8000]),
+                # Trimite inceputul + finalul — datele tehnice sunt adesea la final
+text_trimmed = text[:6000] + "\n\n[...]\n\n" + text[-2000:] if len(text) > 8000 else text
+contents=PROMPT.format(title=title, url=url, text=text_trimmed),
             )
             raw = response.text.strip()
             raw = re.sub(r"^```json\s*|^```\s*|```$", "", raw, flags=re.MULTILINE).strip()
