@@ -186,13 +186,30 @@ def scrape_thechillinbear() -> list[dict]:
             if r.status_code == 404:
                 break
             soup = BeautifulSoup(r.text, "html.parser")
-            articles = soup.find_all("article")
-            if not articles:
+
+            # Linkurile sunt pe imagini si titluri h5, nu in <article>
+            # Extragem toate linkurile interne care nu sunt categorii/autori/pagini
+            found = False
+            for a in soup.find_all("a", href=True):
+                href = a["href"]
+                if (
+                    href.startswith("https://ro.thechillinbear.com/")
+                    and "/category/" not in href
+                    and "/author/" not in href
+                    and "/page/" not in href
+                    and href not in ["https://ro.thechillinbear.com/trasee/",
+                                     "https://ro.thechillinbear.com/",
+                                     "https://ro.thechillinbear.com/cabane/",
+                                     "https://ro.thechillinbear.com/map/",
+                                     "https://ro.thechillinbear.com/experiente/",
+                                     "https://ro.thechillinbear.com/fotografii/"]
+                    and href.count("/") == 4  # slug direct, nu subpagini
+                ):
+                    links.append(href)
+                    found = True
+
+            if not found:
                 break
-            for art in articles:
-                a = art.find("a", href=True)
-                if a:
-                    links.append(a["href"])
             page += 1
             time.sleep(1)
         except Exception as e:
@@ -267,7 +284,11 @@ def scrape_chitaracalatoare() -> list[dict]:
             found = False
             for a in soup.find_all("a", href=True):
                 href = a["href"]
-                if "chitaracalatoare.ro/20" in href and href not in links:
+                if (
+                    "chitaracalatoare.ro/20" in href
+                    and href not in links
+                    and href.startswith("http")  # exclude mailto: si altele
+                ):
                     links.append(href)
                     found = True
             if not found:
