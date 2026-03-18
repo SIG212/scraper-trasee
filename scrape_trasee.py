@@ -24,6 +24,9 @@ HEADERS = {
 }
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+gemini_client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
+last_gemini_call = 0.0  # timestamp ultimului request
+
 
 # ---------------------------------------------------------------------------
 # Geocoding via Nominatim (OpenStreetMap) - gratuit, fara API key
@@ -52,11 +55,11 @@ def geocode(location_text: str) -> tuple[float, float] | None:
 
 def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
     """Trimite textul unui articol catre Gemini si returneaza date structurate."""
-    if not GEMINI_API_KEY:
+    global last_gemini_call
+
+    if not gemini_client:
         print("  [gemini] GEMINI_API_KEY lipsa, sar extragerea AI", flush=True)
         return None
-
-    client = genai.Client(api_key=GEMINI_API_KEY)
 
     prompt = f"""Esti un asistent care extrage informatii structurate despre trasee montane din Romania.
 
@@ -86,8 +89,13 @@ Daca o informatie nu apare explicit in text, pune null. Nu inventa date."""
 
     for attempt in range(3):
         try:
-            time.sleep(5)  # 15 RPM pe free tier = 1 req/4s, 5s e safe
-            response = client.models.generate_content(
+            # Rate limiter global: minim 5s intre requesturi
+            elapsed = time.time() - last_gemini_call
+            if elapsed < 5.0:
+                time.sleep(5.0 - elapsed)
+
+            last_gemini_call = time.time()
+            response = gemini_client.models.generate_content(
                 model="gemini-2.5-flash-lite",
                 contents=prompt,
             )
