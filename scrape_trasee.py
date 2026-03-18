@@ -29,21 +29,21 @@ last_gemini_call = 0.0  # timestamp ultimului request
 
 
 # ---------------------------------------------------------------------------
-# Geocoding via Nominatim (OpenStreetMap) - gratuit, fara API key
+# Geocoding via ArcGIS (gratuit, fara API key, functioneaza din cloud)
 # ---------------------------------------------------------------------------
 
 def geocode(location_text: str) -> tuple[float, float] | None:
-    """Returneaza (lat, lng) pentru un text de locatie, sau None."""
+    """Returneaza (lat, lng) folosind ArcGIS geocoder."""
     try:
-        r = requests.get(
-            "https://nominatim.openstreetmap.org/search",
-            params={"q": location_text + ", Romania", "format": "json", "limit": 1},
-            headers={"User-Agent": "MergLaMunte-Scraper/1.0"},
-            timeout=10,
-        )
-        data = r.json()
-        if data:
-            return float(data[0]["lat"]), float(data[0]["lon"])
+        from geopy.geocoders import ArcGIS
+        from geopy.exc import GeocoderTimedOut, GeocoderServiceError
+
+        geolocator = ArcGIS(user_agent="MergLaMunte-Scraper/1.0", timeout=10)
+        location = geolocator.geocode(location_text)
+        if location:
+            return float(location.latitude), float(location.longitude)
+        else:
+            print(f"  [geocode] Nu gasit: '{location_text}'", flush=True)
     except Exception as e:
         print(f"  [geocode] Eroare pentru '{location_text}': {e}", flush=True)
     return None
@@ -337,17 +337,21 @@ def add_coordinates(trasee: list[dict]) -> list[dict]:
         loc = t.get("localitate_start")
         munte = t.get("munte")
 
+        # Ignora valori "null" string
+        if loc in (None, "null", ""): loc = None
+        if munte in (None, "null", ""): munte = None
+
         if not loc and not munte:
             continue
 
-        # Incearca mai intai cu localitate + munte pentru precizie maxima
+        # Queries in ordine descrescatoare de precizie
         queries = []
         if loc and munte:
             queries.append(f"{loc}, {munte}, Romania")
         if loc:
             queries.append(f"{loc}, Romania")
         if munte:
-            queries.append(f"{munte}, Romania")
+            queries.append(f"Muntii {munte}, Romania")
 
         coords = None
         for q in queries:
@@ -355,13 +359,13 @@ def add_coordinates(trasee: list[dict]) -> list[dict]:
                 coords = cache[q]
                 break
             coords = geocode(q)
-            time.sleep(1.1)
+            time.sleep(1.2)
             if coords:
                 cache[q] = coords
                 print(f"  [{i+1}] '{q}' → {coords[0]:.4f}, {coords[1]:.4f}", flush=True)
                 break
             else:
-                print(f"  [{i+1}] '{q}' → nu gasit, incerc alternativa...", flush=True)
+                print(f"  [{i+1}] '{q}' → nu gasit", flush=True)
 
         if coords:
             t["lat"], t["lng"] = coords
