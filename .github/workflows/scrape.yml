@@ -22,7 +22,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependente
-        run: pip install requests beautifulsoup4 google-genai
+        run: pip install requests beautifulsoup4 google-genai geopy
 
       - name: Ruleaza scraper
         env:
