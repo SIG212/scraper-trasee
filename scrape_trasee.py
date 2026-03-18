@@ -145,7 +145,7 @@ def scrape_bloguldecalatorii() -> list[dict]:
         return []
 
     results = []
-    for i, url in enumerate(links[:5]):  # limit pentru test
+    for i, url in enumerate(links[:999]):  # limit pentru test
         try:
             time.sleep(1.5)
             r = requests.get(url, headers=HEADERS, timeout=10)
@@ -212,7 +212,7 @@ def scrape_thechillinbear() -> list[dict]:
     print(f"  Gasit {len(links)} linkuri", flush=True)
 
     results = []
-    for i, url in enumerate(links[:5]):
+    for i, url in enumerate(links[:999]):
         try:
             time.sleep(1.5)
             r = requests.get(url, headers=HEADERS, timeout=15)
@@ -295,7 +295,7 @@ def scrape_chitaracalatoare() -> list[dict]:
     print(f"  Gasit {len(links)} linkuri", flush=True)
 
     results = []
-    for i, url in enumerate(links[:5]):
+    for i, url in enumerate(links[:999]):
         try:
             time.sleep(1.5)
             r = requests.get(url, headers=HEADERS, timeout=15)
