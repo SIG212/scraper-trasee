@@ -45,10 +45,10 @@ GEMINI_API_KEY      = os.environ.get("GEMINI_API_KEY", "")
 gemini_client       = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 _last_gemini_call   = 0.0
 
-MAX_PER_SOURCE      = 999    # coboara la 3 pentru test rapid (3 x 5 surse = 15 trasee)
+MAX_PER_SOURCE      = 4    # coboara la 3 pentru test rapid (3 x 5 surse = 15 trasee)
 SLEEP_HTTP          = 1.5    # pauza intre request-uri HTTP
 GEMINI_INTERVAL     = 1.0    # rate-limit: 1 req/s (Tier-1 = 150 RPM)
-GEMINI_MODEL        = "gemini-2.5-flash-lite"
+GEMINI_MODEL        = "gemini-2.5-pro"
 OUTPUT_FILE         = "trasee.json"
 
 
