@@ -7,7 +7,7 @@ Output: trasee.json
 
 Campuri extrase per traseu:
   nume, localitate_start, durata_h, dificultate,
-  denivelare_m, distanta_km, sursa_url, poza_url
+  denivelare_m, distanta_km, elevatie_pozitiva_m, sursa_url, poza_url
 
 Cerinte:
   pip install requests beautifulsoup4 google-genai
@@ -45,10 +45,10 @@ GEMINI_API_KEY      = os.environ.get("GEMINI_API_KEY", "")
 gemini_client       = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 _last_gemini_call   = 0.0
 
-MAX_PER_SOURCE      = 5   # limita articole per sursa (coboara la 10 pentru test rapid)
-SLEEP_HTTP          = 1.5    # pauza intre request-uri HTTP (politete fata de servere)
+MAX_PER_SOURCE      = 999    # coboara la 3 pentru test rapid (3 x 5 surse = 15 trasee)
+SLEEP_HTTP          = 1.5    # pauza intre request-uri HTTP
 GEMINI_INTERVAL     = 1.0    # rate-limit: 1 req/s (Tier-1 = 150 RPM)
-GEMINI_MODEL        = "gemini-2.5-pro"  # schimba cu "gemini-2.5-pro" pentru calitate mai buna
+GEMINI_MODEL        = "gemini-2.5-flash-lite"
 OUTPUT_FILE         = "trasee.json"
 
 
@@ -58,7 +58,7 @@ OUTPUT_FILE         = "trasee.json"
 
 PROMPT = """\
 Esti un asistent care extrage informatii structurate despre trasee montane din Romania.
-Articolele sunt jurnale de drumetie — datele tehnice pot aparea oriunde in text, nu doar la inceput.
+Articolele sunt jurnale de drumetie — datele tehnice pot aparea oriunde in text.
 
 Titlu: {title}
 URL: {url}
@@ -66,21 +66,25 @@ URL: {url}
 Text:
 {text}
 
-Cauta cu atentie in TOT textul urmatoarele informatii si raspunde DOAR cu JSON valid, fara text suplimentar, fara backticks:
+Cauta cu atentie in TOT textul si raspunde DOAR cu JSON valid, fara text suplimentar, fara backticks:
 
 {{
   "nume": "numele scurt al traseului sau titlul articolului reformulat concis",
   "localitate_start": "satul sau orasul de unde pleaca traseul (fara diacritice, ex: Busteni, Zarnesti, Sinaia)",
-  "durata_h": numar_float_sau_null,
+  "durata_h": numar_float_ore_sau_null,
   "dificultate": "usor|mediu|greu|null",
   "denivelare_m": numar_int_sau_null,
-  "distanta_km": numar_float_sau_null
+  "distanta_km": numar_float_sau_null,
+  "elevatie_pozitiva_m": numar_int_sau_null
 }}
 
 Reguli stricte:
 - durata_h: cauta "ore", "h", "timp de mers", "durata" — converteste minute in ore (ex: 90 min = 1.5)
 - distanta_km: cauta "km", "kilometri", "distanta"
-- denivelare_m: cauta "denivelare", "diferenta de nivel", "D+", "urcare", "metri"
+- denivelare_m: diferenta totala de nivel intre start si cel mai inalt punct
+- elevatie_pozitiva_m: totalul de metri urcati (D+ sau "urcare totala" sau "diferenta nivel urcare") — diferit de denivelare!
+  Cauta: "D+", "urcare", "pozitiv", "ascensiune", "metri urcare", "diferenta nivel pozitiva"
+  Exemplu: un circuit cu urcare 800m si coborare 800m are elevatie_pozitiva_m=800 si denivelare_m=800
 - dificultate: normalizeaza la usor / mediu / greu (ex: "moderat" -> "mediu", "dificil" -> "greu")
 - localitate_start: fara diacritice (Busteni nu Bușteni, Brasov nu Brașov)
 - Nu inventa date. Daca nu gasesti o informatie, pune null.
@@ -89,22 +93,29 @@ Reguli stricte:
 
 def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
     global _last_gemini_call
+
     if not gemini_client:
         print("  [!] GEMINI_API_KEY lipsa — skip AI", flush=True)
         return None
+
+    # Trimite inceputul + finalul — datele tehnice sunt adesea la final
+    text_trimmed = text[:1000] + "\n\n[...]\n\n" + text[-2000:] if len(text) > 3000 else text
+
     for attempt in range(3):
         try:
             elapsed = time.time() - _last_gemini_call
             if elapsed < GEMINI_INTERVAL:
                 time.sleep(GEMINI_INTERVAL - elapsed)
+
             _last_gemini_call = time.time()
-            text_trimmed = text[:1000] + "\n\n[...]\n\n" + text[-2000:] if len(text) > 3000 else text
+
             response = gemini_client.models.generate_content(
                 model=GEMINI_MODEL,
                 contents=PROMPT.format(title=title, url=url, text=text_trimmed),
             )
             raw = response.text.strip()
             raw = re.sub(r"^```json\s*|^```\s*|```$", "", raw, flags=re.MULTILINE).strip()
+
             parsed = json.loads(raw)
             if isinstance(parsed, list):
                 parsed = parsed[0] if parsed else None
@@ -112,6 +123,7 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
                 print(f"  [!] Tip neasteptat de la Gemini: {type(parsed)}, skip", flush=True)
                 return None
             return parsed
+
         except Exception as e:
             err = str(e)
             if "429" in err:
@@ -121,6 +133,7 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
             else:
                 print(f"  [!] Eroare Gemini: {e}", flush=True)
                 return None
+
     return None
 
 
@@ -128,9 +141,10 @@ def extract_with_gemini(title: str, text: str, url: str) -> dict | None:
 # Utilitare HTML
 # ---------------------------------------------------------------------------
 
-def http_get(url: str, timeout: int = 15) -> requests.Response | None:
+def http_get(url: str, timeout: int = 15, extra_headers: dict = None) -> requests.Response | None:
+    headers = {**HEADERS, **(extra_headers or {})}
     try:
-        r = requests.get(url, headers=HEADERS, timeout=timeout)
+        r = requests.get(url, headers=headers, timeout=timeout)
         r.raise_for_status()
         return r
     except Exception as e:
@@ -144,7 +158,15 @@ def og_image(soup: BeautifulSoup) -> str | None:
 
 
 def body_text(soup: BeautifulSoup) -> str:
-    node = soup.find("div", class_="entry-content") or soup.find("article")
+    candidates = [
+        soup.find("div", class_="entry-content"),
+        soup.find("div", class_="post-content"),
+        soup.find("div", class_="article-content"),
+        soup.find("div", class_="content"),
+        soup.find("article"),
+        soup.find("main"),
+    ]
+    node = next((c for c in candidates if c), None)
     return node.get_text(separator=" ", strip=True) if node else ""
 
 
@@ -154,22 +176,21 @@ def h1_text(soup: BeautifulSoup) -> str:
 
 
 def build_record(data: dict, url: str, blog: str, img: str | None) -> dict:
-    """Combina datele Gemini cu metadatele sursei."""
     return {
-        "nume":             data.get("nume"),
-        "localitate_start": data.get("localitate_start"),
-        "durata_h":         data.get("durata_h"),
-        "dificultate":      data.get("dificultate"),
-        "denivelare_m":     data.get("denivelare_m"),
-        "distanta_km":      data.get("distanta_km"),
-        "sursa_url":        url,
-        "sursa_blog":       blog,
-        "poza_url":         img,
+        "nume":                  data.get("nume"),
+        "localitate_start":      data.get("localitate_start"),
+        "durata_h":              data.get("durata_h"),
+        "dificultate":           data.get("dificultate"),
+        "denivelare_m":          data.get("denivelare_m"),
+        "distanta_km":           data.get("distanta_km"),
+        "elevatie_pozitiva_m":   data.get("elevatie_pozitiva_m"),
+        "sursa_url":             url,
+        "sursa_blog":            blog,
+        "poza_url":              img,
     }
 
 
 def scrape_articles(links: list[str], blog_name: str) -> list[dict]:
-    """Scrapeaza o lista de URL-uri si returneaza traseele extrase."""
     results = []
     total = min(len(links), MAX_PER_SOURCE)
 
@@ -196,11 +217,16 @@ def scrape_articles(links: list[str], blog_name: str) -> list[dict]:
 
         record = build_record(data, url, blog_name, img)
         results.append(record)
-        print(f"    OK: {record['nume'] or '(fara nume)'} | "
-              f"{record['localitate_start'] or '?'} | "
-              f"{record['durata_h']}h | "
-              f"{record['distanta_km']}km | "
-              f"{record['dificultate']}", flush=True)
+
+        durata  = f"{record['durata_h']}h"      if record['durata_h']             else "?h"
+        dist    = f"{record['distanta_km']}km"   if record['distanta_km']          else "?km"
+        elev    = f"D+{record['elevatie_pozitiva_m']}m" if record['elevatie_pozitiva_m'] else "?D+"
+        print(
+            f"    OK: {record['nume'] or '(fara nume)'} | "
+            f"{record['localitate_start'] or '?'} | "
+            f"{durata} | {dist} | {elev} | {record['dificultate'] or '?'}",
+            flush=True,
+        )
 
     return results
 
@@ -224,7 +250,12 @@ def scrape_bloguldecalatorii() -> list[dict]:
     if block:
         for a in block.find_all("a", href=True):
             href = a["href"]
-            if "bloguldecalatorii.ro" in href and "/20" in href and "#" not in href:
+            if (
+                "bloguldecalatorii.ro" in href
+                and "/20" in href
+                and "#" not in href
+                and href.startswith("https://")
+            ):
                 links.append(href)
 
     links = list(dict.fromkeys(links))
@@ -262,6 +293,7 @@ def scrape_thechillinbear() -> list[dict]:
             and "/category/" not in href
             and "/author/" not in href
             and "/page/" not in href
+            and "/tag/" not in href
             and href not in skip
             and href.count("/") == 4
             and "#" not in href
@@ -296,7 +328,12 @@ def scrape_chitaracalatoare() -> list[dict]:
 
         for a in soup.find_all("a", href=True):
             href = a["href"]
-            if "chitaracalatoare.ro/20" in href and "#" not in href and href not in links:
+            if (
+                "chitaracalatoare.ro/20" in href
+                and href.startswith("https://")   # exclude mailto: si altele
+                and "#" not in href
+                and href not in links
+            ):
                 links.append(href)
                 found = True
 
@@ -310,7 +347,7 @@ def scrape_chitaracalatoare() -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# Scraper 4: jurnaldedrumetii.ro
+# Scraper 4: jurnaldedrumetii.ro  (Blogger — fara pagini de categorie)
 # ---------------------------------------------------------------------------
 
 def scrape_jurnaldedrumetii() -> list[dict]:
@@ -318,11 +355,12 @@ def scrape_jurnaldedrumetii() -> list[dict]:
     links = []
 
     for page in range(1, 20):
-        url = (
-            "https://jurnaldedrumetii.ro/category/drumetii/"
-            if page == 1
-            else f"https://jurnaldedrumetii.ro/category/drumetii/page/{page}/"
-        )
+        if page == 1:
+            url = "https://www.jurnaldedrumetii.ro/"
+        else:
+            # Blogger foloseste paginare cu start offset
+            url = f"https://www.jurnaldedrumetii.ro/search?updated-max=2099-01-01&max-results=20&start={(page - 1) * 20}"
+
         r = http_get(url)
         if not r:
             break
@@ -333,13 +371,8 @@ def scrape_jurnaldedrumetii() -> list[dict]:
         for a in soup.find_all("a", href=True):
             href = a["href"]
             if (
-                "jurnaldedrumetii.ro" in href
-                and "/category/" not in href
-                and "/author/" not in href
-                and "/page/" not in href
-                and "/tag/" not in href
-                and href.startswith("https://jurnaldedrumetii.ro/")
-                and href.count("/") >= 4
+                "jurnaldedrumetii.ro/20" in href
+                and href.startswith("http")
                 and "#" not in href
                 and href not in links
             ):
@@ -363,14 +396,19 @@ def scrape_suspemunte() -> list[dict]:
     print("\n[5/5] suspemunte.com", flush=True)
     links = []
 
+    # suspemunte poate returna 403 din GitHub Actions (Cloudflare)
+    # Incercam cu Referer de Google ca sa mimam trafic organic
+    extra = {"Referer": "https://www.google.com/"}
+
     for page in range(1, 20):
         url = (
             "https://suspemunte.com/drumetii/"
             if page == 1
             else f"https://suspemunte.com/drumetii/page/{page}/"
         )
-        r = http_get(url)
+        r = http_get(url, extra_headers=extra)
         if not r:
+            print("  suspemunte.com inaccesibil (posibil Cloudflare), skip", flush=True)
             break
 
         soup  = BeautifulSoup(r.text, "html.parser")
@@ -384,6 +422,7 @@ def scrape_suspemunte() -> list[dict]:
                 and href != "https://suspemunte.com/drumetii/"
                 and "/page/" not in href
                 and "/category/" not in href
+                and href.startswith("https://")
                 and "#" not in href
                 and href not in links
             ):
@@ -404,11 +443,6 @@ def scrape_suspemunte() -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def deduplicate(trasee: list[dict]) -> list[dict]:
-    """
-    Elimina duplicatele dupa sursa_url.
-    Articole cu acelasi (nume, localitate_start) sunt pastrate — pot fi surse diferite
-    despre acelasi traseu, utile pentru cross-referinta.
-    """
     seen_urls = set()
     unique    = []
 
@@ -433,7 +467,7 @@ def main():
     print("=" * 60, flush=True)
 
     if not GEMINI_API_KEY:
-        print("\n[EROARE] GEMINI_API_KEY nu e setat. Export variabila si incearca din nou.", flush=True)
+        print("\n[EROARE] GEMINI_API_KEY nu e setat.", flush=True)
         sys.exit(1)
 
     all_trasee = []
@@ -443,13 +477,11 @@ def main():
     all_trasee += scrape_jurnaldedrumetii()
     all_trasee += scrape_suspemunte()
 
-    # Deduplicare pe URL
     before = len(all_trasee)
     all_trasee = deduplicate(all_trasee)
     after = len(all_trasee)
     print(f"\n[dedup] {before} → {after} trasee (eliminate {before - after} duplicate)", flush=True)
 
-    # Filtreaza intrari fara date minime (cel putin nume sau localitate)
     valid = [
         t for t in all_trasee
         if t.get("nume") or t.get("localitate_start")
